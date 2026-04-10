@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turin Map — The Apocalypse Is a Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- Leaflet CSS & JS — free, no API key needed -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+/* ============================================
+   MAP PAGE — Specific Styles
+   ============================================ */
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 500px;
+}
+
+#turinMap {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+}
+
+/* Dark map tiles override */
+.leaflet-container {
+  background: var(--bg-primary);
+  font-family: var(--font-body);
+}
+.leaflet-control-zoom a {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--bg-card-hover) !important;
+}
+.leaflet-control-attribution {
+  background: rgba(14,13,11,0.8) !important;
+  color: var(--text-muted) !important;
+  font-size: 9px !important;
+}
+.leaflet-control-attribution a {
+  color: var(--text-secondary) !important;
+}
+
+/* Custom popups */
+.leaflet-popup-content-wrapper {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+  max-width: 320px;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+.leaflet-popup-tip {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+.leaflet-popup-close-button {
+  color: var(--text-secondary) !important;
+  font-size: 18px !important;
+  padding: 6px 8px 0 0 !important;
+}
+.leaflet-popup-close-button:hover {
+  color: var(--accent-gold) !important;
+}
+
+/* Popup interior */
+.map-popup {
+  padding: 16px;
+}
+.map-popup-faction {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.map-popup-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.map-popup-subtitle {
+  font-family: var(--font-system);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.map-popup-category {
+  display: inline-block;
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.map-popup-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.map-popup-notes {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.5;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Legend panel */
+.map-legend {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1000;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 220px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.map-legend-title {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+  margin-bottom: 12px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: opacity var(--transition-speed);
+}
+.legend-item.dimmed {
+  opacity: 0.3;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.legend-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Category filter */
+.map-category-bar {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: calc(100% - 40px);
+}
+.map-cat-btn {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  white-space: nowrap;
+}
+.map-cat-btn:hover,
+.map-cat-btn.active {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-dim);
+  background: rgba(22,20,18,0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .map-wrapper { height: calc(100vh - 60px); }
+  .map-legend { bottom: 12px; left: 12px; padding: 12px; max-width: 180px; }
+  .map-category-bar { top: 64px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<div class="nav-overlay" id="navOverlay"></div>
+<button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">The Apocalypse<br>Is a Business</div>
+    <div class="sidebar-subtitle">Lore Companion</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="nav-icon">⬡</span> Home</a></li>
+    <li><a href="characters.html"><span class="nav-icon">◉</span> Characters</a></li>
+    <li><a href="system.html"><span class="nav-icon">⚙</span> The System</a></li>
+    <li><a href="world.html"><span class="nav-icon">◈</span> World</a></li>
+    <li><a href="map.html" class="active"><span class="nav-icon">⊕</span> Turin Map</a></li>
+    <li><a href="timeline.html"><span class="nav-icon">▸</span> Timeline</a></li>
+  </ul>
+  <div class="nav-chapter-filter">
+    <label for="chapterFilter">Spoiler Filter</label>
+    <select class="chapter-select" id="chapterFilter">
+      <option value="99">Show All</option>
+      <option value="11">Through Chapter 11</option>
+      <option value="7">Through Chapter 7</option>
+      <option value="5">Through Chapter 5</option>
+      <option value="3">Through Chapter 3</option>
+      <option value="1">Chapter 1 Only</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main">
+
+  <div class="page-header">
+    <h1>Turin — Operational Map</h1>
+    <div class="page-subtitle">⊕ Faction positions, key locations, and scenario events</div>
+  </div>
+
+  <div class="map-wrapper">
+    <!-- Category filter bar -->
+    <div class="map-category-bar" id="categoryBar">
+      <button class="map-cat-btn active" data-cat="all">All</button>
+      <button class="map-cat-btn" data-cat="headquarters">HQ</button>
+      <button class="map-cat-btn" data-cat="safehouse">Nodes</button>
+      <button class="map-cat-btn" data-cat="strategic">Strategic</button>
+      <button class="map-cat-btn" data-cat="landmark">Landmarks</button>
+      <button class="map-cat-btn" data-cat="infrastructure">Infrastructure</button>
+      <button class="map-cat-btn" data-cat="scenario">Scenarios</button>
+    </div>
+
+    <!-- The map -->
+    <div id="turinMap"></div>
+
+    <!-- Legend -->
+    <div class="map-legend" id="mapLegend">
+      <div class="map-legend-title">Factions</div>
+      <!-- Built by JS -->
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-system">⬡ Classification Window Status: Closed ⬡</div>
+  </footer>
+
+</main>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/nav.js"></script>
+<script src="js/spoiler.js"></script>
+<script src="js/data/locations.js"></script>
+<script>
+(function() {
+
+  // ---- INIT MAP ----
+  // Centered on Turin, zoom level 13
+  var map = L.map('turinMap', {
+    zoomControl: true,
+    attributionControl: true
+  }).setView([45.0703, 7.6869], 13);
+
+  // OpenStreetMap tiles — free, no key needed
+  // Using CartoDB dark tiles for thematic consistency
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // ---- STATE ----
+  var allMarkers = [];
+  var activeCategory = 'all';
+  var hiddenFactions = {};
+
+  // ---- CREATE CUSTOM MARKER ----
+  function createMarker(loc) {
+    var style = MARKER_STYLES[loc.faction] || { color: '#888', label: 'Unknown' };
+    var catInfo = CATEGORY_LABELS[loc.category] || loc.category;
+
+    // SVG circle marker
+    var size = loc.icon === 'hq' ? 14 : (loc.icon === 'scenario' ? 12 : 10);
+    var svgIcon = L.divIcon({
+      className: 'custom-marker',
+      html: '<div style="' +
+        'width:' + size + 'px;height:' + size + 'px;' +
+        'background:' + style.color + ';' +
+        'border:2px solid rgba(255,255,255,0.3);' +
+        'border-radius:50%;' +
+        'box-shadow:0 0 8px ' + style.color + '80;' +
+        '"></div>',
+      iconSize: [size, size],
+      iconAnchor: [size/2, size/2],
+      popupAnchor: [0, -(size/2 + 4)]
+    });
+
+    // Popup content
+    var popup = '<div class="map-popup">';
+    popup += '<div class="map-popup-faction" style="color:' + style.color + '">' + style.label + '</div>';
+    popup += '<div class="map-popup-name">' + loc.name + '</div>';
+    if (loc.subtitle) {
+      popup += '<div class="map-popup-subtitle">' + loc.subtitle + '</div>';
+    }
+    popup += '<div class="map-popup-category" style="color:' + style.color + ';background:' + style.color + '15;border:1px solid ' + style.color + '30">' + catInfo + '</div>';
+    popup += '<div class="map-popup-desc">' + loc.description + '</div>';
+    if (loc.notes) {
+      popup += '<div class="map-popup-notes">' + loc.notes + '</div>';
+    }
+    popup += '</div>';
+
+    var marker = L.marker([loc.lat, loc.lng], { icon: svgIcon })
+      .bindPopup(popup, { maxWidth: 300 });
+
+    return {
+      marker: marker,
+      data: loc
+    };
+  }
+
+  // ---- RENDER MARKERS ----
+  function renderMarkers() {
+    var maxChapter = getMaxChapter();
+
+    for (var i = 0; i < allMarkers.length; i++) {
+      var m = allMarkers[i];
+      var d = m.data;
+
+      var chapterOk = d.chapter <= maxChapter;
+      var catOk = (activeCategory === 'all' || d.category === activeCategory);
+      var factionOk = !hiddenFactions[d.faction];
+
+      if (chapterOk && catOk && factionOk) {
+        if (!map.hasLayer(m.marker)) m.marker.addTo(map);
+      } else {
+        if (map.hasLayer(m.marker)) map.removeLayer(m.marker);
+      }
+    }
+  }
+
+  // ---- BUILD LEGEND ----
+  function buildLegend() {
+    var legend = document.getElementById('mapLegend');
+    var html = '<div class="map-legend-title">Factions</div>';
+
+    // Collect factions actually in use
+    var usedFactions = {};
+    for (var i = 0; i < MAP_LOCATIONS.length; i++) {
+      usedFactions[MAP_LOCATIONS[i].faction] = true;
+    }
+
+    for (var key in MARKER_STYLES) {
+      if (!usedFactions[key]) continue;
+      var s = MARKER_STYLES[key];
+      var dimmed = hiddenFactions[key] ? ' dimmed' : '';
+      html += '<div class="legend-item' + dimmed + '" data-faction="' + key + '">';
+      html += '  <div class="legend-dot" style="background:' + s.color + '"></div>';
+      html += '  <span class="legend-label">' + s.label + '</span>';
+      html += '</div>';
+    }
+
+    legend.innerHTML = html;
+
+    // Click to toggle
+    var items = legend.querySelectorAll('.legend-item');
+    for (var j = 0; j < items.length; j++) {
+      items[j].addEventListener('click', function() {
+        var f = this.getAttribute('data-faction');
+        hiddenFactions[f] = !hiddenFactions[f];
+        this.classList.toggle('dimmed');
+        renderMarkers();
+      });
+    }
+  }
+
+  // ---- CATEGORY FILTER ----
+  var catBtns = document.querySelectorAll('.map-cat-btn');
+  for (var c = 0; c < catBtns.length; c++) {
+    catBtns[c].addEventListener('click', function() {
+      activeCategory = this.getAttribute('data-cat');
+      for (var x = 0; x < catBtns.length; x++) catBtns[x].classList.remove('active');
+      this.classList.add('active');
+      renderMarkers();
+    });
+  }
+
+  // ---- SPOILER INTEGRATION ----
+  function getMaxChapter() {
+    var sel = document.getElementById('chapterFilter');
+    return sel ? parseInt(sel.value, 10) : 99;
+  }
+
+  var chapterSel = document.getElementById('chapterFilter');
+  if (chapterSel) {
+    chapterSel.addEventListener('change', renderMarkers);
+  }
+
+  // ---- INIT ----
+  for (var i = 0; i < MAP_LOCATIONS.length; i++) {
+    allMarkers.push(createMarker(MAP_LOCATIONS[i]));
+  }
+
+  buildLegend();
+  renderMarkers();
+
+})();
+</script>
+
+</body>
+</html>

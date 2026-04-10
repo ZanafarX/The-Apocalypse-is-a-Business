@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Characters — The Apocalypse Is a Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ============================================
+   CHARACTER PAGE — Specific Styles
+   ============================================ */
+
+/* Card Grid */
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.char-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+.char-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+}
+
+.char-card-portrait {
+  width: 100%;
+  height: 200px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.char-card-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.char-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+}
+
+.char-card-info {
+  padding: 16px;
+}
+.char-card-faction {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.char-card-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.char-card-title {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.char-card-class {
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold);
+}
+
+/* Filter rows */
+.filter-row {
+  margin-bottom: 12px;
+}
+.filter-row-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* No results */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: var(--font-system);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   MODAL / DOSSIER OVERLAY
+   ============================================ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  overflow-y: auto;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  width: 100%;
+  max-width: 680px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed);
+  z-index: 10;
+}
+.modal-close:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-dim);
+}
+
+.modal-body {
+  padding: 32px;
+}
+
+/* ============================================
+   DOSSIER INTERIOR STYLES
+   ============================================ */
+.dossier-header {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 28px;
+  align-items: flex-start;
+}
+
+.dossier-portrait {
+  width: 120px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dossier-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dossier-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--text-muted);
+}
+
+.dossier-header-info {
+  flex: 1;
+  min-width: 0;
+}
+.dossier-faction {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.dossier-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.dossier-alias {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent-gold);
+}
+.dossier-title {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.dossier-descriptor {
+  font-family: var(--font-system);
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent-gold-dim);
+}
+
+.dossier-section {
+  margin-bottom: 24px;
+}
+.dossier-section-header {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dossier-class-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin-bottom: 10px;
+}
+.dossier-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.field-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.field-value {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+.field-value.system-text {
+  font-family: var(--font-system);
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.dossier-classline {
+  font-family: var(--font-system);
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border-radius: 3px;
+}
+
+.dossier-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.dossier-flaw {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: rgba(139, 45, 45, 0.08);
+  border-left: 2px solid var(--accent-crimson);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.flaw-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-crimson-bright);
+  margin-right: 6px;
+}
+
+.skill-ranks {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.dossier-relationship {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.dossier-relationship:last-child { border-bottom: none; }
+.rel-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+.rel-detail {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsive dossier */
+@media (max-width: 500px) {
+  .dossier-header { flex-direction: column; align-items: center; text-align: center; }
+  .dossier-portrait { width: 100px; height: 130px; }
+  .dossier-class-grid { grid-template-columns: 1fr; }
+  .char-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .char-card-portrait { height: 160px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<div class="nav-overlay" id="navOverlay"></div>
+<button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">The Apocalypse<br>Is a Business</div>
+    <div class="sidebar-subtitle">Lore Companion</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="nav-icon">⬡</span> Home</a></li>
+    <li><a href="characters.html" class="active"><span class="nav-icon">◉</span> Characters</a></li>
+    <li><a href="system.html"><span class="nav-icon">⚙</span> The System</a></li>
+    <li><a href="world.html"><span class="nav-icon">◈</span> World</a></li>
+    <li><a href="map.html"><span class="nav-icon">⊕</span> Turin Map</a></li>
+    <li><a href="timeline.html"><span class="nav-icon">▸</span> Timeline</a></li>
+  </ul>
+  <div class="nav-chapter-filter">
+    <label for="chapterFilter">Spoiler Filter</label>
+    <select class="chapter-select" id="chapterFilter">
+      <option value="99">Show All</option>
+      <option value="11">Through Chapter 11</option>
+      <option value="7">Through Chapter 7</option>
+      <option value="5">Through Chapter 5</option>
+      <option value="3">Through Chapter 3</option>
+      <option value="1">Chapter 1 Only</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main">
+
+  <div class="page-header">
+    <h1>Character Dossiers</h1>
+    <div class="page-subtitle">◉ Personnel files — classified by faction and role</div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+
+    <!-- Faction Filter -->
+    <div class="filter-row">
+      <div class="filter-row-label">Faction</div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="leonelli">Leonelli</button>
+        <button class="filter-btn" data-filter="ferro-patto">Ferro Patto</button>
+        <button class="filter-btn" data-filter="fiamma-eterna">Fiamma Eterna</button>
+        <button class="filter-btn" data-filter="leone-selvaggio">Leone Selvaggio</button>
+        <button class="filter-btn" data-filter="tredicesima">Tredicesima</button>
+        <button class="filter-btn" data-filter="municipio">Municipio</button>
+        <button class="filter-btn" data-filter="compagnia-acque">Compagnia Acque</button>
+        <button class="filter-btn" data-filter="corporate-bloc">Corporate Bloc</button>
+        <button class="filter-btn" data-filter="civilian">Civilian</button>
+      </div>
+    </div>
+
+    <!-- Role Filter -->
+    <div class="filter-row">
+      <div class="filter-row-label">Role</div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-role="all">All</button>
+        <button class="filter-btn" data-role="core-five">Core Five</button>
+        <button class="filter-btn" data-role="analyst">Analysts</button>
+        <button class="filter-btn" data-role="faction-leader">Faction Leaders</button>
+        <button class="filter-btn" data-role="civilian">Civilians</button>
+      </div>
+    </div>
+
+    <!-- Card Grid (rendered by JS) -->
+    <div class="char-grid" id="characterGrid"></div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-system">⬡ Classification Window Status: Closed ⬡</div>
+  </footer>
+
+</main>
+
+<!-- ==================== MODAL ==================== -->
+<div class="modal-overlay" id="characterModal">
+  <div class="modal-container">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-body" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/nav.js"></script>
+<script src="js/spoiler.js"></script>
+<script src="js/data/characters.js"></script>
+<script src="js/pages/characters.js"></script>
+
+</body>
+</html>

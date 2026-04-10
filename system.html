@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The System — The Apocalypse Is a Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ============================================
+   SYSTEM CODEX — Page Styles
+   ============================================ */
+
+/* Tabs */
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 32px;
+  overflow-x: auto;
+}
+.tab-btn {
+  font-family: var(--font-system);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  white-space: nowrap;
+}
+.tab-btn:hover { color: var(--text-primary); }
+.tab-btn.active { color: var(--accent-gold); border-bottom-color: var(--accent-gold); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* System init message */
+.system-init-block {
+  background: var(--system-bg);
+  border: 1px solid var(--system-border);
+  border-left: 3px solid var(--accent-gold);
+  padding: 24px 28px;
+  margin: 20px 0 28px;
+  border-radius: 2px;
+}
+.system-init-text {
+  font-family: var(--font-system);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  line-height: 2;
+  white-space: pre-line;
+}
+
+/* Prose block */
+.codex-prose {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* Section divider */
+.codex-section {
+  margin-bottom: 36px;
+}
+.codex-section-title {
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Interface table */
+.interface-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.interface-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  background: var(--bg-card);
+}
+.interface-label {
+  padding: 10px 16px;
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+}
+.interface-value {
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Stat card */
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-bottom: 12px;
+  transition: border-color var(--transition-speed);
+}
+.stat-card:hover { border-color: var(--border-accent); }
+.stat-card-name {
+  font-family: var(--font-system);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+.stat-card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.stat-card-users {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.stat-card-note {
+  margin-top: 8px;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--accent-gold-dim);
+  padding: 8px 12px;
+  background: var(--system-bg);
+  border-radius: 3px;
+}
+
+/* Class card */
+.class-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: border-color var(--transition-speed);
+}
+.class-card:hover { border-color: var(--border-accent); }
+
+.class-card-header {
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.class-card-header:hover { background: var(--bg-card-hover); }
+
+.class-card-name {
+  font-family: var(--font-system);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+}
+.class-card-holder {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+.class-card-descriptor {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.class-toggle {
+  font-size: 18px;
+  color: var(--text-muted);
+  transition: transform var(--transition-speed);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.class-card.open .class-toggle { transform: rotate(90deg); }
+
+.class-card-body {
+  display: none;
+  padding: 0 24px 24px;
+}
+.class-card.open .class-card-body { display: block; }
+
+.class-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  margin-bottom: 14px;
+}
+.class-field-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.class-field-value {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+.class-field-value.gold {
+  font-family: var(--font-system);
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.class-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.class-line-tier {
+  font-family: var(--font-system);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--border-subtle);
+}
+.class-line-arrow {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.class-line-tier.final {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-dim);
+  background: var(--accent-gold-glow);
+}
+
+/* NPC block */
+.npc-block {
+  background: rgba(139,45,45,0.06);
+  border: 1px solid rgba(139,45,45,0.2);
+  border-left: 3px solid var(--accent-crimson);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+.npc-title {
+  font-family: var(--font-system);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-crimson-bright);
+  margin-bottom: 8px;
+}
+.npc-list {
+  list-style: none;
+  padding: 0;
+}
+.npc-list li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+.npc-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent-crimson);
+}
+
+/* Scenario type cards */
+.scenario-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: border-color var(--transition-speed);
+}
+.scenario-card:hover { border-color: var(--border-accent); }
+.scenario-name {
+  font-family: var(--font-system);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold);
+  margin-bottom: 4px;
+}
+.scenario-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Mechanic block */
+.mech-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.mech-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+/* Tier progression */
+.tier-progression {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+.tier-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.tier-name {
+  font-family: var(--font-system);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold);
+  padding-top: 2px;
+}
+.tier-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Skill rank progression */
+.rank-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rank-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 10px;
+  font-size: 12px;
+}
+.rank-badge {
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 3px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+.rank-badge.hidden {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-dim);
+  background: var(--accent-gold-glow);
+}
+.rank-text {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .interface-row { grid-template-columns: 1fr; }
+  .interface-label { padding: 8px 12px; }
+  .class-info-grid { grid-template-columns: 1fr; }
+  .tier-row { grid-template-columns: 1fr; }
+  .tab-btn { padding: 10px 14px; font-size: 10px; letter-spacing: 1px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<div class="nav-overlay" id="navOverlay"></div>
+<button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">The Apocalypse<br>Is a Business</div>
+    <div class="sidebar-subtitle">Lore Companion</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="nav-icon">⬡</span> Home</a></li>
+    <li><a href="characters.html"><span class="nav-icon">◉</span> Characters</a></li>
+    <li><a href="system.html" class="active"><span class="nav-icon">⚙</span> The System</a></li>
+    <li><a href="world.html"><span class="nav-icon">◈</span> World</a></li>
+    <li><a href="map.html"><span class="nav-icon">⊕</span> Turin Map</a></li>
+    <li><a href="timeline.html"><span class="nav-icon">▸</span> Timeline</a></li>
+  </ul>
+  <div class="nav-chapter-filter">
+    <label for="chapterFilter">Spoiler Filter</label>
+    <select class="chapter-select" id="chapterFilter">
+      <option value="99">Show All</option>
+      <option value="11">Through Chapter 11</option>
+      <option value="7">Through Chapter 7</option>
+      <option value="5">Through Chapter 5</option>
+      <option value="3">Through Chapter 3</option>
+      <option value="1">Chapter 1 Only</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main">
+
+  <div class="page-header">
+    <h1>System Codex</h1>
+    <div class="page-subtitle">⚙ Classes, stats, skills, scenarios, and hidden mechanics</div>
+  </div>
+
+  <section class="section" style="padding-top:0">
+
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="stats">Stats</button>
+      <button class="tab-btn" data-tab="classes">Classes</button>
+      <button class="tab-btn" data-tab="skills">Skills</button>
+      <button class="tab-btn" data-tab="scenarios">Scenarios</button>
+      <button class="tab-btn" data-tab="mechanics">Mechanics</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-overview"></div>
+    <div class="tab-panel" id="tab-stats"></div>
+    <div class="tab-panel" id="tab-classes"></div>
+    <div class="tab-panel" id="tab-skills"></div>
+    <div class="tab-panel" id="tab-scenarios"></div>
+    <div class="tab-panel" id="tab-mechanics"></div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-system">⬡ Classification Window Status: Closed ⬡</div>
+  </footer>
+
+</main>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/nav.js"></script>
+<script src="js/spoiler.js"></script>
+<script src="js/data/system.js"></script>
+<script>
+(function() {
+
+  function getMax() {
+    var s = document.getElementById('chapterFilter');
+    return s ? parseInt(s.value,10) : 99;
+  }
+
+  // ========== OVERVIEW ==========
+  function renderOverview() {
+    var max = getMax();
+    var o = SYSTEM_OVERVIEW;
+    if (o.chapter > max) { document.getElementById('tab-overview').innerHTML = ''; return; }
+
+    var h = '';
+    h += '<div class="codex-prose">' + o.intro + '</div>';
+    h += '<div class="system-init-block"><div class="system-init-text">' + o.initMessage + '</div></div>';
+
+    h += '<div class="codex-section"><div class="codex-section-title">Interface</div>';
+    h += '<div class="interface-grid">';
+    for (var i = 0; i < o.interface.length; i++) {
+      h += '<div class="interface-row"><div class="interface-label">' + o.interface[i].label + '</div><div class="interface-value">' + o.interface[i].text + '</div></div>';
+    }
+    h += '</div></div>';
+
+    // NPC
+    if (o.npcStatus.chapter <= max) {
+      var n = o.npcStatus;
+      h += '<div class="npc-block">';
+      h += '<div class="npc-title">' + n.title + '</div>';
+      h += '<div class="codex-prose" style="margin-bottom:12px">' + n.description + '</div>';
+      h += '<ul class="npc-list">';
+      for (var c = 0; c < n.consequences.length; c++) {
+        h += '<li>' + n.consequences[c] + '</li>';
+      }
+      h += '</ul>';
+      if (n.note) h += '<div class="stat-card-note">' + n.note + '</div>';
+      h += '</div>';
+    }
+
+    // Class Selection
+    var cs = MECHANICS_DATA.classSelection;
+    if (cs.chapter <= max) {
+      h += '<div class="codex-section" style="margin-top:28px"><div class="codex-section-title">Class Selection Window</div>';
+      h += '<div class="codex-prose">' + cs.description + '</div>';
+      h += '<div class="tier-progression">';
+      for (var t = 0; t < cs.tierThresholds.length; t++) {
+        h += '<div class="tier-row"><div class="tier-name">' + cs.tierThresholds[t].tier + '</div><div class="tier-desc">' + cs.tierThresholds[t].condition + '</div></div>';
+      }
+      h += '</div></div>';
+    }
+
+    document.getElementById('tab-overview').innerHTML = h;
+  }
+
+  // ========== STATS ==========
+  function renderStats() {
+    var max = getMax();
+    var h = '';
+
+    h += '<div class="codex-section"><div class="codex-section-title">Primary Stats</div>';
+    for (var i = 0; i < STATS_DATA.primaryStats.length; i++) {
+      var s = STATS_DATA.primaryStats[i];
+      if (s.chapter > max) continue;
+      h += '<div class="stat-card">';
+      h += '<div class="stat-card-name">' + s.name + '</div>';
+      h += '<div class="stat-card-desc">' + s.description + '</div>';
+      h += '<div class="stat-card-users">' + s.users + '</div>';
+      if (s.note) h += '<div class="stat-card-note">' + s.note + '</div>';
+      h += '</div>';
+    }
+    h += '</div>';
+
+    // Secondary
+    var visibleSec = STATS_DATA.secondaryStats.filter(function(s){ return s.chapter <= max; });
+    if (visibleSec.length > 0) {
+      h += '<div class="codex-section"><div class="codex-section-title">Secondary / Organizational Stats</div>';
+      for (var j = 0; j < visibleSec.length; j++) {
+        var ss = visibleSec[j];
+        h += '<div class="stat-card">';
+        h += '<div class="stat-card-name">' + ss.name + '</div>';
+        h += '<div class="stat-card-desc">' + ss.description + '</div>';
+        h += '<div class="stat-card-users">' + ss.effects + '</div>';
+        if (ss.note) h += '<div class="stat-card-note">' + ss.note + '</div>';
+        h += '</div>';
+      }
+      h += '</div>';
+    }
+
+    document.getElementById('tab-stats').innerHTML = h;
+  }
+
+  // ========== CLASSES ==========
+  function renderClasses() {
+    var max = getMax();
+    var h = '';
+
+    for (var i = 0; i < CLASSES_DATA.length; i++) {
+      var c = CLASSES_DATA[i];
+      if (c.chapter > max) continue;
+
+      h += '<div class="class-card">';
+      h += '<div class="class-card-header" onclick="this.parentElement.classList.toggle(\'open\')">';
+      h += '<div><div class="class-card-name">' + c.name + '</div>';
+      h += '<div class="class-card-holder">' + c.holder + '</div>';
+      h += '<div class="class-card-descriptor">"' + c.descriptor + '"</div></div>';
+      h += '<div class="class-toggle">▸</div>';
+      h += '</div>';
+
+      h += '<div class="class-card-body">';
+
+      h += '<div class="class-info-grid">';
+      h += '<div><div class="class-field-label">Primary Stat</div><div class="class-field-value gold">' + c.primary + '</div></div>';
+      h += '<div><div class="class-field-label">Secondary Stat</div><div class="class-field-value gold">' + c.secondary + '</div></div>';
+      h += '<div><div class="class-field-label">Tier</div><div class="class-field-value">' + c.tier + '</div></div>';
+      if (c.ceiling) { h += '<div><div class="class-field-label">Ceiling</div><div class="class-field-value">' + c.ceiling + '</div></div>'; }
+      h += '</div>';
+
+      // Class line
+      if (c.classLine) {
+        h += '<div class="class-line">';
+        for (var cl = 0; cl < c.classLine.length; cl++) {
+          if (cl > 0) h += '<span class="class-line-arrow">→</span>';
+          var isFinal = (cl === c.classLine.length - 1 && c.classLine.length > 2);
+          h += '<span class="class-line-tier' + (isFinal ? ' final' : '') + '">' + c.classLine[cl] + '</span>';
+        }
+        h += '</div>';
+      }
+
+      h += '<div class="codex-prose" style="margin-bottom:12px"><strong style="color:var(--text-primary)">Build Direction:</strong> ' + c.buildDirection + '</div>';
+      if (c.combatNotes) {
+        h += '<div class="codex-prose" style="font-style:italic;color:var(--text-muted)">' + c.combatNotes + '</div>';
+      }
+
+      h += '</div></div>';
+    }
+
+    document.getElementById('tab-classes').innerHTML = h;
+  }
+
+  // ========== SKILLS ==========
+  function renderSkills() {
+    var max = getMax();
+    var h = '';
+
+    if (SKILLS_OVERVIEW.chapter <= max) {
+      var so = SKILLS_OVERVIEW;
+      h += '<div class="codex-section">';
+      h += '<div class="codex-section-title">Skill Mechanics</div>';
+      h += '<div class="codex-prose">' + so.acquisition + '</div>';
+
+      h += '<div class="interface-grid" style="margin-top:16px">';
+      h += '<div class="interface-row"><div class="interface-label">Visible Ranks</div><div class="interface-value">' + so.visibleRanks + '</div></div>';
+      h += '<div class="interface-row"><div class="interface-label">Hidden Ranks</div><div class="interface-value">' + so.hiddenRanks + '</div></div>';
+      h += '<div class="interface-row"><div class="interface-label">Rank 4 Rule</div><div class="interface-value">' + so.hiddenRank4Rule + '</div></div>';
+      h += '<div class="interface-row"><div class="interface-label">Class Reading</div><div class="interface-value">' + so.classWindowNote + '</div></div>';
+      h += '</div></div>';
+    }
+
+    // Group skills by holder
+    var grouped = {};
+    for (var i = 0; i < SKILLS_DATA.length; i++) {
+      var sk = SKILLS_DATA[i];
+      if (sk.chapter > max) continue;
+      if (!grouped[sk.holder]) grouped[sk.holder] = [];
+      grouped[sk.holder].push(sk);
+    }
+
+    for (var holder in grouped) {
+      var skills = grouped[holder];
+      h += '<div class="codex-section">';
+      h += '<div class="codex-section-title">' + holder + ' — ' + skills[0].class + '</div>';
+
+      for (var j = 0; j < skills.length; j++) {
+        var s = skills[j];
+        h += '<div class="skill-block">';
+        h += '<div class="skill-name">' + s.name + '</div>';
+        h += '<div class="skill-type">' + s.type + '</div>';
+        h += '<div class="skill-desc">' + s.description + '</div>';
+
+        // Ranks
+        var visRanks = s.ranks.filter(function(r){ return r.chapter <= max; });
+        if (visRanks.length > 0) {
+          h += '<div class="rank-list">';
+          for (var r = 0; r < visRanks.length; r++) {
+            var isHidden = (typeof visRanks[r].rank === 'string' && visRanks[r].rank.indexOf('H') === 0);
+            var badge = isHidden ? visRanks[r].rank : 'R' + visRanks[r].rank;
+            h += '<div class="rank-item">';
+            h += '<div class="rank-badge' + (isHidden ? ' hidden' : '') + '">' + badge + '</div>';
+            h += '<div class="rank-text">' + visRanks[r].text + '</div>';
+            h += '</div>';
+          }
+          h += '</div>';
+        }
+
+        h += '</div>';
+      }
+      h += '</div>';
+    }
+
+    document.getElementById('tab-skills').innerHTML = h;
+  }
+
+  // ========== SCENARIOS ==========
+  function renderScenarios() {
+    var max = getMax();
+    var sd = SCENARIOS_DATA;
+    var h = '';
+
+    if (sd.overview.chapter <= max) {
+      h += '<div class="codex-prose">' + sd.overview.text + '</div>';
+
+      // Scale types
+      h += '<div class="codex-section"><div class="codex-section-title">Scenario Scale</div>';
+      for (var i = 0; i < sd.scaleTypes.length; i++) {
+        var st = sd.scaleTypes[i];
+        if (st.chapter > max) continue;
+        h += '<div class="scenario-card"><div class="scenario-name">' + st.name + '</div><div class="scenario-desc">' + st.desc + '</div></div>';
+      }
+      h += '</div>';
+
+      // Named types
+      var visNamed = sd.namedTypes.filter(function(t){ return t.chapter <= max; });
+      if (visNamed.length > 0) {
+        h += '<div class="codex-section"><div class="codex-section-title">Named Scenario Types</div>';
+        for (var n = 0; n < visNamed.length; n++) {
+          h += '<div class="scenario-card"><div class="scenario-name">' + visNamed[n].name + '</div><div class="scenario-desc">' + visNamed[n].desc + '</div></div>';
+        }
+        h += '</div>';
+      }
+
+      h += '<div class="stat-card-note">' + sd.keyNote + '</div>';
+    }
+
+    document.getElementById('tab-scenarios').innerHTML = h || '<div style="color:var(--text-muted);text-align:center;padding:40px;">No scenario data at this chapter filter.</div>';
+  }
+
+  // ========== MECHANICS ==========
+  function renderMechanics() {
+    var max = getMax();
+    var md = MECHANICS_DATA;
+    var h = '';
+
+    // Contracts
+    if (md.contracts.chapter <= max) {
+      var ct = md.contracts;
+      h += '<div class="mech-card">';
+      h += '<div class="mech-title">' + ct.title + '</div>';
+      h += '<div class="codex-prose">' + ct.description + '</div>';
+      h += '<ul class="npc-list" style="margin:12px 0">';
+      for (var i = 0; i < ct.effects.length; i++) {
+        h += '<li>' + ct.effects[i] + '</li>';
+      }
+      h += '</ul>';
+
+      if (ct.amplification.chapter <= max) {
+        h += '<div class="system-init-block" style="margin-top:16px;border-left-color:var(--accent-gold-dim)">';
+        h += '<div class="skill-name" style="margin-bottom:6px">' + ct.amplification.title + '</div>';
+        h += '<div class="skill-desc">' + ct.amplification.text + '</div>';
+        h += '<div style="margin-top:8px;font-size:11px;color:var(--accent-gold-dim);font-style:italic">' + ct.amplification.peakNode + '</div>';
+        h += '</div>';
+      }
+      h += '</div>';
+    }
+
+    // Territory
+    if (md.territory.chapter <= max) {
+      var tr = md.territory;
+      h += '<div class="mech-card">';
+      h += '<div class="mech-title">' + tr.title + '</div>';
+      h += '<div class="tier-progression">';
+      for (var t = 0; t < tr.tiers.length; t++) {
+        h += '<div class="tier-row"><div class="tier-name">' + tr.tiers[t].name + '</div><div class="tier-desc">' + tr.tiers[t].desc + '</div></div>';
+      }
+      h += '</div></div>';
+    }
+
+    // Faction mechanics
+    if (md.factionMechanics.chapter <= max) {
+      var fm = md.factionMechanics;
+      h += '<div class="mech-card">';
+      h += '<div class="mech-title">' + fm.title + '</div>';
+      h += '<div class="codex-prose">' + fm.description + '</div>';
+      h += '<div class="stat-card-note" style="margin-top:12px"><strong style="color:var(--accent-gold)">Organizational Quests:</strong> ' + fm.orgQuests + '</div>';
+      if (fm.note) h += '<div style="margin-top:8px;font-size:11px;color:var(--text-muted);font-style:italic">' + fm.note + '</div>';
+      h += '</div>';
+    }
+
+    document.getElementById('tab-mechanics').innerHTML = h || '<div style="color:var(--text-muted);text-align:center;padding:40px;">No mechanics data at this chapter filter.</div>';
+  }
+
+  // ========== ALL ==========
+  function renderAll() {
+    renderOverview();
+    renderStats();
+    renderClasses();
+    renderSkills();
+    renderScenarios();
+    renderMechanics();
+  }
+
+  // Tabs
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  for (var t = 0; t < tabBtns.length; t++) {
+    tabBtns[t].addEventListener('click', function() {
+      var id = this.getAttribute('data-tab');
+      for (var x = 0; x < tabBtns.length; x++) tabBtns[x].classList.remove('active');
+      this.classList.add('active');
+      var panels = document.querySelectorAll('.tab-panel');
+      for (var p = 0; p < panels.length; p++) panels[p].classList.remove('active');
+      document.getElementById('tab-' + id).classList.add('active');
+    });
+  }
+
+  var chapterSel = document.getElementById('chapterFilter');
+  if (chapterSel) chapterSel.addEventListener('change', renderAll);
+
+  renderAll();
+
+})();
+</script>
+
+</body>
+</html>

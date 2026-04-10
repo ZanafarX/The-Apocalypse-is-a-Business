@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World — The Apocalypse Is a Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ============================================
+   WORLD PAGE — Specific Styles
+   ============================================ */
+
+/* Tab bar */
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 32px;
+  overflow-x: auto;
+}
+.tab-btn {
+  font-family: var(--font-system);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  white-space: nowrap;
+}
+.tab-btn:hover { color: var(--text-primary); }
+.tab-btn.active {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Faction card */
+.faction-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: border-color var(--transition-speed);
+}
+.faction-card:hover { border-color: var(--border-accent); }
+
+.faction-card-header {
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.faction-card-header:hover { background: var(--bg-card-hover); }
+
+.faction-header-left { flex: 1; min-width: 0; }
+
+.faction-color-bar {
+  width: 4px;
+  align-self: stretch;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.faction-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.faction-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+.faction-meta-item {
+  font-family: var(--font-system);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.faction-meta-item span {
+  color: var(--text-secondary);
+}
+
+.faction-toggle {
+  font-size: 18px;
+  color: var(--text-muted);
+  transition: transform var(--transition-speed);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.faction-card.open .faction-toggle { transform: rotate(90deg); }
+
+.faction-card-body {
+  display: none;
+  padding: 0 24px 24px;
+}
+.faction-card.open .faction-card-body { display: block; }
+
+.faction-section {
+  margin-bottom: 16px;
+}
+.faction-section-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+  margin-bottom: 6px;
+}
+.faction-section-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.faction-subgroup {
+  background: var(--system-bg);
+  border: 1px solid var(--system-border);
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin-top: 8px;
+}
+.faction-subgroup-name {
+  font-family: var(--font-system);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 4px;
+}
+.faction-subgroup-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Creature card */
+.creature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-crimson);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: border-color var(--transition-speed);
+}
+.creature-card:hover { border-color: var(--border-accent); border-left-color: var(--accent-crimson-bright); }
+
+.creature-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.creature-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.creature-tier {
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-crimson-bright);
+  background: rgba(139,45,45,0.12);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.creature-field {
+  margin-bottom: 10px;
+}
+.creature-field-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+.creature-field-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* District card */
+.district-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: border-color var(--transition-speed);
+}
+.district-card:hover { border-color: var(--border-accent); }
+
+.district-header {
+  margin-bottom: 12px;
+}
+.district-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.district-subtitle {
+  font-size: 12px;
+  color: var(--accent-gold-dim);
+  font-style: italic;
+  margin-top: 2px;
+}
+.district-control {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.district-control span { color: var(--text-secondary); }
+
+/* Front card */
+.front-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: border-color var(--transition-speed);
+}
+.front-card:hover { border-color: var(--border-accent); }
+
+.front-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.front-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.front-type {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  background: var(--accent-gold-glow);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.front-function {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.front-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .front-columns { grid-template-columns: 1fr; }
+  .tab-btn { padding: 10px 16px; font-size: 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<div class="nav-overlay" id="navOverlay"></div>
+<button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">The Apocalypse<br>Is a Business</div>
+    <div class="sidebar-subtitle">Lore Companion</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="nav-icon">⬡</span> Home</a></li>
+    <li><a href="characters.html"><span class="nav-icon">◉</span> Characters</a></li>
+    <li><a href="system.html"><span class="nav-icon">⚙</span> The System</a></li>
+    <li><a href="world.html" class="active"><span class="nav-icon">◈</span> World</a></li>
+    <li><a href="map.html"><span class="nav-icon">⊕</span> Turin Map</a></li>
+    <li><a href="timeline.html"><span class="nav-icon">▸</span> Timeline</a></li>
+  </ul>
+  <div class="nav-chapter-filter">
+    <label for="chapterFilter">Spoiler Filter</label>
+    <select class="chapter-select" id="chapterFilter">
+      <option value="99">Show All</option>
+      <option value="11">Through Chapter 11</option>
+      <option value="7">Through Chapter 7</option>
+      <option value="5">Through Chapter 5</option>
+      <option value="3">Through Chapter 3</option>
+      <option value="1">Chapter 1 Only</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main">
+
+  <div class="page-header">
+    <h1>World Codex</h1>
+    <div class="page-subtitle">◈ Factions, creatures, districts, and organizations</div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+
+    <!-- Tab bar -->
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="factions">Factions</button>
+      <button class="tab-btn" data-tab="creatures">Creatures</button>
+      <button class="tab-btn" data-tab="districts">Districts</button>
+      <button class="tab-btn" data-tab="fronts">Fronts &amp; Orgs</button>
+    </div>
+
+    <!-- FACTIONS TAB -->
+    <div class="tab-panel active" id="tab-factions"></div>
+
+    <!-- CREATURES TAB -->
+    <div class="tab-panel" id="tab-creatures"></div>
+
+    <!-- DISTRICTS TAB -->
+    <div class="tab-panel" id="tab-districts"></div>
+
+    <!-- FRONTS TAB -->
+    <div class="tab-panel" id="tab-fronts"></div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-system">⬡ Classification Window Status: Closed ⬡</div>
+  </footer>
+
+</main>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/nav.js"></script>
+<script src="js/spoiler.js"></script>
+<script src="js/data/world.js"></script>
+<script>
+(function() {
+
+  // ---- HELPERS ----
+  function getMaxChapter() {
+    var sel = document.getElementById('chapterFilter');
+    return sel ? parseInt(sel.value, 10) : 99;
+  }
+
+  // ---- RENDER FACTIONS ----
+  function renderFactions() {
+    var max = getMaxChapter();
+    var panel = document.getElementById('tab-factions');
+    var html = '';
+
+    for (var i = 0; i < FACTIONS.length; i++) {
+      var f = FACTIONS[i];
+      if (f.chapter > max) continue;
+
+      html += '<div class="faction-card" data-chapter="' + f.chapter + '">';
+      html += '  <div class="faction-card-header" onclick="this.parentElement.classList.toggle(\'open\')">';
+      html += '    <div class="faction-color-bar" style="background:' + f.color + '"></div>';
+      html += '    <div class="faction-header-left">';
+      html += '      <div class="faction-name">' + f.name + '</div>';
+      html += '      <div class="faction-meta">';
+      html += '        <div class="faction-meta-item">Type: <span>' + f.type + '</span></div>';
+      html += '        <div class="faction-meta-item">Leader: <span>' + f.leader + '</span></div>';
+      html += '        <div class="faction-meta-item">Role: <span>' + f.threat + '</span></div>';
+      html += '      </div>';
+      html += '    </div>';
+      html += '    <div class="faction-toggle">▸</div>';
+      html += '  </div>';
+
+      html += '  <div class="faction-card-body">';
+
+      html += '    <div class="faction-section">';
+      html += '      <div class="faction-section-label">Summary</div>';
+      html += '      <div class="faction-section-text">' + f.summary + '</div>';
+      html += '    </div>';
+
+      html += '    <div class="faction-section">';
+      html += '      <div class="faction-section-label">Territory</div>';
+      html += '      <div class="faction-section-text">' + f.territory + '</div>';
+      html += '    </div>';
+
+      html += '    <div class="faction-section">';
+      html += '      <div class="faction-section-label">Strengths</div>';
+      html += '      <div class="faction-section-text">' + f.strengths + '</div>';
+      html += '    </div>';
+
+      html += '    <div class="faction-section">';
+      html += '      <div class="faction-section-label">Weaknesses</div>';
+      html += '      <div class="faction-section-text">' + f.weaknesses + '</div>';
+      html += '    </div>';
+
+      html += '    <div class="faction-section">';
+      html += '      <div class="faction-section-label">Philosophy</div>';
+      html += '      <div class="faction-section-text" style="font-style:italic">' + f.philosophy + '</div>';
+      html += '    </div>';
+
+      // Subgroups
+      var visibleSubs = [];
+      for (var s = 0; s < f.subgroups.length; s++) {
+        if (f.subgroups[s].chapter <= max) visibleSubs.push(f.subgroups[s]);
+      }
+      if (visibleSubs.length > 0) {
+        html += '    <div class="faction-section">';
+        html += '      <div class="faction-section-label">Internal Groups</div>';
+        for (var v = 0; v < visibleSubs.length; v++) {
+          html += '      <div class="faction-subgroup">';
+          html += '        <div class="faction-subgroup-name">' + visibleSubs[v].name + '</div>';
+          html += '        <div class="faction-subgroup-desc">' + visibleSubs[v].desc + '</div>';
+          html += '      </div>';
+        }
+        html += '    </div>';
+      }
+
+      html += '  </div>'; // body
+      html += '</div>'; // card
+    }
+
+    if (!html) html = '<div style="color:var(--text-muted);text-align:center;padding:40px;">No factions visible at this chapter filter.</div>';
+    panel.innerHTML = html;
+  }
+
+  // ---- RENDER CREATURES ----
+  function renderCreatures() {
+    var max = getMaxChapter();
+    var panel = document.getElementById('tab-creatures');
+    var html = '';
+
+    for (var i = 0; i < CREATURES.length; i++) {
+      var c = CREATURES[i];
+      if (c.chapter > max) continue;
+
+      html += '<div class="creature-card">';
+      html += '  <div class="creature-header">';
+      html += '    <div class="creature-name">' + c.name + '</div>';
+      html += '    <div class="creature-tier">' + c.tier + '</div>';
+      html += '  </div>';
+
+      var fields = [
+        { label: 'Appearance', text: c.appearance },
+        { label: 'Behavior', text: c.behavior },
+        { label: 'Threat Assessment', text: c.threat },
+        { label: 'Notes', text: c.notes }
+      ];
+      for (var f = 0; f < fields.length; f++) {
+        if (!fields[f].text) continue;
+        html += '  <div class="creature-field">';
+        html += '    <div class="creature-field-label">' + fields[f].label + '</div>';
+        html += '    <div class="creature-field-text">' + fields[f].text + '</div>';
+        html += '  </div>';
+      }
+
+      html += '</div>';
+    }
+
+    if (!html) html = '<div style="color:var(--text-muted);text-align:center;padding:40px;">No creatures visible at this chapter filter.</div>';
+    panel.innerHTML = html;
+  }
+
+  // ---- RENDER DISTRICTS ----
+  function renderDistricts() {
+    var max = getMaxChapter();
+    var panel = document.getElementById('tab-districts');
+    var html = '';
+
+    for (var i = 0; i < DISTRICTS.length; i++) {
+      var d = DISTRICTS[i];
+      if (d.chapter > max) continue;
+
+      html += '<div class="district-card">';
+      html += '  <div class="district-header">';
+      html += '    <div class="district-name">' + d.name + '</div>';
+      html += '    <div class="district-subtitle">' + d.subtitle + '</div>';
+      html += '    <div class="district-control">Control: <span>' + d.controlledBy + '</span></div>';
+      html += '  </div>';
+
+      html += '  <div class="creature-field">';
+      html += '    <div class="creature-field-label">Character</div>';
+      html += '    <div class="creature-field-text">' + d.character + '</div>';
+      html += '  </div>';
+
+      html += '  <div class="creature-field">';
+      html += '    <div class="creature-field-label">Collapse Behavior</div>';
+      html += '    <div class="creature-field-text">' + d.collapseNotes + '</div>';
+      html += '  </div>';
+
+      if (d.keyLocations) {
+        html += '  <div class="creature-field">';
+        html += '    <div class="creature-field-label">Key Locations</div>';
+        html += '    <div class="creature-field-text">' + d.keyLocations + '</div>';
+        html += '  </div>';
+      }
+
+      html += '</div>';
+    }
+
+    if (!html) html = '<div style="color:var(--text-muted);text-align:center;padding:40px;">No districts visible at this chapter filter.</div>';
+    panel.innerHTML = html;
+  }
+
+  // ---- RENDER FRONTS ----
+  function renderFronts() {
+    var max = getMaxChapter();
+    var panel = document.getElementById('tab-fronts');
+    var html = '';
+
+    for (var i = 0; i < FRONTS.length; i++) {
+      var fr = FRONTS[i];
+      if (fr.chapter > max) continue;
+
+      html += '<div class="front-card">';
+      html += '  <div class="front-header">';
+      html += '    <div class="front-name">' + fr.name + '</div>';
+      html += '    <div class="front-type">' + fr.type + '</div>';
+      html += '  </div>';
+      html += '  <div class="front-function">' + fr.function + '</div>';
+
+      html += '  <div class="front-columns">';
+
+      html += '    <div class="creature-field">';
+      html += '      <div class="creature-field-label">Pre-Collapse</div>';
+      html += '      <div class="creature-field-text">' + fr.preCollapse + '</div>';
+      html += '    </div>';
+
+      html += '    <div class="creature-field">';
+      html += '      <div class="creature-field-label">Post-Collapse Utility</div>';
+      html += '      <div class="creature-field-text">' + fr.postCollapse + '</div>';
+      html += '    </div>';
+
+      html += '  </div>';
+      html += '</div>';
+    }
+
+    if (!html) html = '<div style="color:var(--text-muted);text-align:center;padding:40px;">No organizations visible at this chapter filter.</div>';
+    panel.innerHTML = html;
+  }
+
+  // ---- RENDER ALL ----
+  function renderAll() {
+    renderFactions();
+    renderCreatures();
+    renderDistricts();
+    renderFronts();
+  }
+
+  // ---- TABS ----
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  for (var t = 0; t < tabBtns.length; t++) {
+    tabBtns[t].addEventListener('click', function() {
+      var tabId = this.getAttribute('data-tab');
+      for (var x = 0; x < tabBtns.length; x++) tabBtns[x].classList.remove('active');
+      this.classList.add('active');
+      var panels = document.querySelectorAll('.tab-panel');
+      for (var p = 0; p < panels.length; p++) panels[p].classList.remove('active');
+      document.getElementById('tab-' + tabId).classList.add('active');
+    });
+  }
+
+  // ---- SPOILER RE-RENDER ----
+  var chapterSel = document.getElementById('chapterFilter');
+  if (chapterSel) chapterSel.addEventListener('change', renderAll);
+
+  // ---- INIT ----
+  renderAll();
+
+})();
+</script>
+
+</body>
+</html>

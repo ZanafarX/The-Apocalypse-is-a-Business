@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline — The Apocalypse Is a Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ============================================
+   TIMELINE PAGE — Specific Styles
+   ============================================ */
+
+/* Filter bar */
+.timeline-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+/* Timeline spine */
+.timeline {
+  position: relative;
+  padding-left: 36px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-subtle);
+}
+
+/* Event node */
+.tl-event {
+  position: relative;
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: tlFadeIn 0.4s ease forwards;
+}
+@keyframes tlFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dot on the spine */
+.tl-dot {
+  position: absolute;
+  left: -36px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+  z-index: 2;
+}
+
+/* Connecting line pulse for system events */
+.tl-event[data-cat="system"] .tl-dot {
+  box-shadow: 0 0 8px rgba(201,168,76,0.4);
+}
+
+/* Card */
+.tl-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 20px 24px;
+  transition: all var(--transition-speed);
+  cursor: default;
+}
+.tl-card:hover {
+  border-color: var(--border-accent);
+}
+
+/* Time marker */
+.tl-time {
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+/* Category + chapter badge row */
+.tl-badges {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.tl-cat-badge {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.tl-ch-badge {
+  font-family: var(--font-system);
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+/* Title */
+.tl-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+/* Description */
+.tl-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+/* Impact */
+.tl-impact {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 10px 14px;
+  background: var(--system-bg);
+  border-left: 2px solid var(--accent-gold-dim);
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.tl-impact-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+  margin-bottom: 4px;
+}
+
+/* Related entries */
+.tl-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.tl-related-tag {
+  font-family: var(--font-system);
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+/* No results */
+.tl-empty {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: var(--font-system);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .timeline { padding-left: 28px; }
+  .tl-dot { left: -28px; width: 10px; height: 10px; }
+  .tl-card { padding: 16px; }
+  .tl-title { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<div class="nav-overlay" id="navOverlay"></div>
+<button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">The Apocalypse<br>Is a Business</div>
+    <div class="sidebar-subtitle">Lore Companion</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><span class="nav-icon">⬡</span> Home</a></li>
+    <li><a href="characters.html"><span class="nav-icon">◉</span> Characters</a></li>
+    <li><a href="system.html"><span class="nav-icon">⚙</span> The System</a></li>
+    <li><a href="world.html"><span class="nav-icon">◈</span> World</a></li>
+    <li><a href="map.html"><span class="nav-icon">⊕</span> Turin Map</a></li>
+    <li><a href="timeline.html" class="active"><span class="nav-icon">▸</span> Timeline</a></li>
+  </ul>
+  <div class="nav-chapter-filter">
+    <label for="chapterFilter">Spoiler Filter</label>
+    <select class="chapter-select" id="chapterFilter">
+      <option value="99">Show All</option>
+      <option value="11">Through Chapter 11</option>
+      <option value="7">Through Chapter 7</option>
+      <option value="5">Through Chapter 5</option>
+      <option value="3">Through Chapter 3</option>
+      <option value="1">Chapter 1 Only</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main">
+
+  <div class="page-header">
+    <h1>Timeline</h1>
+    <div class="page-subtitle">▸ Chronological event log — System Initialization forward</div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+
+    <!-- Category filters -->
+    <div class="timeline-filters" id="timelineFilters">
+      <button class="filter-btn active" data-tl-cat="all">All</button>
+      <!-- Built by JS from TIMELINE_CATEGORIES -->
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline" id="timelineContainer"></div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-system">⬡ Classification Window Status: Closed ⬡</div>
+  </footer>
+
+</main>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/nav.js"></script>
+<script src="js/spoiler.js"></script>
+<script src="js/data/timeline.js"></script>
+<script>
+(function() {
+
+  var container = document.getElementById('timelineContainer');
+  var filterBar = document.getElementById('timelineFilters');
+  var activeCat = 'all';
+
+  // ---- BUILD FILTER BUTTONS ----
+  (function buildFilters() {
+    var html = '<button class="filter-btn active" data-tl-cat="all">All</button>';
+    for (var key in TIMELINE_CATEGORIES) {
+      var c = TIMELINE_CATEGORIES[key];
+      html += '<button class="filter-btn" data-tl-cat="' + key + '">' + c.icon + ' ' + c.label + '</button>';
+    }
+    filterBar.innerHTML = html;
+
+    var btns = filterBar.querySelectorAll('.filter-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function() {
+        activeCat = this.getAttribute('data-tl-cat');
+        var all = filterBar.querySelectorAll('.filter-btn');
+        for (var x = 0; x < all.length; x++) all[x].classList.remove('active');
+        this.classList.add('active');
+        renderTimeline();
+      });
+    }
+  })();
+
+  // ---- RENDER ----
+  function getMax() {
+    var s = document.getElementById('chapterFilter');
+    return s ? parseInt(s.value, 10) : 99;
+  }
+
+  function renderTimeline() {
+    var max = getMax();
+    var html = '';
+    var delay = 0;
+
+    for (var i = 0; i < TIMELINE_EVENTS.length; i++) {
+      var ev = TIMELINE_EVENTS[i];
+      if (ev.chapter > max) continue;
+      if (activeCat !== 'all' && ev.category !== activeCat) continue;
+
+      var cat = TIMELINE_CATEGORIES[ev.category] || { color: '#5a5650', label: ev.category, icon: '▪' };
+
+      html += '<div class="tl-event" data-cat="' + ev.category + '" style="animation-delay:' + delay + 'ms">';
+
+      // Dot
+      html += '<div class="tl-dot" style="background:' + cat.color + '"></div>';
+
+      // Card
+      html += '<div class="tl-card">';
+
+      // Time
+      html += '<div class="tl-time">' + ev.time + '</div>';
+
+      // Badges
+      html += '<div class="tl-badges">';
+      html += '<span class="tl-cat-badge" style="color:' + cat.color + ';background:' + cat.color + '12;border:1px solid ' + cat.color + '30">' + cat.icon + ' ' + cat.label + '</span>';
+      html += '<span class="tl-ch-badge">Ch. ' + ev.chapter + '</span>';
+      html += '</div>';
+
+      // Title
+      html += '<div class="tl-title">' + ev.title + '</div>';
+
+      // Description
+      html += '<div class="tl-desc">' + ev.description + '</div>';
+
+      // Impact
+      if (ev.impact) {
+        html += '<div class="tl-impact">';
+        html += '<div class="tl-impact-label">Impact</div>';
+        html += ev.impact;
+        html += '</div>';
+      }
+
+      // Related
+      if (ev.relatedEntries && ev.relatedEntries.length > 0) {
+        html += '<div class="tl-related">';
+        for (var r = 0; r < ev.relatedEntries.length; r++) {
+          html += '<span class="tl-related-tag">' + ev.relatedEntries[r] + '</span>';
+        }
+        html += '</div>';
+      }
+
+      html += '</div>'; // card
+      html += '</div>'; // event
+
+      delay += 60;
+    }
+
+    if (!html) {
+      html = '<div class="tl-empty">No events match current filters.</div>';
+    }
+
+    container.innerHTML = html;
+  }
+
+  // ---- SPOILER INTEGRATION ----
+  var chapterSel = document.getElementById('chapterFilter');
+  if (chapterSel) chapterSel.addEventListener('change', renderTimeline);
+
+  // ---- INIT ----
+  renderTimeline();
+
+})();
+</script>
+
+</body>
+</html>

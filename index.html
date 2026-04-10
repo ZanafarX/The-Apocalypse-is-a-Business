@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Apocalypse Is a Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<div class="nav-overlay" id="navOverlay"></div>
+<button class="hamburger" id="hamburgerBtn" aria-label="Open menu">☰</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">The Apocalypse<br>Is a Business</div>
+    <div class="sidebar-subtitle">Lore Companion</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active"><span class="nav-icon">⬡</span> Home</a></li>
+    <li><a href="characters.html"><span class="nav-icon">◉</span> Characters</a></li>
+    <li><a href="system.html"><span class="nav-icon">⚙</span> The System</a></li>
+    <li><a href="world.html"><span class="nav-icon">◈</span> World</a></li>
+    <li><a href="map.html"><span class="nav-icon">⊕</span> Turin Map</a></li>
+    <li><a href="timeline.html"><span class="nav-icon">▸</span> Timeline</a></li>
+  </ul>
+  <div class="nav-chapter-filter">
+    <label for="chapterFilter">Spoiler Filter</label>
+    <select class="chapter-select" id="chapterFilter">
+      <option value="99">Show All</option>
+      <option value="11">Through Chapter 11</option>
+      <option value="7">Through Chapter 7</option>
+      <option value="5">Through Chapter 5</option>
+      <option value="3">Through Chapter 3</option>
+      <option value="1">Chapter 1 Only</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-system-line">⬡ System Notification — Registration Confirmed</div>
+    <h1 class="hero-title">The Apocalypse Is <em>a Business</em></h1>
+    <p class="hero-tagline">Bad guys versus worse guys. Turin, Italy.</p>
+    <p class="hero-premise">
+      The System arrived without warning. It classified, measured, and upgraded
+      every human being on Earth — and gave them seventy-two hours to choose what
+      they would become. Cecilia Leonelli, head of a Turin crime family, chose first
+      and chose correctly. Now she is building something no other faction in the city
+      understands yet: an organization so structurally necessary that its criminal
+      nature becomes irrelevant.
+    </p>
+    <div class="hero-cta">
+      <a href="characters.html" class="btn btn-primary">Dossiers</a>
+      <a href="system.html" class="btn btn-ghost">System Codex</a>
+    </div>
+  </section>
+
+  <!-- SYSTEM BROADCASTS -->
+  <section class="section">
+    <div class="section-header">⬡ System Broadcasts — Latest Events</div>
+    <div class="broadcast-feed">
+
+      <div class="broadcast" data-chapter="11">
+        <div class="broadcast-header">
+          <span class="broadcast-type">Classification Report</span>
+          <span class="broadcast-time">Chapter 11</span>
+        </div>
+        <div class="broadcast-body">
+          <strong>NPC DISTRIBUTION CONFIRMED.</strong> The majority of the Leonelli
+          organization has been classified as NPC. Thirteen personnel outside the
+          inner circle selected their classes within the window. Luca Terranova
+          formally assigned as head of the System Analysis Division.
+        </div>
+      </div>
+
+      <div class="broadcast" data-chapter="7">
+        <div class="broadcast-header">
+          <span class="broadcast-type">Class Confirmation</span>
+          <span class="broadcast-time">Chapter 7</span>
+        </div>
+        <div class="broadcast-body">
+          <strong>CORE FIVE CLASSIFICATIONS LOCKED.</strong>
+          Fixer. Collector. Advocate. Runner. Watcher.
+          One additional entity classified: <strong>Architect</strong> — Luca Terranova.
+          Classification window remains open for registered entities city-wide.
+        </div>
+      </div>
+
+      <div class="broadcast" data-chapter="5">
+        <div class="broadcast-header">
+          <span class="broadcast-type">Acquisition</span>
+          <span class="broadcast-time">Chapter 5</span>
+        </div>
+        <div class="broadcast-body">
+          <strong>FIRST ANALYST SECURED.</strong> Entity designation: Archimede.
+          Three kilometers from Palazzo Valperga. The System Analysis Division
+          concept is now operational.
+        </div>
+      </div>
+
+      <div class="broadcast" data-chapter="1">
+        <div class="broadcast-header">
+          <span class="broadcast-type">System Alert</span>
+          <span class="broadcast-time">Chapter 1</span>
+        </div>
+        <div class="broadcast-body">
+          <strong>WELCOME TO THE NEW WORLD.</strong>
+          Your registration is confirmed. Please review your classification options.
+          You have 72 hours. Entity Cecilia Leonelli has selected: <strong>FIXER</strong>.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="section">
+    <div class="section-header">⬡ Navigation — Codex Access</div>
+    <div class="quick-links">
+      <a href="characters.html" class="quick-link-card">
+        <div class="quick-link-icon">◉</div>
+        <div class="quick-link-title">Characters</div>
+        <div class="quick-link-desc">Dossiers for the Core Five, analysts, faction leaders, and key figures across Turin.</div>
+      </a>
+      <a href="system.html" class="quick-link-card">
+        <div class="quick-link-icon">⚙</div>
+        <div class="quick-link-title">The System</div>
+        <div class="quick-link-desc">Classes, stats, skills, scenarios, contracts, and hidden mechanics.</div>
+      </a>
+      <a href="world.html" class="quick-link-card">
+        <div class="quick-link-icon">◈</div>
+        <div class="quick-link-title">World</div>
+        <div class="quick-link-desc">Factions, locations, creatures, and the texture of post-System Turin.</div>
+      </a>
+      <a href="map.html" class="quick-link-card">
+        <div class="quick-link-icon">⊕</div>
+        <div class="quick-link-title">Turin Map</div>
+        <div class="quick-link-desc">Interactive map with faction territories, key locations, and scenario markers.</div>
+      </a>
+      <a href="timeline.html" class="quick-link-card">
+        <div class="quick-link-icon">▸</div>
+        <div class="quick-link-title">Timeline</div>
+        <div class="quick-link-desc">Chronological event log from System Initialization forward.</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-system">⬡ Classification Window Status: Closed ⬡</div>
+  </footer>
+
+</main>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/nav.js"></script>
+<script src="js/spoiler.js"></script>
+
+</body>
+</html>
