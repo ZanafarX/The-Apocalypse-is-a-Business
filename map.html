@@ -263,7 +263,7 @@
     <div class="map-category-bar" id="categoryBar">
       <button class="map-cat-btn active" data-cat="all">All</button>
       <button class="map-cat-btn" data-cat="headquarters">HQ</button>
-      <button class="map-cat-btn" data-cat="safehouse">Nodes</button>
+      <button class="map-cat-btn" data-cat="safehouse">Recruitment</button>
       <button class="map-cat-btn" data-cat="strategic">Strategic</button>
       <button class="map-cat-btn" data-cat="landmark">Landmarks</button>
       <button class="map-cat-btn" data-cat="infrastructure">Infrastructure</button>
@@ -294,14 +294,11 @@
 (function() {
 
   // ---- INIT MAP ----
-  // Centered on Turin, zoom level 13
   var map = L.map('turinMap', {
     zoomControl: true,
     attributionControl: true
   }).setView([45.0703, 7.6869], 13);
 
-  // OpenStreetMap tiles — free, no key needed
-  // Using CartoDB dark tiles for thematic consistency
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
     subdomains: 'abcd',
@@ -318,7 +315,6 @@
     var style = MARKER_STYLES[loc.faction] || { color: '#888', label: 'Unknown' };
     var catInfo = CATEGORY_LABELS[loc.category] || loc.category;
 
-    // SVG circle marker
     var size = loc.icon === 'hq' ? 14 : (loc.icon === 'scenario' ? 12 : 10);
     var svgIcon = L.divIcon({
       className: 'custom-marker',
@@ -334,7 +330,6 @@
       popupAnchor: [0, -(size/2 + 4)]
     });
 
-    // Popup content
     var popup = '<div class="map-popup">';
     popup += '<div class="map-popup-faction" style="color:' + style.color + '">' + style.label + '</div>';
     popup += '<div class="map-popup-name">' + loc.name + '</div>';
@@ -382,14 +377,10 @@
     var legend = document.getElementById('mapLegend');
     var html = '<div class="map-legend-title">Factions</div>';
 
-    // Collect factions actually in use
-    var usedFactions = {};
-    for (var i = 0; i < MAP_LOCATIONS.length; i++) {
-      usedFactions[MAP_LOCATIONS[i].faction] = true;
-    }
-
+    // Show all defined factions — even those without
+    // dedicated markers — so readers see the full landscape.
+    // Click to toggle visibility of that faction's markers.
     for (var key in MARKER_STYLES) {
-      if (!usedFactions[key]) continue;
       var s = MARKER_STYLES[key];
       var dimmed = hiddenFactions[key] ? ' dimmed' : '';
       html += '<div class="legend-item' + dimmed + '" data-faction="' + key + '">';
