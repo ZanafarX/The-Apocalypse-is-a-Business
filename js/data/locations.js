@@ -248,47 +248,95 @@ var HOOD_CONFIG = {
 
   'CENTRO': {
     color: '#7a7a8a',
-    notes: 'Symbolic civic center. Piazza Castello, Via Roma, Palazzo Reale. Military presence from Day 2. High visibility, low defensibility.'
-  },
-  'QUADRILATERO ROMANO': {
-    color: '#c9a84c',
-    notes: 'Leonelli home territory. Roman-era street grid, narrow alleys, baroque palazzi. Palazzo Valperga sits at its western edge.'
+    notes: 'Historic civic and commercial heart of Turin, part of Circoscrizione 1 with Crocetta. Piazza Castello, Via Roma, Palazzo Reale, and the major arcaded boulevards. Includes the Quadrilatero Romano — the Roman-era street grid with narrow alleys and baroque palazzi.'
   },
   'AURORA': {
     color: '#d4763a',
-    notes: 'Working-class district north of the Quadrilatero. Dense immigrant population, informal economy, strong community networks. Porta Palazzo market sits at its southern edge. Dario\'s operational territory.'
+    notes: 'Historic working-class district north of the city center, part of Circoscrizione 7. Includes the Porta Palazzo quarter — home to Europe\'s largest open-air market in Piazza della Repubblica — as well as Borgo Dora and Valdocco. High immigrant population, dense informal economy, and strong community networks.'
   },
   'BARRIERA DI MILANO': {
     color: '#b33a3a',
-    notes: 'Northeast district beyond Aurora. Industrial heritage, high population density. Contested ground — no faction has claimed it by Day 4.'
+    notes: 'Industrial northeast district, part of Circoscrizione 6 with Regio Parco, Falchera, and Rebaudengo. Named for a former toll gate on the road to Milan. High population density, aging housing stock, and limited infrastructure investment. One of Turin\'s most economically precarious neighborhoods.'
   },
   'SAN DONATO': {
     color: '#6a8caf',
-    notes: 'Northwestern residential district. Post-war housing stock, Parco Dora industrial park. Luca Terranova\'s apartment is here.'
+    notes: 'Northwestern residential district, part of Circoscrizione 4 with Campidoglio and Parella. Bounded by Corso Francia, Corso Potenza, and Parco Dora. Known for the Art Nouveau villas along Corso Francia, the Torre Intesa Sanpaolo skyscraper, and a mix of students, immigrants, and working families.'
   },
   'CROCETTA': {
     color: '#5a7a5a',
-    notes: 'Affluent residential district south of the center. Politecnico di Torino campus. Bourgeois, orderly, and entirely unprepared for collapse conditions.'
+    notes: 'Affluent residential quarter south of the center, part of Circoscrizione 1 with Centro. Home to the Politecnico di Torino. Elegant late-nineteenth-century housing, quiet tree-lined streets, and an upper-middle-class residential character.'
   },
   'VANCHIGLIA': {
     color: '#4a7a9a',
-    notes: 'East of center, bordering the Po. University area, younger population. Piazza Vittorio Veneto is at its southern edge.'
+    notes: 'East of center, part of Circoscrizione 7 with Aurora and Madonna del Pilone. University neighborhood with a younger population and active cafe scene. Piazza Vittorio Veneto — Turin\'s largest piazza — opens toward the Po at its southern edge.'
   },
   'SAN SALVARIO': {
     color: '#8a7a6a',
-    notes: 'South of Porta Nuova station. Dense, diverse, commercially active. Strong candidate for early civilian self-organization.'
+    notes: 'Dense, diverse district south of Porta Nuova station, part of Circoscrizione 8. Multicultural population, active street commerce, and established community organizations. One of Turin\'s most vibrant and socially mixed neighborhoods.'
   },
-  'BORGO PO': {
+  'BORGO PO E CAVORETTO': {
     color: '#6a6a60',
-    notes: 'East bank of the Po. Residential, hilly, affluent. Corso Casale runs through it — site of the Lanza shop and Ferrero building.'
+    notes: 'East bank of the Po, part of Circoscrizione 8. Borgo Po lines the riverside with affluent villas and Corso Casale. Cavoretto sits higher on the Collina Torinese with panoramic views over the city and access to hillside parks.'
   },
   'CENISIA': {
     color: '#887766',
-    notes: 'Western residential district. Corso Francia runs through — site of the abandoned military vehicles on Day 4.'
+    notes: 'Western residential district, part of Circoscrizione 3 with San Paolo and Pozzo Strada. Includes the Cit Turin sub-neighborhood, known for its Art Nouveau architecture. The Palazzo di Giustizia (Turin\'s courthouse) is located here.'
   },
   'SAN PAOLO': {
     color: '#7a6655',
-    notes: 'Southwest residential. Working-class, dense, practical. Good candidate for early Leonelli outreach.'
+    notes: 'Southwestern working-class quarter, part of Circoscrizione 3. Historically tied to industrial employment. Strong neighborhood identity, dense housing, and active local commerce.'
+  },
+  'BORGATA VITTORIA': {
+    color: '#7a8a6a',
+    notes: 'Northern residential district, part of Circoscrizione 5 with Madonna di Campagna, Lucento, and Le Vallette. Formerly wooded and then industrial land, populated mainly during the 1950s demographic boom. Affordable housing, local markets, and proximity to Parco Dora.'
+  },
+  'FALCHERA': {
+    color: '#6a7a6a',
+    notes: 'Far northeastern public housing district, part of Circoscrizione 6. Designed in the 1950s by architect Giovanni Astengo as one of Italy\'s earliest planned suburban communities with integrated green spaces. The Laghetti di Falchera — two artificial lakes reclaimed from former gravel quarries — sit at its northern edge.'
+  },
+  'LE VALLETTE': {
+    color: '#5a6a5a',
+    notes: 'Northwestern periphery, part of Circoscrizione 5. Large post-war public housing complex built as a self-sufficient satellite quarter. Near the Allianz Stadium (Juventus) and the Le Verbene shopping center.'
+  },
+  'MADONNA DEL PILONE': {
+    color: '#8a8a6a',
+    notes: 'Hillside residential quarter on the east bank of the Po, part of Circoscrizione 7 with Aurora and Vanchiglia. Quiet, partially wooded, with limited river crossing points. Named for a pillar shrine at a historic crossing of the Po.'
+  },
+  'MADONNA DI CAMPAGNA': {
+    color: '#7a6a5a',
+    notes: 'Northern district bordering Borgata Vittoria to the east, part of Circoscrizione 5. Wide streets, green areas, and a metro station on Turin\'s Airport Line. Former agricultural zone that urbanized rapidly during the industrial era.'
+  },
+  'MERCATI GENERALI': {
+    color: '#6a6a7a',
+    notes: 'Southern district named for the rationalist wholesale market buildings designed by Umberto Cuzzi in 1932, located beyond the railway from the Lingotto complex. Part of the broader Lingotto-area urban renewal led by Renzo Piano.'
+  },
+  'MIRAFIORI NORD': {
+    color: '#5a7a7a',
+    notes: 'Southwestern residential district, part of Circoscrizione 2 with Santa Rita and Mirafiori Sud. Built largely to house factory workers arriving from southern Italy during the industrial boom. Dense apartment blocks, local schools, and the historic Borgo Mirafiori with its nineteenth-century rural core.'
+  },
+  'MIRAFIORI SUD': {
+    color: '#4a6a6a',
+    notes: 'Southern periphery, part of Circoscrizione 2. Dominated by the Fiat Mirafiori factory complex, built in 1939 and expanded in 1956 as Fiat\'s primary production plant. Working-class housing with strong ties to the factory\'s economic cycle. Home to the Orti Generali urban garden project.'
+  },
+  'NIZZA MILLEFONTI': {
+    color: '#7a7a5a',
+    notes: 'Southern district along the Po river, part of Circoscrizione 8. Named for the underground springs ("mille fonti") that once fed the area. Home to the Lingotto building (former Fiat factory, now a Renzo Piano-designed multipurpose complex), the 2006 Olympic Village, and vestiges of the 1961 Italia \'61 Expo.'
+  },
+  'PARELLA': {
+    color: '#6a7a8a',
+    notes: 'Western residential quarter, part of Circoscrizione 4 with San Donato and Campidoglio. Quiet, middle-class, with post-war housing blocks and local parks. Connected to the center via Corso Francia.'
+  },
+  'POZZO STRADA': {
+    color: '#7a8a7a',
+    notes: 'Far western residential district near the ring road, part of Circoscrizione 3 with San Paolo and Cenisia. Suburban character with lower building density. Corso Francia runs through it toward Rivoli and the Alpine valleys.'
+  },
+  'REGIO PARCO': {
+    color: '#8a7a7a',
+    notes: 'Northeast district along the Dora Riparia river, part of Circoscrizione 6. Named for a sixteenth-century royal castle built by Emanuele Filiberto, destroyed during the French siege in the eighteenth century. Working-class neighborhood undergoing urban renewal.'
+  },
+  'SANTA RITA': {
+    color: '#7a6a7a',
+    notes: 'Southwestern residential district, part of Circoscrizione 2 with Mirafiori Nord and Mirafiori Sud. One of Turin\'s most populated neighborhoods, with dense housing, strong local commerce along Via Tripoli and Corso Sebastopoli, and a solidly middle-class residential character.'
   }
 
   // Add more as needed. Neighborhoods not listed here will still
