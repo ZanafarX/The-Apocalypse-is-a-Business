@@ -223,6 +223,85 @@ var CATEGORY_LABELS = {
 };
 
 // ============================================
+// NEIGHBORHOOD CONFIG
+// ============================================
+// Colors and narrative notes for each quartiere.
+// The key should match the neighborhood name exactly as it
+// appears in the GeoJSON file's properties (check after converting).
+//
+// After you convert the shapefile, open quartieri.geojson in a
+// text editor and look for the property name used for each
+// neighborhood (likely "NOME_QU" or "NOME" or "QUARTIERE").
+// Set HOOD_NAME_PROPERTY below to match that key.
+//
+// HOW TO ADD NOTES FOR A NEW NEIGHBORHOOD:
+// 1. Find the neighborhood name in the GeoJSON
+// 2. Add a matching entry to HOOD_CONFIG below
+// ============================================
+
+var HOOD_NAME_PROPERTY = 'DENOM';  // ← Change this to match your GeoJSON property name
+
+var HOOD_CONFIG = {
+  // The keys below are guesses based on common Turin quartiere names.
+  // After you convert the shapefile, check the actual property values
+  // and update these keys to match exactly (case-sensitive).
+
+  'CENTRO': {
+    color: '#7a7a8a',
+    notes: 'Symbolic civic center. Piazza Castello, Via Roma, Palazzo Reale. Military presence from Day 2. High visibility, low defensibility.'
+  },
+  'QUADRILATERO ROMANO': {
+    color: '#c9a84c',
+    notes: 'Leonelli home territory. Roman-era street grid, narrow alleys, baroque palazzi. Palazzo Valperga sits at its western edge.'
+  },
+  'AURORA': {
+    color: '#d4763a',
+    notes: 'Working-class district north of the Quadrilatero. Dense immigrant population, informal economy, strong community networks. Porta Palazzo market sits at its southern edge. Dario\'s operational territory.'
+  },
+  'BARRIERA DI MILANO': {
+    color: '#b33a3a',
+    notes: 'Northeast district beyond Aurora. Industrial heritage, high population density. Contested ground — no faction has claimed it by Day 4.'
+  },
+  'SAN DONATO': {
+    color: '#6a8caf',
+    notes: 'Northwestern residential district. Post-war housing stock, Parco Dora industrial park. Luca Terranova\'s apartment is here.'
+  },
+  'CROCETTA': {
+    color: '#5a7a5a',
+    notes: 'Affluent residential district south of the center. Politecnico di Torino campus. Bourgeois, orderly, and entirely unprepared for collapse conditions.'
+  },
+  'VANCHIGLIA': {
+    color: '#4a7a9a',
+    notes: 'East of center, bordering the Po. University area, younger population. Piazza Vittorio Veneto is at its southern edge.'
+  },
+  'SAN SALVARIO': {
+    color: '#8a7a6a',
+    notes: 'South of Porta Nuova station. Dense, diverse, commercially active. Strong candidate for early civilian self-organization.'
+  },
+  'BORGO PO': {
+    color: '#6a6a60',
+    notes: 'East bank of the Po. Residential, hilly, affluent. Corso Casale runs through it — site of the Lanza shop and Ferrero building.'
+  },
+  'CENISIA': {
+    color: '#887766',
+    notes: 'Western residential district. Corso Francia runs through — site of the abandoned military vehicles on Day 4.'
+  },
+  'SAN PAOLO': {
+    color: '#7a6655',
+    notes: 'Southwest residential. Working-class, dense, practical. Good candidate for early Leonelli outreach.'
+  }
+
+  // Add more as needed. Neighborhoods not listed here will still
+  // render with a default gray color — only the notes will be missing.
+};
+
+// Default style for neighborhoods not in HOOD_CONFIG
+var HOOD_DEFAULT = {
+  color: '#555555',
+  notes: null
+};
+
+// ============================================
 // TEMPLATE — Copy this block to add a new location:
 // ============================================
 /*

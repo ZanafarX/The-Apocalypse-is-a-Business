@@ -78,7 +78,7 @@
   color: var(--accent-gold) !important;
 }
 
-/* Popup interior */
+/* Popup interior — locations */
 .map-popup {
   padding: 16px;
 }
@@ -130,6 +130,38 @@
   border-top: 1px solid var(--border-subtle);
 }
 
+/* Popup interior — neighborhoods */
+.hood-popup {
+  padding: 14px;
+}
+.hood-popup-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.hood-popup-notes {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Neighborhood label on map */
+.hood-label {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow:
+    0 0 4px rgba(0,0,0,0.9),
+    0 0 8px rgba(0,0,0,0.7),
+    1px 1px 2px rgba(0,0,0,0.9);
+}
+
 /* Legend panel */
 .map-legend {
   position: absolute;
@@ -141,7 +173,7 @@
   border-radius: 6px;
   padding: 16px;
   max-width: 220px;
-  max-height: 50vh;
+  max-height: 60vh;
   overflow-y: auto;
 }
 .map-legend-title {
@@ -151,13 +183,13 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--accent-gold-dim);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .legend-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 0;
+  padding: 3px 0;
   cursor: pointer;
   transition: opacity var(--transition-speed);
 }
@@ -170,9 +202,21 @@
   border-radius: 50%;
   flex-shrink: 0;
 }
+.legend-swatch {
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.15);
+}
 .legend-label {
   font-size: 11px;
   color: var(--text-secondary);
+}
+.legend-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 8px 0;
 }
 
 /* Category filter */
@@ -210,11 +254,30 @@
   background: rgba(22,20,18,0.95);
 }
 
+/* Loading / error state */
+.hood-status {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  font-family: var(--font-system);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+.hood-status.error { color: var(--accent-crimson-bright); }
+.hood-status.hidden { display: none; }
+
 /* Responsive */
 @media (max-width: 768px) {
   .map-wrapper { height: calc(100vh - 60px); }
   .map-legend { bottom: 12px; left: 12px; padding: 12px; max-width: 180px; }
   .map-category-bar { top: 64px; }
+  .hood-label { font-size: 8px; letter-spacing: 1px; }
 }
 </style>
 </head>
@@ -274,10 +337,10 @@
     <div id="turinMap"></div>
 
     <!-- Legend -->
-    <div class="map-legend" id="mapLegend">
-      <div class="map-legend-title">Factions</div>
-      <!-- Built by JS -->
-    </div>
+    <div class="map-legend" id="mapLegend"></div>
+
+    <!-- Neighborhood load status -->
+    <div class="hood-status hidden" id="hoodStatus"></div>
   </div>
 
   <footer class="site-footer">
@@ -290,6 +353,7 @@
 <script src="js/nav.js"></script>
 <script src="js/spoiler.js"></script>
 <script src="js/data/locations.js"></script>
+<script src="js/data/quartieri.js"></script>
 <script>
 (function() {
 
@@ -297,10 +361,11 @@
   var map = L.map('turinMap', {
     zoomControl: true,
     attributionControl: true
-  }).setView([45.0703, 7.6869], 13);
+  }).setView([45.0703, 7.6869], 14);
 
+  // CartoDB dark tiles — free, no key
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
@@ -309,8 +374,119 @@
   var allMarkers = [];
   var activeCategory = 'all';
   var hiddenFactions = {};
+  var showNeighborhoods = true;
+  var neighborhoodLayer = null;
+  var neighborhoodLabels = [];
+  var hoodNames = []; // for legend
 
-  // ---- CREATE CUSTOM MARKER ----
+  // ---- NEIGHBORHOOD OVERLAYS (from GeoJSON file) ----
+  var statusEl = document.getElementById('hoodStatus');
+
+  function showStatus(msg, isError) {
+    statusEl.textContent = msg;
+    statusEl.className = 'hood-status' + (isError ? ' error' : '');
+    if (!isError) {
+      setTimeout(function() { statusEl.className = 'hood-status hidden'; }, 3000);
+    }
+  }
+
+  function getHoodStyle(name) {
+    // Try exact match first, then uppercase, then title case
+    var cfg = HOOD_CONFIG[name]
+           || HOOD_CONFIG[name.toUpperCase()]
+           || HOOD_CONFIG[name.replace(/\b\w/g, function(c) { return c.toUpperCase(); })]
+           || HOOD_DEFAULT;
+    return cfg;
+  }
+
+  function loadNeighborhoods() {
+    // Check if the quartieri.js script loaded the variable
+    if (typeof QUARTIERI_GEOJSON === 'undefined') {
+      showStatus('quartieri.js not found — see setup instructions', true);
+      console.log('Neighborhood data not loaded.');
+      console.log('1. Download: https://risorse.comune.torino.it/opendata/geodata/quartieri.zip');
+      console.log('2. Convert at: https://mapshaper.org (export as GeoJSON)');
+      console.log('3. Add "var QUARTIERI_GEOJSON = " at start, ";" at end');
+      console.log('4. Save as: js/data/quartieri.js');
+      return;
+    }
+
+    neighborhoodLayer = L.geoJSON(QUARTIERI_GEOJSON, {
+      style: function(feature) {
+        var name = feature.properties[HOOD_NAME_PROPERTY] || '';
+        var cfg = getHoodStyle(name);
+        return {
+          color: cfg.color,
+          weight: 1.5,
+          opacity: 0.40,
+          fillColor: cfg.color,
+          fillOpacity: 0.10,
+          dashArray: '4 4'
+        };
+      },
+      onEachFeature: function(feature, layer) {
+        var name = feature.properties[HOOD_NAME_PROPERTY] || 'Unknown';
+        var cfg = getHoodStyle(name);
+
+        // Store name for legend
+        hoodNames.push({ name: name, color: cfg.color });
+
+        // Popup
+        var html = '<div class="hood-popup">';
+        html += '<div class="hood-popup-name">' + name + '</div>';
+        if (cfg.notes) {
+          html += '<div class="hood-popup-notes">' + cfg.notes + '</div>';
+        }
+        html += '</div>';
+        layer.bindPopup(html, { maxWidth: 280 });
+
+        // Floating label at polygon center
+        var center = layer.getBounds().getCenter();
+        var label = L.marker(center, {
+          icon: L.divIcon({
+            className: 'hood-label',
+            html: '<span style="color:' + cfg.color + '">' + name + '</span>',
+            iconSize: null,
+            iconAnchor: [0, 0]
+          }),
+          interactive: false
+        });
+        neighborhoodLabels.push(label);
+      }
+    });
+
+    if (showNeighborhoods) {
+      neighborhoodLayer.addTo(map);
+      for (var i = 0; i < neighborhoodLabels.length; i++) {
+        neighborhoodLabels[i].addTo(map);
+      }
+    }
+
+    showStatus('Neighborhoods loaded (' + hoodNames.length + ' zones)', false);
+    buildLegend();
+  }
+
+  function toggleNeighborhoods() {
+    showNeighborhoods = !showNeighborhoods;
+
+    if (neighborhoodLayer) {
+      if (showNeighborhoods) {
+        neighborhoodLayer.addTo(map);
+        for (var i = 0; i < neighborhoodLabels.length; i++) {
+          neighborhoodLabels[i].addTo(map);
+        }
+      } else {
+        map.removeLayer(neighborhoodLayer);
+        for (var i = 0; i < neighborhoodLabels.length; i++) {
+          map.removeLayer(neighborhoodLabels[i]);
+        }
+      }
+    }
+
+    buildLegend();
+  }
+
+  // ---- LOCATION MARKERS ----
   function createMarker(loc) {
     var style = MARKER_STYLES[loc.faction] || { color: '#888', label: 'Unknown' };
     var catInfo = CATEGORY_LABELS[loc.category] || loc.category;
@@ -346,13 +522,9 @@
     var marker = L.marker([loc.lat, loc.lng], { icon: svgIcon })
       .bindPopup(popup, { maxWidth: 300 });
 
-    return {
-      marker: marker,
-      data: loc
-    };
+    return { marker: marker, data: loc };
   }
 
-  // ---- RENDER MARKERS ----
   function renderMarkers() {
     var maxChapter = getMaxChapter();
 
@@ -372,15 +544,19 @@
     }
   }
 
-  // ---- BUILD LEGEND ----
+  // ---- LEGEND ----
   function buildLegend() {
     var legend = document.getElementById('mapLegend');
-    var html = '<div class="map-legend-title">Factions</div>';
+    var html = '';
 
-    // Show all defined factions — even those without
-    // dedicated markers — so readers see the full landscape.
-    // Click to toggle visibility of that faction's markers.
+    // Faction markers
+    html += '<div class="map-legend-title">Factions</div>';
+    var usedFactions = {};
+    for (var i = 0; i < MAP_LOCATIONS.length; i++) {
+      usedFactions[MAP_LOCATIONS[i].faction] = true;
+    }
     for (var key in MARKER_STYLES) {
+      if (!usedFactions[key]) continue;
       var s = MARKER_STYLES[key];
       var dimmed = hiddenFactions[key] ? ' dimmed' : '';
       html += '<div class="legend-item' + dimmed + '" data-faction="' + key + '">';
@@ -389,16 +565,71 @@
       html += '</div>';
     }
 
+    // Neighborhoods (only if GeoJSON loaded)
+    if (hoodNames.length > 0) {
+      html += '<div class="legend-divider"></div>';
+      html += '<div class="map-legend-title">Neighborhoods</div>';
+
+      var toggleClass = showNeighborhoods ? '' : ' dimmed';
+      html += '<div class="legend-item' + toggleClass + '" data-hood-toggle="all">';
+      html += '  <div class="legend-swatch" style="background:rgba(255,255,255,0.15)"></div>';
+      html += '  <span class="legend-label" style="font-style:italic">' + (showNeighborhoods ? 'Hide All' : 'Show All') + '</span>';
+      html += '</div>';
+
+      // Deduplicate and sort
+      var seen = {};
+      var unique = [];
+      for (var n = 0; n < hoodNames.length; n++) {
+        if (!seen[hoodNames[n].name]) {
+          seen[hoodNames[n].name] = true;
+          unique.push(hoodNames[n]);
+        }
+      }
+      unique.sort(function(a, b) { return a.name.localeCompare(b.name); });
+
+      for (var u = 0; u < unique.length; u++) {
+        html += '<div class="legend-item" data-hood-name="' + unique[u].name + '">';
+        html += '  <div class="legend-swatch" style="background:' + unique[u].color + ';opacity:0.6"></div>';
+        html += '  <span class="legend-label">' + unique[u].name + '</span>';
+        html += '</div>';
+      }
+    }
+
     legend.innerHTML = html;
 
-    // Click to toggle
-    var items = legend.querySelectorAll('.legend-item');
-    for (var j = 0; j < items.length; j++) {
-      items[j].addEventListener('click', function() {
-        var f = this.getAttribute('data-faction');
-        hiddenFactions[f] = !hiddenFactions[f];
+    // Faction toggle clicks
+    var factionItems = legend.querySelectorAll('[data-faction]');
+    for (var f = 0; f < factionItems.length; f++) {
+      factionItems[f].addEventListener('click', function() {
+        var fKey = this.getAttribute('data-faction');
+        hiddenFactions[fKey] = !hiddenFactions[fKey];
         this.classList.toggle('dimmed');
         renderMarkers();
+      });
+    }
+
+    // Neighborhood toggle
+    var hoodToggle = legend.querySelector('[data-hood-toggle]');
+    if (hoodToggle) {
+      hoodToggle.addEventListener('click', function() {
+        toggleNeighborhoods();
+      });
+    }
+
+    // Neighborhood name clicks — fly to area
+    var hoodItems = legend.querySelectorAll('[data-hood-name]');
+    for (var h = 0; h < hoodItems.length; h++) {
+      hoodItems[h].addEventListener('click', function() {
+        var name = this.getAttribute('data-hood-name');
+        if (!neighborhoodLayer) return;
+
+        neighborhoodLayer.eachLayer(function(layer) {
+          var layerName = layer.feature.properties[HOOD_NAME_PROPERTY] || '';
+          if (layerName === name) {
+            map.flyToBounds(layer.getBounds(), { duration: 0.8, padding: [40, 40] });
+            layer.openPopup();
+          }
+        });
       });
     }
   }
@@ -414,12 +645,11 @@
     });
   }
 
-  // ---- SPOILER INTEGRATION ----
+  // ---- SPOILER ----
   function getMaxChapter() {
     var sel = document.getElementById('chapterFilter');
     return sel ? parseInt(sel.value, 10) : 99;
   }
-
   var chapterSel = document.getElementById('chapterFilter');
   if (chapterSel) {
     chapterSel.addEventListener('change', renderMarkers);
@@ -430,7 +660,8 @@
     allMarkers.push(createMarker(MAP_LOCATIONS[i]));
   }
 
-  buildLegend();
+  loadNeighborhoods(); // async — loads GeoJSON, builds legend when done
+  buildLegend();       // initial legend with just factions
   renderMarkers();
 
 })();
