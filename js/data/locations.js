@@ -25,14 +25,14 @@ var MAP_LOCATIONS = [
     id: 'palazzo-valperga',
     name: 'Palazzo Valperga',
     subtitle: 'Leonelli HQ — Day 1 Base',
-    lat: 45.074702,
-    lng: 7.679325,
+    lat: 45.067751,
+    lng: 7.6806806,
     chapter: 1,
     faction: 'leonelli',
     category: 'headquarters',
     icon: 'hq',
-    description: 'Leonelli operational headquarters. Via della Consolata, Quadrilatero Romano. A four-story late baroque palazzo with multiple entry points, reinforced interiors, and adjacent controlled properties. Pre-collapse, ground floor housed a private consulting office; first floor a members-only dining club. Upper floors: secure offices, document archive, signal-blocked meeting room. Two cellar levels.',
-    notes: 'Chosen pre-collapse for operational resilience. By Day 2, the private dining room has become a war room. By Day 4, the building houses the Core Five, the System Analysis Division, sheltered civilians, and a growing roster of recruits. The north gate is the site of the first direct combat with Ferro Patto operatives.'
+    description: 'Leonelli operational headquarters. Via Vittorio Alfieri, Quadrilatero Romano. A four-story late baroque palazzo with multiple entry points, reinforced interiors, and adjacent controlled properties. Pre-System, ground floor housed a private consulting office; first floor a members-only dining club. Upper floors: apartments, secure offices, document archive, signal-blocked meeting room. Two cellar levels.',
+    notes: 'Chosen pre-System for operational resilience. By Day 2, the private dining room has become a war room. By Day 4, the building houses the core syndicate members, the System Analysis Division, and a growing roster of recruits.'
   },
 
   // ==========================================
@@ -63,7 +63,7 @@ var MAP_LOCATIONS = [
     faction: 'leonelli',
     category: 'safehouse',
     icon: 'node',
-    description: 'A residential building on Corso Casale, east bank of the Po. Ermilo Ferrero (RaptorSix) and his sister were barricaded on the top floor during the Night of First Measure. Four armed men from a rival group had attempted to take them hours earlier; two neighbors were killed on the second floor. Cecilia\'s team cleared the building, interrogated a survivor, and extracted the siblings.',
+    description: 'A residential building on Corso Casale, east bank of the Po. Ermilo Ferrero (RaptorSix) and his wife Lorena were barricaded on the top floor during the Night of First Measure. Four armed men from a rival group had attempted to take them hours earlier; two neighbors were killed on the second floor. Cecilia\'s team cleared the building, interrogated a survivor, and extracted the siblings.',
     notes: 'The survivor named Marinelli as the group\'s backer. The dead analyst Davide Lanza\'s notebook contained Ferrero\'s address with the note "top floor / use rear entrance" — both groups were working from the same list.'
   },
 
@@ -111,20 +111,6 @@ var MAP_LOCATIONS = [
     icon: 'scenario',
     description: 'On Day 4, Cecilia\'s team found two armored military vehicles abandoned in the center of Corso Francia, doors open, engines dead. Bullet holes clustered in patterns indicating the soldiers hadn\'t expected the angles. Blood on the asphalt, no bodies. Cecilia recovered a military map marked with safe routes and fallback positions.',
     notes: 'Nearby, the team encountered Paride Ricci — a former Polizia supervisor who had kept a group of civilians alive in a basement through the Night of First Measure. He and his people joined the Leonellis.'
-  },
-
-  {
-    id: 'palazzo-gate-battle',
-    name: 'North Gate — Palazzo Valperga',
-    subtitle: 'Ferro Patto Engagement',
-    lat: 45.075162,
-    lng: 7.679063,
-    chapter: 10,
-    faction: 'leonelli',
-    category: 'scenario',
-    icon: 'scenario',
-    description: 'During the Night of First Measure, Bianca\'s north team returned to Palazzo Valperga under fire — pursued by Ferro Patto operatives and a creature. The attackers included individuals with active System abilities: one erected shimmering barriers, another threw concussive force blasts, a third had perception through cover. The roof team engaged with flood lamps and fire. A creature was caught and killed in the closing gate.',
-    notes: 'First direct combat between the Leonellis and players with active System abilities. The team brought back Giulia Conti (class: Artificer). The dead creature hung in the gate until morning.'
   },
 
   // ==========================================
@@ -186,20 +172,6 @@ var MAP_LOCATIONS = [
     description: 'Turin\'s largest piazza, opening toward the Po. On the first night, Dario observed a man standing on a park bench near the piazza, preaching about levels, classes, and quests to a growing crowd. Two listeners began glowing — hands, mostly. "Like light, but not from a bulb."',
     notes: 'The man said anyone who didn\'t choose a class would get a bad one. That it was a test. Dario left before anything else happened. He wasn\'t wrong about that part.'
   },
-
-  {
-    id: 'via-garibaldi',
-    name: 'Via Garibaldi',
-    subtitle: 'Looted Corridor — Day 2',
-    lat: 45.07080,
-    lng: 7.67550,
-    chapter: 4,
-    faction: 'contested',
-    category: 'landmark',
-    icon: 'landmark',
-    description: 'Turin\'s main pedestrian street. By Day 2, shops were mostly shuttered. A tabacchi had been forced open, its grate bent back. Pharmacies showed the same selective logic: obvious goods taken, specialist medicines left by people who couldn\'t read the labels. Blood pressure cuffs and reading glasses remained on the floor.',
-    notes: 'Cecilia noted: "We don\'t have anyone with clinical training. That\'s going to be expensive before long."'
-  }
 
 ];
 
