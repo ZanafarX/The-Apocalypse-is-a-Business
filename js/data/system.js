@@ -57,7 +57,7 @@ var STATS_DATA = {
       name: 'ACUITY',
       chapter: 1,
       description: 'Pattern recognition, strategic planning, information processing speed.',
-      users: 'Primary: Matteo (Advocate), Luca (Architect). Secondary: Cecilia (Fixer), Bianca (Watcher).'
+      users: 'Primary: Matteo (Advocate), Luca (Architect). Secondary: Cecilia (Fixer)'
     },
     {
       name: 'FORCE',
@@ -75,19 +75,19 @@ var STATS_DATA = {
       name: 'VELOCITY',
       chapter: 1,
       description: 'Movement speed, reaction time, positional advantage.',
-      users: 'No known primary user among Core cast.'
+      users: 'Primary: Bianca (Watcher).'
     },
     {
       name: 'PRECISION',
       chapter: 1,
       description: 'Accuracy, fine motor control, targeting quality.',
-      users: 'No known primary user among Core cast.'
+      users: 'Secondary: Bianca (Watcher)'
     },
     {
       name: 'EDGE',
-      chapter: 7,
+      chapter: 1,
       description: 'Opportunistic action, misdirection, exploit windows, and the margin between what should work and what does. Governs classes whose power derives from positioning and timing rather than raw output.',
-      users: 'Primary: Dario (Runner), Bianca (Watcher).',
+      users: 'Primary: Dario (Runner)',
       note: 'The seventh stat. Not listed in the initialization message. Not announced. Discovered through class behavior. Its existence is inferred, not stated.'
     }
   ],
@@ -95,14 +95,14 @@ var STATS_DATA = {
   secondaryStats: [
     {
       name: 'INFAMY',
-      chapter: 7,
+      chapter: 13,
       description: 'Accumulates through acts the System categorizes as fear-generating — killing under observation, enforcing agreements by violence, breaking resistance publicly. Does not reset.',
       effects: 'High Infamy improves intimidation, underworld compliance, and command weight. Also escalates enemy aggression, Hero faction targeting, and bounty values.',
       note: 'The System tracks it because it is useful information about what an entity is becoming.'
     },
     {
       name: 'AUTHORITY',
-      chapter: 99,
+      chapter: 13,
       description: 'Unlocked only at faction recognition. Measures organizational command power. Scales with hierarchy quality, membership, territory, and active agreement density.',
       effects: 'An individual without a recognized faction has zero Authority regardless of every other stat. Authority is what converts individual Player capability into institutional power.',
       note: null
@@ -135,7 +135,7 @@ var CLASSES_DATA = [
   {
     id: 'collector',
     name: 'COLLECTOR',
-    chapter: 7,
+    chapter: 8,
     holder: 'Ruggiero Montini',
     descriptor: 'For those who claim what is owed.',
     tier: 'Origin (I)',
@@ -150,7 +150,7 @@ var CLASSES_DATA = [
   {
     id: 'advocate',
     name: 'ADVOCATE',
-    chapter: 7,
+    chapter: 8,
     holder: 'Matteo Vascari',
     descriptor: 'For those who make terms hold.',
     tier: 'Origin (I)',
@@ -165,7 +165,7 @@ var CLASSES_DATA = [
   {
     id: 'runner',
     name: 'RUNNER',
-    chapter: 7,
+    chapter: 20,
     holder: 'Dario Fioretti',
     descriptor: 'For those who move faster than consequences.',
     tier: 'Origin (I)',
@@ -180,12 +180,12 @@ var CLASSES_DATA = [
   {
     id: 'watcher',
     name: 'WATCHER',
-    chapter: 7,
+    chapter: 8,
     holder: 'Bianca Severa',
     descriptor: 'For those who see what others will not.',
     tier: 'Origin (I)',
-    primary: 'EDGE',
-    secondary: 'ACUITY',
+    primary: 'VELOCITY',
+    secondary: 'PRECISION',
     classLine: ['Watcher', 'Night Auditor', 'Widow Fang', 'Silence Collector'],
     ceiling: null,
     buildDirection: 'Precision eliminator and intelligence operative. Excels in conditions of silence — physical, informational, and territorial. The most dangerous member of the crew in the specific situations she is designed for, which she has taken care to make very common.',
@@ -195,7 +195,7 @@ var CLASSES_DATA = [
   {
     id: 'architect',
     name: 'ARCHITECT',
-    chapter: 7,
+    chapter: 8,
     holder: 'Luca Terranova',
     descriptor: 'For those who build what others use.',
     tier: 'Origin (I)',
@@ -236,7 +236,7 @@ var CLASSES_DATA = [
 // ==========================================
 
 var SKILLS_OVERVIEW = {
-  chapter: 7,
+  chapter: 1,
   acquisition: 'Skills emerge from behavior — the System formalizes what an entity consistently does rather than offering a selection menu.',
   visibleRanks: 'Ranks 1 through 3 are visible and announced.',
   hiddenRanks: 'Ranks 4 and above exist but are never announced. Unlock conditions are specific behavioral convergences the System does not explain. Their existence must be inferred from anomalous effects. Every hidden rank unlock is a story beat.',
@@ -249,7 +249,7 @@ var SKILLS_DATA = [
   {
     id: 'marked-ledger',
     name: 'MARKED LEDGER',
-    chapter: 1,
+    chapter: 13,
     holder: 'Cecilia Leonelli',
     class: 'FIXER',
     type: 'Passive',
@@ -275,19 +275,19 @@ var SKILLS_DATA = [
 
   {
     id: 'terms',
-    name: 'TERMS',
-    chapter: 7,
+    name: 'WEIGHT OF OFFICE',
+    chapter: 13,
     holder: 'Cecilia Leonelli',
     class: 'FIXER',
-    type: 'Active — Developing',
-    description: 'Cecilia can impose a conditional behavioral constraint on a target during direct engagement. At low ranks: a brief hesitation window. At higher ranks: a battlefield compulsion — an opponent under TERMS cannot voluntarily move toward a protected target, use a specific named skill, or take a specific named action for the duration.',
+    type: 'Active — Presence-based',
+    description: 'Cecilia can impose a conditional behavioral constraint on a target during direct engagement. At low ranks: a brief hesitation window. At higher ranks: a battlefield compulsion — an opponent under WEIGHT OF OFFICE cannot voluntarily move toward a protected target, use a specific named skill, or take a specific named action for the duration.',
     ranks: []
   },
 
   {
     id: 'iron-threshold',
     name: 'IRON THRESHOLD',
-    chapter: 7,
+    chapter: 17,
     holder: 'Ruggiero Montini',
     class: 'COLLECTOR',
     type: 'Passive',
@@ -303,7 +303,7 @@ var SKILLS_DATA = [
   {
     id: 'corridor',
     name: 'CORRIDOR',
-    chapter: 7,
+    chapter: 17,
     holder: 'Ruggiero Montini',
     class: 'COLLECTOR',
     type: 'Active',
@@ -314,7 +314,7 @@ var SKILLS_DATA = [
   {
     id: 'binding-clause',
     name: 'BINDING CLAUSE / BREACH PENALTY',
-    chapter: 7,
+    chapter: 22,
     holder: 'Matteo Vascari',
     class: 'ADVOCATE',
     type: 'Active',
@@ -330,7 +330,7 @@ var SKILLS_DATA = [
   {
     id: 'precedent',
     name: 'PRECEDENT',
-    chapter: 7,
+    chapter: 22,
     holder: 'Matteo Vascari',
     class: 'ADVOCATE',
     type: 'Passive',
@@ -341,7 +341,7 @@ var SKILLS_DATA = [
   {
     id: 'read-the-room',
     name: 'READ THE ROOM',
-    chapter: 7,
+    chapter: 20,
     holder: 'Dario Fioretti',
     class: 'RUNNER',
     type: 'Passive',
@@ -352,7 +352,7 @@ var SKILLS_DATA = [
   {
     id: 'supply-line',
     name: 'SUPPLY LINE',
-    chapter: 7,
+    chapter: 20,
     holder: 'Dario Fioretti',
     class: 'RUNNER',
     type: 'Active',
@@ -363,7 +363,7 @@ var SKILLS_DATA = [
   {
     id: 'quiet-approach',
     name: 'QUIET APPROACH',
-    chapter: 7,
+    chapter: 18,
     holder: 'Bianca Severa',
     class: 'WATCHER',
     type: 'Passive',
@@ -374,7 +374,7 @@ var SKILLS_DATA = [
   {
     id: 'silence-field',
     name: 'SILENCE FIELD',
-    chapter: 7,
+    chapter: 18,
     holder: 'Bianca Severa',
     class: 'WATCHER',
     type: 'Active',
@@ -385,7 +385,7 @@ var SKILLS_DATA = [
   {
     id: 'close-coverage',
     name: 'CLOSE COVERAGE',
-    chapter: 7,
+    chapter: 18,
     holder: 'Bianca Severa',
     class: 'WATCHER',
     type: 'Active',
@@ -396,7 +396,7 @@ var SKILLS_DATA = [
   {
     id: 'load-bearing',
     name: 'LOAD BEARING',
-    chapter: 7,
+    chapter: 34,
     holder: 'Luca Terranova',
     class: 'ARCHITECT',
     type: 'Passive — Developing',
@@ -407,7 +407,7 @@ var SKILLS_DATA = [
   {
     id: 'framework',
     name: 'FRAMEWORK',
-    chapter: 7,
+    chapter: 34,
     holder: 'Luca Terranova',
     class: 'ARCHITECT',
     type: 'Active — Developing',
@@ -442,23 +442,23 @@ var SKILLS_DATA = [
 var SCENARIOS_DATA = {
 
   overview: {
-    chapter: 7,
+    chapter: 8,
     text: 'The System generates Scenarios regularly and at multiple scales. They are the primary progression engine for all Players. The Leonellis approach every Scenario as an intelligence event first and a survival event second.'
   },
 
   scaleTypes: [
-    { name: 'City-Wide Scenarios', chapter: 7, desc: 'Affect all of Turin simultaneously. Short-notice announcement. Secondary objectives never disclosed. All registered entities receive the alert. Creatures manifest at scale. Fixed duration. Rewards distributed on performance and undisclosed factors. Most dramatically reshape the faction landscape.' },
-    { name: 'District Scenarios', chapter: 99, desc: 'Affect a specific area. May or may not be announced outside the affected district. Shorter, more focused, with localized creature types or conditions tied to the district\'s character. A well-positioned faction can extract disproportionate value.' },
-    { name: 'Faction Scenarios', chapter: 99, desc: 'Issued directly to recognized factions. Invisible to non-members. Specific objectives, sometimes against rival factions. The System\'s method of stress-testing faction structure and rewarding organizational depth.' },
-    { name: 'Individual Scenarios', chapter: 99, desc: 'Issued to specific Players. Private. Emerge from behavioral patterns the System has been observing. Calibrated to push the Player toward a specific threshold or test a specific capacity.' },
-    { name: 'Recurring Minor Scenarios', chapter: 99, desc: 'Occur somewhere in the city every day. Not every district sees one, but at the city level, Scenarios are a permanent background condition.' }
+    { name: 'City-Wide Scenarios', chapter: 8, desc: 'Affect all of Turin simultaneously. Short-notice announcement. Secondary objectives never disclosed. All registered entities receive the alert. Creatures manifest at scale. Fixed duration. Rewards distributed on performance and undisclosed factors. Most dramatically reshape the faction landscape.' },
+    { name: 'District Scenarios', chapter: 8, desc: 'Affect a specific area. May or may not be announced outside the affected district. Shorter, more focused, with localized creature types or conditions tied to the district\'s character. A well-positioned faction can extract disproportionate value.' },
+    { name: 'Faction Scenarios', chapter: 8, desc: 'Issued directly to recognized factions. Invisible to non-members. Specific objectives, sometimes against rival factions. The System\'s method of stress-testing faction structure and rewarding organizational depth.' },
+    { name: 'Individual Scenarios', chapter: 38, desc: 'Issued to specific Players. Private. Emerge from behavioral patterns the System has been observing. Calibrated to push the Player toward a specific threshold or test a specific capacity.' },
+    { name: 'Recurring Minor Scenarios', chapter: 8, desc: 'Occur somewhere in the city every day. Not every district sees one, but at the city level, Scenarios are a permanent background condition.' }
   ],
 
   namedTypes: [
-    { name: 'CLAIM', chapter: 7, desc: 'Contest a designated node between factions. The fight around the node often yields more than the node itself.' },
-    { name: 'SUPPLY', chapter: 99, desc: 'Spawn resource caches weighted to district economic value, not random distribution.' },
-    { name: 'RANKING', chapter: 99, desc: 'Publish individual and faction standings city-wide. The event is the information.' },
-    { name: 'HIDDEN OBJECTIVE', chapter: 99, desc: 'Announce a stated primary objective that is not the real one.' },
+    { name: 'CLAIM', chapter: 8, desc: 'Contest a designated node between factions. The fight around the node often yields more than the node itself.' },
+    { name: 'SUPPLY', chapter: 8, desc: 'Spawn resource caches weighted to district economic value, not random distribution.' },
+    { name: 'RANKING', chapter: 8, desc: 'Publish individual and faction standings city-wide. The event is the information.' },
+    { name: 'HIDDEN OBJECTIVE', chapter: 8, desc: 'Announce a stated primary objective that is not the real one.' },
     { name: 'NARRATIVE', chapter: 99, desc: 'The rarest type. Structural choices with permanent, irreversible consequences that reshape city conditions. The most significant Leonelli advantages and most serious threats arrive through Narrative Events.' }
   ],
 
@@ -473,7 +473,7 @@ var SCENARIOS_DATA = {
 var MECHANICS_DATA = {
 
   contracts: {
-    chapter: 7,
+    chapter: 23,
     title: 'Contracts',
     description: 'Formalized agreements carry System-enforceable weight. Most factions do not know contracts exist as a mechanic. The Leonellis discover, develop, and exploit them first because Matteo\'s professional life already runs on binding agreements.',
     effects: [
@@ -482,7 +482,7 @@ var MECHANICS_DATA = {
       'At higher development: compulsion effects, territory-linked bonuses, interaction with Cecilia\'s MARKED LEDGER'
     ],
     amplification: {
-      chapter: 7,
+      chapter: 99,
       title: 'Turin Contract Amplification',
       text: 'Hidden mechanic. Contract and oath effects receive a significant bonus when executed at specific Turin locations with documented esoteric or lodge history — certain piazzas, underground chambers, specific buildings. Not announced by the System. Discoverable. Matteo finds it at Palazzo Scorza during an early negotiation. Reshapes how the Leonellis choose every future negotiation venue.',
       peakNode: 'The Superga summit is the highest-amplification node in the city. The Fiamma Eterna holds it without knowing what it is mechanically.'

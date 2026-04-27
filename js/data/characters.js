@@ -35,30 +35,30 @@ var CHARACTERS = [
     primaryStat: 'PRESENCE',
     secondaryStat: 'ACUITY',
     stats: {
-      presence: 90,
+      presence: 95,
       acuity: 80,
       force: 25,
       resilience: 35,
       velocity: 40,
       precision: 50,
-      edge: 0
+      edge: 65
     },
-    appearance: 'Shorter than the others, slim, compact build. Ash-blonde bob cut at the jaw, bright green eyes, young face, sharp chin. Deceptively small in a room full of larger people — never physically imposing, always visually controlled. Wears an immaculate tailored black suit, white blouse, minimal jewelry, concealed blades.',
+    appearance: 'Age 26. Shorter than the others, slim, compact build. Ash-blonde bob cut at the jaw, bright green eyes, young face, sharp chin. Deceptively small in a room full of larger people — never physically imposing, always visually controlled. Wears an immaculate tailored black suit, white blouse, minimal jewelry, concealed blades.',
     summary: 'Protagonist. Head of the Leonelli crime family. Calm, exact, patient. Speaks softly and rarely repeats herself. Notices leverage points immediately: debts, habits, fear, ambition. Polite on purpose. Protects her people because they are hers, not because she is merciful. Straightens her cuffs before making a threat. Lets silence run long if it pressures the other person.',
     coreFlaw: 'Underestimates irrational actors because she expects self-interest to govern behavior.',
     skills: [
       {
         name: 'MARKED LEDGER',
         type: 'Passive',
-        chapter: 1,
+        chapter: 13,
         desc: 'Through sustained interaction, Cecilia identifies a target\'s primary vulnerability — the thing they most fear losing. The System formalizes this as a catalogued flag that enhances all her actions against that target.',
         ranks: 'Ranks 1–3 visible. Hidden Rank 4 unlocks when she eliminates a Marked target also operating under an active Breach Penalty — becomes FINAL ACCOUNT.'
       },
       {
-        name: 'TERMS',
-        type: 'Active — Developing',
-        chapter: 7,
-        desc: 'Cecilia can impose a conditional behavioral constraint on a target during direct engagement. At low ranks, creates a brief hesitation window. At higher ranks, functions as a battlefield compulsion.',
+        name: 'WEIGHT OF OFFICE',
+        type: 'Active — Presence-based',
+        chapter: 13,
+        desc: 'A command presence effect projected in a defined radius. Entities within range who fail a Resilience check experience hesitation — a physical reluctance to take hostile action against Cecilia or a designated ally. Does not work on enemies with very high Resilience or specific immunity skills. Scales poorly against fanatical states.',
         ranks: null
       },
       {
@@ -91,18 +91,18 @@ var CHARACTERS = [
     tier: 'Origin (I)',
     classLine: 'Watcher → Night Auditor → Widow Fang → Silence Collector',
     descriptor: 'For those who see what others will not.',
-    primaryStat: 'EDGE',
-    secondaryStat: 'ACUITY',
+    primaryStat: 'VELOCITY',
+    secondaryStat: 'PRECISION',
     stats: {
-      presence: 40,
-      acuity: 75,
+      presence: 35,
+      acuity: 55,
       force: 35,
-      resilience: 30,
-      velocity: 70,
-      precision: 85,
-      edge: 90
+      resilience: 35,
+      velocity: 90,
+      precision: 75,
+      edge: 50
     },
-    appearance: 'Tall, slim, almost severe. Long black hair in a single braid. Pale skin, light violet or gray-lilac eyes, narrow face, unreadable expression. Moves without wasted motion; when standing still, she is the stillest person in the room. Fitted black suit, pale shirt, slim tie, flat shoes.',
+    appearance: 'Age 27. Tall, slim, almost severe. Long black hair in a single braid. Pale skin, light violet or gray-lilac eyes, narrow face, unreadable expression. Moves without wasted motion; when standing still, she is the stillest person in the room. Fitted black suit, pale shirt, slim tie, flat shoes.',
     summary: 'Leonelli intelligence chief, assassin, and internal security. Reserved, exact, unsentimental. Speaks less than anyone else and listens more. Positions herself where she can see doors and reflections. Blinks infrequently when focused. Rarely laughs. Loves Cecilia with dangerous, absolute devotion — expressed through attention, readiness, and the speed with which she moves against threats.',
     coreFlaw: 'Can escalate to elimination faster than Cecilia prefers. Trusts almost no one outside the Core Five.',
     skills: [
@@ -156,9 +156,9 @@ var CHARACTERS = [
       resilience: 85,
       velocity: 30,
       precision: 45,
-      edge: 0
+      edge: 40
     },
-    appearance: 'Tallest or nearly tallest in the group. Broad shoulders, thick neck, heavy hands, completely bald. Square jaw, deep brow, narrow eyes, one visible scar at the temple and cheek. Looks like a wall in a suit. Black suit cut for a heavy frame, dark shirt, dark tie, plain heavy-soled shoes.',
+    appearance: 'Age 43. Tallest in the group. Broad shoulders, thick neck, heavy hands, completely bald. Square jaw, deep brow, narrow eyes, one visible scar at the temple and cheek. Looks like a wall in a suit. Black suit cut for a heavy frame, dark shirt, dark tie, plain heavy-soled shoes.',
     summary: 'Leonelli enforcer and collections chief. Quiet, disciplined, literal. Does not posture. Jokes rarely, and when he does it is dry and blunt. Checks exits and chokepoints automatically. Rolls his shoulders before a fight. Most openly protective of Cecilia. Argues for decisive force when others deliberate. Excels in corridors, stairwells, and cramped terrain.',
     coreFlaw: 'Impatient with liars, cowards, and ornamental authority. Argues for decisive force when deliberation may be wiser.',
     skills: [
@@ -205,9 +205,9 @@ var CHARACTERS = [
       resilience: 25,
       velocity: 20,
       precision: 40,
-      edge: 0
+      edge: 50
     },
-    appearance: 'Lean, older than the others, silver-gray hair combed back. Trimmed beard, narrow mouth, long nose, angular cheekbones. Wears dark glasses or lightly tinted lenses — when he removes them, it should matter. Immaculate charcoal or black suit, pale shirt, dark tie.',
+    appearance: 'Age 49. Lean, silver-gray hair combed back. Trimmed beard, narrow mouth, long nose, angular cheekbones. Wears dark glasses or lightly tinted lenses — when he removes them, it should matter. Immaculate charcoal or black suit, pale shirt, dark tie.',
     summary: 'Leonelli consigliere. Controlled, educated, exact. Best speaker in formal settings, most dangerous writer in the group. Can argue with Cecilia directly without losing her respect because he argues with evidence, not sentiment. Cleans his glasses when thinking. Corrects imprecise wording mid-sentence. Reads contracts twice even when he wrote them. Transforms criminal administration into System-backed leverage through contract mechanics.',
     coreFlaw: 'Pride in his intellect is his primary flaw — too much faith in comprehensible systems.',
     skills: [
@@ -256,7 +256,7 @@ var CHARACTERS = [
       precision: 60,
       edge: 85
     },
-    appearance: 'Lean, athletic build. Dark blue-black hair, longer on top, always deliberately unruly. Short beard or careful stubble. Tinted glasses worn low enough to show his grin. Handsome in an unserious, dangerous way. Sharp black suit with a flashier cut than the others, blue tie or accent.',
+    appearance: 'Age 32. Lean, athletic build. Dark blue-black hair, longer on top, always deliberately unruly. Short beard or careful stubble. Tinted glasses worn low enough to show his grin. Handsome in an unserious, dangerous way. Sharp black suit with a flashier cut than the others, blue tie or accent.',
     summary: 'Leonelli operator. Fast-talking, charming, observant. Flirts and needles people on purpose to test how tightly wound they are. Underneath that, ruthless and practical. Fidgets with his cufflinks. Samples food and drink first in unfamiliar places. Never forgets an insult but pretends he did. Reaches spaces and people the others cannot.',
     coreFlaw: 'Takes risks because he trusts his own adaptability — his primary flaw.',
     skills: [
@@ -307,9 +307,9 @@ var CHARACTERS = [
       resilience: 20,
       velocity: 25,
       precision: 35,
-      edge: 0
+      edge: 30
     },
-    appearance: 'Age 28. Average height, lean from forgetting to eat. Dark hair, usually unkempt. Wears glasses.',
+    appearance: 'Age 26. Average height, lean from forgetting to eat. Dark hair, usually unkempt. Wears glasses.',
     summary: 'Co-protagonist. First Leonelli analyst. Pre-collapse data analyst whose real intellectual life was MMORPG economy modeling — his crafting simulators had thousands of users. Posted a 900-word class-selection breakdown more accurate than anything else available in Turin. Calm, methodical, speaks in systems. Non-combat. The analyst the Division is built around.',
     coreFlaw: 'Internally aware that he is indispensable, humiliated, and constrained. Most likely to seek leverage through control of information rather than direct confrontation.',
     skills: [
@@ -422,7 +422,7 @@ var CHARACTERS = [
     primaryStat: null,
     secondaryStat: null,
     stats: null,
-    appearance: 'Luca\'s sister. Further physical description pending.',
+    appearance: 'Age 24. Luca\'s sister. Long auburn hair.',
     summary: 'The most observant civilian in the building. She is not a prisoner. She is not an asset. She is a person in an impossible situation who has decided that understanding the situation is more useful than objecting to it. Building a picture of the Leonelli organization from the inside, noting its structures, loyalties, tensions, and gaps. Whether she engaged with the class selection window has not been confirmed.',
     coreFlaw: null,
     skills: [],
@@ -486,10 +486,10 @@ var CHARACTERS = [
   },
 
   {
-    id: 'voss',
-    name: 'Padre Elia Voss',
+    id: 'salvatore',
+    name: 'Padre Nero Salvatore',
     alias: null,
-    portrait: 'img/characters/voss.png',
+    portrait: 'img/characters/salvatore.png',
     chapter: 99,
     faction: 'fiamma-eterna',
     role: 'faction-leader',
@@ -502,7 +502,7 @@ var CHARACTERS = [
     secondaryStat: null,
     stats: null,
     appearance: 'Age 58. Lean and angular, silver hair worn longer than fashionable. Quiet hands. Radiates authority from stillness.',
-    summary: 'Believes the System is a divine selection event, sincerely and entirely. He is not cruel — he is indifferent to suffering that falls outside his transcendent purpose. Declines to prevent violence when it serves his organization. Cannot be placed in a leverage map because his motivations are not self-interest in any form Cecilia can engage.',
+    summary: 'Believes the System is a divine selection event, sincerely and entirely. He is not cruel. He is indifferent to suffering that falls outside his transcendent purpose. Declines to prevent violence when it serves his organization. Cannot be placed in a leverage map because his motivations are not self-interest in any form Cecilia can engage.',
     coreFlaw: 'The living instance of Cecilia\'s core flaw.',
     skills: [],
     relationships: [
@@ -534,8 +534,8 @@ var CHARACTERS = [
   },
 
   {
-    id: 'moretti',
-    name: 'Capitano Andrea Moretti',
+    id: 'leto',
+    name: 'Capitano Vitale Leto',
     alias: null,
     portrait: 'img/characters/moretti.png',
     chapter: 99,
@@ -549,8 +549,8 @@ var CHARACTERS = [
     primaryStat: null,
     secondaryStat: null,
     stats: null,
-    appearance: 'Age 38. Compact, methodical, specific in his language in a way that reminds Cecilia of Matteo.',
-    summary: 'Carabinieri captain. Selected his class in the first twelve hours. Has done the same analysis Cecilia did about the post-System power landscape and reached different conclusions about what his responsibilities require. He will appear before his affiliation is clear and remain ambiguous longer than the reader expects.',
+    appearance: 'Age 45. Compact, methodical, specific in his language in a way that reminds Cecilia of Matteo.',
+    summary: 'Carabinieri captain. A single Carabinieri unit operating out of a Centro Storico station with a higher-than-average rate of Player-class personnel because its commanding officer privately encouraged class selection from the first day. Still operates as law enforcement. Still wears the uniform. Increasingly divergent from institutional norms in capability and in operational independence.',
     coreFlaw: 'The gap between the institution he serves and the reality he operates in grows wider every day.',
     skills: [],
     relationships: [
@@ -621,11 +621,11 @@ var CHARACTERS = [
     secondaryStat: 'PRESENCE',
     stats: null,
     appearance: 'Age 51. Pre-collapse corporate attorney and logistics consultant.',
-    summary: 'Assembling a protection-and-services operation with corporate branding: System-backed security contracts, supply chain restoration offers, the presentation of institutional normality as a product. He dresses predation in legitimacy. He knows he does this. He does not consider it a problem. The Matteo-Fasce dynamic is the story\'s most interesting professional rivalry.',
+    summary: 'Assembling a protection-and-services operation with corporate branding: System-backed security contracts, supply chain restoration offers, the presentation of institutional normality as a product. He dresses predation in legitimacy. He knows he does this. He does not consider it a problem.',
     coreFlaw: 'Believes he is something better than the Leonellis. Cecilia finds this distinction operationally irrelevant and personally contemptible.',
     skills: [],
     relationships: [
-      { name: 'Matteo Vascari', detail: 'Most interesting professional rivalry in the story. Doing the same thing from different starting positions.', chapter: 99 }
+      { name: 'Matteo Vascari', detail: 'Professional rival. Doing the same thing from different starting positions.', chapter: 99 }
     ]
   }
 
