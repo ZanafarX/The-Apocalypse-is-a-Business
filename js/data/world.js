@@ -160,39 +160,207 @@ var FACTIONS = [
 var CREATURES = [
 
   {
-    id: 'prowlers',
-    name: 'Prowlers',
+    id: 'river-prowler',
+    name: 'River Prowler (Predatore Fluviale)',
     tier: 'Tier 1',
-    chapter: 7,
+    chapter: 4,
     category: 'scenario-entity',
-    appearance: 'Roughly human-scale. Elongated limbs, low center of gravity, directional speed that exceeds human capacity without looking supernatural. Do not look magical — they look like something nature could have produced and didn\'t, until now.',
+    appearance: 'Roughly human-scale. Long, low-slung bodies covered in an oily, black-and-blue chitinous carapace.',
     behavior: 'Pack predators deployed city-wide during the Night of First Measure. Hunt isolated individuals and stragglers. Avoid coordinated resistance. Retreat from organized response.',
-    threat: 'Manageable for any organized group with combat capacity. Dangerous to isolated civilians and uncoordinated groups.',
+    threat: 'Their primary attack is a high-velocity, close-quarters lunge that deals kinetic and piercing damage',
     notes: 'First creatures encountered. Establish the baseline threat level and the cost of disorganization.'
   },
-
+  
   {
-    id: 'sentinels',
-    name: 'Territorial Sentinels',
-    tier: 'Tier 2',
-    chapter: 7,
+    id: 'cobblestone-skitterer',
+    name: 'Cobblestone Skitterer (Ragno dei Sanpietrini)',
+    tier: 'Tier 1',
+    chapter: 99,
     category: 'scenario-entity',
-    appearance: 'Stationary entities appearing at high-value System nodes — market entrances, freight yards, industrial access points.',
-    behavior: 'Do not hunt; they hold positions on the System\'s behalf. Defeating one yields a territorial claim bonus and a supply cache. Most factions misread them as standard threats and shelter in place — the correct response is engagement.',
-    threat: 'Significant individual threat. Requires coordinated group engagement. The discrepancy in faction rewards is the first breadcrumb toward hidden objectives.',
-    notes: 'The faction that clears Sentinels while others hide gains the first measurable advantage. This is the System Analysis Division\'s first proof of concept.'
+    appearance: 'Small, heavily mutated arachnids whose carapaces perfectly mimic the color and rough texture of Turin\'s traditional sanpietrini cobblestones.',
+    behavior: 'Infest the narrow streets of the Quadrilatero and the Centro Storico. Individually trivial, but operate via highly coordinated pack-aggro. A single ignored bite can cascade into full paralysis within minutes.',
+    threat: 'Stacking [Numbing Toxin] debuff drains agility and stamina. Trivial in isolation; potentially fatal through cumulative neglect.',
+    notes: null
   },
 
   {
-    id: 'apex',
-    name: 'The Apex',
-    tier: 'Tier 3',
-    chapter: 7,
+    id: 'slag-crawler',
+    name: 'Slag Crawler (Strisciante di Scorie)',
+    tier: 'Tier 1',
+    chapter: 99,
     category: 'scenario-entity',
-    appearance: 'One per scenario event. Appears at the highest-value System node in the zone.',
-    behavior: 'Not defeatable by any Book One faction. Engagement costs more than it can return. Correct response: avoidance and observation.',
-    threat: 'Existential. Do not engage. The information value of its location exceeds the combat value of attempting to fight it.',
-    notes: 'During the Night of First Measure, the Apex appears at Superga, marking the hilltop as System-significant. The Fiamma Eterna interprets it as a guardian. Both conclusions — avoid it, something important is here — are correct.'
+    appearance: 'Heavily mutated insectoid scavengers that incorporate consumed metals, plastics, and concrete directly into their outer shells.',
+    behavior: 'Drawn instinctively to Turin\'s industrial districts — Lingotto and Mirafiori. Their corrosive mandibles chew through raw industrial materials, which their biology then grafts as armor.',
+    threat: 'Physical defense scales dynamically with recent consumption. A Slag Crawler fed on automotive steel is functionally immune to low-level slashing and kinetic attacks. Highly vulnerable to acid and high-tier fire.',
+    notes: null
+  },
+
+  {
+    id: 'fog-weaver',
+    name: 'Fog Weaver (Tessitore di Nebbia)',
+    tier: 'Tier 1',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Tall, spectral, elongated entities that drift over boulevards and riverbanks during early morning hours.',
+    behavior: 'Active in Turin\'s characteristic autumn fog. Generate localized mana-infused fog banks that limit visual perception and dampen auditory signals. Rarely engage in melee — prefer to exhaust prey.',
+    threat: 'Persistent [Disorientation] debuff within their aura. Mana-draining tendrils slowly exhaust trapped targets until collapse. Dangerous for their attrition value more than raw damage.',
+    notes: null
+  },
+
+  {
+    id: 'echo-hound',
+    name: 'Echo Hound (Segugio dell\'Eco)',
+    tier: 'Tier 1',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Hairless, heavily muscled quadrupeds with pale blind eyes and massive bat-like auditory canals.',
+    behavior: 'Roam the wider avenues — Corso Regina Margherita — in packs of three to five. Hunt via System-mana tracking and echolocation. Operate as the System\'s mid-tier pursuit predators.',
+    threat: '[Resonating Howl] locks onto a target and immediately alerts all hostile entities within a two-block radius. The howl also applies a brief low-level sonic stun against under-leveled Players. Danger multiplies rapidly with proximity to other enemy types.',
+    notes: null
+  },
+
+  {
+    id: 'catacomb-ghoul',
+    name: 'Catacomb Ghoul (Divoratore delle Catacombe)',
+    tier: 'Tier 2',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Gaunt, subterranean horrors adapted to Turin\'s extensive network of historical underground tunnels, cellars, and crypts.',
+    behavior: 'Spawn exclusively in darkness. Violently photophobic — will not pursue prey onto the surface during daylight. Highly aggressive to anyone entering the cellars, swarming immediately.',
+    threat: 'Claw attacks apply [Rot], which nullifies natural healing entirely and reduces healing potion and Mender skill effectiveness by 75%. The underground is categorically more dangerous than street-level as a result.',
+    notes: null
+  },
+
+  {
+    id: 'territorial-sentinel',
+    name: 'Territorial Sentinel (Sentinella di Nodo)',
+    tier: 'Tier 3',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Massive, heavily armored monolithic entities that incorporate local architecture into their bodies — wrought-iron fencing, streetlamps formed into halos of spikes.',
+    behavior: 'Do not roam. Spawn specifically to guard high-value System nodes, territorial claim points, and high-tier supply caches. Cannot be bypassed by stealth; the System requires destruction to claim the anchored territory.',
+    threat: 'Pure stat-check. Tremendous AoE kinetic attacks, shockwaves, and immense health pools. Requires a coordinated raid group. Not a threat to be absorbed into operational planning — a gate.',
+    notes: null
+  },
+
+  {
+    id: 'ironline-centipede',
+    name: 'Ironline Centipede (Scolopendra dei Binari)',
+    tier: 'Tier 2',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Massive, multi-segmented insectoids with dense carapaces that mimic the color and texture of rusted industrial steel.',
+    behavior: 'Have claimed Turin\'s abandoned tram lines and rail corridors — Porta Nuova and Porta Susa. Use the metal rails to accelerate to lethal speeds. Highly predictable in pathing.',
+    threat: 'Friction during movement generates [Electrified Carapace], discharging shock damage against melee attackers. High linear mobility makes them lethal in their corridors. Pathing predictability makes them susceptible to coordinated traps.',
+    notes: null
+  },
+
+  {
+    id: 'galleria-harpy',
+    name: 'Galleria Harpy (Arpia di Vetro)',
+    tier: 'Tier 1',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Vicious avian predators with feathers rewritten by the System into razor-sharp translucent crystalline structures. Nest in the upper rafters of Turin\'s glass-roofed 19th-century arcades.',
+    behavior: 'Attack by dive-bombing from skylights. Deliberately shatter glass canopies and windows during engagements as a primary tactic, not a side effect.',
+    threat: '[Shrapnel Rain] AoE from shattered glass creates area denial. Crystalline feathers inflict [Laceration], a stacking bleed debuff. Environmental damage potential makes enclosed arcade spaces high-risk.',
+    notes: null
+  },
+
+  {
+    id: 'siphon-fiend',
+    name: 'Siphon Fiend (Demone Sottrattore)',
+    tier: 'Tier 1',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Bulbous, leech-like aberrations roughly the size of large dogs.',
+    behavior: 'Congregate around stalled traffic and abandoned petrol stations on the city\'s outer avenues. Feed indiscriminately on petrochemicals, battery acid, and biological fluids.',
+    threat: 'Spit viscous flammable bile to slow targets. Igniting a Siphon Fiend — by elemental magic or environmental hazard — triggers catastrophic [Combustion], detonating violently across a wide blast radius. A trap or a mistake depending on who\'s in range.',
+    notes: null
+  },
+
+  {
+    id: 'piazza-shade',
+    name: 'Piazza Shade (Ombra della Piazza)',
+    tier: 'Tier 2',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Drifting, silhouette-like horrors that haunt Turin\'s vast empty squares — Piazza Statuto, Piazza Vittorio Veneto — exclusively at night.',
+    behavior: 'The System has weaponized Turin\'s centuries-old reputation as a European capital of esoteric energy. Incorporeal and passive in daylight hours; territorial and aggressive after dark.',
+    threat: 'Exceptionally high physical evasion. Functionally immune to standard ballistics. Attacks bypass physical armor, applying [Soul Drain] — a direct siphon of Mana and Stamina. Require System-infused weaponry or elemental magic to reliably kill.',
+    notes: null
+  },
+
+  {
+    id: 'briar-stag',
+    name: 'Briar Stag (Cervo di Rovo)',
+    tier: 'Tier 1',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Large mutated deer whose skeletal structures have aggressively fused with mana-infused brambles and thorn vines.',
+    behavior: 'Found predominantly on the Collina Torinese and the roads leading to Superga. Highly territorial.',
+    threat: 'Primary threat is a heavy kinetic charge. On impact, vines slough from the antlers and apply [Rooted], pinning the target and leaving them highly vulnerable to follow-up strikes.',
+    notes: null
+  },
+
+  {
+    id: 'cornice-lurker',
+    name: 'Cornice Lurker (Acquattato dei Cornicioni)',
+    tier: 'Tier 2',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Winged, stony entities that cling to the Baroque facades, gutters, and balconies of the Centro Storico. During daylight, enter a state of petrification and flawlessly mimic architectural grotesques and statues.',
+    behavior: 'Active at night or when triggered. Exploit extreme vertical mobility to dive from rooftops.',
+    threat: '[Crushing Grip] grapple attack lifts targets off the ground and drops them. Direct damage is moderate; resulting fall damage onto cobblestones is frequently fatal. Daytime camouflage makes them nearly undetectable until engaged.',
+    notes: null
+  },
+
+  {
+    id: 'riverbank-dredge',
+    name: 'Riverbank Dredge (Dragatore Fluviale)',
+    tier: 'Tier 2',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Hulking masses of dense muscle and river detritus. Larger and slower than the River Prowler.',
+    behavior: 'Lurk in the shallow mudbanks and industrial runoff zones of the Po and Dora rivers.',
+    threat: 'Massive health pools. Ranged attacks hurl concrete-dense clumps of hardened mud. Hits apply [Heavy Burden], drastically reducing Player movement speed and temporarily degrading low-tier armor durability.',
+    notes: null
+  },
+
+  {
+    id: 'ossuary-amalgam',
+    name: 'Ossuary Amalgam (Amalgama dell\'Ossario)',
+    tier: 'Tier 3',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Grotesque, shifting conglomerates of animated bone, wrought-iron grave fencing, and shattered tomb masonry bound together by thick System mana.',
+    behavior: 'Concentrated in Turin\'s Monumental Cemetery. Passively absorbs nearby smaller undead and fresh corpses. Localized boss-tier threat.',
+    threat: '[Macabre Regeneration] heals by absorbing nearby remains, demanding high-burst damage to outpace it. Delivers devastating [Cleave] AoE attacks using chunks of marble headstones. Requires burst-damage combinations rather than sustained attrition.',
+    notes: null
+  },
+
+  {
+    id: 'valentino-stalker',
+    name: 'Valentino Stalker (Predatore del Valentino)',
+    tier: 'Tier 2',
+    chapter: 99,
+    category: 'scenario-entity',
+    appearance: 'Sleek, heavily mutated apex felines with dark fur altered by the System to passively bend ambient light, creating a natural shimmering cloaking effect.',
+    behavior: 'Have turned Parco del Valentino into a lethal hunting ground. Passive cloaking is always active within their territory.',
+    threat: 'Passively apply [Stalked] to any Player entering their territory, significantly increasing critical strike chance on the opening attack. Bianca Severa has spent considerable time observing them to reverse-engineer their cloaking mechanics for the Watcher class.',
+    notes: null
+  },
+
+  {
+    id: 'razorwing-flock',
+    name: 'Razor-wing Flock (Stormo Tagliente)',
+    tier: 'Tier 1',
+    chapter: 34,
+    category: 'scenario-entity',
+    appearance: 'Turin\'s city pigeons, brutally rewritten by Initialization. Wings calcified and hardened into jagged metallic edges. Roost on statues, traffic lights, and window ledges across the entire city.',
+    behavior: 'Individually trivial but aggro in flocks of twenty to fifty. Ubiquitous urban presence — more environmental pressure than discrete encounter.',
+    threat: 'Swarm behavior creates a localized [Vortex of Blades] AoE. Highly lethal to Unawakened civilians or low-level Players caught in the open without overhead cover. Functions as a constant ambient hazard forcing shelter discipline.',
+    notes: null
   }
 
 ];
