@@ -2,23 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Turin Map — The Apocalypse Is a Business</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<!-- Leaflet CSS & JS — free, no API key needed -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
 /* ============================================
-   MAP PAGE — Specific Styles
+   MAP PAGE — Responsive Redesign
    ============================================ */
+
+/* Reset main padding so map can fill */
+.main {
+  padding: 0 !important;
+}
+.page-header {
+  padding: 16px 24px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.site-footer {
+  display: none; /* hide footer on map page — reclaim vertical space */
+}
 
 .map-wrapper {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
-  min-height: 500px;
+  height: calc(100vh - 70px);
+  min-height: 480px;
+  overflow: hidden;
 }
 
 #turinMap {
@@ -27,29 +39,36 @@
   background: var(--bg-primary);
 }
 
-/* Dark map tiles override */
+/* ---- Leaflet overrides ---- */
 .leaflet-container {
   background: var(--bg-primary);
   font-family: var(--font-body);
 }
+.leaflet-control-zoom {
+  margin: 12px !important;
+  border: none !important;
+}
 .leaflet-control-zoom a {
-  background: var(--bg-secondary) !important;
+  background: rgba(22,20,18,0.95) !important;
   color: var(--text-primary) !important;
   border-color: var(--border-subtle) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .leaflet-control-zoom a:hover {
   background: var(--bg-card-hover) !important;
+  color: var(--accent-gold) !important;
 }
 .leaflet-control-attribution {
-  background: rgba(14,13,11,0.8) !important;
+  background: rgba(14,13,11,0.7) !important;
   color: var(--text-muted) !important;
   font-size: 9px !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
-.leaflet-control-attribution a {
-  color: var(--text-secondary) !important;
-}
+.leaflet-control-attribution a { color: var(--text-secondary) !important; }
 
-/* Custom popups */
+/* ---- Popups ---- */
 .leaflet-popup-content-wrapper {
   background: var(--bg-secondary) !important;
   border: 1px solid var(--border-subtle) !important;
@@ -74,210 +93,480 @@
   font-size: 18px !important;
   padding: 6px 8px 0 0 !important;
 }
-.leaflet-popup-close-button:hover {
-  color: var(--accent-gold) !important;
-}
+.leaflet-popup-close-button:hover { color: var(--accent-gold) !important; }
 
-/* Popup interior — locations */
-.map-popup {
-  padding: 16px;
-}
+.map-popup { padding: 16px; }
 .map-popup-faction {
   font-family: var(--font-system);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 4px;
 }
 .map-popup-name {
   font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 2px;
+  font-size: 18px; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 2px;
 }
 .map-popup-subtitle {
   font-family: var(--font-system);
-  font-size: 10px;
-  color: var(--text-muted);
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+  font-size: 10px; color: var(--text-muted);
+  letter-spacing: 1px; margin-bottom: 10px;
 }
 .map-popup-category {
   display: inline-block;
   font-family: var(--font-system);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 2px;
-  margin-bottom: 10px;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 2px; margin-bottom: 10px;
 }
 .map-popup-desc {
-  font-size: 12px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 8px;
+  font-size: 12px; color: var(--text-secondary);
+  line-height: 1.6; margin-bottom: 8px;
 }
 .map-popup-notes {
-  font-size: 11px;
-  color: var(--text-muted);
-  font-style: italic;
-  line-height: 1.5;
-  padding-top: 8px;
-  border-top: 1px solid var(--border-subtle);
+  font-size: 11px; color: var(--text-muted);
+  font-style: italic; line-height: 1.5;
+  padding-top: 8px; border-top: 1px solid var(--border-subtle);
 }
 
-/* Popup interior — neighborhoods */
-.hood-popup {
-  padding: 14px;
-}
+.hood-popup { padding: 14px; }
 .hood-popup-name {
   font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 6px;
+  font-size: 16px; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 6px;
 }
 .hood-popup-notes {
-  font-size: 12px;
-  color: var(--text-secondary);
+  font-size: 12px; color: var(--text-secondary);
   line-height: 1.6;
 }
 
-/* Neighborhood label on map */
+/* ---- Floating neighborhood labels ---- */
 .hood-label {
   font-family: 'Source Code Pro', monospace;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  pointer-events: none;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  white-space: nowrap; pointer-events: none;
   text-shadow:
-    0 0 4px rgba(0,0,0,0.9),
+    0 0 4px rgba(0,0,0,0.95),
     0 0 8px rgba(0,0,0,0.7),
     1px 1px 2px rgba(0,0,0,0.9);
 }
 
-/* Legend panel */
-.map-legend {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  z-index: 1000;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  padding: 16px;
-  max-width: 220px;
-  max-height: 60vh;
-  overflow-y: auto;
-}
-.map-legend-title {
-  font-family: var(--font-system);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--accent-gold-dim);
-  margin-bottom: 10px;
-}
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 3px 0;
-  cursor: pointer;
-  transition: opacity var(--transition-speed);
-}
-.legend-item.dimmed {
-  opacity: 0.3;
-}
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.legend-swatch {
-  width: 14px;
-  height: 10px;
-  border-radius: 2px;
-  flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.15);
-}
-.legend-label {
-  font-size: 11px;
-  color: var(--text-secondary);
-}
-.legend-divider {
-  height: 1px;
-  background: var(--border-subtle);
-  margin: 8px 0;
-}
-
-/* Category filter */
+/* ============================================
+   CATEGORY BAR — horizontal scroll, no wrap
+   ============================================ */
 .map-category-bar {
   position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 12px;
+  left: 12px;
+  right: 12px;
   z-index: 1000;
   display: flex;
   gap: 6px;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: calc(100% - 40px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 2px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  /* Fade edges to hint scrollability */
+  mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
 }
+.map-category-bar::-webkit-scrollbar { display: none; }
+
 .map-cat-btn {
   font-family: var(--font-system);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 5px 10px;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 7px 12px;
   border-radius: 3px;
   border: 1px solid var(--border-subtle);
-  background: var(--bg-secondary);
+  background: rgba(22,20,18,0.92);
   color: var(--text-secondary);
   cursor: pointer;
   transition: all var(--transition-speed);
   white-space: nowrap;
+  flex-shrink: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .map-cat-btn:hover,
 .map-cat-btn.active {
   color: var(--accent-gold);
   border-color: var(--accent-gold-dim);
-  background: rgba(22,20,18,0.95);
+  background: rgba(30,27,24,0.96);
 }
 
-/* Loading / error state */
+/* ============================================
+   CONTROLS TRIGGER — Floating action button
+   ============================================ */
+.controls-trigger {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(22,20,18,0.95);
+  border: 1px solid var(--accent-gold-dim);
+  border-radius: 4px;
+  color: var(--accent-gold);
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+.controls-trigger:hover {
+  background: rgba(30,27,24,1);
+  border-color: var(--accent-gold);
+  transform: translateY(-1px);
+}
+.controls-trigger .trigger-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+.controls-trigger.panel-open {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Active filter badge */
+.controls-trigger .filter-badge {
+  display: none;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent-crimson-bright, #d94545);
+  margin-left: 2px;
+}
+.controls-trigger.has-filters .filter-badge { display: inline-block; }
+
+/* ============================================
+   CONTROLS PANEL — desktop side drawer
+   ============================================ */
+.controls-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  z-index: 1002;
+  background: rgba(14,13,11,0.97);
+  border-left: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: -8px 0 32px rgba(0,0,0,0.6);
+}
+.controls-panel.open {
+  transform: translateX(0);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+.panel-title {
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+}
+.panel-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color var(--transition-speed);
+}
+.panel-close:hover { color: var(--accent-gold); }
+
+.panel-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+.panel-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 11px 8px;
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-speed);
+}
+.panel-tab:hover { color: var(--text-secondary); }
+.panel-tab.active {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
+}
+.panel-tab .tab-count {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 9px;
+  color: var(--text-muted);
+}
+.panel-tab.active .tab-count { color: var(--accent-gold-dim); }
+
+.panel-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.panel-body::-webkit-scrollbar { width: 6px; }
+.panel-body::-webkit-scrollbar-track { background: transparent; }
+.panel-body::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+
+.panel-section { display: none; padding: 12px 8px 16px; }
+.panel-section.active { display: block; }
+
+/* Section actions row (Show/Hide All) */
+.section-actions {
+  display: flex;
+  gap: 6px;
+  padding: 0 8px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 8px;
+}
+.section-action-btn {
+  flex: 1;
+  padding: 6px 10px;
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+.section-action-btn:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-dim);
+}
+
+/* Search input for neighborhoods */
+.section-search {
+  margin: 0 8px 10px;
+  position: relative;
+}
+.section-search input {
+  width: 100%;
+  padding: 8px 10px 8px 28px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 12px;
+  outline: none;
+  transition: border-color var(--transition-speed);
+}
+.section-search input:focus { border-color: var(--accent-gold-dim); }
+.section-search input::placeholder { color: var(--text-muted); }
+.section-search::before {
+  content: '⌕';
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 13px;
+  pointer-events: none;
+}
+
+/* Filter list items */
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background var(--transition-speed);
+  user-select: none;
+}
+.filter-item:hover { background: rgba(255,255,255,0.04); }
+.filter-item.dimmed { opacity: 0.35; }
+.filter-item.dimmed:hover { opacity: 0.6; }
+
+.filter-dot {
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.filter-swatch {
+  width: 14px; height: 11px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.filter-label {
+  flex: 1;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+.filter-label .label-sub {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+.filter-action {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-system);
+  letter-spacing: 1px;
+}
+.filter-item:hover .filter-action { color: var(--accent-gold); }
+
+.empty-state {
+  padding: 20px 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* Status pill */
 .hood-status {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 80px;
+  right: 20px;
   z-index: 1000;
   font-family: var(--font-system);
   font-size: 10px;
   letter-spacing: 1px;
   color: var(--text-muted);
-  background: var(--bg-secondary);
+  background: rgba(22,20,18,0.95);
   border: 1px solid var(--border-subtle);
-  border-radius: 4px;
-  padding: 8px 12px;
+  border-radius: 3px;
+  padding: 7px 11px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 1;
+  transition: opacity 0.4s;
 }
-.hood-status.error { color: var(--accent-crimson-bright); }
-.hood-status.hidden { display: none; }
+.hood-status.error { color: var(--accent-crimson-bright, #d94545); }
+.hood-status.hidden { opacity: 0; pointer-events: none; }
 
-/* Responsive */
+/* ============================================
+   MOBILE — bottom sheet
+   ============================================ */
 @media (max-width: 768px) {
   .map-wrapper { height: calc(100vh - 60px); }
-  .map-legend { bottom: 12px; left: 12px; padding: 12px; max-width: 180px; }
-  .map-category-bar { top: 64px; }
+  .page-header { padding: 12px 16px 10px; }
+  .page-header h1 { font-size: 18px; }
+  .page-subtitle { font-size: 10px; }
+
+  .map-category-bar {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+  }
+  .map-cat-btn {
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+
   .hood-label { font-size: 8px; letter-spacing: 1px; }
+
+  .controls-trigger {
+    bottom: 16px;
+    right: 16px;
+    padding: 11px 14px;
+    font-size: 10px;
+  }
+
+  /* Bottom sheet on mobile */
+  .controls-panel {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70vh;
+    max-height: 560px;
+    border-left: none;
+    border-top: 1px solid var(--accent-gold-dim);
+    border-radius: 12px 12px 0 0;
+    transform: translateY(100%);
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.7);
+  }
+  .controls-panel.open { transform: translateY(0); }
+
+  /* Drag handle */
+  .controls-panel::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 4px;
+    background: var(--border-subtle);
+    border-radius: 2px;
+  }
+  .panel-header { padding: 18px 16px 12px; }
+
+  .hood-status {
+    bottom: 76px;
+    right: 16px;
+    font-size: 9px;
+  }
+
+  /* Backdrop when panel open */
+  .panel-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1001;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s;
+  }
+  .panel-backdrop.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .panel-backdrop { display: none; }
 }
 </style>
 </head>
@@ -304,8 +593,8 @@
     <label for="chapterFilter">Spoiler Filter</label>
     <select class="chapter-select" id="chapterFilter">
       <option value="99">Show All</option>
-	  <option value="35">Through Chapter 35</option>
-	  <option value="30">Through Chapter 30</option>
+      <option value="35">Through Chapter 35</option>
+      <option value="30">Through Chapter 30</option>
       <option value="25">Through Chapter 25</option>
       <option value="20">Through Chapter 20</option>
       <option value="15">Through Chapter 15</option>
@@ -324,7 +613,7 @@
   </div>
 
   <div class="map-wrapper">
-    <!-- Category filter bar -->
+    <!-- Category filter — horizontal scrolling, no wrap -->
     <div class="map-category-bar" id="categoryBar">
       <button class="map-cat-btn active" data-cat="all">All</button>
       <button class="map-cat-btn" data-cat="headquarters">HQ</button>
@@ -338,16 +627,60 @@
     <!-- The map -->
     <div id="turinMap"></div>
 
-    <!-- Legend -->
-    <div class="map-legend" id="mapLegend"></div>
-
-    <!-- Neighborhood load status -->
+    <!-- Status pill -->
     <div class="hood-status hidden" id="hoodStatus"></div>
-  </div>
 
-  <footer class="site-footer">
-    <div class="footer-system">⬡ Classification Window Status: Closed ⬡</div>
-  </footer>
+    <!-- Floating trigger button -->
+    <button class="controls-trigger" id="controlsTrigger" aria-label="Open filters and legend">
+      <span class="trigger-icon">⊕</span>
+      <span>Legend</span>
+      <span class="filter-badge" aria-hidden="true"></span>
+    </button>
+
+    <!-- Backdrop (mobile only) -->
+    <div class="panel-backdrop" id="panelBackdrop"></div>
+
+    <!-- Controls panel: tabbed -->
+    <aside class="controls-panel" id="controlsPanel" aria-hidden="true">
+      <div class="panel-header">
+        <div class="panel-title">Map Controls</div>
+        <button class="panel-close" id="panelClose" aria-label="Close">×</button>
+      </div>
+
+      <div class="panel-tabs" role="tablist">
+        <button class="panel-tab active" data-tab="factions" role="tab">
+          Factions <span class="tab-count" id="factionCount"></span>
+        </button>
+        <button class="panel-tab" data-tab="areas" role="tab">
+          Areas <span class="tab-count" id="areaCount"></span>
+        </button>
+      </div>
+
+      <div class="panel-body">
+        <!-- Factions tab -->
+        <div class="panel-section active" data-section="factions">
+          <div class="section-actions">
+            <button class="section-action-btn" data-action="show-all-factions">Show All</button>
+            <button class="section-action-btn" data-action="hide-all-factions">Hide All</button>
+          </div>
+          <div id="factionList"></div>
+        </div>
+
+        <!-- Areas tab -->
+        <div class="panel-section" data-section="areas">
+          <div class="section-actions">
+            <button class="section-action-btn" data-action="toggle-hoods">Toggle Layer</button>
+            <button class="section-action-btn" data-action="reset-view">Reset View</button>
+          </div>
+          <div class="section-search">
+            <input type="text" id="hoodSearch" placeholder="Search neighborhoods..." />
+          </div>
+          <div id="hoodList"></div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
 
 </main>
 
@@ -360,12 +693,12 @@
 (function() {
 
   // ---- INIT MAP ----
+  var initialView = { center: [45.0703, 7.6869], zoom: 14 };
   var map = L.map('turinMap', {
     zoomControl: true,
     attributionControl: true
-  }).setView([45.0703, 7.6869], 14);
+  }).setView(initialView.center, initialView.zoom);
 
-  // CartoDB dark tiles — free, no key
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
     subdomains: 'abcd',
@@ -379,11 +712,11 @@
   var showNeighborhoods = true;
   var neighborhoodLayer = null;
   var neighborhoodLabels = [];
-  var hoodNames = []; // for legend
+  var hoodNames = [];
+  var hoodSearchQuery = '';
 
-  // ---- NEIGHBORHOOD OVERLAYS (from GeoJSON file) ----
+  // ---- STATUS ----
   var statusEl = document.getElementById('hoodStatus');
-
   function showStatus(msg, isError) {
     statusEl.textContent = msg;
     statusEl.className = 'hood-status' + (isError ? ' error' : '');
@@ -392,8 +725,8 @@
     }
   }
 
+  // ---- NEIGHBORHOOD STYLE LOOKUP ----
   function getHoodStyle(name) {
-    // Try exact match first, then uppercase, then title case
     var cfg = HOOD_CONFIG[name]
            || HOOD_CONFIG[name.toUpperCase()]
            || HOOD_CONFIG[name.replace(/\b\w/g, function(c) { return c.toUpperCase(); })]
@@ -401,15 +734,16 @@
     return cfg;
   }
 
+  // ---- LOAD NEIGHBORHOODS ----
   function loadNeighborhoods() {
-    // Check if the quartieri.js script loaded the variable
     if (typeof QUARTIERI_GEOJSON === 'undefined') {
-      showStatus('quartieri.js not found — see setup instructions', true);
+      showStatus('quartieri.js not found', true);
       console.log('Neighborhood data not loaded.');
       console.log('1. Download: https://risorse.comune.torino.it/opendata/geodata/quartieri.zip');
       console.log('2. Convert at: https://mapshaper.org (export as GeoJSON)');
       console.log('3. Add "var QUARTIERI_GEOJSON = " at start, ";" at end');
       console.log('4. Save as: js/data/quartieri.js');
+      buildPanel();
       return;
     }
 
@@ -430,10 +764,8 @@
         var name = feature.properties[HOOD_NAME_PROPERTY] || 'Unknown';
         var cfg = getHoodStyle(name);
 
-        // Store name for legend
-        hoodNames.push({ name: name, color: cfg.color });
+        hoodNames.push({ name: name, color: cfg.color, layer: layer });
 
-        // Popup
         var html = '<div class="hood-popup">';
         html += '<div class="hood-popup-name">' + name + '</div>';
         if (cfg.notes) {
@@ -442,7 +774,6 @@
         html += '</div>';
         layer.bindPopup(html, { maxWidth: 280 });
 
-        // Floating label at polygon center
         var center = layer.getBounds().getCenter();
         var label = L.marker(center, {
           icon: L.divIcon({
@@ -464,31 +795,29 @@
       }
     }
 
-    showStatus('Neighborhoods loaded (' + hoodNames.length + ' zones)', false);
-    buildLegend();
+    showStatus(hoodNames.length + ' zones loaded', false);
+    buildPanel();
   }
 
   function toggleNeighborhoods() {
     showNeighborhoods = !showNeighborhoods;
+    if (!neighborhoodLayer) return;
 
-    if (neighborhoodLayer) {
-      if (showNeighborhoods) {
-        neighborhoodLayer.addTo(map);
-        for (var i = 0; i < neighborhoodLabels.length; i++) {
-          neighborhoodLabels[i].addTo(map);
-        }
-      } else {
-        map.removeLayer(neighborhoodLayer);
-        for (var i = 0; i < neighborhoodLabels.length; i++) {
-          map.removeLayer(neighborhoodLabels[i]);
-        }
+    if (showNeighborhoods) {
+      neighborhoodLayer.addTo(map);
+      for (var i = 0; i < neighborhoodLabels.length; i++) {
+        neighborhoodLabels[i].addTo(map);
+      }
+    } else {
+      map.removeLayer(neighborhoodLayer);
+      for (var i = 0; i < neighborhoodLabels.length; i++) {
+        map.removeLayer(neighborhoodLabels[i]);
       }
     }
-
-    buildLegend();
+    buildPanel();
   }
 
-  // ---- LOCATION MARKERS ----
+  // ---- MARKERS ----
   function createMarker(loc) {
     var style = MARKER_STYLES[loc.faction] || { color: '#888', label: 'Unknown' };
     var catInfo = CATEGORY_LABELS[loc.category] || loc.category;
@@ -511,14 +840,10 @@
     var popup = '<div class="map-popup">';
     popup += '<div class="map-popup-faction" style="color:' + style.color + '">' + style.label + '</div>';
     popup += '<div class="map-popup-name">' + loc.name + '</div>';
-    if (loc.subtitle) {
-      popup += '<div class="map-popup-subtitle">' + loc.subtitle + '</div>';
-    }
+    if (loc.subtitle) popup += '<div class="map-popup-subtitle">' + loc.subtitle + '</div>';
     popup += '<div class="map-popup-category" style="color:' + style.color + ';background:' + style.color + '15;border:1px solid ' + style.color + '30">' + catInfo + '</div>';
     popup += '<div class="map-popup-desc">' + loc.description + '</div>';
-    if (loc.notes) {
-      popup += '<div class="map-popup-notes">' + loc.notes + '</div>';
-    }
+    if (loc.notes) popup += '<div class="map-popup-notes">' + loc.notes + '</div>';
     popup += '</div>';
 
     var marker = L.marker([loc.lat, loc.lng], { icon: svgIcon })
@@ -529,11 +854,9 @@
 
   function renderMarkers() {
     var maxChapter = getMaxChapter();
-
     for (var i = 0; i < allMarkers.length; i++) {
       var m = allMarkers[i];
       var d = m.data;
-
       var chapterOk = d.chapter <= maxChapter;
       var catOk = (activeCategory === 'all' || d.category === activeCategory);
       var factionOk = !hiddenFactions[d.faction];
@@ -544,99 +867,201 @@
         if (map.hasLayer(m.marker)) map.removeLayer(m.marker);
       }
     }
+    updateFilterBadge();
   }
 
-  // ---- LEGEND ----
-  function buildLegend() {
-    var legend = document.getElementById('mapLegend');
+  // ---- PANEL CONTENT ----
+  function buildPanel() {
+    buildFactionList();
+    buildHoodList();
+  }
+
+  function buildFactionList() {
+    var container = document.getElementById('factionList');
+    var countEl = document.getElementById('factionCount');
     var html = '';
 
-    // Faction markers
-    html += '<div class="map-legend-title">Factions</div>';
     var usedFactions = {};
+    var factionCounts = {};
     for (var i = 0; i < MAP_LOCATIONS.length; i++) {
-      usedFactions[MAP_LOCATIONS[i].faction] = true;
+      var f = MAP_LOCATIONS[i].faction;
+      usedFactions[f] = true;
+      factionCounts[f] = (factionCounts[f] || 0) + 1;
     }
+
+    var visible = 0, total = 0;
     for (var key in MARKER_STYLES) {
       if (!usedFactions[key]) continue;
+      total++;
+      if (!hiddenFactions[key]) visible++;
       var s = MARKER_STYLES[key];
       var dimmed = hiddenFactions[key] ? ' dimmed' : '';
-      html += '<div class="legend-item' + dimmed + '" data-faction="' + key + '">';
-      html += '  <div class="legend-dot" style="background:' + s.color + '"></div>';
-      html += '  <span class="legend-label">' + s.label + '</span>';
+      var count = factionCounts[key] || 0;
+      html += '<div class="filter-item' + dimmed + '" data-faction="' + key + '">';
+      html += '  <div class="filter-dot" style="background:' + s.color + '"></div>';
+      html += '  <div class="filter-label">' + s.label;
+      html += '    <span class="label-sub">' + count + ' location' + (count === 1 ? '' : 's') + '</span>';
+      html += '  </div>';
       html += '</div>';
     }
 
-    // Neighborhoods (only if GeoJSON loaded)
-    if (hoodNames.length > 0) {
-      html += '<div class="legend-divider"></div>';
-      html += '<div class="map-legend-title">Neighborhoods</div>';
+    container.innerHTML = html || '<div class="empty-state">No factions on map.</div>';
+    countEl.textContent = '(' + visible + '/' + total + ')';
 
-      var toggleClass = showNeighborhoods ? '' : ' dimmed';
-      html += '<div class="legend-item' + toggleClass + '" data-hood-toggle="all">';
-      html += '  <div class="legend-swatch" style="background:rgba(255,255,255,0.15)"></div>';
-      html += '  <span class="legend-label" style="font-style:italic">' + (showNeighborhoods ? 'Hide All' : 'Show All') + '</span>';
-      html += '</div>';
-
-      // Deduplicate and sort
-      var seen = {};
-      var unique = [];
-      for (var n = 0; n < hoodNames.length; n++) {
-        if (!seen[hoodNames[n].name]) {
-          seen[hoodNames[n].name] = true;
-          unique.push(hoodNames[n]);
-        }
-      }
-      unique.sort(function(a, b) { return a.name.localeCompare(b.name); });
-
-      for (var u = 0; u < unique.length; u++) {
-        html += '<div class="legend-item" data-hood-name="' + unique[u].name + '">';
-        html += '  <div class="legend-swatch" style="background:' + unique[u].color + ';opacity:0.6"></div>';
-        html += '  <span class="legend-label">' + unique[u].name + '</span>';
-        html += '</div>';
-      }
-    }
-
-    legend.innerHTML = html;
-
-    // Faction toggle clicks
-    var factionItems = legend.querySelectorAll('[data-faction]');
-    for (var f = 0; f < factionItems.length; f++) {
-      factionItems[f].addEventListener('click', function() {
+    var items = container.querySelectorAll('[data-faction]');
+    for (var j = 0; j < items.length; j++) {
+      items[j].addEventListener('click', function() {
         var fKey = this.getAttribute('data-faction');
         hiddenFactions[fKey] = !hiddenFactions[fKey];
         this.classList.toggle('dimmed');
         renderMarkers();
+        buildFactionList(); // refresh count
       });
     }
+  }
 
-    // Neighborhood toggle
-    var hoodToggle = legend.querySelector('[data-hood-toggle]');
-    if (hoodToggle) {
-      hoodToggle.addEventListener('click', function() {
-        toggleNeighborhoods();
-      });
+  function buildHoodList() {
+    var container = document.getElementById('hoodList');
+    var countEl = document.getElementById('areaCount');
+
+    if (hoodNames.length === 0) {
+      container.innerHTML = '<div class="empty-state">Neighborhood overlay unavailable.</div>';
+      countEl.textContent = '';
+      return;
     }
 
-    // Neighborhood name clicks — fly to area
-    var hoodItems = legend.querySelectorAll('[data-hood-name]');
-    for (var h = 0; h < hoodItems.length; h++) {
-      hoodItems[h].addEventListener('click', function() {
+    var seen = {};
+    var unique = [];
+    for (var n = 0; n < hoodNames.length; n++) {
+      if (!seen[hoodNames[n].name]) {
+        seen[hoodNames[n].name] = true;
+        unique.push(hoodNames[n]);
+      }
+    }
+    unique.sort(function(a, b) { return a.name.localeCompare(b.name); });
+
+    var q = hoodSearchQuery.toLowerCase().trim();
+    var filtered = q
+      ? unique.filter(function(h) { return h.name.toLowerCase().indexOf(q) !== -1; })
+      : unique;
+
+    countEl.textContent = '(' + unique.length + ')';
+
+    if (filtered.length === 0) {
+      container.innerHTML = '<div class="empty-state">No matches for "' + hoodSearchQuery + '".</div>';
+      return;
+    }
+
+    var html = '';
+    for (var u = 0; u < filtered.length; u++) {
+      var dimOpacity = showNeighborhoods ? '' : ' style="opacity:0.4"';
+      html += '<div class="filter-item" data-hood-name="' + filtered[u].name + '"' + dimOpacity + '>';
+      html += '  <div class="filter-swatch" style="background:' + filtered[u].color + ';opacity:0.7"></div>';
+      html += '  <span class="filter-label">' + filtered[u].name + '</span>';
+      html += '  <span class="filter-action">→</span>';
+      html += '</div>';
+    }
+    container.innerHTML = html;
+
+    var items = container.querySelectorAll('[data-hood-name]');
+    for (var h = 0; h < items.length; h++) {
+      items[h].addEventListener('click', function() {
         var name = this.getAttribute('data-hood-name');
         if (!neighborhoodLayer) return;
-
         neighborhoodLayer.eachLayer(function(layer) {
           var layerName = layer.feature.properties[HOOD_NAME_PROPERTY] || '';
           if (layerName === name) {
             map.flyToBounds(layer.getBounds(), { duration: 0.8, padding: [40, 40] });
             layer.openPopup();
+            closePanel();
           }
         });
       });
     }
   }
 
-  // ---- CATEGORY FILTER ----
+  // ---- FILTER BADGE ----
+  function updateFilterBadge() {
+    var trigger = document.getElementById('controlsTrigger');
+    var hasFilter = false;
+    for (var k in hiddenFactions) {
+      if (hiddenFactions[k]) { hasFilter = true; break; }
+    }
+    if (hasFilter) trigger.classList.add('has-filters');
+    else trigger.classList.remove('has-filters');
+  }
+
+  // ---- PANEL OPEN/CLOSE ----
+  var panel = document.getElementById('controlsPanel');
+  var trigger = document.getElementById('controlsTrigger');
+  var backdrop = document.getElementById('panelBackdrop');
+
+  function openPanel() {
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+    trigger.classList.add('panel-open');
+    backdrop.classList.add('visible');
+  }
+  function closePanel() {
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    trigger.classList.remove('panel-open');
+    backdrop.classList.remove('visible');
+  }
+
+  trigger.addEventListener('click', openPanel);
+  document.getElementById('panelClose').addEventListener('click', closePanel);
+  backdrop.addEventListener('click', closePanel);
+
+  // Close on Esc
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && panel.classList.contains('open')) closePanel();
+  });
+
+  // ---- TABS ----
+  var tabs = document.querySelectorAll('.panel-tab');
+  for (var t = 0; t < tabs.length; t++) {
+    tabs[t].addEventListener('click', function() {
+      var target = this.getAttribute('data-tab');
+      for (var x = 0; x < tabs.length; x++) tabs[x].classList.remove('active');
+      this.classList.add('active');
+      var sections = document.querySelectorAll('.panel-section');
+      for (var s = 0; s < sections.length; s++) {
+        if (sections[s].getAttribute('data-section') === target) {
+          sections[s].classList.add('active');
+        } else {
+          sections[s].classList.remove('active');
+        }
+      }
+    });
+  }
+
+  // ---- SECTION ACTIONS ----
+  document.querySelector('[data-action="show-all-factions"]').addEventListener('click', function() {
+    hiddenFactions = {};
+    renderMarkers();
+    buildFactionList();
+  });
+  document.querySelector('[data-action="hide-all-factions"]').addEventListener('click', function() {
+    for (var key in MARKER_STYLES) hiddenFactions[key] = true;
+    renderMarkers();
+    buildFactionList();
+  });
+  document.querySelector('[data-action="toggle-hoods"]').addEventListener('click', function() {
+    toggleNeighborhoods();
+  });
+  document.querySelector('[data-action="reset-view"]').addEventListener('click', function() {
+    map.flyTo(initialView.center, initialView.zoom, { duration: 0.8 });
+    closePanel();
+  });
+
+  // ---- HOOD SEARCH ----
+  document.getElementById('hoodSearch').addEventListener('input', function(e) {
+    hoodSearchQuery = e.target.value;
+    buildHoodList();
+  });
+
+  // ---- CATEGORY BAR ----
   var catBtns = document.querySelectorAll('.map-cat-btn');
   for (var c = 0; c < catBtns.length; c++) {
     catBtns[c].addEventListener('click', function() {
@@ -653,17 +1078,13 @@
     return sel ? parseInt(sel.value, 10) : 99;
   }
   var chapterSel = document.getElementById('chapterFilter');
-  if (chapterSel) {
-    chapterSel.addEventListener('change', renderMarkers);
-  }
+  if (chapterSel) chapterSel.addEventListener('change', renderMarkers);
 
   // ---- INIT ----
   for (var i = 0; i < MAP_LOCATIONS.length; i++) {
     allMarkers.push(createMarker(MAP_LOCATIONS[i]));
   }
-
-  loadNeighborhoods(); // async — loads GeoJSON, builds legend when done
-  buildLegend();       // initial legend with just factions
+  loadNeighborhoods();
   renderMarkers();
 
 })();
