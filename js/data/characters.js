@@ -334,13 +334,46 @@ var CHARACTERS = [
       { name: 'Bianca Severa', detail: 'Called her class correctly. She noticed him for it. Noticing is different from monitoring.', chapter: 7 }
     ]
   },
+  
+    {
+    id: 'iris',
+    name: 'Iris Terranova',
+    alias: null,
+    portrait: 'img/characters/iris.png',
+    chapter: 6,
+    faction: 'leonelli',
+    role: 'analyst',
+    title: 'Resident of Palazzo Valperga',
+    class: 'Sparkcaller',
+    tier: 'Origin (I)',
+    classLine: null,
+    descriptor: null,
+    primaryStat: 'PRECISION',
+    secondaryStat: 'ACUITY',
+    stats: {
+      presence: 40,
+      acuity: 65,
+      force: 15,
+      resilience: 20,
+      velocity: 40,
+      precision: 70,
+      edge: 35
+    },
+    appearance: 'Age 23. Luca\'s sister. Long auburn hair.',
+    summary: 'The most observant civilian in the building. She is not a prisoner. She is not an asset. She is a person in an impossible situation who has decided that understanding the situation is more useful than objecting to it. Building a picture of the Leonelli organization from the inside, noting its structures, loyalties, tensions, and gaps. Whether she engaged with the class selection window has not been confirmed.',
+    coreFlaw: null,
+    skills: [],
+    relationships: [
+      { name: 'Luca Terranova', detail: 'Her brother. The consequence of his acquisition is embodied in her presence, and neither of them can entirely pretend otherwise.', chapter: 6 }
+    ]
+  },
 
   {
     id: 'serena',
     name: 'Serena Marini',
     alias: 'Nullroute',
     portrait: 'img/characters/serena.png',
-    chapter: 99, // Arc 3 — not yet in draft
+    chapter: 99, // Arc 2 — not yet in draft
     faction: 'leonelli',
     role: 'analyst',
     title: 'Exploit Lab Lead',
@@ -366,6 +399,139 @@ var CHARACTERS = [
     relationships: [
       { name: 'Dario Fioretti', detail: 'Genuinely fond of him, which has not caused a problem yet.', chapter: 99 },
       { name: 'Luca Terranova', detail: 'Two most capable analysts. Think in different modes — architecture vs. edge cases. Likely to both respect and irritate each other.', chapter: 99 }
+    ]
+  },
+  
+  {
+    id: 'giulia-conti',
+    name: 'Giulia Conti',
+    alias: null,
+    portrait: 'img/characters/giulia-conti.png',
+    chapter: 99,
+    faction: 'leonelli',
+    role: 'analyst',
+    title: 'Artificer — System Analysis Division (tentative)',
+    class: 'ARTIFICER',
+    tier: 'Origin (I)',
+    classLine: null,
+    descriptor: null,
+    primaryStat: 'PRECISION',
+    secondaryStat: 'ACUITY',
+    stats: {
+      presence: 25,
+      acuity: 70,
+      force: 10,
+      resilience: 20,
+      velocity: 20,
+      precision: 70,
+      edge: 40
+    },
+    appearance: 'Slight, mousy. Ink-stained fingers. Tendency to avoid eye contact.',
+    summary: 'Tentative recruit for the System Analysis Division. Her Artificer class grants her the ability to manipulate and upgrade physical items with System properties — a capability no one else in the organization possesses and no one has yet fully mapped for operational use. Her value is structural and immediate; her integration is not. Crippling anxiety in combat zones makes her dependent on others for basic field safety, a liability the Division absorbs because the alternative is forfeiting the class entirely. She knows exactly how much she is worth and has no idea how to use that knowledge.',
+    coreFlaw: 'Practically helpless outside of controlled environments. Her anxiety is not an obstacle to her work — it is an obstacle to surviving long enough to do it.',
+    skills: [],
+    relationships: []
+  },
+
+  {
+    id: 'ermilo',
+    name: 'Ermilo Ferrero',
+    alias: 'RaptorSix',
+    portrait: 'img/characters/ermilo.png',
+    chapter: 13,
+    faction: 'leonelli',
+    role: 'analyst',
+    title: 'Observer — System Analysis Division',
+    class: 'OBSERVER',
+    tier: 'Origin (I)',
+    classLine: null,
+    descriptor: null,
+    primaryStat: 'ACUITY',
+    secondaryStat: 'PRECISION',
+    stats: {
+      presence: 20,
+      acuity: 70,
+      force: 15,
+      resilience: 15,
+      velocity: 30,
+      precision: 65,
+      edge: 35
+    },
+    appearance: 'Age 24. Pale, sleep-deprived, frantic eyes. Nervous stutter.',
+    summary: 'Forum theory-crafter who correctly deduced early class mechanics before anyone with real authority was listening. His MMORPG veteran\'s instinct is sound; his real-world survival capacity is not. Pressed into Leonelli service, his Observer class makes him an invaluable analytical asset — he sees hidden System variables that fall outside Luca\'s ARCHITECT framework, the things the System logs but does not surface. In the Division\'s information architecture, he reads what others cannot find. Outside of it, he needs managing.',
+    coreFlaw: 'The gap between his theoretical capability and his practical fragility is wide enough to be dangerous — to him and, in the wrong situation, to whoever is depending on his read.',
+    skills: [],
+    relationships: [
+      { name: 'Lorena Ferrero', detail: 'His wife. His grounding force. The person between him and operational collapse.', chapter: 13 },
+      { name: 'Luca Terranova', detail: 'Complementary capabilities — ARCHITECT and OBSERVER see different layers of the same System. Whether that produces collaboration or friction depends on the day.', chapter: 34 }
+    ]
+  },
+
+  {
+    id: 'lorena',
+    name: 'Lorena Ferrero',
+    alias: null,
+    portrait: 'img/characters/lorena.png',
+    chapter: 13,
+    faction: 'leonelli',
+    role: 'analyst',
+    title: 'Scribe — System Analysis Division',
+    class: 'SCRIBE',
+    tier: 'Origin (I)',
+    classLine: null,
+    descriptor: null,
+    primaryStat: 'ACUITY',
+    secondaryStat: 'RESILIENCE',
+    stats: {
+      presence: 35,
+      acuity: 70,
+      force: 15,
+      resilience: 65,
+      velocity: 20,
+      precision: 40,
+      edge: 30
+    },
+    appearance: 'Age 24. Pragmatic bearing. Fiercely protective energy.',
+    summary: 'Ermilo\'s wife. She came with him; she is not an afterthought. Her Scribe class allows her to physically record and formalize System data in ways that carry institutional weight — a foundational capability for Matteo\'s expanding contract architecture, which depends entirely on reliable documentation of System-legible agreements. Where Matteo authors binding terms, Lorena creates the substrate that makes those terms verifiable. She is also, practically speaking, the reason Ermilo functions at all: she is his grounding force when his theoretical mind gets overwhelmed by their new reality. The Division got two assets and billed it as one acquisition.',
+    coreFlaw: 'Her value is tied to Ermilo\'s presence, which makes her leverage and her exposure the same thing.',
+    skills: [],
+    relationships: [
+      { name: 'Ermilo Ferrero', detail: 'Her husband. She manages the distance between his capabilities and his limits.', chapter: 13 },
+      { name: 'Matteo Vascari', detail: 'Her Scribe class is the foundation his contract architecture builds on. A quiet, functional dependency neither has yet formally acknowledged.', chapter: 13 }
+    ]
+  },
+  
+  {
+    id: 'ivan',
+    name: 'Ivan Carceri',
+    alias: null,
+    portrait: 'img/characters/ivan.png',
+    chapter: 13,
+    faction: 'leonelli',
+    role: 'analyst',
+    title: 'Cartographer — System Analysis Division',
+    class: 'CARTOGRAPHER',
+    tier: 'Origin (I)',
+    classLine: null,
+    descriptor: null,
+    primaryStat: 'ACUITY',
+    secondaryStat: 'PRECISION',
+    stats: {
+      presence: 20,
+      acuity: 70,
+      force: 10,
+      resilience: 15,
+      velocity: 35,
+      precision: 70,
+      edge: 25
+    },
+    appearance: 'Age 32. Lanky, too much hair, constantly nervous. High-strung energy that does not settle.',
+    summary: 'Recruitment target extracted by Cecilia and Bianca during the Night of First Measure — found barricaded in his apartment, surrounded by hand-drawn charts, already doing the work. Deeply overwhelmed by the apocalypse and not pretending otherwise. His Cartographer class allows him to predict short-term systemic trends before they become visible in the data — a capability that sits between Luca\'s structural modeling and Ermilo\'s hidden-variable reading, and overlaps neatly with neither. The frantic, obsessive quality of his mind is not incidental to the class; it is the cost of it. He produces accurate reads under conditions that leave him visibly worse off for having done so.',
+    coreFlaw: 'The class takes a severe toll on his nerves. He is most useful at his limit, and his limit is where he breaks down.',
+    skills: [],
+    relationships: [
+      { name: 'Cecilia Leonelli', detail: 'She extracted him. He is aware that this was not rescue.', chapter: 13 },
+      { name: 'Bianca Severa', detail: 'Was present at the extraction. He has not stopped being aware of her since.', chapter: 13 }
     ]
   },
 
@@ -405,31 +571,6 @@ var CHARACTERS = [
   // ==========================================
   // CIVILIANS / NON-FACTION
   // ==========================================
-
-  {
-    id: 'iris',
-    name: 'Iris Terranova',
-    alias: null,
-    portrait: 'img/characters/iris.png',
-    chapter: 5,
-    faction: 'civilian',
-    role: 'civilian',
-    title: 'Resident of Palazzo Valperga',
-    class: 'Unknown',
-    tier: null,
-    classLine: null,
-    descriptor: null,
-    primaryStat: null,
-    secondaryStat: null,
-    stats: null,
-    appearance: 'Age 24. Luca\'s sister. Long auburn hair.',
-    summary: 'The most observant civilian in the building. She is not a prisoner. She is not an asset. She is a person in an impossible situation who has decided that understanding the situation is more useful than objecting to it. Building a picture of the Leonelli organization from the inside, noting its structures, loyalties, tensions, and gaps. Whether she engaged with the class selection window has not been confirmed.',
-    coreFlaw: null,
-    skills: [],
-    relationships: [
-      { name: 'Luca Terranova', detail: 'Her brother. The consequence of his acquisition is embodied in her presence, and neither of them can entirely pretend otherwise.', chapter: 5 }
-    ]
-  },
 
   {
     id: 'benedetto',
