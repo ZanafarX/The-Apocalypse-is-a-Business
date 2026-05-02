@@ -602,11 +602,11 @@ var CHARACTERS = [
   // ==========================================
 
   {
-    id: 'ricci',
-    name: 'Comandante Elena Ricci',
+    id: 'ermes',
+    name: 'Comandante Ermes Di Falco',
     alias: null,
-    portrait: 'img/characters/ricci.png',
-    chapter: 3,
+    portrait: 'img/characters/ermes.png',
+    chapter: 99,
     faction: 'ferro-patto',
     role: 'faction-leader',
     title: 'Leader of Ferro Patto',
@@ -618,11 +618,11 @@ var CHARACTERS = [
     secondaryStat: null,
     stats: null,
     appearance: 'Former Carabinieri lieutenant colonel, age 47.',
-    summary: 'Built Ferro Patto from institutional muscle memory and genuine conviction that public order is a service obligation. Not cynical about her mission — sincerely believes in it. Competent tactically, weak on information architecture and economic logistics. Her threat to Cecilia is reputational: she offers civilians a cleaner-looking version of order.',
-    coreFlaw: 'Sincerely wrong about what will sustain her mission. Chose symbolic territory over logistical territory.',
+    summary: 'Built Ferro Patto from institutional muscle memory and genuine conviction that public order is a service obligation. Not cynical about his mission — sincerely believes in it. Competent tactically, weak on information architecture and economic logistics. His threat to Cecilia is reputational: he offers civilians a cleaner-looking version of order.',
+    coreFlaw: 'Sincerely wrong about what will sustain his mission. Chose symbolic territory over logistical territory.',
     skills: [],
     relationships: [
-      { name: 'Cecilia Leonelli', detail: 'A competitive problem even when Cecilia is winning on every operational metric.', chapter: 3 }
+      { name: 'Cecilia Leonelli', detail: 'A competitive problem even when Cecilia is winning on every operational metric.', chapter: 99 }
     ]
   },
 
