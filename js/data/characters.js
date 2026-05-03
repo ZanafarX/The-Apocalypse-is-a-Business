@@ -36,12 +36,12 @@ var CHARACTERS = [
     secondaryStat: 'ACUITY',
     stats: {
       presence: 95,
-      acuity: 80,
+      acuity: 85,
       force: 25,
       resilience: 35,
       velocity: 40,
       precision: 50,
-      edge: 65
+      edge: 60
     },
     appearance: 'Age 26. Shorter than the others, slim, compact build. Ash-blonde bob cut at the jaw, bright green eyes, young face, sharp chin. Deceptively small in a room full of larger people — never physically imposing, always visually controlled. Wears an immaculate tailored black suit, white blouse, minimal jewelry, concealed blades.',
     summary: 'Protagonist. Head of the Leonelli crime family. Calm, exact, patient. Speaks softly and rarely repeats herself. Notices leverage points immediately: debts, habits, fear, ambition. Polite on purpose. Protects her people because they are hers, not because she is merciful. Straightens her cuffs before making a threat. Lets silence run long if it pressures the other person.',
@@ -298,44 +298,44 @@ var CHARACTERS = [
     tier: 'Origin (I)',
     classLine: 'Architect → System Architect → Framework Master → World Engine',
     descriptor: 'For those who build what others use.',
-    primaryStat: 'ACUITY',
-    secondaryStat: 'PRESENCE (emerging)',
+    primaryStat: 'EDGE',
+    secondaryStat: 'ACUITY',
     stats: {
       presence: 30,
-      acuity: 95,
+      acuity: 85,
       force: 10,
       resilience: 20,
       velocity: 25,
       precision: 35,
-      edge: 30
+      edge: 90
     },
-    appearance: 'Age 26. Average height, lean from forgetting to eat. Dark hair, usually unkempt. Wears glasses.',
-    summary: 'Co-protagonist. First Leonelli analyst. Pre-collapse data analyst whose real intellectual life was MMORPG economy modeling — his crafting simulators had thousands of users. Posted a 900-word class-selection breakdown more accurate than anything else available in Turin. Calm, methodical, speaks in systems. Non-combat. The analyst the Division is built around.',
-    coreFlaw: 'Internally aware that he is indispensable, humiliated, and constrained. Most likely to seek leverage through control of information rather than direct confrontation.',
+    appearance: 'Age 26. Average height, lean in a way that reads as chronic rather than deliberate; he forgets meals the way some people forget to reply to messages. Dark hair with a faint reddish cast, permanently unkempt, falling across his forehead. Gray-purple eyes behind wire-framed glasses, usually carrying the flatness of someone who has been thinking too hard for too long. Habitually dressed in whatever was closest to hand: a faded teal button-up over a white shirt, sleeves pushed to the elbow. Looks younger than he is at rest, older when working.',
+    summary: 'First analyst acquired by the Leonelli organization and current head of the System Analysis Division. Pre-collapse, Luca worked as a competent and quietly bored data analyst at a financial modeling firm in San Donato; his actual intellectual life ran under the handle "Archimede" on a niche gaming forum, where his MMORPG crafting simulators and market prediction tools served thousands of users who never knew his real name. The forum post that drew Cecilia\'s attention in the first hours after initialization was not the longest class-selection breakdown circulating in Turin. It was the most structurally rigorous, written for an audience he did not yet have, examining the language of the class descriptors for what they implied rather than what they stated. She acquired him through structured coercion: every exit closed before the contract was offered, the deal framed as mutual interest. He signed because his arithmetic was correct, and because his sister Iris was already inside the building. He has not yet admitted to himself that he is exactly where he wants to be.',
+    coreFlaw: 'Indispensable, humiliated, and constrained, and aware of all three. Most likely to seek leverage through control of information rather than direct confrontation, and not yet decided what he would do with that leverage if he acquired it. The deeper problem he can already see: the System is shaping his cognition, not just developing it, and the tool he would use to analyze the change is the thing being modified.',
     skills: [
       {
-        name: 'LOAD BEARING',
-        type: 'Passive — Developing',
+        name: 'LOAD-BEARING',
+        type: 'Passive (developing)',
         chapter: 7,
-        desc: 'Luca instinctively identifies the structural dependencies of any system he observes: the things that, if removed or changed, cause the rest to collapse or transform. In a Scenario, identifies which element of enemy deployment or objective chain is load-bearing before anyone else.',
-        ranks: 'At higher ranks, applies to physical environments, faction structures, and System-generated Scenario architectures.'
+        desc: 'Luca instinctively identifies the structural dependencies of any system he observes: the elements that, if changed, cause the rest to collapse or transform. At current ranks, this applies to informational, organizational, and Scenario architectures. The skill does not turn off. He cannot enter a room, read a report, or hear a briefing without registering what is holding it together.',
+        ranks: 'At higher ranks, extends to physical environments, faction structures, and System-generated Scenario architectures in ways he has not yet encountered. The class\'s EDGE-primary configuration means the skill identifies not only structural dependencies but the points at which those structures can be made to fail.'
       },
       {
         name: 'FRAMEWORK',
-        type: 'Active — Developing',
+        type: 'Active (developing)',
         chapter: 7,
-        desc: 'Luca constructs a predictive model of a developing situation and shares it as a System-legible output to a designated group. At higher ranks, becomes a shared tactical overlay updating in real time.',
-        ranks: 'The skill that makes him irreplaceable — and the skill most dangerous if directed against Cecilia\'s interests.'
+        desc: 'Luca constructs a predictive model of a developing situation and shares it as a System-legible output to a designated group. At low ranks, this presents as a probability estimate delivered to group interfaces. At higher ranks, it becomes a shared tactical overlay that updates in real time as conditions change.',
+        ranks: 'The skill that makes him irreplaceable in any complex Scenario, and the skill that makes him most dangerous to Cecilia if he ever directs it toward understanding her specifically.'
       }
     ],
     relationships: [
-      { name: 'Cecilia Leonelli', detail: 'The only relationship in the group that is genuinely bilateral in intellectual respect. She cannot fully see through him because he does the same thing she does, from a different angle.', chapter: 5 },
-      { name: 'Iris Terranova', detail: 'His sister. The emotional anchor of his storyline. The consequence of his acquisition is embodied in her presence.', chapter: 5 },
-      { name: 'Bianca Severa', detail: 'Called her class correctly. She noticed him for it. Noticing is different from monitoring.', chapter: 7 }
+      { name: 'Cecilia Leonelli', detail: 'The story\'s most charged dynamic and the only relationship in the Core Five that is genuinely bilateral in intellectual terms. She sees through almost everyone around her. She cannot fully see through Luca because he is running the same process she runs, from a different angle, with different tools. The equilibrium holds because a mind she cannot fully map is more valuable as an ally than threatening as a constraint.', chapter: 5 },
+      { name: 'Iris Terranova', detail: 'His sister. The emotional anchor of his storyline. Her presence in the Palazzo embodies what the acquisition cost, and neither of them can entirely pretend otherwise. He is protective in the way that has no clean expression: she did not choose to be here, and he arranged it because there was no other option that he could see.', chapter: 5 },
+      { name: 'Bianca Severa', detail: 'Called her class correctly in Chapter 7, which was the first time she noticed him rather than monitored him. Noticing, in her case, is a different category of attention. Neither of them has acknowledged the distinction.', chapter: 7 }
     ]
   },
-  
-    {
+
+  {
     id: 'iris',
     name: 'Iris Terranova',
     alias: null,
@@ -343,28 +343,45 @@ var CHARACTERS = [
     chapter: 6,
     faction: 'leonelli',
     role: 'analyst',
-    title: 'Resident of Palazzo Valperga',
-    class: 'Sparkcaller',
+    title: 'Resident of Palazzo Valperga, Division Coordinator',
+    class: 'SPARKCALLER',
     tier: 'Origin (I)',
     classLine: null,
     descriptor: null,
-    primaryStat: 'PRECISION',
-    secondaryStat: 'ACUITY',
+    primaryStat: 'EDGE',
+    secondaryStat: 'FORCE',
     stats: {
-      presence: 40,
-      acuity: 65,
-      force: 15,
-      resilience: 20,
-      velocity: 40,
-      precision: 70,
-      edge: 35
+      presence: 35,
+      acuity: 55,
+      force: 60,
+      resilience: 25,
+      velocity: 45,
+      precision: 50,
+      edge: 75
     },
-    appearance: 'Age 23. Luca\'s sister. Long auburn hair.',
-    summary: 'Brought into Palazzo Valperga as a direct consequence of her brother\'s acquisition, she occupies a position that cannot be called captivity and cannot be called freedom. Building a picture of the Leonelli organization from the inside, noting its structures, loyalties, tensions, and gaps.',
-    coreFlaw: null,
-    skills: [],
+    appearance: 'Age 23. Brown hair worn in a high ponytail, practical, with a few strands always escaping around her face. Blue-gray eyes, wide and alert; the default expression reads as slight surprise, which is misleading, because she is almost never caught off guard. It is simply how attention looks on her. Usually in a plain white top. Looks younger than she is until she asks a question she already knew the answer to.',
+    summary: 'Younger sister of Luca Terranova and resident of Palazzo Valperga. Studied literature at the University of Turin when the System initialized; not a theorist, not a gamer, but someone who reads people the way her brother reads mechanics, with the same attention to what is implied rather than stated. She was in the apartment when the Leonelli acquisition team arrived, observed the negotiation in full, and packed a bag without being asked. Her status inside the Palazzo is structurally ambiguous: not a prisoner, not an asset, with functional agency inside the building\'s perimeter and no leverage to leave it. Coordinates the Analysis Division\'s referral pipeline, manages the team\'s external interfaces, and has built relationships with people she has chosen to have them with. Her notebook contains observations the Division does not have, Matteo does not know about, and Cecilia would find professionally interesting and personally unwelcome. The anger is not gone. It has been filed.',
+    coreFlaw: 'Sees too clearly, too early, and inside an organization that has not yet decided what to do with someone who watches it the way she does. Her sharpest tension is with her brother: she has a class that makes her sensitive to latent emergence, and she is not certain what she is watching him become.',
+    skills: [
+      {
+        name: 'LATENT SENSE',
+        type: 'Passive (developing)',
+        chapter: 7,
+        desc: 'Iris perceives suppressed or developing System-recognized potential in entities around her. Not stats, not class details: something more qualitative, the presence of something that has not yet emerged. She does not have the vocabulary to describe this precisely, which frustrates her. It presents as intuition because she has no better framework for it yet.',
+        ranks: 'At higher ranks, the perception becomes more articulate and more specific. The practical implication is that she can sometimes see what people are becoming before they can. This is not comfortable knowledge to have in the Palazzo Valperga.'
+      },
+      {
+        name: 'SPARK',
+        type: 'Active',
+        chapter: 7,
+        desc: 'Iris discharges electrokinetic force through direct or short-range contact, scaled by EDGE and FORCE. The straightforward application is combat. The more interesting application is diagnostic: unstable System-property objects respond to the discharge in ways that index their underlying structure.',
+        ranks: 'SPARKCALLER is a hybrid combat-and-analytical class. Iris is the Division\'s only field-capable analyst by virtue of class rather than coordination function.'
+      }
+    ],
     relationships: [
-      { name: 'Luca Terranova', detail: 'Her brother. The consequence of his acquisition is embodied in her presence, and neither of them can entirely pretend otherwise.', chapter: 6 }
+      { name: 'Luca Terranova', detail: 'Her brother. The consequence of his acquisition is embodied in her presence, and neither of them can entirely pretend otherwise. She is watching him change. She loves him. She is not certain the person he is becoming is someone she would have chosen to love.', chapter: 6 },
+      { name: 'Matteo Vascari', detail: 'Wary professional respect. He tested her early and she passed by asking the question he expected rather than the one he was deflecting, which told him she understood the game. He has since given her access to work she was not officially cleared for, which she takes as a compliment and a leash simultaneously.', chapter: 7 },
+      { name: 'Cecilia Leonelli', detail: 'The arrangement neither discusses directly. Cecilia knows Iris is watching. Iris knows Cecilia knows. Their interactions are correct, almost cordial, and entirely transactional underneath.', chapter: 6 }
     ]
   },
 
@@ -373,44 +390,59 @@ var CHARACTERS = [
     name: 'Serena Marini',
     alias: 'Nullroute',
     portrait: 'img/characters/serena.png',
-    chapter: 99, // Arc 2 — not yet in draft
+    chapter: 99,
     faction: 'leonelli',
     role: 'analyst',
     title: 'Exploit Lab Lead',
-    class: 'Unknown',
+    class: 'BREAKER',
     tier: 'Origin (I)',
     classLine: null,
     descriptor: null,
-    primaryStat: 'ACUITY',
-    secondaryStat: 'Unknown',
+    primaryStat: 'EDGE',
+    secondaryStat: 'ACUITY',
     stats: {
-      presence: 35,
-      acuity: 85,
-      force: 15,
+      presence: 30,
+      acuity: 75,
+      force: 20,
       resilience: 25,
-      velocity: 50,
-      precision: 45,
-      edge: 60
+      velocity: 60,
+      precision: 50,
+      edge: 90
     },
-    appearance: 'Age 31. Former competitive speedrunner.',
-    summary: 'Approaches the Leonellis voluntarily and negotiates aggressively from a position of practical weakness — correctly identifying that her skills generate leverage regardless. Responsible pre-collapse for two game-breaking exploit discoveries that required emergency patches. Enthusiastic about the apocalypse in a way that unsettles everyone around her. Specialty: finding what the System did not intend to reward as generously as it does.',
-    coreFlaw: 'Tactically reckless by Bianca\'s standards. Most likely analyst to create problems through enthusiasm rather than resentment.',
-    skills: [],
+    appearance: 'Age 27. Physically distinctive in the Division: she has made a deliberate choice about how she looks and has not reconsidered it. Looks composed until she starts talking, at which point the speed of her cognition becomes visible.',
+    summary: 'Lead of the Exploit Lab. Competitive speedrunner from age sixteen, initially in games with large communities and later in games with communities of eighteen people and declining servers. Two of her pre-collapse exploit discoveries required emergency developer patches within forty-eight hours, both because she ran them on public servers rather than reporting them. Both times she considered this a success. She approached the Leonellis on Day 6 with three System mechanics other factions were not yet using, two untested, one tested on herself without telling anyone, and a clear-eyed read of her own leverage: it was less than it would be if she waited, and waiting was worse. She negotiated better terms than Cecilia had intended to offer. She is enthusiastic about the apocalypse. The world broke, the rules became legible, and her entire skill set became professionally relevant; she considers this objectively good news and is aware that most people in the building do not share the assessment. She has tested things on herself that she should have tested on systems. She will continue to do this.',
+    coreFlaw: 'Tactically reckless by any reasonable standard. The analyst most likely to create problems through enthusiasm rather than resentment, which Bianca has logged as a separate category of risk from the ones she usually manages.',
+    skills: [
+      {
+        name: 'NULL STATE',
+        type: 'Passive',
+        chapter: 99,
+        desc: 'Serena exists partially outside the System\'s standard classification framework. In defined, expected interactions, she functions normally. At the edges of mechanic definitions, the threshold cases, the interactions between systems that were not designed to interact, she produces outputs the System was not modeling.',
+        ranks: 'Not always useful. Occasionally spectacular.'
+      },
+      {
+        name: 'EXPLOIT WINDOW',
+        type: 'Active (developing)',
+        chapter: 99,
+        desc: 'Serena deliberately triggers and extends the edge-case interactions her passive identifies, holding a mechanic in an undefined state long enough to extract value from it. At current ranks, the windows are short and the triggers imprecise.',
+        ranks: 'At higher ranks, she will engineer the conditions that create the windows rather than finding them in the environment. BREAKER does not advance through grind; it advances by going somewhere the System\'s designers did not go. The System cannot tell her in advance what her next rank unlock requires because the unlock condition is, by definition, something it did not anticipate.'
+      }
+    ],
     relationships: [
-      { name: 'Dario Fioretti', detail: 'Genuinely fond of him, which has not caused a problem yet.', chapter: 99 },
-      { name: 'Luca Terranova', detail: 'Two most capable analysts. Think in different modes — architecture vs. edge cases. Likely to both respect and irritate each other.', chapter: 99 }
+      { name: 'Dario Fioretti', detail: 'Genuinely fond of him. He operates by a similar logic: not analysis, reaction, the advantage in the moment. The fondness has not caused a problem yet.', chapter: 99 },
+      { name: 'Luca Terranova', detail: 'Productive friction. She thinks he is too slow and too worried about being wrong. He thinks she generates noise without sufficient framework. Both assessments are partially correct, and their combined output is better than either could produce alone, which neither has fully admitted.', chapter: 99 }
     ]
   },
-  
+
   {
     id: 'giulia-conti',
     name: 'Giulia Conti',
     alias: null,
     portrait: 'img/characters/giulia.png',
-    chapter: 99,
+    chapter: 11,
     faction: 'leonelli',
     role: 'analyst',
-    title: 'Artificer — System Analysis Division (tentative)',
+    title: 'Artificer — Division Technical Arm',
     class: 'ARTIFICER',
     tier: 'Origin (I)',
     classLine: null,
@@ -419,18 +451,37 @@ var CHARACTERS = [
     secondaryStat: 'ACUITY',
     stats: {
       presence: 25,
-      acuity: 70,
+      acuity: 65,
       force: 10,
       resilience: 20,
-      velocity: 20,
-      precision: 70,
-      edge: 40
+      velocity: 25,
+      precision: 80,
+      edge: 45
     },
-    appearance: 'Slight, mousy. Ink-stained fingers. Tendency to avoid eye contact.',
-    summary: 'Tentative recruit for the System Analysis Division. Her Artificer class grants her the ability to manipulate and upgrade physical items with System properties — a capability no one else in the organization possesses and no one has yet fully mapped for operational use. Her value is structural and immediate; her integration is not. Crippling anxiety in combat zones makes her dependent on others for basic field safety, a liability the Division absorbs because the alternative is forfeiting the class entirely. She knows exactly how much she is worth and has no idea how to use that knowledge.',
-    coreFlaw: 'Practically helpless outside of controlled environments. Her anxiety is not an obstacle to her work — it is an obstacle to surviving long enough to do it.',
-    skills: [],
-    relationships: []
+    appearance: 'Age 25. Slight build, the kind that makes her look younger than she is in a room full of people and invisible in a crowd. Dark hair worn in two long braids with a faint purple tint, a deliberate choice she has maintained since before any of this started. Green eyes, direct when she is focused on something, sliding away when she is not. Darker complexion. Ink-stained fingers on most days, the particular permanent kind that comes from technical work rather than casual use. Usually in a plain white t-shirt; the care she puts into objects does not extend to what she wears. Avoids eye contact in unfamiliar situations. Holds it steadily when she is explaining something she is certain about.',
+    summary: 'Artificer of the System Analysis Division and the technical arm of the Leonelli operational advantage. Pre-collapse, she was a restoration technician at a private conservation firm contracted to several of Turin\'s museums: quiet, credentialed work that required precision, patience, and an instinctive understanding of how things were built in order to understand how to fix them. The skills the System later formalized had no professional vocabulary before its arrival. Cecilia recruited her in the second week, in plain terms: the things you build will keep people alive, credentials are not the question, capability is. Giulia accepted, steadied specifically by being recognized for something no one had previously found a use for. Her current output includes the node disruptor, modified equipment for Leonelli field operatives, and a restricted-license output to the broader protection network that Cecilia structures carefully to maintain the technical advantage. In her workshop she moves without hesitation, asks for what she needs directly, and has sent Dario away twice for being loud at the wrong moment.',
+    coreFlaw: 'Anxiety in unfamiliar or high-threat environments is real and not performed. She functions in combat zones by keeping her attention on the object in her hands and not on what is happening around her, which works until it does not. The further unresolved question is whether she is grateful to the System for making her capabilities legible or angry at the previous world for failing to find a use for them sooner. The answer shifts depending on what she is being asked to build.',
+    skills: [
+      {
+        name: 'MATERIAL SENSE',
+        type: 'Passive',
+        chapter: 11,
+        desc: 'Giulia perceives the System properties latent in physical objects: the modifications possible, the incompatibilities present, and the stress points that will fail first under System-level force. This operates continuously and involuntarily, which means she has not been able to look at the Palazzo\'s infrastructure without running a structural assessment since her first week in the building.',
+        ranks: 'She has not shared all of her findings.'
+      },
+      {
+        name: 'INFUSE',
+        type: 'Active',
+        chapter: 11,
+        desc: 'Giulia introduces System properties into a physical object through direct sustained contact and concentrated attention. The precision required is significant; imprecise infusion produces unstable results, which she has learned from twice. At current ranks, the process requires her workshop, specific raw materials, and time.',
+        ranks: 'At higher ranks, time and material dependencies compress. The ARTIFICER class moves at higher tiers from modification toward creation: producing objects with System properties from raw materials, eventually objects the System has no prior record of.'
+      }
+    ],
+    relationships: [
+      { name: 'Cecilia Leonelli', detail: 'The most straightforward loyalty dynamic in the building, which Cecilia periodically reassesses for what she might be missing. Giulia was recognized, given a workshop, given real materials and real problems, and told that what she built would matter. What Cecilia watches for is the moment Giulia realizes that what she builds does not always go where she would send it. That moment has not arrived yet.', chapter: 11 },
+      { name: 'Luca Terranova', detail: 'Consults her when a Scenario analysis produces a mechanical problem that needs a physical solution. The collaboration is productive and uncomplicated, by Division standards.', chapter: 13 },
+      { name: 'Serena Marini', detail: 'Works with her more often than anyone planned. Exploit windows frequently require a device to hold them open. The collaboration is productive and occasionally alarming.', chapter: 99 }
+    ]
   },
 
   {
@@ -441,8 +492,8 @@ var CHARACTERS = [
     chapter: 13,
     faction: 'leonelli',
     role: 'analyst',
-    title: 'Observer — System Analysis Division',
-    class: 'OBSERVER',
+    title: 'Auditor — System Analysis Division',
+    class: 'AUDITOR',
     tier: 'Origin (I)',
     classLine: null,
     descriptor: null,
@@ -450,20 +501,35 @@ var CHARACTERS = [
     secondaryStat: 'PRECISION',
     stats: {
       presence: 20,
-      acuity: 70,
+      acuity: 75,
       force: 15,
       resilience: 15,
       velocity: 30,
       precision: 65,
       edge: 35
     },
-    appearance: 'Age 25. Pale, sleep-deprived, frantic eyes. Nervous stutter.',
-    summary: 'Forum theory-crafter who correctly deduced early class mechanics before anyone with real authority was listening. His MMORPG veteran\'s instinct is sound; his real-world survival capacity is not. Pressed into Leonelli service, his Observer class makes him an invaluable analytical asset — he sees hidden System variables that fall outside Luca\'s ARCHITECT framework, the things the System logs but does not surface. In the Division\'s information architecture, he reads what others cannot find. Outside of it, he needs managing.',
-    coreFlaw: 'The gap between his theoretical capability and his practical fragility is wide enough to be dangerous — to him and, in the wrong situation, to whoever is depending on his read.',
-    skills: [],
+    appearance: 'Age 25. Black hair with a distinctive patch of white-gray at the crown, a feature he was born with and has never successfully explained to anyone\'s satisfaction. Yellow-amber eyes with a directness that reads as intensity before you register that it is actually anxiety. He looks at things the way someone looks at things when they are not sure the thing will still be there if they glance away. Black jacket with orange-yellow accent cuffs, worn with the collar up. Looks harder than his age until he speaks, at which point the stutter reappears and revises the impression.',
+    summary: 'Auditor of the System Analysis Division. Forum theory-crafter since age fifteen, Ermilio spent his teenage years on private server communities for games whose official support had ended, developing a specific and unusual cognitive orientation: an instinct for finding what was there rather than what was shown. Cut content, unreleased mechanics, developer notes left in the code. The handle "RaptorSix" came from a speedrunning technique he discovered and documented for a game with a twelve-person active community. He correctly deduced several early System class mechanics from inference alone, which got him flagged by Bianca independently of Luca; the two posts sat in her files together for four hours before Cecilia decided the second was worth a visit. He was found barricaded on the top floor of his building, holding off an extraction attempt by a rival faction, his wife having already decided they needed to go somewhere better. Cecilia announced herself by citing the analytical error in his forum post. He opened the door.',
+    coreFlaw: 'Has made peace with the arrangement faster than the arrangement deserves, primarily because the work is genuinely interesting. The skills he uses to help the Leonellis are the same skills he would use to identify what the Leonellis hide from the System and occasionally from each other. He has not yet decided what to do with the things he has seen that no one asked him to look for.',
+    skills: [
+      {
+        name: 'VARIABLE',
+        type: 'Passive',
+        chapter: 13,
+        desc: 'Ermilio sees System flags and hidden variables attached to entities, objects, and locations: the data points the System tracks without surfacing. Condition triggers logged across multiple instances, accumulated spawn energy at specific locations, compliance flags on contracts. The information arrives as a secondary visual layer over his normal field of vision, mostly unobtrusive, occasionally overwhelming in locations with significant System activity.',
+        ranks: 'Where the standard interface shows a Player\'s class name and tier, an AUDITOR can request the underlying data: hidden flags, accumulated trigger conditions, behavioral records, and environmental values the System logs for its own purposes.'
+      },
+      {
+        name: 'DISCREPANCY',
+        type: 'Active',
+        chapter: 13,
+        desc: 'Ermilio identifies divergences between the System\'s visible output and its hidden records. When a faction\'s public Reputation does not match its logged behavioral record, he can see the gap. When a contract has been technically complied with in a way that violates its logged intent, he can see the gap.',
+        ranks: 'The skill Matteo finds most useful and most unsettling.'
+      }
+    ],
     relationships: [
-      { name: 'Lorena Ferrero', detail: 'His wife. His grounding force. The person between him and operational collapse.', chapter: 13 },
-      { name: 'Luca Terranova', detail: 'Complementary capabilities — ARCHITECT and OBSERVER see different layers of the same System. Whether that produces collaboration or friction depends on the day.', chapter: 34 }
+      { name: 'Lorena Ferrero', detail: 'His wife. His anchor and his editor. When his framing goes somewhere the evidence does not support, she says so, and he listens. This is not a common dynamic in the Division, and Matteo has quietly noted it.', chapter: 13 },
+      { name: 'Luca Terranova', detail: 'Complicated by the fact that Ermilio arrived at the Palazzo with the sense that Luca was a ceiling: older, better-credentialed, operating at a level he was still working toward. The AUDITOR/ARCHITECT dynamic has revised this. Luca builds models from data that can be seen; Ermilio reads data that cannot be seen by anyone else. They need each other, which is a more comfortable arrangement than either expected.', chapter: 34 }
     ]
   },
 
@@ -480,27 +546,42 @@ var CHARACTERS = [
     tier: 'Origin (I)',
     classLine: null,
     descriptor: null,
-    primaryStat: 'ACUITY',
-    secondaryStat: 'RESILIENCE',
+    primaryStat: 'PRECISION',
+    secondaryStat: 'ACUITY',
     stats: {
       presence: 35,
-      acuity: 70,
+      acuity: 65,
       force: 15,
-      resilience: 65,
+      resilience: 45,
       velocity: 20,
-      precision: 40,
-      edge: 30
+      precision: 80,
+      edge: 25
     },
-    appearance: 'Age 24. Pragmatic bearing. Fiercely protective energy.',
-    summary: 'Ermilio\'s wife. She came with him; she is not an afterthought. Her Scribe class allows her to physically record and formalize System data in ways that carry institutional weight — a foundational capability for Matteo\'s expanding contract architecture, which depends entirely on reliable documentation of System-legible agreements. Where Matteo authors binding terms, Lorena creates the substrate that makes those terms verifiable. She is also, practically speaking, the reason Ermilo functions at all: she is his grounding force when his theoretical mind gets overwhelmed by their new reality. The Division got two assets and billed it as one acquisition.',
-    coreFlaw: 'Her value is tied to Ermilo\'s presence, which makes her leverage and her exposure the same thing.',
-    skills: [],
+    appearance: 'Age 24. Brown hair worn up in a high bun on working days and falling loose when she is off the clock, which in the Palazzo happens infrequently. Blue-gray eyes that open wide when she is alarmed, which is regularly: not because she is easily frightened, but because she pays enough attention to be alarmed by things that should alarm people. Practical V-neck top. Often has ink on her hands from Scribe work that did not fully transfer to the official medium. This bothers her slightly.',
+    summary: 'Scribe of the System Analysis Division and the formal-records infrastructure underwriting Matteo\'s contract architecture. Pre-collapse, she was completing a part-time legal administration certificate while working at a notarial office in the Quadrilatero, processing property records and witnessing documents. She started at nineteen. By the time the System arrived she was fast, precise, and held a thorough understanding of what formal documentation does and does not protect. She married Ermilio at twenty, which both their families considered premature and neither of them reconsidered. She was the one who decided they were going with Cecilia: Ermilio was still running the analysis when she packed their bags. Her Scribe class produces System-validated records of any fact she has directly witnessed or received through credible documentation, which means her records are not supporting documentation in System-adjudicated disputes; they are primary sources. She has been quietly right about several things before the Division reached the same conclusion, and she does not make a point of this.',
+    coreFlaw: 'The only member of the Division who came to the Palazzo entirely because of someone else\'s value to the organization. Her own class emerged afterward, which means her current indispensability was not the reason she was brought in: it is something she built from inside the arrangement. She has a clear view of what this means for her leverage, and a slightly less clear view of what it means for her relationship with an organization she joined under duress and now functionally supports.',
+    skills: [
+      {
+        name: 'INSCRIPTION',
+        type: 'Active',
+        chapter: 13,
+        desc: 'Lorena produces a System-validated record of any fact she has directly witnessed or received through a credible chain of documentation. The record is timestamped by the System and flagged as authenticated. The precision required is significant: imprecise or partially false records produce distorted outputs she can detect but cannot fully correct.',
+        ranks: 'An Inscribed record cannot be retroactively altered without producing a visible discrepancy, and can be submitted as evidence in System-adjudicated disputes.'
+      },
+      {
+        name: 'ARCHIVE',
+        type: 'Passive (developing)',
+        chapter: 13,
+        desc: 'Lorena retains exact recall of any document she has Inscribed. At current ranks, this applies to her own Inscriptions only.',
+        ranks: 'At higher ranks, will extend to documents she has analyzed through proper channels, then to documents she has been shown by reliable parties.'
+      }
+    ],
     relationships: [
-      { name: 'Ermilio Ferrero', detail: 'Her husband. She manages the distance between his capabilities and his limits.', chapter: 13 },
-      { name: 'Matteo Vascari', detail: 'Her Scribe class is the foundation his contract architecture builds on. A quiet, functional dependency neither has yet formally acknowledged.', chapter: 13 }
+      { name: 'Ermilio Ferrero', detail: 'Her husband. Her function in his life is structural: she is the editorial pressure that keeps his framing tied to evidence, and the steady presence that keeps him operational. She is protective of him in the way of someone who has decided that her own competence is, among other things, a form of protection. If she is indispensable, he is safer by association.', chapter: 13 },
+      { name: 'Matteo Vascari', detail: 'The most functional professional relationship in the Division, partly because their class lines are genuinely complementary and partly because Matteo respects precision as a value rather than a tool. He does not ask her to inscribe things she has not verified. She has not yet encountered a situation where he did, and she is aware that this is information about him rather than a guarantee.', chapter: 13 }
     ]
   },
-  
+
   {
     id: 'ivan',
     name: 'Ivan Carceri',
@@ -509,29 +590,45 @@ var CHARACTERS = [
     chapter: 13,
     faction: 'leonelli',
     role: 'analyst',
-    title: 'Cartographer — System Analysis Division',
+    title: 'Cartographer — Scenario Desk Lead',
     class: 'CARTOGRAPHER',
     tier: 'Origin (I)',
     classLine: null,
     descriptor: null,
     primaryStat: 'ACUITY',
-    secondaryStat: 'PRECISION',
+    secondaryStat: 'VELOCITY',
     stats: {
       presence: 20,
-      acuity: 70,
-      force: 10,
-      resilience: 15,
-      velocity: 35,
-      precision: 70,
-      edge: 25
+      acuity: 75,
+      force: 15,
+      resilience: 25,
+      velocity: 60,
+      precision: 50,
+      edge: 30
     },
-    appearance: 'Age 32. Lanky, too much hair, constantly nervous. High-strung energy that does not settle.',
-    summary: 'Recruitment target extracted by Cecilia and Bianca during the Night of First Measure — found barricaded in his apartment, surrounded by hand-drawn charts, already doing the work. Deeply overwhelmed by the apocalypse and not pretending otherwise. His Cartographer class allows him to predict short-term systemic trends before they become visible in the data — a capability that sits between Luca\'s structural modeling and Ermilo\'s hidden-variable reading, and overlaps neatly with neither. The frantic, obsessive quality of his mind is not incidental to the class; it is the cost of it. He produces accurate reads under conditions that leave him visibly worse off for having done so.',
-    coreFlaw: 'The class takes a severe toll on his nerves. He is most useful at his limit, and his limit is where he breaks down.',
-    skills: [],
+    appearance: 'Age 32. Blond-going-platinum hair pushed back from his face, receding slightly at the temples in a way he has not registered yet. Rectangular glasses, heavy frames. Almost always wearing professional-grade noise-canceling headphones around his neck or over his ears; he bought three pairs before the System arrived for reasons he described as focus, which was technically accurate. Broad through the shoulders in a way that does not match the nervous energy he carries everywhere else. Stubble that is perpetually one day past where he intended to trim it. His face at rest looks slightly aggrieved, like he has just received information he would have preferred not to have. This is not a mood; it is the permanent condition of someone whose class shows him things he cannot stop seeing.',
+    summary: 'Cartographer and Scenario Desk lead. Pre-collapse, he spent seven years at a private firm modeling emergency service routing in dense urban environments: ambulance dispatch, fire response, police deployment under variable conditions. He was good at it because he understood that systems under stress behave differently from systems at rest, and most models fail at the cases that matter. The System found that useful. Cecilia and Bianca extracted him during the Night of First Measure, finding him barricaded in a Crocetta apartment, surrounded by hand-drawn charts of spawn projections, creature corridors, and density estimates by district. He had been working for eighteen hours without sleep. The charts were startlingly accurate. He produces accurate reads under conditions that leave him visibly worse off for having done so, and the Division has learned to read his physical state as a load-bearing indicator. He is overwhelmed by the apocalypse continuously and not as a character beat that resolves. He functions because the alternative is not functioning, and because he has decided that his charts matter. He is probably right.',
+    coreFlaw: 'The CARTOGRAPHER class amplifies a mind that was already receiving too much signal. He is most useful at his limit and his limit is where he breaks down, which means his most valuable outputs come at predictable cost to his ability to produce the next one.',
+    skills: [
+      {
+        name: 'SURVEY',
+        type: 'Passive',
+        chapter: 13,
+        desc: 'Ivan continuously receives low-level positional and density data about System-active entities and energy accumulations within a significant radius. At rest, this presents as ambient awareness: he knows which direction creatures are moving before anyone reports it. Under stress, it becomes overwhelming.',
+        ranks: 'The headphones are load-bearing infrastructure, not affectation.'
+      },
+      {
+        name: 'PROJECTION',
+        type: 'Active',
+        chapter: 13,
+        desc: 'Ivan produces a formal predictive map of a defined area over a defined time window, rendered as a System-legible overlay shareable with designated parties. Accuracy degrades with distance and time horizon but is meaningfully better than anything available through direct observation.',
+        ranks: 'At higher ranks, the map extends to faction movements, resource flows, and systemic trend lines that have nothing to do with creatures.'
+      }
+    ],
     relationships: [
       { name: 'Cecilia Leonelli', detail: 'She extracted him. He is aware that this was not rescue.', chapter: 13 },
-      { name: 'Bianca Severa', detail: 'Was present at the extraction. He has not stopped being aware of her since.', chapter: 13 }
+      { name: 'Bianca Severa', detail: 'Was present at the extraction. He has not stopped being aware of her since.', chapter: 13 },
+      { name: 'Luca Terranova', detail: 'Functional, with an undercurrent of tension about framing. Ivan provides data; Luca builds models from data. The distinction matters to Ivan because his data sometimes points toward conclusions Luca\'s models do not reach. He has learned to flag these divergences directly rather than letting them dissolve into the synthesis.', chapter: 13 }
     ]
   },
 
