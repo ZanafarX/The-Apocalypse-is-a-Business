@@ -406,7 +406,7 @@ var CHARACTERS = [
     id: 'giulia-conti',
     name: 'Giulia Conti',
     alias: null,
-    portrait: 'img/characters/giulia-conti.png',
+    portrait: 'img/characters/giulia.png',
     chapter: 99,
     faction: 'leonelli',
     role: 'analyst',
@@ -434,10 +434,10 @@ var CHARACTERS = [
   },
 
   {
-    id: 'ermilo',
-    name: 'Ermilo Ferrero',
+    id: 'ermilio',
+    name: 'Ermilio Ferrero',
     alias: 'RaptorSix',
-    portrait: 'img/characters/ermilo.png',
+    portrait: 'img/characters/ermilio.png',
     chapter: 13,
     faction: 'leonelli',
     role: 'analyst',
@@ -457,7 +457,7 @@ var CHARACTERS = [
       precision: 65,
       edge: 35
     },
-    appearance: 'Age 24. Pale, sleep-deprived, frantic eyes. Nervous stutter.',
+    appearance: 'Age 25. Pale, sleep-deprived, frantic eyes. Nervous stutter.',
     summary: 'Forum theory-crafter who correctly deduced early class mechanics before anyone with real authority was listening. His MMORPG veteran\'s instinct is sound; his real-world survival capacity is not. Pressed into Leonelli service, his Observer class makes him an invaluable analytical asset — he sees hidden System variables that fall outside Luca\'s ARCHITECT framework, the things the System logs but does not surface. In the Division\'s information architecture, he reads what others cannot find. Outside of it, he needs managing.',
     coreFlaw: 'The gap between his theoretical capability and his practical fragility is wide enough to be dangerous — to him and, in the wrong situation, to whoever is depending on his read.',
     skills: [],
@@ -492,11 +492,11 @@ var CHARACTERS = [
       edge: 30
     },
     appearance: 'Age 24. Pragmatic bearing. Fiercely protective energy.',
-    summary: 'Ermilo\'s wife. She came with him; she is not an afterthought. Her Scribe class allows her to physically record and formalize System data in ways that carry institutional weight — a foundational capability for Matteo\'s expanding contract architecture, which depends entirely on reliable documentation of System-legible agreements. Where Matteo authors binding terms, Lorena creates the substrate that makes those terms verifiable. She is also, practically speaking, the reason Ermilo functions at all: she is his grounding force when his theoretical mind gets overwhelmed by their new reality. The Division got two assets and billed it as one acquisition.',
+    summary: 'Ermilio\'s wife. She came with him; she is not an afterthought. Her Scribe class allows her to physically record and formalize System data in ways that carry institutional weight — a foundational capability for Matteo\'s expanding contract architecture, which depends entirely on reliable documentation of System-legible agreements. Where Matteo authors binding terms, Lorena creates the substrate that makes those terms verifiable. She is also, practically speaking, the reason Ermilo functions at all: she is his grounding force when his theoretical mind gets overwhelmed by their new reality. The Division got two assets and billed it as one acquisition.',
     coreFlaw: 'Her value is tied to Ermilo\'s presence, which makes her leverage and her exposure the same thing.',
     skills: [],
     relationships: [
-      { name: 'Ermilo Ferrero', detail: 'Her husband. She manages the distance between his capabilities and his limits.', chapter: 13 },
+      { name: 'Ermilio Ferrero', detail: 'Her husband. She manages the distance between his capabilities and his limits.', chapter: 13 },
       { name: 'Matteo Vascari', detail: 'Her Scribe class is the foundation his contract architecture builds on. A quiet, functional dependency neither has yet formally acknowledged.', chapter: 13 }
     ]
   },
