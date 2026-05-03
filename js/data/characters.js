@@ -360,7 +360,7 @@ var CHARACTERS = [
       edge: 35
     },
     appearance: 'Age 23. Luca\'s sister. Long auburn hair.',
-    summary: 'The most observant civilian in the building. She is not a prisoner. She is not an asset. She is a person in an impossible situation who has decided that understanding the situation is more useful than objecting to it. Building a picture of the Leonelli organization from the inside, noting its structures, loyalties, tensions, and gaps. Whether she engaged with the class selection window has not been confirmed.',
+    summary: 'Brought into Palazzo Valperga as a direct consequence of her brother\'s acquisition, she occupies a position that cannot be called captivity and cannot be called freedom. Building a picture of the Leonelli organization from the inside, noting its structures, loyalties, tensions, and gaps.',
     coreFlaw: null,
     skills: [],
     relationships: [
