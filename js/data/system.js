@@ -13,7 +13,7 @@
 
 var SYSTEM_OVERVIEW = {
   chapter: 1,
-  intro: 'The System arrived without warning and without explanation. It did not ask permission. It appeared in every person\'s visual field simultaneously — text rendered in the air, monochrome, slightly luminous, impossible to ignore or obscure — and it addressed each person directly, as though it had been waiting. It did not say what it was. It said what it wanted.',
+  intro: 'The System arrived without warning and without explanation. It did not ask permission. It appeared in every person\'s visual field simultaneously — text rendered in the air, monochrome, slightly luminous, impossible to ignore or obscure — and it addressed each person directly, as though it had been waiting.',
   initMessage: 'WELCOME TO THE NEW WORLD.\nYOUR REGISTRATION IS CONFIRMED.\nPLEASE REVIEW YOUR CLASSIFICATION OPTIONS.\nYOU HAVE 72 HOURS.',
   interface: [
     { label: 'Display Method', text: 'Direct-to-perception overlays. No device required. No opt-out.' },
@@ -30,7 +30,6 @@ var SYSTEM_OVERVIEW = {
     description: 'The designation given to any human entity who does not engage with the class selection window before it closes. Approximately half of Turin\'s population becomes NPC — including most police and military, who were ordered by institutional command to ignore the System and await government guidance that never came.',
     consequences: [
       'NPC weapons and physical force deal significantly reduced damage against Players and creatures',
-      'What would take a Player one action costs an NPC unit ten, with corresponding casualties',
       'NPCs are not excluded from Scenario events — creatures do not distinguish them from Players as targets',
       'They receive none of the protection that class registration confers, and all of the exposure',
       'The consequences are permanent and mechanical'
@@ -57,7 +56,7 @@ var STATS_DATA = {
       name: 'ACUITY',
       chapter: 1,
       description: 'Pattern recognition, strategic planning, information processing speed.',
-      users: 'Primary: Matteo (Advocate), Luca (Architect). Secondary: Cecilia (Fixer)'
+      users: 'Primary: Matteo (Advocate). Secondary: Cecilia (Fixer), Luca (Architect)'
     },
     {
       name: 'FORCE',
@@ -87,7 +86,7 @@ var STATS_DATA = {
       name: 'EDGE',
       chapter: 1,
       description: 'Opportunistic action, misdirection, exploit windows, and the margin between what should work and what does. Governs classes whose power derives from positioning and timing rather than raw output.',
-      users: 'Primary: Dario (Runner)',
+      users: 'Primary: Dario (Runner), Luca (Architect)',
       note: 'The seventh stat. Not listed in the initialization message. Not announced. Discovered through class behavior. Its existence is inferred, not stated.'
     }
   ],
