@@ -37,11 +37,11 @@ var CHARACTERS = [
     stats: {
       presence: 95,
       acuity: 85,
-      force: 25,
+      force: 20,
       resilience: 35,
-      velocity: 40,
-      precision: 50,
-      edge: 60
+      velocity: 50,
+      precision: 45,
+      edge: 65
     },
     appearance: 'Age 26. Shorter than the others, slim, compact build. Ash-blonde bob cut at the jaw, bright green eyes, young face, sharp chin. Deceptively small in a room full of larger people — never physically imposing, always visually controlled. Wears an immaculate tailored black suit, white blouse, minimal jewelry, concealed blades.',
     summary: 'Protagonist. Head of the Leonelli crime family. Calm, exact, patient. Speaks softly and rarely repeats herself. Notices leverage points immediately: debts, habits, fear, ambition. Polite on purpose. Protects her people because they are hers, not because she is merciful. Straightens her cuffs before making a threat. Lets silence run long if it pressures the other person.',
@@ -100,7 +100,7 @@ var CHARACTERS = [
       resilience: 35,
       velocity: 90,
       precision: 75,
-      edge: 50
+      edge: 45
     },
     appearance: 'Age 27. Tall, slim, almost severe. Long black hair in a single braid. Pale skin, light violet or gray-lilac eyes, narrow face, unreadable expression. Moves without wasted motion; when standing still, she is the stillest person in the room. Fitted black suit, pale shirt, slim tie, flat shoes.',
     summary: 'Leonelli intelligence chief, assassin, and internal security. Reserved, exact, unsentimental. Speaks less than anyone else and listens more. Positions herself where she can see doors and reflections. Blinks infrequently when focused. Rarely laughs. Loves Cecilia with dangerous, absolute devotion — expressed through attention, readiness, and the speed with which she moves against threats.',
@@ -150,13 +150,13 @@ var CHARACTERS = [
     primaryStat: 'FORCE',
     secondaryStat: 'RESILIENCE',
     stats: {
-      presence: 55,
+      presence: 50,
       acuity: 40,
-      force: 95,
-      resilience: 85,
+      force: 90,
+      resilience: 80,
       velocity: 30,
       precision: 45,
-      edge: 40
+      edge: 20
     },
     appearance: 'Age 43. Tallest in the group. Broad shoulders, thick neck, heavy hands, completely bald. Square jaw, deep brow, narrow eyes, one visible scar at the temple and cheek. Looks like a wall in a suit. Black suit cut for a heavy frame, dark shirt, dark tie, plain heavy-soled shoes.',
     summary: 'Leonelli enforcer and collections chief. Quiet, disciplined, literal. Does not posture. Jokes rarely, and when he does it is dry and blunt. Checks exits and chokepoints automatically. Rolls his shoulders before a fight. Most openly protective of Cecilia. Argues for decisive force when others deliberate. Excels in corridors, stairwells, and cramped terrain.',
@@ -201,11 +201,11 @@ var CHARACTERS = [
     stats: {
       presence: 70,
       acuity: 90,
-      force: 15,
-      resilience: 25,
-      velocity: 20,
-      precision: 40,
-      edge: 50
+      force: 25,
+      resilience: 40,
+      velocity: 35,
+      precision: 50,
+      edge: 55
     },
     appearance: 'Age 49. Lean, silver-gray hair combed back. Trimmed beard, narrow mouth, long nose, angular cheekbones. Wears dark glasses or lightly tinted lenses — when he removes them, it should matter. Immaculate charcoal or black suit, pale shirt, dark tie.',
     summary: 'Leonelli consigliere. Controlled, educated, exact. Best speaker in formal settings, most dangerous writer in the group. Can argue with Cecilia directly without losing her respect because he argues with evidence, not sentiment. Cleans his glasses when thinking. Corrects imprecise wording mid-sentence. Reads contracts twice even when he wrote them. Transforms criminal administration into System-backed leverage through contract mechanics.',
@@ -248,12 +248,12 @@ var CHARACTERS = [
     primaryStat: 'EDGE',
     secondaryStat: 'PRESENCE',
     stats: {
-      presence: 65,
-      acuity: 55,
-      force: 40,
+      presence: 70,
+      acuity: 65,
+      force: 45,
       resilience: 35,
-      velocity: 75,
-      precision: 60,
+      velocity: 60,
+      precision: 50,
       edge: 85
     },
     appearance: 'Age 32. Lean, athletic build. Dark blue-black hair, longer on top, always deliberately unruly. Short beard or careful stubble. Tinted glasses worn low enough to show his grin. Handsome in an unserious, dangerous way. Sharp black suit with a flashier cut than the others, blue tie or accent.',
@@ -303,7 +303,7 @@ var CHARACTERS = [
     stats: {
       presence: 30,
       acuity: 85,
-      force: 10,
+      force: 20,
       resilience: 20,
       velocity: 25,
       precision: 35,
@@ -351,13 +351,13 @@ var CHARACTERS = [
     primaryStat: 'EDGE',
     secondaryStat: 'FORCE',
     stats: {
-      presence: 35,
+      presence: 45,
       acuity: 55,
-      force: 60,
-      resilience: 25,
+      force: 65,
+      resilience: 20,
       velocity: 45,
       precision: 50,
-      edge: 75
+      edge: 70
     },
     appearance: 'Age 23. Brown hair worn in a high ponytail, practical, with a few strands always escaping around her face. Blue-gray eyes, wide and alert; the default expression reads as slight surprise, which is misleading, because she is almost never caught off guard. It is simply how attention looks on her. Usually in a plain white top. Looks younger than she is until she asks a question she already knew the answer to.',
     summary: 'Younger sister of Luca Terranova and resident of Palazzo Valperga. Studied literature at the University of Turin when the System initialized; not a theorist, not a gamer, but someone who reads people the way her brother reads mechanics, with the same attention to what is implied rather than stated. She was in the apartment when the Leonelli acquisition team arrived, observed the negotiation in full, and packed a bag without being asked. Her status inside the Palazzo is structurally ambiguous: not a prisoner, not an asset, with functional agency inside the building\'s perimeter and no leverage to leave it. Coordinates the Analysis Division\'s referral pipeline, manages the team\'s external interfaces, and has built relationships with people she has chosen to have them with. Her notebook contains observations the Division does not have, Matteo does not know about, and Cecilia would find professionally interesting and personally unwelcome. The anger is not gone. It has been filed.',
@@ -390,7 +390,7 @@ var CHARACTERS = [
     name: 'Serena Marini',
     alias: 'Nullroute',
     portrait: 'img/characters/serena.png',
-    chapter: 99,
+    chapter: 52,
     faction: 'leonelli',
     role: 'analyst',
     title: 'Exploit Lab Lead',
@@ -404,9 +404,9 @@ var CHARACTERS = [
       presence: 30,
       acuity: 75,
       force: 20,
-      resilience: 25,
-      velocity: 60,
-      precision: 50,
+      resilience: 20,
+      velocity: 50,
+      precision: 60,
       edge: 90
     },
     appearance: 'Age 27. Short black hair with a teal-to-olive gradient toward the tips, cut close around the ears and falling across the face in a way that covers one eye most of the time. The visible eye is yellow-green. Light olive skin. Usually in a white t-shirt under a cream-colored oversized jacket worn open, which gives her a slightly off-duty appearance that is not entirely accurate. Large over-ear headphones worn around the neck, black with magenta accent rings.',
@@ -416,14 +416,14 @@ var CHARACTERS = [
       {
         name: 'NULL STATE',
         type: 'Passive',
-        chapter: 99,
+        chapter: 52,
         desc: 'Serena exists partially outside the System\'s standard classification framework. In defined, expected interactions, she functions normally. At the edges of mechanic definitions, the threshold cases, the interactions between systems that were not designed to interact, she produces outputs the System was not modeling.',
         ranks: 'Not always useful. Occasionally spectacular.'
       },
       {
         name: 'EXPLOIT WINDOW',
         type: 'Active (developing)',
-        chapter: 99,
+        chapter: 52,
         desc: 'Serena deliberately triggers and extends the edge-case interactions her passive identifies, holding a mechanic in an undefined state long enough to extract value from it. At current ranks, the windows are short and the triggers imprecise.',
         ranks: 'At higher ranks, she will engineer the conditions that create the windows rather than finding them in the environment. BREAKER does not advance through grind; it advances by going somewhere the System\'s designers did not go. The System cannot tell her in advance what her next rank unlock requires because the unlock condition is, by definition, something it did not anticipate.'
       }
@@ -450,7 +450,7 @@ var CHARACTERS = [
     primaryStat: 'PRECISION',
     secondaryStat: 'ACUITY',
     stats: {
-      presence: 25,
+      presence: 30,
       acuity: 65,
       force: 10,
       resilience: 20,
@@ -502,9 +502,9 @@ var CHARACTERS = [
     stats: {
       presence: 20,
       acuity: 75,
-      force: 15,
-      resilience: 15,
-      velocity: 30,
+      force: 20,
+      resilience: 25,
+      velocity: 35,
       precision: 65,
       edge: 35
     },
@@ -552,10 +552,10 @@ var CHARACTERS = [
       presence: 35,
       acuity: 65,
       force: 15,
-      resilience: 45,
+      resilience: 35,
       velocity: 20,
       precision: 80,
-      edge: 25
+      edge: 45
     },
     appearance: 'Age 24. Brown hair worn up in a high bun on working days and falling loose when she is off the clock, which in the Palazzo happens infrequently. Blue-gray eyes that open wide when she is alarmed, which is regularly: not because she is easily frightened, but because she pays enough attention to be alarmed by things that should alarm people. Practical V-neck top. Often has ink on her hands from Scribe work that did not fully transfer to the official medium. This bothers her slightly.',
     summary: 'Scribe of the System Analysis Division and the formal-records infrastructure underwriting Matteo\'s contract architecture. Pre-collapse, she was completing a part-time legal administration certificate while working at a notarial office in the Quadrilatero, processing property records and witnessing documents. She started at nineteen. By the time the System arrived she was fast, precise, and held a thorough understanding of what formal documentation does and does not protect. She married Ermilio at twenty, which both their families considered premature and neither of them reconsidered. She was the one who decided they were going with Cecilia: Ermilio was still running the analysis when she packed their bags. Her Scribe class produces System-validated records of any fact she has directly witnessed or received through credible documentation, which means her records are not supporting documentation in System-adjudicated disputes; they are primary sources. She has been quietly right about several things before the Division reached the same conclusion, and she does not make a point of this.',
@@ -600,11 +600,11 @@ var CHARACTERS = [
     stats: {
       presence: 20,
       acuity: 75,
-      force: 15,
+      force: 25,
       resilience: 25,
       velocity: 60,
-      precision: 50,
-      edge: 30
+      precision: 40,
+      edge: 45
     },
     appearance: 'Age 32. Blond-going-platinum hair pushed back from his face, receding slightly at the temples in a way he has not registered yet. Rectangular glasses, heavy frames. Almost always wearing professional-grade noise-canceling headphones around his neck or over his ears; he bought three pairs before the System arrived for reasons he described as focus, which was technically accurate. Broad through the shoulders in a way that does not match the nervous energy he carries everywhere else. Stubble that is perpetually one day past where he intended to trim it. His face at rest looks slightly aggrieved, like he has just received information he would have preferred not to have. This is not a mood; it is the permanent condition of someone whose class shows him things he cannot stop seeing.',
     summary: 'Cartographer and Scenario Desk lead. Pre-collapse, he spent seven years at a private firm modeling emergency service routing in dense urban environments: ambulance dispatch, fire response, police deployment under variable conditions. He was good at it because he understood that systems under stress behave differently from systems at rest, and most models fail at the cases that matter. The System found that useful. Cecilia and Bianca extracted him during the Night of First Measure, finding him barricaded in a Crocetta apartment, surrounded by hand-drawn charts of spawn projections, creature corridors, and density estimates by district. He had been working for eighteen hours without sleep. The charts were startlingly accurate. He produces accurate reads under conditions that leave him visibly worse off for having done so, and the Division has learned to read his physical state as a load-bearing indicator. He is overwhelmed by the apocalypse continuously and not as a character beat that resolves. He functions because the alternative is not functioning, and because he has decided that his charts matter. He is probably right.',
@@ -646,7 +646,7 @@ var CHARACTERS = [
     classLine: null,
     descriptor: null,
     primaryStat: 'ACUITY',
-    secondaryStat: 'Unknown',
+    secondaryStat: 'EDGE',
     stats: {
       presence: 30,
       acuity: 80,
@@ -654,7 +654,7 @@ var CHARACTERS = [
       resilience: 30,
       velocity: 25,
       precision: 40,
-      edge: 55
+      edge: 60
     },
     appearance: 'Age 41. Former competitive poker player turned online casino operator.',
     summary: 'Pre-collapse, his family owed the Leonellis a significant debt — he presents himself voluntarily within 48 hours of initialization, having already done the math. Specializes in probability modeling under incomplete information and opponent behavior prediction. Cynical, non-resentful, purely transactional. Does not object to anything on moral grounds, only on structural grounds when the plan is unsound.',
