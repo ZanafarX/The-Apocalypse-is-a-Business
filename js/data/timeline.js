@@ -62,7 +62,7 @@ var TIMELINE_EVENTS = [
     title: 'System Initialization',
     chapter: 1,
     category: 'system',
-    description: 'At 11:55 on March 13, the world changed. A pressure shift behind the eyes, light too sharp for a March noon, shadows cut rather than cast. Then the words appeared — glowing text suspended in the air above Turin, impossible to ignore. The System announced itself to 2,247,891 registered entities. The Classification Window opened. The 72-hour countdown began.',
+    description: 'At 19:00 on March 13, the world changed. A pressure shift behind the eyes, light too sharp for a March evening, shadows cut rather than cast. Then the words appeared — glowing text suspended in the air above Turin, impossible to ignore. The System announced itself to 2,247,891 registered entities. The Classification Window opened. The 72-hour countdown began.',
     impact: 'Civil infrastructure began degrading within hours. Organizations with preexisting command structures held their shape while civic institutions fragmented. The sky turned a deep, vibrant purple and did not return to blue.',
     relatedEntries: ['Cecilia Leonelli', 'The System']
   },
