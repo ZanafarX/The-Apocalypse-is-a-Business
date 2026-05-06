@@ -43,22 +43,22 @@ var CHARACTERS = [
       precision: 45,
       edge: 65
     },
-    appearance: 'Age 26. Shorter than the others, slim, compact build. Ash-blonde bob cut at the jaw, bright green eyes, young face, sharp chin. Deceptively small in a room full of larger people — never physically imposing, always visually controlled. Wears an immaculate tailored black suit, white blouse, minimal jewelry, concealed blades.',
-    summary: 'Protagonist. Head of the Leonelli crime family. Calm, exact, patient. Speaks softly and rarely repeats herself. Notices leverage points immediately: debts, habits, fear, ambition. Polite on purpose. Protects her people because they are hers, not because she is merciful. Straightens her cuffs before making a threat. Lets silence run long if it pressures the other person.',
+    appearance: 'Age 26. Shorter than the others, slim and compact. Ash-blonde hair cut to the jaw in a clean bob, slightly layered, with a faint cool undertone at the tips where the light catches it differently. Bright green eyes, steady and direct, the kind that register everything and give back very little. Young face, sharp chin, features that read as pleasant until they read as precise. Her default expression is a controlled near-smile: not warmth, acknowledgment. She is never the most physically imposing person in the room and has arranged her entire presentation around the fact. Immaculate tailored black suit, white blouse, minimal jewelry, concealed blades.',
+    summary: 'Protagonist. Head of the Leonelli crime family. Calm, exact, patient. Speaks softly and rarely repeats herself. Notices leverage points immediately: debts, habits, fear, ambition. Polite on purpose. Protects her people because they are hers, not because she is merciful. Straightens her cuffs before making a threat. Lets silence run long when it pressures the other person.',
     coreFlaw: 'Underestimates irrational actors because she expects self-interest to govern behavior.',
     skills: [
       {
         name: 'MARKED LEDGER',
         type: 'Passive',
         chapter: 13,
-        desc: 'Through sustained interaction, Cecilia identifies a target\'s primary vulnerability — the thing they most fear losing. The System formalizes this as a catalogued flag that enhances all her actions against that target.',
-        ranks: 'Ranks 1–3 visible. Hidden Rank 4 unlocks when she eliminates a Marked target also operating under an active Breach Penalty — becomes FINAL ACCOUNT.'
+        desc: 'Through sustained interaction, Cecilia identifies a target\'s primary vulnerability: the thing they most fear losing. The System formalizes this as a catalogued flag that enhances all her actions against that target.',
+        ranks: 'Ranks 1–3 visible. Hidden Rank 4 unlocks when she eliminates a Marked target also operating under an active Breach Penalty. Becomes FINAL ACCOUNT.'
       },
       {
         name: 'WEIGHT OF OFFICE',
         type: 'Active — Presence-based',
         chapter: 13,
-        desc: 'A command presence effect projected in a defined radius. Entities within range who fail a Resilience check experience hesitation — a physical reluctance to take hostile action against Cecilia or a designated ally. Does not work on enemies with very high Resilience or specific immunity skills. Scales poorly against fanatical states.',
+        desc: 'A command presence effect projected in a defined radius. Entities within range who fail a Resilience check experience hesitation: a physical reluctance to take hostile action against Cecilia or a designated ally. Does not work on enemies with very high Resilience or specific immunity skills. Scales poorly against fanatical states.',
         ranks: null
       },
       {
@@ -102,22 +102,22 @@ var CHARACTERS = [
       precision: 80,
       edge: 45
     },
-    appearance: 'Age 27. Tall, slim, almost severe. Long black hair in a single braid. Pale skin, light violet or gray-lilac eyes, narrow face, unreadable expression. Moves without wasted motion; when standing still, she is the stillest person in the room. Fitted black suit, pale shirt, slim tie, flat shoes.',
-    summary: 'Leonelli intelligence chief, assassin, and internal security. Reserved, exact, unsentimental. Speaks less than anyone else and listens more. Positions herself where she can see doors and reflections. Blinks infrequently when focused. Rarely laughs. Loves Cecilia with dangerous, absolute devotion — expressed through attention, readiness, and the speed with which she moves against threats.',
-    coreFlaw: 'Can escalate to elimination faster than Cecilia prefers. Trusts almost no one outside the Core Five.',
+    appearance: 'Age 27. Tall, slim, severe in the way of someone who has removed everything unnecessary. Black hair, straight and glossy, falling loose and long across one side of her face with a braid visible at the opposite shoulder. Pale skin with a faint flush along the cheekbones that reads as the only involuntary thing about her. Amber-gold eyes, heavy-lidded and downcast by default, the kind of gaze that registers everything from below its own surface. Narrow face, lips held in a flat, sealed line. She moves without wasted motion and when standing still she is the stillest person in the room. Black suit, white shirt, blue tie, flat shoes.',
+    summary: 'Leonelli intelligence chief, assassin, and internal security. Reserved, exact, unsentimental. Speaks less than anyone else and listens more. Positions herself where she can see doors and reflections. Blinks infrequently when focused. Rarely laughs. Her devotion to Cecilia is dangerous and absolute, expressed through attention, readiness, and the speed with which she moves against threats.',
+    coreFlaw: 'She escalates to elimination faster than Cecilia prefers and trusts almost no one outside the Core Five.',
     skills: [
       {
         name: 'QUIET APPROACH',
         type: 'Passive',
         chapter: 7,
-        desc: 'Bianca\'s movement generates no System-legible sound signature within enclosed spaces. Not true invisibility — she still occupies space and can be physically encountered. But her movement falls below the detection threshold of non-System-enhanced awareness.',
+        desc: 'Bianca\'s movement generates no System-legible sound signature within enclosed spaces. Not true invisibility: she still occupies space and can be physically encountered. Her movement falls below the detection threshold of non-System-enhanced awareness.',
         ranks: 'At higher ranks, extends to outdoor environments and crowds.'
       },
       {
         name: 'SILENCE FIELD',
         type: 'Active',
         chapter: 7,
-        desc: 'Suppresses sound in a designated radius. Prevents auditory alerting and verbal skill components. At advanced tiers, suppresses the System interface itself for entities inside — targets cannot read their own status, receive notifications, or see skill cooldowns.',
+        desc: 'Suppresses sound in a designated radius. Prevents auditory alerting and verbal skill components. At advanced tiers, suppresses the System interface itself for entities inside, leaving targets unable to read their own status, receive notifications, or see skill cooldowns.',
         ranks: 'A room Bianca has silenced is a room the System has gone quiet in.'
       },
       {
@@ -158,28 +158,28 @@ var CHARACTERS = [
       precision: 45,
       edge: 20
     },
-    appearance: 'Age 43. Tallest in the group. Broad shoulders, thick neck, heavy hands, completely bald. Square jaw, deep brow, narrow eyes, one visible scar at the temple and cheek. Looks like a wall in a suit. Black suit cut for a heavy frame, dark shirt, dark tie, plain heavy-soled shoes.',
+    appearance: 'Age 43. Tallest in the group, broad through the shoulders and neck in a way that makes rooms feel smaller. Completely bald, the skull large and cleanly shaped. Ice-blue eyes set deep under a heavy brow that sits in a permanent downward press, the kind of face that reads as anger at rest and is simply his face. The brow is crossed with creases earned over decades, and the overall impression is of something that has absorbed a great deal of force and is prepared to absorb more. Strong jaw, wide nose, lips held in a flat line. A scar runs from his left temple to the cheekbone. Dark suit cut for a heavy frame, white shirt, striped tie.',
     summary: 'Leonelli enforcer and collections chief. Quiet, disciplined, literal. Does not posture. Jokes rarely, and when he does it is dry and blunt. Checks exits and chokepoints automatically. Rolls his shoulders before a fight. Most openly protective of Cecilia. Argues for decisive force when others deliberate. Excels in corridors, stairwells, and cramped terrain.',
-    coreFlaw: 'Impatient with liars, cowards, and ornamental authority. Argues for decisive force when deliberation may be wiser.',
+    coreFlaw: 'He is impatient with liars, cowards, and ornamental authority, and argues for decisive force in situations where deliberation may be wiser.',
     skills: [
       {
         name: 'IRON THRESHOLD',
         type: 'Passive',
         chapter: 7,
-        desc: 'Damage absorption scales upward during sustained engagement. The longer Ruggiero holds a position, the more he can absorb. Hidden Rank 4 activates automatically in any outnumbered engagement — damage condition no longer required.',
-        ranks: 'Hidden Rank 4 unlock: Sustain combat against four or more simultaneous opponents without retreating.'
+        desc: 'Damage absorption scales upward during sustained engagement. The longer Ruggiero holds a position, the more he can absorb. Hidden Rank 4 activates automatically in any outnumbered engagement, with no damage condition required.',
+        ranks: 'Hidden Rank 4 unlock: sustain combat against four or more simultaneous opponents without retreating.'
       },
       {
         name: 'CORRIDOR',
         type: 'Active',
         chapter: 7,
-        desc: 'Ruggiero designates a physical space — hallway, doorframe, stairwell — as held ground. Enemies attempting to move through face escalating resistance effects. Allies moving through receive a minor speed bonus.',
+        desc: 'Ruggiero designates a physical space as held ground. Enemies attempting to move through face escalating resistance effects. Allies moving through receive a minor speed bonus.',
         ranks: 'Pairs with IRON THRESHOLD in chokepoint situations.'
       }
     ],
     relationships: [
       { name: 'Cecilia Leonelli', detail: 'Most openly protective. Completely intolerant of disrespect toward her.', chapter: 1 },
-      { name: 'Luca Terranova', detail: 'Accepted COLLECTOR on Luca\'s reasoning in Chapter 7. Does not give respect easily — the fact that he did says something about both of them.', chapter: 7 }
+      { name: 'Luca Terranova', detail: 'Accepted COLLECTOR on Luca\'s reasoning in Chapter 7. He does not give respect easily, and the fact that he did says something about both of them.', chapter: 7 }
     ]
   },
 
@@ -207,16 +207,16 @@ var CHARACTERS = [
       precision: 50,
       edge: 55
     },
-    appearance: 'Age 49. Lean, silver-gray hair combed back. Trimmed beard, narrow mouth, long nose, angular cheekbones. Wears dark glasses or lightly tinted lenses — when he removes them, it should matter. Immaculate charcoal or black suit, pale shirt, dark tie.',
-    summary: 'Leonelli consigliere. Controlled, educated, exact. Best speaker in formal settings, most dangerous writer in the group. Can argue with Cecilia directly without losing her respect because he argues with evidence, not sentiment. Cleans his glasses when thinking. Corrects imprecise wording mid-sentence. Reads contracts twice even when he wrote them. Transforms criminal administration into System-backed leverage through contract mechanics.',
-    coreFlaw: 'Pride in his intellect is his primary flaw — too much faith in comprehensible systems.',
+    appearance: 'Age 49. Lean and broad-shouldered, with the kind of physical presence that makes his stillness feel deliberate. Silver-white hair swept back from the face in a dramatic wave, dark streaks still running through it, the whole effect somewhere between distinguished and severe. Heavy dark brows set in a permanent downward press above blue-tinted aviator glasses that he wears as a default rather than an affectation. The beard is full and shaped, dark shading to silver at the chin. Angular cheekbones, a long jaw, a face that communicates authority without effort and skepticism without movement. Black suit, white shirt, black tie.',
+    summary: 'Leonelli consigliere. Controlled, educated, exact. The best speaker in formal settings and the most dangerous writer in the group. He can argue with Cecilia directly without losing her respect because he argues with evidence, not sentiment. Cleans his glasses when thinking. Corrects imprecise wording mid-sentence. Reads contracts twice even when he wrote them. Transforms criminal administration into System-backed leverage through contract mechanics.',
+    coreFlaw: 'Pride in his intellect is his primary flaw. He places too much faith in systems that can be fully comprehended.',
     skills: [
       {
         name: 'BINDING CLAUSE / BREACH PENALTY',
         type: 'Active',
         chapter: 7,
-        desc: 'Formalized agreements authored by Matteo carry System-enforceable weight. Violation triggers a Breach Penalty — a System-registered consequence applied to the violating party. At higher ranks: compulsion effects, territory-linked enforcement, automatic flagging into Cecilia\'s Marked Ledger.',
-        ranks: 'Hidden Rank 4 unlock: Author a contract that is breached, then witness the full Breach Penalty execution without intervening.'
+        desc: 'Formalized agreements authored by Matteo carry System-enforceable weight. Violation triggers a Breach Penalty, a System-registered consequence applied to the violating party. At higher ranks: compulsion effects, territory-linked enforcement, automatic flagging into Cecilia\'s Marked Ledger.',
+        ranks: 'Hidden Rank 4 unlock: author a contract that is breached, then witness the full Breach Penalty execution without intervening.'
       },
       {
         name: 'PRECEDENT',
@@ -256,15 +256,15 @@ var CHARACTERS = [
       precision: 50,
       edge: 80
     },
-    appearance: 'Age 32. Lean, athletic build. Dark blue-black hair, longer on top, always deliberately unruly. Short beard or careful stubble. Tinted glasses worn low enough to show his grin. Handsome in an unserious, dangerous way. Sharp black suit with a flashier cut than the others, blue tie or accent.',
+    appearance: 'Age 32. Lean, with the relaxed posture of someone who has never needed to take up more space than he chooses to. Dark black hair, longer on top and swept dramatically to one side in a way that is too consistent to be accidental. Full dark beard, kept at medium length, slightly unkempt at the edges. Blue-tinted aviator glasses worn across the bridge of his nose, doing very little to obscure the expression beneath them. That expression is the most notable thing about him: a half-smile that reads as both genuine and strategic, the face of someone who has already decided he is the most interesting person in the room and is waiting to find out if you agree. Blue suit with a flashier cut than the others, white shirt, dark tie.',
     summary: 'Leonelli operator. Fast-talking, charming, observant. Flirts and needles people on purpose to test how tightly wound they are. Underneath that, ruthless and practical. Fidgets with his cufflinks. Samples food and drink first in unfamiliar places. Never forgets an insult but pretends he did. Reaches spaces and people the others cannot.',
-    coreFlaw: 'Takes risks because he trusts his own adaptability — his primary flaw.',
+    coreFlaw: 'He takes risks because he trusts his own adaptability, and that trust is not always warranted.',
     skills: [
       {
         name: 'READ THE ROOM',
         type: 'Passive',
         chapter: 7,
-        desc: 'On entry to any space, Dario instinctively maps the emotional and motivational state of everyone present. The System formalizes this as a passive alignment display — a rough read of the gap between stated behavior and actual intent.',
+        desc: 'On entry to any space, Dario instinctively maps the emotional and motivational state of everyone present. The System formalizes this as a passive alignment display: a rough read of the gap between stated behavior and actual intent.',
         ranks: null
       },
       {
@@ -276,7 +276,7 @@ var CHARACTERS = [
       }
     ],
     relationships: [
-      { name: 'Cecilia Leonelli', detail: 'She sees through him instantly. Neither mistakes the other for harmless.', chapter: 1 },
+      { name: 'Cecilia Leonelli', detail: 'She sees through him instantly. The partnership works because neither mistakes the other for harmless.', chapter: 1 },
       { name: 'Serena Marini', detail: 'Genuinely fond of her, which has not caused a problem yet.', chapter: 99 }
     ]
   },
