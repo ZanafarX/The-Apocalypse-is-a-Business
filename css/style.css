@@ -641,6 +641,161 @@ a:hover { color: var(--text-primary); }
 }
 
 /* ============================================
+   NEWSLETTER FORM
+   ============================================ */
+.newsletter-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.newsletter-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-gold-dim);
+  border-radius: 4px;
+  padding: 40px;
+  transition: border-color var(--transition-speed);
+}
+.newsletter-card:hover { border-left-color: var(--accent-gold); }
+
+.newsletter-intro {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.newsletter-system-line {
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dim);
+  margin-bottom: 12px;
+}
+
+.newsletter-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.newsletter-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.newsletter-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.newsletter-label {
+  font-family: var(--font-system);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.newsletter-input {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-family: var(--font-system);
+  font-size: 13px;
+  padding: 12px 14px;
+  border-radius: 4px;
+  width: 100%;
+  transition: border-color var(--transition-speed), background var(--transition-speed);
+}
+.newsletter-input::placeholder { color: var(--text-muted); }
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--accent-gold-dim);
+  background: var(--bg-secondary);
+}
+
+.newsletter-checkbox-row { display: flex; align-items: flex-start; }
+
+.newsletter-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+  font-family: var(--font-system);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+.newsletter-checkbox input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: var(--accent-gold);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.newsletter-recaptcha {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
+.newsletter-recaptcha.ml-error iframe {
+  border: 1px solid var(--accent-crimson) !important;
+}
+
+.newsletter-privacy {
+  font-family: var(--font-system);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 4px 0;
+}
+
+.newsletter-submit-row { margin-top: 8px; }
+
+.newsletter-submit {
+  width: 100%;
+  font-family: var(--font-system);
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 14px 28px;
+}
+
+.newsletter-success {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* MailerLite validation error states — themed to crimson */
+.ml-error .newsletter-input,
+.ml-error input[type="email"] {
+  border-color: var(--accent-crimson) !important;
+}
+.ml-error .newsletter-checkbox,
+.ml-error .newsletter-checkbox span {
+  color: var(--accent-crimson-bright) !important;
+}
+
+@media (max-width: 600px) {
+  .newsletter-card { padding: 28px 20px; }
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 @keyframes fadeIn {

@@ -30,8 +30,8 @@
     <label for="chapterFilter">Spoiler Filter</label>
     <select class="chapter-select" id="chapterFilter">
       <option value="99">Show All</option>
-	  <option value="35">Through Chapter 35</option>
-	  <option value="30">Through Chapter 30</option>
+      <option value="35">Through Chapter 35</option>
+      <option value="30">Through Chapter 30</option>
       <option value="25">Through Chapter 25</option>
       <option value="20">Through Chapter 20</option>
       <option value="15">Through Chapter 15</option>
@@ -63,60 +63,74 @@
     </div>
   </section>
 
-  <!-- SYSTEM BROADCASTS -->
+  <!-- ==================== NEWSLETTER ==================== -->
   <section class="section">
-    <div class="section-header">⬡ System Broadcasts — Latest Events</div>
-    <div class="broadcast-feed">
+    <div class="section-header">⬡ System Transmissions — Open the Channel</div>
 
-      <div class="broadcast" data-chapter="14">
-        <div class="broadcast-header">
-          <span class="broadcast-type">Classification Report</span>
-          <span class="broadcast-time">Chapter 14</span>
+    <div id="mlb2-40891331" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-40891331 newsletter-container">
+      <div class="ml-form-embedWrapper newsletter-card">
+
+        <!-- FORM STATE -->
+        <div class="ml-form-embedBody row-form">
+          <div class="newsletter-intro">
+            <div class="newsletter-system-line">⬡ Incoming Transmission</div>
+            <h3 class="newsletter-title">Dispatches from Turin</h3>
+            <p class="newsletter-desc">
+              Register for chapter releases, launch announcements, and field reports
+              from inside the Leonelli organization. The classification window is open.
+            </p>
+          </div>
+
+          <form class="ml-block-form newsletter-form"
+                action="https://assets.mailerlite.com/jsonp/2321813/forms/186683523324708427/subscribe"
+                data-code="" method="post" target="_blank">
+
+            <div class="ml-form-fieldRow newsletter-row">
+              <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                <label for="newsletter-email" class="newsletter-label">Identifier — Email</label>
+                <input id="newsletter-email"
+                       aria-label="email" aria-required="true"
+                       type="email"
+                       class="newsletter-input"
+                       name="fields[email]"
+                       placeholder="your.email@domain.com"
+                       autocomplete="email">
+              </div>
+            </div>
+
+            <div class="ml-form-checkboxRow ml-validate-required newsletter-checkbox-row">
+              <label class="newsletter-checkbox">
+                <input type="checkbox">
+                <span>Confirm registration. I consent to receive transmissions and updates.</span>
+              </label>
+            </div>
+
+            <div class="ml-form-recaptcha ml-validate-required newsletter-recaptcha">
+              <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+            </div>
+
+            <p class="newsletter-privacy">Unsubscribe anytime. See our Privacy Policy for details.</p>
+
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+
+            <div class="ml-form-embedSubmit newsletter-submit-row">
+              <button type="submit" class="btn btn-primary newsletter-submit">⬡ Confirm Registration</button>
+              <button disabled="disabled" style="display: none;" type="button" class="loading btn btn-primary newsletter-submit">
+                <span>Transmitting…</span>
+              </button>
+            </div>
+          </form>
         </div>
-        <div class="broadcast-body">
-          <strong>NPC DISTRIBUTION CONFIRMED.</strong> The majority of the Leonelli
-          organization has been classified as NPC. Fifty-three personnel outside the
-          inner circle selected their classes within the window.
+
+        <!-- SUCCESS STATE -->
+        <div class="ml-form-successBody row-success newsletter-success" style="display: none">
+          <div class="newsletter-system-line">⬡ Registration Confirmed</div>
+          <h3 class="newsletter-title">Transmission Acknowledged</h3>
+          <p class="newsletter-desc">You have been added to the dispatch list. Stand by for incoming field reports.</p>
         </div>
+
       </div>
-
-      <div class="broadcast" data-chapter="8">
-        <div class="broadcast-header">
-          <span class="broadcast-type">Class Confirmation</span>
-          <span class="broadcast-time">Chapter 8</span>
-        </div>
-        <div class="broadcast-body">
-          <strong>CORE FIVE CLASSIFICATIONS LOCKED.</strong>
-          Fixer. Collector. Advocate. Runner. Watcher.
-          One additional entity classified: <strong>Architect</strong> — Luca Terranova.
-          Classification window remains open for registered entities city-wide.
-        </div>
-      </div>
-
-      <div class="broadcast" data-chapter="5">
-        <div class="broadcast-header">
-          <span class="broadcast-type">Acquisition</span>
-          <span class="broadcast-time">Chapter 5</span>
-        </div>
-        <div class="broadcast-body">
-          <strong>FIRST ANALYST SECURED.</strong> Entity designation: Archimede.
-          Three kilometers from Palazzo Valperga. The System Analysis Division
-          concept is now operational.
-        </div>
-      </div>
-
-      <div class="broadcast" data-chapter="2">
-        <div class="broadcast-header">
-          <span class="broadcast-type">System Alert</span>
-          <span class="broadcast-time">Chapter 2</span>
-        </div>
-        <div class="broadcast-body">
-          <strong>WELCOME TO THE NEW WORLD.</strong>
-          Your registration is confirmed. Please review your classification options.
-          You have 72 hours. Entity Cecilia Leonelli has selected: <strong>FIXER</strong>.
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -162,6 +176,29 @@
 <!-- ==================== SCRIPTS ==================== -->
 <script src="js/nav.js"></script>
 <script src="js/spoiler.js"></script>
+
+<!-- ==================== MAILERLITE ==================== -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  function ml_webform_success_40891331() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-40891331 .row-success').show();
+    $('.ml-subscribe-form-40891331 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/2321813/forms/186683523324708427/takel");
+</script>
+
+<!-- MailerLite Universal -->
+<script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '2321813');
+</script>
 
 </body>
 </html>
