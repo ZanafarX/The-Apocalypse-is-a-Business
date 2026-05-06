@@ -93,8 +93,8 @@ var FACTIONS = [
     territory: 'Centro Storico station',
     type: 'Institutional — Law Enforcement',
     threat: 'Institutional Variable',
-    summary: 'A single Carabinieri unit with higher-than-average Player-class personnel because its commanding officer privately encouraged class selection regardless of official guidance. Still operates as law enforcement. Still wears the uniform. Increasingly divergent from NPC colleagues in capability.',
-    strengths: 'Institutional legitimacy. Genuine tactical training. Player-class personnel measurably more effective than NPC counterparts. Leto\'s independent judgment and methodical analysis.',
+    summary: 'A single Carabinieri unit with higher-than-average Player personnel because its commanding officer privately encouraged class selection regardless of official guidance. Still operates as law enforcement. Still wears the uniform. Increasingly divergent from NPC colleagues in capability.',
+    strengths: 'Institutional legitimacy. Genuine tactical training. Player personnel measurably more effective than NPC counterparts. Leto\'s independent judgment and methodical analysis.',
     weaknesses: 'Small unit. Constrained by institutional framework that may no longer serve its purpose. Internal tension between Player and NPC personnel.',
     philosophy: 'The gap between the institution he serves and the reality he operates in grows wider every day. The negotiation between opposition and arrangement is ongoing.',
     subgroups: []
@@ -128,7 +128,7 @@ var FACTIONS = [
     type: 'Infrastructure Faction',
     threat: 'Economic Variable',
     summary: 'Player faction formed around control of Turin\'s water infrastructure within the first two weeks. Not ideological. Purely opportunistic: engineers who recognized water as the most irreplaceable civic resource and moved first. Provides water in exchange for resources, protection, and formal agreements.',
-    strengths: 'Controls the most irreplaceable resource in the city. Player-class personnel at each node. Leverage cannot be answered with force without catastrophic reputational cost.',
+    strengths: 'Controls the most irreplaceable resource in the city. Player personnel at each node. Leverage cannot be answered with force without catastrophic reputational cost.',
     weaknesses: 'Small faction. Limited military capability. Dependent on external security. Leverage is defensive only — cannot project power.',
     philosophy: 'Extractive in the sophisticated sense. Not crudely predatory — harder to argue against publicly.',
     subgroups: []

@@ -96,10 +96,10 @@ var CHARACTERS = [
     stats: {
       presence: 35,
       acuity: 55,
-      force: 35,
-      resilience: 35,
+      force: 45,
+      resilience: 40,
       velocity: 90,
-      precision: 75,
+      precision: 80,
       edge: 45
     },
     appearance: 'Age 27. Tall, slim, almost severe. Long black hair in a single braid. Pale skin, light violet or gray-lilac eyes, narrow face, unreadable expression. Moves without wasted motion; when standing still, she is the stillest person in the room. Fitted black suit, pale shirt, slim tie, flat shoes.',
@@ -508,7 +508,7 @@ var CHARACTERS = [
       precision: 65,
       edge: 35
     },
-    appearance: 'Age 25. Black hair with a distinctive patch of white-gray at the crown, a feature he was born with and has never successfully explained to anyone\'s satisfaction. Yellow-amber eyes with a directness that reads as intensity before you register that it is actually anxiety. He looks at things the way someone looks at things when they are not sure the thing will still be there if they glance away. Black jacket with orange-yellow accent cuffs, worn with the collar up. Looks harder than his age until he speaks, at which point the stutter reappears and revises the impression.',
+    appearance: 'Age 25. Short, black hair. Yellow-amber eyes with a directness that reads as intensity before you register that it is actually anxiety. He looks at things the way someone looks at things when they are not sure the thing will still be there if they glance away. Black jacket with orange-yellow accent cuffs, worn with the collar up. Looks harder than his age until he speaks, at which point the stutter reappears and revises the impression.',
     summary: 'Auditor of the System Analysis Division. Forum theory-crafter since age fifteen, Ermilio spent his teenage years on private server communities for games whose official support had ended, developing a specific and unusual cognitive orientation: an instinct for finding what was there rather than what was shown. Cut content, unreleased mechanics, developer notes left in the code. The handle "RaptorSix" came from a speedrunning technique he discovered and documented for a game with a twelve-person active community. He correctly deduced several early System class mechanics from inference alone, which got him flagged by Bianca independently of Luca; the two posts sat in her files together for four hours before Cecilia decided the second was worth a visit. He was found barricaded on the top floor of his building, holding off an extraction attempt by a rival faction, his wife having already decided they needed to go somewhere better. Cecilia announced herself by citing the analytical error in his forum post. He opened the door.',
     coreFlaw: 'Has made peace with the arrangement faster than the arrangement deserves, primarily because the work is genuinely interesting. The skills he uses to help the Leonellis are the same skills he would use to identify what the Leonellis hide from the System and occasionally from each other. He has not yet decided what to do with the things he has seen that no one asked him to look for.',
     skills: [
