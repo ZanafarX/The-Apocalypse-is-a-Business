@@ -254,7 +254,7 @@ var CHARACTERS = [
       resilience: 35,
       velocity: 60,
       precision: 50,
-      edge: 85
+      edge: 80
     },
     appearance: 'Age 32. Lean, athletic build. Dark blue-black hair, longer on top, always deliberately unruly. Short beard or careful stubble. Tinted glasses worn low enough to show his grin. Handsome in an unserious, dangerous way. Sharp black suit with a flashier cut than the others, blue tie or accent.',
     summary: 'Leonelli operator. Fast-talking, charming, observant. Flirts and needles people on purpose to test how tightly wound they are. Underneath that, ruthless and practical. Fidgets with his cufflinks. Samples food and drink first in unfamiliar places. Never forgets an insult but pretends he did. Reaches spaces and people the others cannot.',
