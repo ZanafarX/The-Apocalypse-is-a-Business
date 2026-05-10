@@ -37,7 +37,7 @@ var TIMELINE_EVENTS = [
     chapter: 1,
     category: 'leonelli',
     description: 'A handwritten note arrived through Matteo\'s channels, dated March 11: <em>"Be advised. The world will be altered within the next two days. Physical parameters will change. Prepare accordingly."</em> The signature matched a historical society that had been inactive for decades.',
-    impact: 'Cecilia initially dismissed it as a prank or a test. Within twenty-four hours, multiple independent sources were echoing the same clinical phrasing — too similar, too widely distributed, too devoid of political content to be a hoax.',
+    impact: 'Cecilia initially dismissed it as a prank or a test. Within twenty-four hours, multiple independent sources were echoing the same clinical phrasing. The wording was too similar, too widely distributed, and too devoid of political content to be a hoax.',
     relatedEntries: ['Matteo Vascari', 'Fiamma Eterna']
   },
 
@@ -47,7 +47,7 @@ var TIMELINE_EVENTS = [
     title: 'Warnings Proliferate',
     chapter: 1,
     category: 'city',
-    description: 'Bianca reported that similar warnings were reaching business leaders, politicians, law enforcement, and criminal organizations across the city — all within twelve hours. Several referenced "physical parameters," "reality restructuring," and "dimensional stability." One specified a time: noon GMT the following day.',
+    description: 'Bianca reported that similar warnings had reached business leaders, politicians, law enforcement, and criminal organizations across the city. All of it happened within a twelve-hour window. Several referenced "physical parameters," "reality restructuring," and "dimensional stability." One specified a time: noon GMT the following day.',
     impact: 'Cecilia recalled the Core Five and ordered full preparation. The government placed offices on alert, but response was slow and contradictory. Some businesses closed for the day.',
     relatedEntries: ['Bianca Severa', 'Cecilia Leonelli']
   },
@@ -62,7 +62,7 @@ var TIMELINE_EVENTS = [
     title: 'System Initialization',
     chapter: 1,
     category: 'system',
-    description: 'At 19:00 on March 13, the world changed. A pressure shift behind the eyes, light too sharp for a March evening, shadows cut rather than cast. Then the words appeared — glowing text suspended in the air above Turin, impossible to ignore. The System announced itself to 2,247,891 registered entities. The Classification Window opened. The 72-hour countdown began.',
+    description: 'At 19:00 on March 13, the world changed. A pressure shift behind the eyes, light too sharp for a March evening, shadows cut rather than cast. Then the words appeared. Glowing text suspended in the air above Turin, impossible to ignore. The System announced itself to 2,247,891 registered entities. The Classification Window opened. The 72-hour countdown began.',
     impact: 'Civil infrastructure began degrading within hours. Organizations with preexisting command structures held their shape while civic institutions fragmented. The sky turned a deep, vibrant purple and did not return to blue.',
     relatedEntries: ['Cecilia Leonelli', 'The System']
   },
@@ -73,7 +73,7 @@ var TIMELINE_EVENTS = [
     title: 'Cecilia Selects FIXER',
     chapter: 1,
     category: 'leonelli',
-    description: 'Alone at her desk after 3 AM, Cecilia opened the class selection interface. She evaluated Sovereign, Enforcer, and Fixer with the same eye she used for contracts — reading the architecture, not the meaning. Sovereign required legitimacy that hadn\'t been established yet. Enforcer didn\'t match her direction. Fixer named an outcome without specifying a method, with a ceiling signal — <em>"what others cannot"</em> — that marked a threshold of capability, not willingness.',
+    description: 'Alone at her desk after 3 AM, Cecilia opened the class selection interface. She evaluated Sovereign, Enforcer, and Fixer with the same eye she used for contracts, reading the architecture rather than the meaning. Sovereign required legitimacy that hadn\'t been established yet. Enforcer didn\'t match her direction. Fixer named an outcome without specifying a method. Its descriptor language carried a ceiling signal in the phrase <em>"what others cannot,"</em> which marked a threshold of capability rather than willingness.',
     impact: 'The Leonelli organization had its first Player-classified member before most of Turin had finished processing the initial message. Cecilia selected before consulting the others, reading the System\'s descriptor language on instinct.',
     relatedEntries: ['Cecilia Leonelli', 'FIXER']
   },
@@ -84,8 +84,8 @@ var TIMELINE_EVENTS = [
     title: 'Dario Selects RUNNER',
     chapter: 8,
     category: 'leonelli',
-    description: 'Dario selected his class early, before the Core Five convened for formal discussion. <em>"For those who move faster than consequences."</em> He chose Runner over Brute and Infiltrator because it was about speed and options rather than fixed positions. He did not wait to be told.',
-    impact: 'Dario\'s early selection meant the Leonellis had two Player-classified members within the first day — one strategic, one operational.',
+    description: 'Dario selected his class early, before the Core Five convened for formal discussion. <em>"For those who move faster than consequences."</em> He chose Runner over Brute and Infiltrator because it emphasized speed and tactical flexibility. He did not wait to be told.',
+    impact: 'Dario\'s early selection gave the Leonellis two Player-classified members within the first day. One handled strategy, the other operations.',
     relatedEntries: ['Dario Fioretti', 'RUNNER']
   },
 
@@ -106,8 +106,8 @@ var TIMELINE_EVENTS = [
     title: 'First Night of Collapse',
     chapter: 2,
     category: 'city',
-    description: 'Phone signal dropped to intermittent patches. Cars choked major boulevards. A military convoy of decades-old APCs pressed southwest down Corso Regina Margherita. By 6 PM, gunshots. By 9 PM, bodies on the pavement. Pharmacies and shops were looted selectively — obvious goods taken, specialist medicines left behind by people who couldn\'t read the labels.',
-    impact: 'The knowledge gap — who understood what the System was and what it meant — began to matter as much as the supply gap. People who grasped the new reality in the first hours separated sharply from those who waited for the old one to return.',
+    description: 'Phone signal dropped to intermittent patches. Cars choked major boulevards. A military convoy of decades-old APCs pressed southwest down Corso Regina Margherita. By 6 PM, gunshots. By 9 PM, bodies on the pavement. Pharmacies and shops were looted selectively. Obvious goods went first, while specialist medicines stayed on the shelves, left behind by people who couldn\'t read the labels.',
+    impact: 'The knowledge gap began to matter as much as the supply gap. Who understood what the System was, and what it meant, defined survival as much as access to food and medicine. People who grasped the new reality in the first hours separated sharply from those who waited for the old one to return.',
     relatedEntries: ['Cecilia Leonelli']
   },
 
@@ -122,7 +122,7 @@ var TIMELINE_EVENTS = [
     chapter: 3,
     category: 'leonelli',
     description: 'Cecilia walked the building at 5:30 AM. People were sleeping in corridors on unauthorized bedding. The cellar access hadn\'t been properly secured. Ruggiero had sealed entrances, repositioned guards, and kept the perimeter clean since 3 AM. Eleven non-payroll people were sheltering inside, including the Esposito family. Cecilia ordered a protocol for intake and exchange.',
-    impact: 'Palazzo Valperga began its transition from private headquarters to fortified shelter. The question of who to take in — and what to ask in return — became a policy problem that would define the organization\'s relationship with the civilian population.',
+    impact: 'Palazzo Valperga began its transition from private headquarters to fortified shelter. The organization now had to decide who to take in and what to ask in return. The answer would shape its relationship with the civilian population for the rest of the collapse.',
     relatedEntries: ['Palazzo Valperga', 'Ruggiero Brando']
   },
 
@@ -143,8 +143,8 @@ var TIMELINE_EVENTS = [
     title: 'The Archimede Thread',
     chapter: 3,
     category: 'leonelli',
-    description: 'Bianca brought Cecilia a cached gaming forum post by a user called Archimede. Written the previous evening and posted during a narrow signal window, the thread dismantled the class selection interface from first principles — identifying ceiling signals in descriptor language, selection architecture, and why most people were choosing wrong. It was rigorous, generalized, and written for strangers.',
-    impact: 'Cecilia recognized the author as someone who could identify value faster than anyone else — and who had done it publicly, for free, on the chance that the right people would find it. She ordered Bianca to find him.',
+    description: 'Bianca brought Cecilia a cached gaming forum post by a user called Archimede. Written the previous evening and posted during a narrow signal window, the thread dismantled the class selection interface from first principles, identifying ceiling signals in descriptor language, selection architecture, and why most people were choosing wrong. It was rigorous, generalized, and written for strangers.',
+    impact: 'Cecilia recognized the author as someone who could identify value faster than anyone else. He had done it publicly, for free, on the chance that the right people would find it. She ordered Bianca to find him.',
     relatedEntries: ['Luca Terranova', 'Bianca Severa']
   },
 
@@ -154,7 +154,7 @@ var TIMELINE_EVENTS = [
     title: 'First Creature Encounter',
     chapter: 4,
     category: 'scenario',
-    description: 'On the Lungo Po embankment en route to Luca\'s building, Cecilia and Dario encountered one of the System\'s creatures for the first time. Low-slung, fast, with obsidian-like skin and a vertical mouth of needle teeth. It paused, registered their presence, and chose not to engage.',
+    description: 'On the Lungo Po embankment en route to Luca\'s building, Cecilia and Dario encountered one of the System\'s creatures for the first time. It was low-slung and fast, with obsidian-like skin and a vertical mouth of needle teeth. It paused, registered their presence, and chose not to engage.',
     impact: 'The creature\'s decision not to attack was itself significant. Something that made decisions could be understood. Something that could be understood could eventually be predicted. Cecilia\'s need for an analyst capable of asking those questions sharpened.',
     relatedEntries: ['Cecilia Leonelli', 'Dario Fioretti']
   },
@@ -166,7 +166,7 @@ var TIMELINE_EVENTS = [
     chapter: 5,
     category: 'leonelli',
     description: 'Cecilia, Dario, and Matteo traveled on foot across a collapsing city to recruit Luca Terranova from his apartment in San Donato. He\'d been alone since the System hit, monitoring through his window. Matteo had entered the building twenty minutes ahead with a tighter version of the contract already prepared. Luca signed after reading the architecture of both drafts and negotiating the compensation clause.',
-    impact: 'The Leonellis acquired their first dedicated System analyst — someone who understood game mechanics as a professional discipline and could generalize that knowledge to the new reality. Luca\'s sister Iris was brought to Palazzo Valperga within the hour.',
+    impact: 'The Leonellis acquired their first dedicated System analyst. Luca understood game mechanics as a professional discipline and could generalize that knowledge to the new reality. His sister Iris was brought to Palazzo Valperga within the hour.',
     relatedEntries: ['Luca Terranova', 'Iris Terranova', 'Cecilia Leonelli']
   },
 
@@ -176,7 +176,7 @@ var TIMELINE_EVENTS = [
     title: 'Talent Recruitment Begins',
     chapter: 6,
     category: 'leonelli',
-    description: 'Using criteria refined by Luca — top-100 ladder finishers, theory crafters, economy modelers, exploit hunters, guild officers who optimized rather than managed — the Leonellis began building a recruitment list. Iris Terranova produced eleven names from her own network. Bianca identified a second forum analyst worth pursuing: RaptorSix (Ermilio Ferrero). Medical personnel recruitment from Aurora was also ordered.',
+    description: 'Working from criteria Luca had refined, the Leonellis began building a recruitment list. The profile included top-100 ladder finishers, theory crafters, economy modelers, exploit hunters, and guild officers with optimization records. Iris Terranova produced eleven names from her own network. Bianca identified a second forum analyst worth pursuing: RaptorSix (Ermilio Ferrero). Medical personnel recruitment from Aurora was also ordered.',
     impact: 'The Leonellis formalized their approach to human acquisition in the new economy: find people who understood systems under pressure, reach them before anyone else did, and make staying more attractive than leaving.',
     relatedEntries: ['Luca Terranova', 'Iris Terranova', 'Bianca Severa']
   },
@@ -192,7 +192,7 @@ var TIMELINE_EVENTS = [
     chapter: 8,
     category: 'leonelli',
     description: 'With the classification window closing in hours, the Core Five finalized their selections in a group session led by Luca\'s analysis. Ruggiero chose Collector after Luca argued its ceiling scaled with what the organization could make people owe. Matteo chose Advocate for its potential to enforce agreements mechanically. Bianca chose Watcher because its ceiling was knowledge, not action. Luca had already chosen Architect. Dario and Cecilia had selected days earlier.',
-    impact: 'The Leonelli inner circle was now a complementary set: Fixer, Runner, Collector, Advocate, Watcher, Architect. The selections were strategic rather than aspirational — each chosen for ceiling potential and organizational fit rather than immediate power.',
+    impact: 'The Leonelli inner circle was now a complementary set: Fixer, Runner, Collector, Advocate, Watcher, Architect. Every member had been matched to a class for long-term ceiling potential and organizational fit. Immediate combat power was a secondary consideration.',
     relatedEntries: ['Cecilia Leonelli', 'Ruggiero Brando', 'Matteo Vascari', 'Bianca Severa', 'Dario Fioretti', 'Luca Terranova']
   },
 
@@ -217,8 +217,8 @@ var TIMELINE_EVENTS = [
     title: 'Leonelli Recruitment Teams Deployed',
     chapter: 10,
     category: 'leonelli',
-    description: 'Cecilia dispatched two teams into the city during the Scenario. North team — Bianca, Dario, and Luca — moved via Via Milano to recruit from the priority analyst list. South team — Cecilia, Ruggiero, and four others — took a van southeast toward Corso Casale. Both teams operated under a directive: disengage from creatures, avoid military, retrieve the names on the list.',
-    impact: 'Recruiting during an active Scenario was an acceleration risk. It was also the only window in which the competition would be too busy surviving to contest the same targets.',
+    description: 'Cecilia dispatched two teams into the city during the Scenario. The north team consisted of Bianca, Dario, and Luca, moving via Via Milano to recruit from the priority analyst list. The south team was Cecilia, Ruggiero, and four others, taking a van southeast toward Corso Casale. Both teams operated under a directive: disengage from creatures, avoid military, retrieve the names on the list.',
+    impact: 'Recruiting during an active Scenario carried acceleration risk. It was also the only window in which the competition would be too busy surviving to contest the same targets.',
     relatedEntries: ['Cecilia Leonelli', 'Bianca Severa', 'Dario Fioretti']
   },
 
@@ -239,7 +239,7 @@ var TIMELINE_EVENTS = [
     title: 'Davide Lanza Found Dead — Rival Group Confirmed',
     chapter: 10,
     category: 'faction',
-    description: 'The team\'s first recruitment target, Davide Lanza (market analyst, MMO auction tool builder), was found shot dead behind his shop counter on Corso Casale. His equipment had been stripped. On the wall behind him: "SAFE ZONE" with an arrow and a phone number. Someone was collecting useful people — and killing the ones who resisted.',
+    description: 'The team\'s first recruitment target, Davide Lanza (market analyst, MMO auction tool builder), was found shot dead behind his shop counter on Corso Casale. His equipment had been stripped. On the wall behind him: "SAFE ZONE" with an arrow and a phone number. Someone was collecting useful people. The ones who resisted were being killed.',
     impact: 'Confirmation that the Leonellis were not the only organization identifying System-literate talent. The phone number and directional markings indicated an organized operation with infrastructure and intent.',
     relatedEntries: ['Ferro Patto']
   },
@@ -251,7 +251,7 @@ var TIMELINE_EVENTS = [
     chapter: 11,
     category: 'leonelli',
     description: 'Ermilio Ferrero (RaptorSix) and his sister Lorena were found barricaded on the top floor of their building, having fought off four armed men from the same rival group hours earlier. Two neighbors had been killed. Cecilia\'s team cleared the building, interrogated a survivor, and extracted the Ferreros. The survivor named "Marinelli" as the group\'s backer.',
-    impact: 'The Ferreros brought Observer and Scribe classes into the organization — information-gathering and recording capabilities that would prove critical for the System Analysis Division. The name Marinelli provided a thread to follow.',
+    impact: 'The Ferreros brought Observer and Scribe classes into the organization. Their information-gathering and recording capabilities would prove critical for the System Analysis Division. The name Marinelli provided a thread to follow.',
     relatedEntries: ['Ermilio Ferrero', 'Cecilia Leonelli']
   },
 
@@ -261,8 +261,8 @@ var TIMELINE_EVENTS = [
     title: 'Gate Battle at Palazzo Valperga',
     chapter: 12,
     category: 'leonelli',
-    description: 'Bianca\'s north team returned under fire — pursued by armed hostiles and a creature. The attackers included individuals with combat classes: one who could erect shimmering barriers, another who threw concussive force blasts, a third with perception through cover. The roof team engaged. A creature was caught and killed in the closing gate. The team brought back one asset: Giulia Conti, class Artificer.',
-    impact: 'First direct combat between the Leonellis and Players with active System abilities. The rival group was identified as <strong>Ferro Patto</strong> — a cluster of ex-police, private security, and old military men who had organized around emergency authority.',
+    description: 'Bianca\'s north team returned under fire, pursued by armed hostiles and a creature. The attackers included individuals with combat classes: one who could erect shimmering barriers, another who threw concussive force blasts, a third with perception through cover. The roof team engaged. A creature was caught and killed in the closing gate. The team brought back one asset: Giulia Conti, class Artificer.',
+    impact: 'First direct combat between the Leonellis and Players with active System abilities. The rival group was identified as <strong>Ferro Patto</strong>. Its membership came from ex-police, private security, and old military men who had organized around emergency authority.',
     relatedEntries: ['Bianca Severa', 'Giulia Conti', 'Ferro Patto', 'Palazzo Valperga']
   },
 
@@ -273,7 +273,7 @@ var TIMELINE_EVENTS = [
     chapter: 13,
     category: 'scenario',
     description: 'By midnight, the team had mapped creature behavioral patterns: they hunted in groups of three to four, avoided well-defended positions, and targeted isolated streets. The mayor\'s office had gone dark. On a second excursion, Cecilia recruited Ivan Carceri, a Cartographer class who had been mapping creature spawn points from his building. Then the System issued a new objective: an Extraction Window at Via Po 77. Cecilia\'s team sprinted to the rooftop under rival fire and she claimed the node, registering it to herself.',
-    impact: 'The Extraction Window proved the System generated timed reward events during Scenarios — another mechanism that favored speed and information over raw force.',
+    impact: 'The Extraction Window proved the System generated timed reward events during Scenarios. It was another mechanism that favored speed and information over raw force.',
     relatedEntries: ['Cecilia Leonelli', 'Ivan Carceri']
   },
 
@@ -283,7 +283,7 @@ var TIMELINE_EVENTS = [
     title: 'The NPC Revelation',
     chapter: 15,
     category: 'system',
-    description: 'Luca asked all Leonelli personnel to open their System interfaces. The result was immediate and structural: the vast majority were classified as NPCs — non-player characters. They had not selected classes before the window closed. Only fifty-three people outside the inner circle had done so. NPCs could not level, gain experience, or acquire skills. The System considered them background.',
+    description: 'Luca asked all Leonelli personnel to open their System interfaces. The result was immediate and structural. The vast majority were classified as NPCs. The System used the term to mean non-player character. They had not selected classes before the window closed. Only fifty-three people outside the inner circle had done so. NPCs could not level, gain experience, or acquire skills. The System considered them background.',
     impact: 'Structural reckoning. The organization\'s enforcement capacity was mechanically limited in ways that required immediate strategic adjustment. Luca Terranova was formally assigned as head of the System Analysis Division.',
     relatedEntries: ['Luca Terranova', 'NPC Status', 'System Analysis Division']
   },
@@ -320,7 +320,7 @@ var TIMELINE_EVENTS = [
     title: 'Player vs. NPC Demonstration',
     chapter: 16,
     category: 'leonelli',
-    description: 'Cecilia ordered Gonzaga, an NPC, to shoot Dario, a Player, in the chest at six paces. The round hit like a BB gun — barely a bruise. The demonstration proved the mechanical gap between Players and NPCs in a way the entire room could see.',
+    description: 'Cecilia ordered Gonzaga, an NPC, to shoot Dario, a Player, in the chest at six paces. The round hit like a BB gun, barely a bruise. The demonstration proved the mechanical gap between Players and NPCs in a way the entire room could see.',
     impact: 'The test removed any remaining ambiguity about the NPC disadvantage and gave the organization a visceral understanding of why Player-classified members were irreplaceable assets.',
     relatedEntries: ['Dario Fioretti', 'NPC Status']
   },
@@ -331,7 +331,7 @@ var TIMELINE_EVENTS = [
     title: 'Military Position Salvaged',
     chapter: 16,
     category: 'leonelli',
-    description: 'Cecilia\'s team found an abandoned military position on Corso Francia — two armored vehicles with doors open, bullet holes clustered in patterns that said the soldiers hadn\'t expected the angles. Blood on the asphalt, no bodies. She recovered a military map marked with safe routes and fallback positions.',
+    description: 'Cecilia\'s team found an abandoned military position on Corso Francia. Two armored vehicles stood with their doors open. Bullet holes clustered in patterns that said the soldiers hadn\'t expected the angles. Blood marked the asphalt, but no bodies remained. She recovered a military map marked with safe routes and fallback positions.',
     impact: 'The map revealed how the military had been thinking about the city and where their planning had failed. The salvaged equipment and intelligence gave the Leonellis resources they didn\'t have to manufacture.',
     relatedEntries: ['Cecilia Leonelli']
   },
@@ -342,8 +342,8 @@ var TIMELINE_EVENTS = [
     title: 'Paride Boris Recruited',
     chapter: 16,
     category: 'leonelli',
-    description: 'Near the abandoned military position, Cecilia encountered Paride Boris, a former Polizia supervisor who had kept a group of civilians alive in a building basement through the Night of First Measure. He recognized the Leonelli name. Cecilia offered the same proposition she offered everyone: protection, food, water — or die alone when the next scenario begins. He accepted.',
-    impact: 'Boris brought an organized block of civilians — families and workers who\'d already accepted collective discipline. His police background would later make him the ideal bridge figure to infiltrate the Civil Security Coalition.',
+    description: 'Near the abandoned military position, Cecilia encountered Paride Boris, a former Polizia supervisor who had kept a group of civilians alive in a building basement through the Night of First Measure. He recognized the Leonelli name. Cecilia offered him the standard Leonelli proposition. He could accept protection, food, and water on her terms, or face the next scenario alone. He accepted.',
+    impact: 'Boris arrived with an organized block of civilians. The families and workers he had sheltered had already accepted collective discipline. His police background would later make him the ideal bridge figure to infiltrate the Civil Security Coalition.',
     relatedEntries: ['Cecilia Leonelli', 'Civil Security Coalition']
   },
 
@@ -353,8 +353,8 @@ var TIMELINE_EVENTS = [
     title: 'System Analysis Division — First Briefing',
     chapter: 20,
     category: 'leonelli',
-    description: 'Luca ran his first formal briefing. Key findings: (1) Creatures used coordinated tactics — they withdrew on shared signals and did not scavenge, behaving like combatants with doctrine rather than animals. (2) Creatures appeared to deprioritize NPCs, engaging Players more aggressively. (3) The Night of First Measure had contained hidden secondary objectives — certain locations generated bonus rewards no one had known to pursue. (4) Groups with complementary classes received amplified rewards. The System was incentivizing synergistic teams in strategic locations.',
-    impact: 'The secondary objective discovery meant the Leonellis could prepare teams with specific class combinations and deploy them to high-value locations before future Scenarios triggered. Territory wasn\'t just defensible — it was mechanically profitable.',
+    description: 'Luca ran his first formal briefing. Key findings: (1) Creatures used coordinated tactics. They withdrew on shared signals and did not scavenge, behaving like combatants under shared doctrine. (2) Creatures appeared to deprioritize NPCs, engaging Players more aggressively. (3) The Night of First Measure had contained hidden secondary objectives. Certain locations generated bonus rewards no one had known to pursue. (4) Groups with complementary classes received amplified rewards. The System was incentivizing synergistic teams in strategic locations.',
+    impact: 'The secondary objective discovery meant the Leonellis could prepare teams with specific class combinations and deploy them to high-value locations before future Scenarios triggered. Holding territory now generated direct mechanical rewards through hidden objectives, in addition to its defensive value.',
     relatedEntries: ['Luca Terranova', 'System Analysis Division']
   },
 
@@ -379,7 +379,7 @@ var TIMELINE_EVENTS = [
     title: 'Porta Palazzo Market Reconnaissance',
     chapter: 21,
     category: 'leonelli',
-    description: 'Dario visited Porta Palazzo market to assess conditions. His Runner skill <strong>Read the Room</strong> activated for the first time — an overlay mapping the emotional texture of the space, flagging outliers against the prevailing mood. System drops from the Night of First Measure were already circulating as trade goods. Three unidentified Players were mapping the market\'s vulnerabilities. Dario reconnected with Fatima Hassan, a longtime Aurora contact who asked whether the Leonellis were "still in business." He confirmed. She responded: <em>"Show me."</em>',
+    description: 'Dario visited Porta Palazzo market to assess conditions. His Runner skill <strong>Read the Room</strong> activated for the first time. An overlay mapped the emotional texture of the space, flagging outliers against the prevailing mood. System drops from the Night of First Measure were already circulating as trade goods. Three unidentified Players were mapping the market\'s vulnerabilities. Dario reconnected with Fatima Hassan, a longtime Aurora contact who asked whether the Leonellis were "still in business." He confirmed. She responded: <em>"Show me."</em>',
     impact: 'The market was adapting faster than institutions. Barter had replaced currency in some stalls, System-generated items had entered trade, and the social physics of protection and exchange were already reshaping around whoever showed up consistently.',
     relatedEntries: ['Dario Fioretti', 'RUNNER']
   },
@@ -390,7 +390,7 @@ var TIMELINE_EVENTS = [
     title: 'Civil Security Coalition Announced',
     chapter: 21,
     category: 'faction',
-    description: 'The military announced the formation of a Civil Security Coalition under Commander Fedele Gasparini, recruiting civilians for a Reconstruction Unit. Public bulletins appeared at Porta Palazzo and other high-traffic areas — a claim on public space and public trust.',
+    description: 'The military announced the formation of a Civil Security Coalition under Commander Fedele Gasparini, recruiting civilians for a Reconstruction Unit. Public bulletins appeared at Porta Palazzo and other high-traffic areas. The visible signage was a claim on public space and public trust.',
     impact: 'The Coalition had institutional credibility the Leonellis lacked. Citizens would follow official voices in week one regardless of actual capability.',
     relatedEntries: ['Civil Security Coalition']
   },
@@ -401,8 +401,8 @@ var TIMELINE_EVENTS = [
     title: 'Coalition Counter-Strategy — The Boris Bridge',
     chapter: 21,
     category: 'leonelli',
-    description: 'Dario proposed a counter-strategy: rather than opposing the Coalition publicly, use Boris as a bridge figure. As a former officer — not Leonelli — he could credibly offer Coalition personnel better equipment, terms, and survival odds through informal personal arrangements. The best operators would moonlight for the Leonellis while staying in uniform, creating embedded defectors who weakened Gasparini\'s command from within.',
-    impact: 'Cecilia approved the plan. The solution was not to argue legitimacy but to demonstrate superior control and let quality drain from the Coalition naturally. <em>"If they respond with force, they look bad. If they don\'t, they look weak. Either way, we win."</em>',
+    description: 'Dario proposed a counter-strategy that bypassed direct opposition. Boris would serve as a bridge figure. As a former officer with no formal Leonelli affiliation, he could credibly offer Coalition personnel better equipment, terms, and survival odds through informal personal arrangements. The best operators would moonlight for the Leonellis while staying in uniform, creating embedded defectors who weakened Gasparini\'s command from within.',
+    impact: 'Cecilia approved the plan. The strategy bypassed any direct legitimacy contest and focused on demonstrating superior control, letting quality drain from the Coalition naturally. <em>"If they respond with force, they look bad. If they don\'t, they look weak. Either way, we win."</em>',
     relatedEntries: ['Dario Fioretti', 'Cecilia Leonelli', 'Civil Security Coalition']
   },
 
@@ -413,7 +413,7 @@ var TIMELINE_EVENTS = [
     chapter: 21,
     category: 'city',
     description: 'Clear territorial control became visible across Turin. Civilians aligned with whoever offered protection. Food and water became critical leverage. Rail infrastructure was abandoned by corporate operators. The Leonellis moved toward full consolidation of the Quadrilatero Romano. Ferro Patto claimed Palazzo Reale and the Centro Storico.',
-    impact: 'The post-System power landscape solidified. Faction lines hardened. Ferro Patto chose symbolic territory — Palazzo Reale — over logistical territory, a structural error Cecilia filed for future exploitation.',
+    impact: 'The post-System power landscape solidified. Faction lines hardened. Ferro Patto chose symbolic territory at Palazzo Reale over logistical territory. Cecilia filed the structural error for future exploitation.',
     relatedEntries: ['Palazzo Valperga', 'Ferro Patto']
   },
 
@@ -427,8 +427,8 @@ var TIMELINE_EVENTS = [
     title: 'Military Intelligence Assessment',
     chapter: 22,
     category: 'leonelli',
-    description: 'Cecilia briefed Dario on the military\'s rebuilding efforts: a command center at Caselle Airport, a forward position near Superga, resumed patrols, and the Civil Security Coalition gaining civilian traction. She framed the core problem: the Coalition had institutional credibility the Leonellis could not match directly. The exchange included a rare personal moment — Dario internally calling her <em>"La Capetta"</em> and recognizing she would have dominated any competitive game ecosystem.',
-    impact: 'The strategic response crystallized: do not argue, demonstrate. Offer what the Coalition cannot match. Let capability speak louder than credentials.',
+    description: 'Cecilia briefed Dario on the military\'s rebuilding efforts: a command center at Caselle Airport, a forward position near Superga, resumed patrols, and the Civil Security Coalition gaining civilian traction. She framed the core problem: the Coalition had institutional credibility the Leonellis could not match directly. The exchange included a rare personal moment. Dario internally called her <em>"La Capetta"</em> and recognized she would have dominated any competitive game ecosystem.',
+    impact: 'The strategic response crystallized into a single directive. The Leonellis would offer demonstrable capabilities the Coalition could not match and let the demonstrations do the persuading.',
     relatedEntries: ['Cecilia Leonelli', 'Dario Fioretti']
   },
 
@@ -439,7 +439,7 @@ var TIMELINE_EVENTS = [
     chapter: 23,
     category: 'faction',
     description: 'Dario attended an evening meeting at the old FIAT Lingotto complex where thirty-two people from heavy industry, salvage crews, and observer factions had gathered under Luciano Caruso, a former Mirafiori factory floor manager. Dario identified the key players: Caruso running the room like a rally, Emiliano Valle as an information broker, and Federico Marchi as the quiet mechanic who actually understood things. When the room stalled on protection, Dario proposed a testable project: restoring grid power to two blocks in San Paolo, with the Leonellis providing security.',
-    impact: 'The offer forced Caruso to accept publicly or look like he was protecting his own claim over the city\'s recovery. Caruso agreed. Afterward, Valle dropped his hostility and offered intelligence about something the military was building in Lingotto\'s Building B — the first hint of military infrastructure ambitions.',
+    impact: 'The offer forced Caruso to accept publicly or look like he was protecting his own claim over the city\'s recovery. Caruso agreed. Afterward, Valle dropped his hostility and offered intelligence about something the military was building in Lingotto\'s Building B. It was the first hint of military infrastructure ambitions.',
     relatedEntries: ['Dario Fioretti', 'Lingotto']
   },
 
@@ -471,8 +471,8 @@ var TIMELINE_EVENTS = [
     title: 'Iris Begins Independent Intelligence Work',
     chapter: 26,
     category: 'leonelli',
-    description: 'The narrative shifted to Iris\'s perspective as she worked under Matteo translating property documents. She discovered that three addresses in historical Leonelli correspondence overlapped with buildings Cecilia had identified as expansion priorities. She noticed but did not report the overlap — recording it privately. When she asked Matteo directly, he admitted he knew the full property history and had not told Cecilia everything. He framed it as avoiding complications rather than deception.',
-    impact: 'Iris was building her own map of the organization\'s internal dynamics, including information asymmetries between its leaders. She was tracking Bianca\'s surveillance of her and decided she could track Bianca back. A quietly independent intelligence asset whose loyalty was functional, not ideological.',
+    description: 'The narrative shifted to Iris\'s perspective as she worked under Matteo translating property documents. She discovered that three addresses in historical Leonelli correspondence overlapped with buildings Cecilia had identified as expansion priorities. She noticed but did not report the overlap, recording it privately. When she asked Matteo directly, he admitted he knew the full property history and had not told Cecilia everything. He framed it as avoiding complications rather than deception.',
+    impact: 'Iris was building her own map of the organization\'s internal dynamics, including information asymmetries between its leaders. She was tracking Bianca\'s surveillance of her and decided she could track Bianca back. Her loyalty was practical and conditional, rooted in current self-interest and revisable as circumstances changed.',
     relatedEntries: ['Iris Terranova', 'Matteo Vascari', 'Bianca Severa']
   },
 
@@ -482,8 +482,8 @@ var TIMELINE_EVENTS = [
     title: 'Infrastructure Recruitment Drive',
     chapter: 27,
     category: 'leonelli',
-    description: 'Dario ran predawn recruitment missions targeting skilled tradespeople: Alesio Silvestri (construction site manager with existing Leonelli ties), an unnamed electrician in Aurora who was already unconsciously using System mechanics to splice unidentifiable materials. Each received the same framing — partnership rather than employment, with the condition of Leonelli-exclusive contracts.',
-    impact: 'The organization was building the infrastructure workforce it needed for reconstruction — and for the visible public goods projects that would make the protection economy self-sustaining.',
+    description: 'Dario ran predawn recruitment missions targeting skilled tradespeople: Alesio Silvestri (construction site manager with existing Leonelli ties), an unnamed electrician in Aurora who was already unconsciously using System mechanics to splice unidentifiable materials. Each received the same framing. Partnership rather than employment, with the condition of Leonelli-exclusive contracts.',
+    impact: 'The organization was building the infrastructure workforce it needed. Reconstruction would require it, and so would the visible public goods projects that would make the protection economy self-sustaining.',
     relatedEntries: ['Dario Fioretti']
   },
 
@@ -497,8 +497,8 @@ var TIMELINE_EVENTS = [
     title: 'Night Market — Luca\'s Street Education',
     chapter: 28,
     category: 'leonelli',
-    description: 'Dario took Luca to the night market to expand his capabilities beyond pure analysis. A trader confronted Luca aggressively; Luca held steady and responded calmly, passing what Dario explained was a credibility check. Dario delivered the lesson explicitly: the economy was people, not spreadsheets. Reading body language, understanding what someone was hiding by how they shifted their weight.',
-    impact: 'The Dario-Luca relationship shifted from employer-contractor toward mentorship. Luca began connecting street-level observation to his analytical framework — a capability that would make the Analysis Division\'s outputs more grounded.',
+    description: 'Dario took Luca to the night market to expand his capabilities beyond pure analysis. A trader confronted Luca aggressively; Luca held steady and responded calmly, passing what Dario explained was a credibility check. Dario delivered the lesson explicitly. The economy ran on people, on reading body language and understanding what someone was hiding by how they shifted their weight.',
+    impact: 'The Dario-Luca relationship shifted from employer-contractor toward mentorship. Luca began connecting street-level observation to his analytical framework. The combined capability would make the Analysis Division\'s outputs more grounded.',
     relatedEntries: ['Dario Fioretti', 'Luca Terranova']
   },
 
@@ -509,7 +509,7 @@ var TIMELINE_EVENTS = [
     chapter: 29,
     category: 'leonelli',
     description: 'The Leonellis hosted a formal banquet for ten of Turin\'s wealthiest surviving industrialists. Seven attended. Cecilia presented the framework as practical necessity: protection, cooperation protocols, and shared priorities in exchange for loyalty. She implied some guests had already engaged privately, letting others wonder who. Baroni pushed back hardest, citing his own security and the military\'s return. Matteo countered that the mayor was likely dead and the military could not fight what it did not understand.',
-    impact: 'When Cecilia raised her glass, everyone drank — including Baroni. Matteo categorized the responses afterward: who said yes, who said not yet. The economic foundations were being established faster than the barracks could react.',
+    impact: 'When Cecilia raised her glass, everyone drank, including Baroni. Matteo categorized the responses afterward: who said yes, who said not yet. The economic foundations were being established faster than the barracks could react.',
     relatedEntries: ['Cecilia Leonelli', 'Matteo Vascari']
   },
 
@@ -519,8 +519,8 @@ var TIMELINE_EVENTS = [
     title: 'Demographic Analysis — Players vs. NPCs',
     chapter: 30,
     category: 'leonelli',
-    description: 'The Analysis Division produced a preliminary model of Turin\'s Player-NPC distribution: roughly 145,000 Players against 670,000 NPCs. Highest Player concentration in student areas, lowest in industrial zones like Mirafiori where unions had advised workers to ignore the System prompt. Cecilia immediately identified a "youth bulge" of powered individuals who did not defer to traditional authority — a revolutionary demographic that would either be recruited or become a mob.',
-    impact: 'Matteo connected the data to their institutional strategy: with police and military mostly NPCs, the Leonellis could position themselves as the bridge between vulnerable civilians and the Player population. Cecilia specified the political vehicle — not the mayor\'s office (fragile single point) but the city council, where influence could be distributed across enough seats to steer without exposure.',
+    description: 'The Analysis Division produced a preliminary model of Turin\'s Player-NPC distribution: roughly 145,000 Players against 670,000 NPCs. Highest Player concentration in student areas, lowest in industrial zones like Mirafiori where unions had advised workers to ignore the System prompt. Cecilia immediately identified a "youth bulge" of powered individuals who did not defer to traditional authority. The demographic was revolutionary by definition and represented both a recruitment opportunity and a stability risk that any successful faction would have to address.',
+    impact: 'Matteo connected the data to their institutional strategy: with police and military mostly NPCs, the Leonellis could position themselves as the bridge between vulnerable civilians and the Player population. Cecilia specified the political vehicle. The mayor\'s office would be a fragile single point. The city council was the better target, since influence could be distributed across enough seats to steer without exposure.',
     relatedEntries: ['Luca Terranova', 'System Analysis Division', 'Matteo Vascari']
   },
 
@@ -546,7 +546,7 @@ var TIMELINE_EVENTS = [
     chapter: 31,
     category: 'leonelli',
     description: 'That evening, while walking the perimeter with Bianca, three Players ambushed Cecilia near the Quadrilatero. One had enhanced physical bulk, another was a fire-caster, the third a large combatant. Bianca killed two swiftly. The third reached Cecilia. She used Marked Ledger instinctively, then emptied her magazine into his face at contact range.',
-    impact: 'The attack confirmed Cecilia had become a visible target — not for territory or contracts, but because she represented the dominant power. Someone had decided the Leonelli name needed breaking. She began planning countermeasures before returning to the Palazzo.',
+    impact: 'The attack confirmed Cecilia had become a visible target because she represented the dominant power, regardless of any specific territorial or contractual dispute. Someone had decided the Leonelli name needed breaking. She began planning countermeasures before returning to the Palazzo.',
     relatedEntries: ['Cecilia Leonelli', 'Bianca Severa', 'Marked Ledger']
   },
 
@@ -567,8 +567,8 @@ var TIMELINE_EVENTS = [
     title: 'Analysis Division — The Moral Weight',
     chapter: 33,
     category: 'leonelli',
-    description: 'In the hours before the scenario, the analysts confronted their situation. Ermilio voiced the discomfort of working for a crime boss. Giulia pushed back: the distinction between extortion and payment. The team arrived at a larger realization through conversation — Cecilia\'s model of class-derived territorial authority could be a blueprint for post-System governance, and the reason they were working for a crime boss was that she might be the only person in Turin capable of actually rebuilding society.',
-    impact: 'Ivan accepted this grimly. Lorena framed it as survival versus ethics, with ethics deferred. Ermilio discovered the old tunnel network connecting Palazzo Valperga to Porta Palazzo — a physical secret that mirrored the moral compromises they had already made.',
+    description: 'In the hours before the scenario, the analysts confronted their situation. Ermilio voiced the discomfort of working for a crime boss. Giulia pushed back: the distinction between extortion and payment. Their conversation produced a larger realization. Cecilia\'s model of class-derived territorial authority could be a blueprint for post-System governance, and the reason they were working for a crime boss was that she might be the only person in Turin capable of actually rebuilding society.',
+    impact: 'Ivan accepted this grimly. Lorena framed it as a question of survival, with ethical considerations deferred to a more stable future. Ermilio discovered the old tunnel network connecting Palazzo Valperga to Porta Palazzo. The physical secret mirrored the moral compromises they had already made.',
     relatedEntries: ['System Analysis Division', 'Ermilio Ferrero']
   },
 
@@ -579,7 +579,7 @@ var TIMELINE_EVENTS = [
     chapter: 34,
     category: 'scenario',
     description: 'The Analysis Division reached the point where basement analysis was no longer sufficient. Luca arranged field integration with Dario\'s scouting parties. Bianca collected Luca and Ivan before sundown, checking their gear with clinical efficiency. When Ivan asked what happened if something attacked them, she told him to die quietly. The scenario announced: <strong>"Skyfall."</strong> Eight hours. Objective: close portals. Secondary conditions: undisclosed.',
-    impact: 'Luca privately noticed his Architect class skills were subtly reshaping his cognition — certain patterns feeling intuitive in ways that blurred the line between his own thinking and System influence. He did not share this concern.',
+    impact: 'Luca privately noticed his Architect class skills were subtly reshaping his cognition. Certain patterns felt intuitive in ways that blurred the line between his own thinking and System influence. He did not share this concern.',
     relatedEntries: ['Luca Terranova', 'Bianca Severa', 'Ivan Carceri']
   },
 
@@ -589,8 +589,8 @@ var TIMELINE_EVENTS = [
     title: 'Skyfall — Portal Combat and The Load-Bearing Flaw',
     chapter: 35,
     category: 'scenario',
-    description: 'Ivan\'s Cartographer class guided the team to a portal forming two blocks east. A dozen winged creatures poured through. Luca froze momentarily, then his Architect skill <strong>Load-Bearing</strong> activated — compressing the square\'s layout into tactical clarity, letting him call out a flanking creature on a third-story balcony that Bianca eliminated. When the portal began stabilizing into a permanent spawn point, Luca identified its structural weak point and directed the team to close it before the window narrowed.',
-    impact: 'Luca\'s first live combat use of his class abilities. Load-Bearing worked on physical environments during active Scenarios — a capability that made him irreplaceable in any complex engagement. The Analysis Division crossed from theoretical modeling into field operations.',
+    description: 'Ivan\'s Cartographer class guided the team to a portal forming two blocks east. A dozen winged creatures poured through. Luca froze momentarily, then his Architect skill <strong>Load-Bearing</strong> activated. The square\'s layout compressed into tactical clarity, letting him call out a flanking creature on a third-story balcony that Bianca eliminated. When the portal began stabilizing into a permanent spawn point, Luca identified its structural weak point and directed the team to close it before the window narrowed.',
+    impact: 'Luca\'s first live combat use of his class abilities. Load-Bearing worked on physical environments during active Scenarios. The capability made him irreplaceable in any complex engagement. The Analysis Division crossed from theoretical modeling into field operations.',
     relatedEntries: ['Luca Terranova', 'ARCHITECT', 'Bianca Severa']
   },
 
@@ -600,8 +600,8 @@ var TIMELINE_EVENTS = [
     title: 'Skyfall Debrief — The Offer',
     chapter: 36,
     category: 'leonelli',
-    description: 'After Skyfall, Cecilia summoned Luca privately. She acknowledged his field initiative, asked him to communicate before acting alone in the future, then shifted seamlessly to operations: Ivan\'s spawn maps had improved Bianca\'s route efficiency by fifteen percent. She revealed that spawn aggression scaled inversely with Player density — a finding that enabled controlled farming of weaker waves. Then she made the offer: both Luca and Iris could leave if Iris wanted out.',
-    impact: 'Luca recognized the offer as genuine trust rather than leverage. It recalibrated his understanding of his position in the organization. He stayed — and for the first time, the staying was a choice rather than a constraint.',
+    description: 'After Skyfall, Cecilia summoned Luca privately. She acknowledged his field initiative, asked him to communicate before acting alone in the future, then shifted seamlessly to operations: Ivan\'s spawn maps had improved Bianca\'s route efficiency by fifteen percent. She revealed that spawn aggression scaled inversely with Player density. The finding enabled controlled farming of weaker waves. Then she made the offer: both Luca and Iris could leave if Iris wanted out.',
+    impact: 'Luca recognized the offer as a gesture of genuine trust. It recalibrated his understanding of his position in the organization. He stayed, and for the first time, the staying felt freely chosen.',
     relatedEntries: ['Cecilia Leonelli', 'Luca Terranova', 'Iris Terranova']
   },
 
@@ -612,7 +612,7 @@ var TIMELINE_EVENTS = [
     chapter: 37,
     category: 'leonelli',
     description: 'Cecilia checked her stats: Level 12, Authority 200, Infamy 40, with territorial control over the Quadrilatero and adjacent commercial assets. She catalogued the scenario\'s strategic lessons: she earned passive experience from her people\'s kills and objective completions, meaning she scaled without direct action. Scenarios generated tradeable resources including crystalline cores and energy-reactive metals. Dario warned that Luca\'s fast rise would look like favoritism.',
-    impact: 'Cecilia signaled that the Leonellis would not remain a local operation forever — she warned Dario to worry about rival analysts in New York and London rather than internal optics. She assigned Bianca and Ruggiero to coordinate formal combat training, transitioning the Family from loose squads to a disciplined fighting force.',
+    impact: 'Cecilia signaled that the Leonellis would not remain a local operation forever. She redirected Dario\'s attention toward rival analysts in New York and London. The relevant competition was no longer local. She assigned Bianca and Ruggiero to coordinate formal combat training, transitioning the Family from loose squads to a disciplined fighting force.',
     relatedEntries: ['Cecilia Leonelli', 'Dario Fioretti']
   },
 
@@ -626,7 +626,7 @@ var TIMELINE_EVENTS = [
     title: 'Analysis Division — Two Weeks After Skyfall',
     chapter: 38,
     category: 'leonelli',
-    description: 'Two weeks after Skyfall, the Division debated whether creature drop rates were designed or emergent. Luca cut the argument short: sixteen data points were noise. The real finding was that scenarios were clustering over the same areas with increasing frequency rather than diffusing outward — the System was stress-testing specific nodes. Luca predicted the next scenario would hit industrial zones, particularly Mirafiori, within seven days.',
+    description: 'Two weeks after Skyfall, the Division debated whether creature drop rates were designed or emergent. Luca cut the argument short: sixteen data points were noise. The real finding was that scenarios were clustering over the same areas with increasing frequency rather than diffusing outward. The System was stress-testing specific nodes. Luca predicted the next scenario would hit industrial zones, particularly Mirafiori, within seven days.',
     impact: 'Cecilia noted the Leonellis had fewer than a hundred Players against potentially half a million in the region. She ordered surveillance on emerging Player alliances and set Dario as gatekeeper for growing civilian intake requests, instructing him to bring Iris along on recruitment visits.',
     relatedEntries: ['Luca Terranova', 'System Analysis Division']
   },
@@ -637,7 +637,7 @@ var TIMELINE_EVENTS = [
     title: 'Deputy Mayor Meeting — Rossi\'s Play',
     chapter: 39,
     category: 'city',
-    description: 'Cecilia and Matteo met the deputy mayor\'s office at a hotel near the train station. The delegation included Deputy Mayor Armano (a placeholder), a military attaché (selling capability the army couldn\'t deliver), and Rossi, a utility company liaison working to fold the Leonellis into a consortium he could influence. Cecilia proposed a pilot program in two or three districts — a logistical framework that didn\'t yet exist but would by the time the next scenario forced the government to depend on it.',
+    description: 'Cecilia and Matteo met the deputy mayor\'s office at a hotel near the train station. The delegation included Deputy Mayor Armano (a placeholder), a military attaché (selling capability the army couldn\'t deliver), and Rossi, a utility company liaison working to fold the Leonellis into a consortium he could influence. Cecilia proposed a pilot program in two or three districts. The logistical framework didn\'t yet exist, but it would by the time the next scenario forced the government to depend on it.',
     impact: 'The deputy mayor agreed to a limited deal. Cecilia ordered Dario to deploy personnel in target districts before agreements were finalized, establishing facts on the ground. The gap between what she promised and what she had already built was closing from the other direction.',
     relatedEntries: ['Cecilia Leonelli', 'Matteo Vascari']
   },
@@ -648,8 +648,8 @@ var TIMELINE_EVENTS = [
     title: 'Individual Scenario — The Vagabond',
     chapter: 40,
     category: 'scenario',
-    description: 'A personal System notification arrived with a red urgency border: an Individual Scenario requiring Cecilia to contain a "B-class Anomaly" at a derelict railway warehouse near Porta Susa. Two-hour limit. Restricted participation. Inside, she and Bianca encountered the Vagabond — an entity unlike anything the System had spawned before. It spoke. It knew Cecilia\'s class title. It delivered a message about <em>"the ones who don\'t follow the rules."</em> Its form flickered between solid and smoke.',
-    impact: 'Bianca took a deep cut engaging it. Cecilia used Marked Ledger to designate it and fired with the full force of her Fixer authority. Bianca finished the fight with a clean knife strike. The Vagabond was not a random spawn — it was a targeted, intelligent entity. The System was issuing personal challenges.',
+    description: 'A personal System notification arrived with a red urgency border: an Individual Scenario requiring Cecilia to contain a "B-class Anomaly" at a derelict railway warehouse near Porta Susa. Two-hour limit. Restricted participation. Inside, she and Bianca encountered the Vagabond. The entity was unlike anything the System had spawned before. It spoke. It knew Cecilia\'s class title. It delivered a message about <em>"the ones who don\'t follow the rules."</em> Its form flickered between solid and smoke.',
+    impact: 'Bianca took a deep cut engaging it. Cecilia used Marked Ledger to designate it and fired with the full force of her Fixer authority. Bianca finished the fight with a clean knife strike. The Vagabond demonstrated targeting and intelligence well beyond standard creature spawns. The System had begun issuing personal challenges.',
     relatedEntries: ['Cecilia Leonelli', 'Bianca Severa', 'Marked Ledger']
   },
 
@@ -659,7 +659,7 @@ var TIMELINE_EVENTS = [
     title: 'Rail Yard Observation — Analysts in the Field',
     chapter: 41,
     category: 'leonelli',
-    description: 'Luca authorized another field deployment to the Lingotto rail yards, where spawn anomalies were building. The team observed five creatures emerge from a brief portal — smaller than scenario-grade but more organized and intelligent. Before they could engage, a group of well-coordinated Players arrived and killed the creatures in seconds. Dario and Bianca stepped out to assert territorial authority. The rival Players backed down without a fight.',
+    description: 'Luca authorized another field deployment to the Lingotto rail yards, where spawn anomalies were building. The team observed five creatures emerge from a brief portal. They were smaller than scenario-grade but more organized and intelligent. Before they could engage, a group of well-coordinated Players arrived and killed the creatures in seconds. Dario and Bianca stepped out to assert territorial authority. The rival Players backed down without a fight.',
     impact: 'The chapter tracked the Division\'s transition from basement analysts to field-capable operatives. Luca told Iris that morning that his powers felt like they had always been part of him, but he couldn\'t tell whether he was controlling them or executing what the System already knew he would do.',
     relatedEntries: ['Luca Terranova', 'Iris Terranova', 'Bianca Severa']
   },
@@ -670,8 +670,8 @@ var TIMELINE_EVENTS = [
     title: 'Porta Nuova Station — Soft Ambush',
     chapter: 42,
     category: 'faction',
-    description: 'Cecilia visited Porta Nuova station with Matteo using a forged municipal work permit. She observed the military checkpoint\'s fragility: young soldiers undertrained for System threats. Inside, she spotted a woman in maintenance uniform watching with too much deliberation. Four workers coordinated to block a side exit — a soft ambush designed to delay rather than attack. Cecilia and Matteo exited through the main entrance to a waiting vehicle.',
-    impact: 'A new group was sending a message: they knew where she operated. Not professionals yet, but organized enough to coordinate a blocking action. Cecilia memorized the faces and ordered Matteo to investigate.',
+    description: 'Cecilia visited Porta Nuova station with Matteo using a forged municipal work permit. She observed the military checkpoint\'s fragility: young soldiers undertrained for System threats. Inside, she spotted a woman in maintenance uniform watching with too much deliberation. Four workers coordinated to block a side exit. The soft ambush was designed for delay rather than engagement. Cecilia and Matteo exited through the main entrance to a waiting vehicle.',
+    impact: 'A new group was sending a message: they knew where she operated. The execution was still amateur, though organized enough to coordinate a blocking action. Cecilia memorized the faces and ordered Matteo to investigate.',
     relatedEntries: ['Cecilia Leonelli', 'Matteo Vascari']
   },
 
@@ -686,7 +686,7 @@ var TIMELINE_EVENTS = [
     chapter: 43,
     category: 'leonelli',
     description: 'During her pre-scenario file review, Cecilia found the March 11 warning note at the bottom of the drawer. Reading it now with weeks of System experience, the language she had dismissed as vague revealed itself as precise terminology. <em>"Physical parameters"</em> was accurate description. <em>"Altered"</em> implied modification from an outside hand. The note was written in a language that only made sense after the System arrived.',
-    impact: 'Matteo\'s investigation identified the signatory as a historical preservation society active from the 1960s through the 1990s, associated with a castle outside Ivrea, officially dissolved but persisting in legal rumor. Motto: <em>"Fides et Flamma"</em> — Faith and Flame. A successor group that had anticipated the System\'s arrival. Cecilia opened the case but decided against direct contact.',
+    impact: 'Matteo\'s investigation identified the signatory as a historical preservation society active from the 1960s through the 1990s, associated with a castle outside Ivrea, officially dissolved but persisting in legal rumor. Their motto translated as Faith and Flame, in Latin <em>Fides et Flamma</em>. A successor group had anticipated the System\'s arrival. Cecilia opened the case but decided against direct contact.',
     relatedEntries: ['Fiamma Eterna', 'Matteo Vascari', 'Cecilia Leonelli']
   },
 
@@ -696,8 +696,8 @@ var TIMELINE_EVENTS = [
     title: 'Longshadow Scenario Begins',
     chapter: 44,
     category: 'scenario',
-    description: 'The Longshadow scenario began two hours before dawn. Three fixed-point nodes: Superga Basilica, the Mirafiori Complex, and Porta Susa Station, with elevated diffuse spawns city-wide. Cecilia\'s overlay showed Authority at 330, Infamy at 78. She deployed strategically: Ruggiero at high-visibility Mirafiori, Dario creating diversionary chaos at Superga, and her own small fast squad with Bianca working the spaces between — hunting diffuse spawns and claiming secondary objectives others overlooked.',
-    impact: 'Giulia\'s Artificer work paid off: enforcers carried fabricated protective vests and node disruptors. The creatures were evolving — a new type appeared with phase-shift abilities, crystalline bone blades, and tactical intelligence beyond anything previous. Cecilia and Bianca took it down through coordinated close-quarters fighting.',
+    description: 'The Longshadow scenario began two hours before dawn. Three fixed-point nodes: Superga Basilica, the Mirafiori Complex, and Porta Susa Station, with elevated diffuse spawns city-wide. Cecilia\'s overlay showed Authority at 330, Infamy at 78. She deployed strategically: Ruggiero at high-visibility Mirafiori, Dario creating diversionary chaos at Superga, and her own small fast squad with Bianca working the spaces between. They hunted diffuse spawns and claimed secondary objectives others overlooked.',
+    impact: 'Giulia\'s Artificer work paid off: enforcers carried fabricated protective vests and node disruptors. The creatures were evolving. A new type appeared with phase-shift abilities, crystalline bone blades, and tactical intelligence beyond anything previous. Cecilia and Bianca took it down through coordinated close-quarters fighting.',
     relatedEntries: ['Cecilia Leonelli', 'Bianca Severa', 'Ruggiero Brando', 'Giulia Conti']
   },
 
@@ -707,8 +707,8 @@ var TIMELINE_EVENTS = [
     title: 'Parco Dora — Pulse Node Acquired',
     chapter: 45,
     category: 'leonelli',
-    description: 'At Parco Dora, Cecilia found multiple Player groups converging on an old industrial silo emitting violet System energy. She held at the perimeter and let three rival factions fight each other and the silo\'s monster guards. When a creature carrying a marked objective item climbed the staircase, her enforcers shot it down. She moved through the confusion, reached the fallen object first, and acquired a <strong>Pulse Node</strong> — one of only five discovered across the entire scenario.',
-    impact: 'The Red Star group\'s leader confronted her at gunpoint. Rather than escalate, she traded: two rare items from her stockpile delivered after the scenario in exchange for the group leaving the park immediately. Cheaper than casualties and avoided making enemies of a faction she might need later. The Leonellis were named in the top five contributors for the Turin region.',
+    description: 'At Parco Dora, Cecilia found multiple Player groups converging on an old industrial silo emitting violet System energy. She held at the perimeter and let three rival factions fight each other and the silo\'s monster guards. When a creature carrying a marked objective item climbed the staircase, her enforcers shot it down. She moved through the confusion, reached the fallen object first, and acquired a <strong>Pulse Node</strong>. Only five would be discovered across the entire scenario.',
+    impact: 'The Red Star group\'s leader confronted her at gunpoint. She traded two rare items from her stockpile, to be delivered after the scenario, in exchange for the group leaving the park immediately. The cost was lower than a firefight and avoided making enemies of a faction she might need later. The Leonellis were named in the top five contributors for the Turin region.',
     relatedEntries: ['Cecilia Leonelli']
   },
 
@@ -718,8 +718,8 @@ var TIMELINE_EVENTS = [
     title: 'Fiamma Eterna Markers at Superga',
     chapter: 45,
     category: 'faction',
-    description: 'During the scenario debrief, Dario produced a piece of paper from Superga bearing a hand-drawn flame-in-circle symbol: Fiamma Eterna. The tags appeared near smaller crypts at the Basilica, in areas that felt deliberately avoided — as though marked off by someone who let others handle the fighting while pursuing separate objectives. The connection to the pre-System warning note was now undeniable.',
-    impact: 'The mysterious organization that predicted the System\'s arrival was active, operating alongside the scenarios, and leaving deliberate markers. Cecilia ordered continued discreet intelligence gathering rather than direct approach — premature overtures toward a group hidden by design could turn alignment into resistance.',
+    description: 'During the scenario debrief, Dario produced a piece of paper from Superga bearing a hand-drawn flame-in-circle symbol: Fiamma Eterna. The tags appeared near smaller crypts at the Basilica, in areas that felt deliberately avoided. Someone had been marking them off and letting others handle the fighting while pursuing separate objectives. The connection to the pre-System warning note was now undeniable.',
+    impact: 'The mysterious organization that predicted the System\'s arrival was active, operating alongside the scenarios, and leaving deliberate markers. Cecilia ordered continued discreet intelligence gathering and held back from direct approach. Premature overtures toward a group hidden by design could turn potential alignment into resistance.',
     relatedEntries: ['Fiamma Eterna', 'Dario Fioretti', 'Cecilia Leonelli']
   },
 
@@ -729,8 +729,8 @@ var TIMELINE_EVENTS = [
     title: 'Cecilia Discloses Her Class to Luca',
     chapter: 46,
     category: 'leonelli',
-    description: 'Luca visited Cecilia\'s office privately and asked about her class, having observed something during the Parco Dora negotiations that looked like more than educated guessing. Cecilia shared that she chose Fixer and described her abilities as understanding human nature rather than combat powers. She framed the disclosure as operational efficiency rather than personal trust: <em>"You\'re useful. Anything I give you has to pay off for everyone."</em>',
-    impact: 'The exchange revealed both the growing partnership and the boundary Cecilia maintained against emotional proximity. The Luca-Cecilia dynamic — the story\'s most interesting relationship — had settled into something genuinely bilateral in intellectual respect without resolving the tension of his constrained position.',
+    description: 'Luca visited Cecilia\'s office privately and asked about her class, having observed something during the Parco Dora negotiations that looked like more than educated guessing. Cecilia shared that she chose Fixer and described her abilities as a form of social intelligence applied to human nature, with no direct combat application. She framed the disclosure as operational efficiency: <em>"You\'re useful. Anything I give you has to pay off for everyone."</em>',
+    impact: 'The exchange revealed both the growing partnership and the boundary Cecilia maintained against emotional proximity. Their dynamic had become the story\'s most interesting relationship. It had settled into something genuinely bilateral in intellectual respect, while the tension of his constrained position remained unresolved.',
     relatedEntries: ['Cecilia Leonelli', 'Luca Terranova', 'FIXER']
   },
 
