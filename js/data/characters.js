@@ -181,8 +181,8 @@ var CHARACTERS = [
     ],
     relationships: [
       { name: 'Cecilia Leonelli', detail: 'He is fiercely loyal but struggles with the new reality of Cecilia putting herself in the line of fire. He wants to be the one taking the hits for her, occasionally letting his protectiveness sound like a command.', chapter: 1 },
-      { name: 'Matteo Vascari', detail: 'As the two older veterans of the crew, they coordinate seamlessly. Matteo handles the logistics and legalities, while Ruggiero handles the physical enforcement.', chapter: 1 }
-	  { name: 'Dario Fioretti', detail: 'He sometimes views Dario\'s charismatic, thrill-seeking approach to the apocalypse with mild disbelief, once asking Dario if fighting a horrific monster is "what you call fun"', chapter: 1 },
+      { name: 'Matteo Vascari', detail: 'As the two older veterans of the crew, they coordinate seamlessly. Matteo handles the logistics and legalities, while Ruggiero handles the physical enforcement.', chapter: 1 },
+	  { name: 'Dario Fioretti', detail: 'He sometimes views Dario\'s charismatic, thrill-seeking approach to the apocalypse with mild disbelief, once asking Dario if fighting a horrific monster is "what you call fun"', chapter: 1 }
     ]
   },
 
@@ -280,7 +280,7 @@ var CHARACTERS = [
     ],
     relationships: [
       { name: 'Cecilia Leonelli', detail: 'He loves testing her boundaries with jokes and casual behavior, but he is deeply compelled by her absolute control. He understands that she is actively shaping him into a sharper asset, a process he fully buys into.', chapter: 1 },
-      { name: 'Bianca Severa', detail: 'He enjoys needling her with his relaxed attitude, casually offering her cigarettes in the middle of a mobilization just to see her reject it.', chapter: 1 }
+      { name: 'Bianca Severa', detail: 'He enjoys needling her with his relaxed attitude, casually offering her cigarettes in the middle of a mobilization just to see her reject it.', chapter: 1 },
 	  { name: 'Ruggiero Montini', detail: 'He provides the fast-talking, improvisational groundwork that sets up Ruggiero\'s muscle and Matteo\'s legal traps. He isn\'t afraid to dive into the messy, unpredictable crowds that the older veterans prefer to avoid.', chapter: 1 }
 	  { name: 'Serena Marini', detail: 'Genuinely fond of her, which has not caused a problem yet.', chapter: 99 }
     ]
