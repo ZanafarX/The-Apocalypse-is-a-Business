@@ -281,7 +281,7 @@ var CHARACTERS = [
     relationships: [
       { name: 'Cecilia Leonelli', detail: 'He loves testing her boundaries with jokes and casual behavior, but he is deeply compelled by her absolute control. He understands that she is actively shaping him into a sharper asset, a process he fully buys into.', chapter: 1 },
       { name: 'Bianca Severa', detail: 'He enjoys needling her with his relaxed attitude, casually offering her cigarettes in the middle of a mobilization just to see her reject it.', chapter: 1 }
-	  { name: 'Ruggiero Montini & Matteo Vascari', detail: 'He provides the fast-talking, improvisational groundwork that sets up Ruggiero\'s muscle and Matteo\'s legal traps. He isn\'t afraid to dive into the messy, unpredictable crowds that the older veterans prefer to avoid.', chapter: 1 }
+	  { name: 'Ruggiero Montini', detail: 'He provides the fast-talking, improvisational groundwork that sets up Ruggiero\'s muscle and Matteo\'s legal traps. He isn\'t afraid to dive into the messy, unpredictable crowds that the older veterans prefer to avoid.', chapter: 1 }
 	  { name: 'Serena Marini', detail: 'Genuinely fond of her, which has not caused a problem yet.', chapter: 99 }
     ]
   },
