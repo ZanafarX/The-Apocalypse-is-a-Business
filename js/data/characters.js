@@ -70,10 +70,10 @@ var CHARACTERS = [
       }
     ],
     relationships: [
-      { name: 'Bianca Severa', detail: 'Protected by absolute devotion she has never had to request.', chapter: 1 },
-      { name: 'Ruggiero Montini', detail: 'Her wall. Completely intolerant of disrespect toward her.', chapter: 1 },
-      { name: 'Matteo Vascari', detail: 'The only person who argues with her directly without losing her respect.', chapter: 1 },
-      { name: 'Dario Fioretti', detail: 'She sees through him instantly. The partnership works because neither mistakes the other for harmless.', chapter: 1 },
+      { name: 'Bianca Severa', detail: 'Cecilia trusts Bianca implicitly to hold her ground and protect her. Bianca is her constant shadow, and while Cecilia is emotionally guarded, she recognizes and reciprocates the deep loyalty Bianca offers, noting that they "don\'t scare easily, you and me"', chapter: 1 },
+      { name: 'Ruggiero Montini', detail: 'She respects his veteran experience but constantly has to manage his overprotectiveness, ensuring his desire to shield her doesn\'t undermine her authority or become a weakness.', chapter: 1 },
+      { name: 'Matteo Vascari', detail: 'She relies heavily on his counsel and grounded nature. Because she took over the family at a young age, she values that Matteo treats her with professional respect rather than familial condescension.', chapter: 1 },
+      { name: 'Dario Fioretti', detail: 'She appreciates his cleverness and ability to read people. While she doesn\'t let him get away with being reckless, she enjoys their banter and occasionally allows a more casual, honest dynamic to surface between them during quiet moments.', chapter: 1 },
       { name: 'Luca Terranova', detail: 'The only relationship in the Core group that is genuinely bilateral in terms of intellectual respect.', chapter: 5 }
     ]
   },
@@ -100,7 +100,7 @@ var CHARACTERS = [
       resilience: 40,
       velocity: 90,
       precision: 80,
-      edge: 45
+      edge: 40
     },
     appearance: 'Age 27. Severe in the way of someone who has removed everything unnecessary. Long black hair tied into a braided ponytail. Pale skin with a faint flush along the cheekbones that reads as the only involuntary thing about her. Amber-gold eyes, heavy-lidded and downcast by default, the kind of gaze that registers everything from below its own surface. Narrow face, lips held in a flat, sealed line. Toned figure. She moves without wasted motion and when standing still she is the stillest person in the room. Black suit, white shirt, blue tie, flat shoes.',
     summary: 'Leonelli intelligence chief, assassin, and internal security. Reserved, exact, unsentimental. Speaks less than anyone else and listens more. Positions herself where she can see doors and reflections. Blinks infrequently when focused. Rarely laughs. Her devotion to Cecilia is dangerous and absolute, expressed through attention, readiness, and the speed with which she moves against threats.',
@@ -129,8 +129,10 @@ var CHARACTERS = [
       }
     ],
     relationships: [
-      { name: 'Cecilia Leonelli', detail: 'Dangerous, absolute devotion expressed through action, never plain statement.', chapter: 1 },
-      { name: 'Luca Terranova', detail: 'The first person she has noticed rather than merely monitored. That thread develops slowly.', chapter: 7 }
+      { name: 'Cecilia Leonelli', detail: 'Bianca\'s life revolves around Cecilia, a path she walked down through years of small choices. She harbors a deep, unspoken affection for her boss, operating under the personal rule that "the only thing worse than caring too much was looking like you did"', chapter: 1 },
+      { name: 'Ruggiero Montini', detail: 'There is a professional rivalry over who gets to protect Cecilia. Bianca\'s presence on dangerous missions with Cecilia can provoke Ruggiero\'s irritation, though they respect each other\'s lethal capabilities.', chapter: 1 },
+      { name: 'Dario Fioretti', detail: 'She acts as the deadpan foil to his constant joking. When Dario suggests he could be the team\'s "bard" for morale, Bianca coldly replies she\'d rather "beat it out of people"', chapter: 1 },
+	  { name: 'Luca Terranova', detail: 'The first person she has noticed rather than merely monitored. That thread develops slowly.', chapter: 7 }
     ]
   },
 
@@ -178,8 +180,9 @@ var CHARACTERS = [
       }
     ],
     relationships: [
-      { name: 'Cecilia Leonelli', detail: 'Most openly protective. Completely intolerant of disrespect toward her.', chapter: 1 },
-      { name: 'Luca Terranova', detail: 'Accepted COLLECTOR on Luca\'s reasoning in Chapter 7. He does not give respect easily, and the fact that he did says something about both of them.', chapter: 7 }
+      { name: 'Cecilia Leonelli', detail: 'He is fiercely loyal but struggles with the new reality of Cecilia putting herself in the line of fire. He wants to be the one taking the hits for her, occasionally letting his protectiveness sound like a command.', chapter: 1 },
+      { name: 'Matteo Vascari', detail: 'As the two older veterans of the crew, they coordinate seamlessly. Matteo handles the logistics and legalities, while Ruggiero handles the physical enforcement.', chapter: 1 }
+	  { name: 'Dario Fioretti', detail: 'He sometimes views Dario\'s charismatic, thrill-seeking approach to the apocalypse with mild disbelief, once asking Dario if fighting a horrific monster is "what you call fun"', chapter: 1 },
     ]
   },
 
@@ -227,8 +230,8 @@ var CHARACTERS = [
       }
     ],
     relationships: [
-      { name: 'Cecilia Leonelli', detail: 'The only person who argues with her directly. Argues with evidence, not sentiment.', chapter: 1 },
-      { name: 'Giorgio Esposito', detail: 'The analyst Matteo trusts most.', chapter: 99 }
+      { name: 'Cecilia Leonelli', detail: 'He is old enough to be her father, but he carefully maintains a dynamic of professional respect. He acts as her sounding board and occasionally reminds her to rest, providing a subtle, fatherly support that Cecilia privately appreciates.', chapter: 1 },
+      { name: 'Dario Fioretti', detail: 'He tolerates Dario\'s looseness, often evaluating Dario\'s unorthodox plans (like staging informal defectors from rival factions) with a critical but open mind.', chapter: 1 }
     ]
   },
 
@@ -276,8 +279,10 @@ var CHARACTERS = [
       }
     ],
     relationships: [
-      { name: 'Cecilia Leonelli', detail: 'She sees through him instantly. The partnership works because neither mistakes the other for harmless.', chapter: 1 },
-      { name: 'Serena Marini', detail: 'Genuinely fond of her, which has not caused a problem yet.', chapter: 99 }
+      { name: 'Cecilia Leonelli', detail: 'He loves testing her boundaries with jokes and casual behavior, but he is deeply compelled by her absolute control. He understands that she is actively shaping him into a sharper asset, a process he fully buys into.', chapter: 1 },
+      { name: 'Bianca Severa', detail: 'He enjoys needling her with his relaxed attitude, casually offering her cigarettes in the middle of a mobilization just to see her reject it.', chapter: 1 }
+	  { name: 'Ruggiero Montini & Matteo Vascari', detail: 'He provides the fast-talking, improvisational groundwork that sets up Ruggiero\'s muscle and Matteo\'s legal traps. He isn\'t afraid to dive into the messy, unpredictable crowds that the older veterans prefer to avoid.', chapter: 1 }
+	  { name: 'Serena Marini', detail: 'Genuinely fond of her, which has not caused a problem yet.', chapter: 99 }
     ]
   },
 
