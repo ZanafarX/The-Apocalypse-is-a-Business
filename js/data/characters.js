@@ -335,8 +335,7 @@ var CHARACTERS = [
     ],
     relationships: [
       { name: 'Cecilia Leonelli', detail: 'The story\'s most charged dynamic and the only relationship in the Core Five that is genuinely bilateral in intellectual terms. She sees through almost everyone around her. She cannot fully see through Luca because he is running the same process she runs, from a different angle, with different tools. The equilibrium holds because a mind she cannot fully map is more valuable as an ally than threatening as a constraint.', chapter: 5 },
-      { name: 'Iris Terranova', detail: 'His sister. The emotional anchor of his storyline. Her presence in the Palazzo embodies what the acquisition cost, and neither of them can entirely pretend otherwise. He is protective in the way that has no clean expression: she did not choose to be here, and he arranged it because there was no other option that he could see.', chapter: 5 },
-      { name: 'Bianca Severa', detail: 'Called her class correctly in Chapter 7, which was the first time she noticed him rather than monitored him. Noticing, in her case, is a different category of attention. Neither of them has acknowledged the distinction.', chapter: 7 }
+      { name: 'Iris Terranova', detail: 'His sister. The emotional anchor of his storyline. Her presence in the Palazzo embodies what the acquisition cost, and neither of them can entirely pretend otherwise. He is protective in the way that has no clean expression: she did not choose to be here, and he arranged it because there was no other option that he could see.', chapter: 5 }
     ]
   },
 
