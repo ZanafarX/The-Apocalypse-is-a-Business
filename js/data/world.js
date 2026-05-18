@@ -22,7 +22,7 @@ var FACTIONS = [
     territory: 'Quadrilatero Romano (HQ), Lingotto (target), Scalo Orbassano (target)',
     type: 'Crime Family',
     threat: 'Primary Faction — Protagonist',
-    summary: 'Turin crime family led by Cecilia Leonelli. Pre-collapse strengths — command structure, safehouses, coercion experience, business fronts — translate directly into post-apocalypse advantage. Strategy: acquire elite gamers, formalize them into a System Analysis Division, convert information advantage into territory and legitimacy before rivals understand what\'s happening. The organization itself is treated as a progression build.',
+    summary: 'Turin crime family led by Cecilia Leonelli. Pre-integration strengths — command structure, safehouses, coercion experience, business fronts — translate directly into post-apocalypse advantage. Strategy: acquire elite gamers, formalize them into a System Analysis Division, convert information advantage into territory and legitimacy before rivals understand what\'s happening. The organization itself is treated as a progression build.',
     strengths: 'Preexisting command structure and trust network. Experience with coercion, negotiation, and ugly decisions. Business fronts with operational legitimacy. Cash and manual economies are native operating conditions. System Analysis Division provides unmatched information advantage.',
     weaknesses: 'No initial technical understanding of the System. No medical personnel. Some supplier relationships degraded by chaos. Majority of lower-tier soldiers are NPC-classified.',
     philosophy: 'Make the organization so structurally necessary to Turin\'s continued functioning that its criminal nature becomes irrelevant. Not territorial conquest. Infrastructure. The load-bearing walls of a new city.',
@@ -43,8 +43,8 @@ var FACTIONS = [
     type: 'Militia',
     threat: 'Book Three Antagonist',
     summary: 'Militia coalesced within 24 hours from private security contractors, ex-military, and ex-police. Stated mission: restore order. Actual mission: become it. Has civilian legitimacy and genuine tactical training; lacks information architecture and economic logic.',
-    strengths: 'Genuine tactical training. Early civilian legitimacy. Formal command hierarchy. Access to pre-collapse weapons caches. Mixed Player and NPC composition more capable than most civilian groups.',
-    weaknesses: 'Leadership understands combat and public relations, not economy or information asymmetry. Claimed symbolic territory (Palazzo Reale) over logistical territory — a structural error. Does not know what it does not know about the System.',
+    strengths: 'Genuine tactical training. Early civilian legitimacy. Formal command hierarchy. Access to pre-integration weapons caches. Mixed Player and NPC composition more capable than most civilian groups.',
+    weaknesses: 'Leadership understands combat and public relations, not economy or information asymmetry. Does not know what it does not know about the System.',
     philosophy: 'Public order is a service obligation. They are sincere about this — and sincerely wrong about what will sustain it.',
     subgroups: []
   },
@@ -110,7 +110,7 @@ var FACTIONS = [
     territory: 'Municipal infrastructure, water points, broadcast systems',
     type: 'Institutional — Governance',
     threat: 'Institutional Variable',
-    summary: 'Remnant of Turin\'s formal city government. Not a fighting faction — a governance faction. Controls remaining municipal infrastructure, emergency broadcast systems, and the symbolic weight of being the recognized government. A significant portion of the population still responds to legitimate civic authority.',
+    summary: 'Remnant of Turin\'s formal city government. They\'re a governance faction. Controls remaining municipal infrastructure, emergency broadcast systems, and the symbolic weight of being the recognized government. A significant portion of the population still responds to legitimate civic authority.',
     strengths: 'Symbolic legitimacy. Control of municipal infrastructure. Emergency broadcast capability. Population segment that responds to institutional authority.',
     weaknesses: 'No enforcement capacity. NPC-classified leadership. Tools no longer adequate for the operational reality. Cannot compel compliance from Player factions.',
     philosophy: 'Keep the city functional with whatever tools remain. Deal with whoever makes the practical situation better, regardless of what they are.',
@@ -129,8 +129,8 @@ var FACTIONS = [
     threat: 'Economic Variable',
     summary: 'Player faction formed around control of Turin\'s water infrastructure within the first two weeks. Not ideological. Purely opportunistic: engineers who recognized water as the most irreplaceable civic resource and moved first. Provides water in exchange for resources, protection, and formal agreements.',
     strengths: 'Controls the most irreplaceable resource in the city. Player personnel at each node. Leverage cannot be answered with force without catastrophic reputational cost.',
-    weaknesses: 'Small faction. Limited military capability. Dependent on external security. Leverage is defensive only — cannot project power.',
-    philosophy: 'Extractive in the sophisticated sense. Not crudely predatory — harder to argue against publicly.',
+    weaknesses: 'Small faction. Limited military capability. Dependent on external security. Leverage is defensive only. They cannot project power.',
+    philosophy: 'Extractive in the sophisticated sense. Not crudely predatory. Just harder to argue against publicly.',
     subgroups: []
   },
 
@@ -146,7 +146,7 @@ var FACTIONS = [
     threat: 'Primary Antagonist Book Two',
     summary: 'Loose coalition of executives, logistics professionals, and private security contractors offering privatized governance — security and supply restoration in exchange for operational authority. Dresses predation in legitimacy. Competes with the Leonellis on contracts, supply networks, and civilian legitimacy rather than combat.',
     strengths: 'Clean optics. Professional presentation. System-backed contract capability (Fasce). Economic infrastructure and business relationships. Offers something that looks like institutional normality.',
-    weaknesses: 'Lacks enforcement capability. Lacks territorial depth. Lacks analytical infrastructure. Fasce believes he is better than the Leonellis — Cecilia finds this distinction operationally irrelevant.',
+    weaknesses: 'Lacks enforcement capability. Lacks territorial depth. Lacks analytical infrastructure. Fasce believes he is better than the Leonellis. Cecilia finds this distinction operationally irrelevant.',
     philosophy: 'Institutional normality as a product. The difference between them and the Leonellis is that the Leonellis know what they are.',
     subgroups: []
   }
@@ -202,7 +202,7 @@ var CREATURES = [
     chapter: 99,
     category: 'scenario-entity',
     appearance: 'Tall, spectral, elongated entities that drift over boulevards and riverbanks during early morning hours.',
-    behavior: 'Active in Turin\'s characteristic autumn fog. Generate localized mana-infused fog banks that limit visual perception and dampen auditory signals. Rarely engage in melee — prefer to exhaust prey.',
+    behavior: 'Active in Turin\'s characteristic autumn fog. Generate localized mana-infused fog banks that limit visual perception and dampen auditory signals. Rarely engage in melee. Prefers to exhaust prey.',
     threat: 'Persistent [Disorientation] debuff within their aura. Mana-draining tendrils slowly exhaust trapped targets until collapse. Dangerous for their attrition value more than raw damage.',
     notes: null
   },
@@ -214,7 +214,7 @@ var CREATURES = [
     chapter: 99,
     category: 'scenario-entity',
     appearance: 'Hairless, heavily muscled quadrupeds with pale blind eyes and massive bat-like auditory canals.',
-    behavior: 'Roam the wider avenues — Corso Regina Margherita — in packs of three to five. Hunt via System-mana tracking and echolocation. Operate as the System\'s mid-tier pursuit predators.',
+    behavior: 'Roam the wider avenues in packs of three to five. Hunt via System-mana tracking and echolocation. Operate as the System\'s mid-tier pursuit predators.',
     threat: '[Resonating Howl] locks onto a target and immediately alerts all hostile entities within a two-block radius. The howl also applies a brief low-level sonic stun against under-leveled Players. Danger multiplies rapidly with proximity to other enemy types.',
     notes: null
   },
@@ -237,9 +237,9 @@ var CREATURES = [
     tier: 'Tier 3',
     chapter: 99,
     category: 'scenario-entity',
-    appearance: 'Massive, heavily armored monolithic entities that incorporate local architecture into their bodies — wrought-iron fencing, streetlamps formed into halos of spikes.',
+    appearance: 'Massive, heavily armored monolithic entities that incorporate local architecture into their bodies \(ex. wrought-iron fencing, streetlamps formed into halos of spikes.\)',
     behavior: 'Do not roam. Spawn specifically to guard high-value System nodes, territorial claim points, and high-tier supply caches. Cannot be bypassed by stealth; the System requires destruction to claim the anchored territory.',
-    threat: 'Pure stat-check. Tremendous AoE kinetic attacks, shockwaves, and immense health pools. Requires a coordinated raid group. Not a threat to be absorbed into operational planning — a gate.',
+    threat: 'Pure stat-check. Tremendous AoE kinetic attacks, shockwaves, and immense health pools. Requires a coordinated raid group.',
     notes: null
   },
 
@@ -250,7 +250,7 @@ var CREATURES = [
     chapter: 99,
     category: 'scenario-entity',
     appearance: 'Massive, multi-segmented insectoids with dense carapaces that mimic the color and texture of rusted industrial steel.',
-    behavior: 'Have claimed Turin\'s abandoned tram lines and rail corridors — Porta Nuova and Porta Susa. Use the metal rails to accelerate to lethal speeds. Highly predictable in pathing.',
+    behavior: 'Have claimed Turin\'s abandoned tram lines and rail corridors. Use the metal rails to accelerate to lethal speeds. Highly predictable in pathing.',
     threat: 'Friction during movement generates [Electrified Carapace], discharging shock damage against melee attackers. High linear mobility makes them lethal in their corridors. Pathing predictability makes them susceptible to coordinated traps.',
     notes: null
   },
@@ -285,7 +285,7 @@ var CREATURES = [
     tier: 'Tier 2',
     chapter: 99,
     category: 'scenario-entity',
-    appearance: 'Drifting, silhouette-like horrors that haunt Turin\'s vast empty squares — Piazza Statuto, Piazza Vittorio Veneto — exclusively at night.',
+    appearance: 'Drifting, silhouette-like horrors that haunt Turin\'s vast empty squares exclusively at night.',
     behavior: 'The System has weaponized Turin\'s centuries-old reputation as a European capital of esoteric energy. Incorporeal and passive in daylight hours; territorial and aggressive after dark.',
     threat: 'Exceptionally high physical evasion. Functionally immune to standard ballistics. Attacks bypass physical armor, applying [Soul Drain] — a direct siphon of Mana and Stamina. Require System-infused weaponry or elemental magic to reliably kill.',
     notes: null
@@ -358,7 +358,7 @@ var CREATURES = [
     chapter: 34,
     category: 'scenario-entity',
     appearance: 'Turin\'s city pigeons, brutally rewritten by Initialization. Wings calcified and hardened into jagged metallic edges. Roost on statues, traffic lights, and window ledges across the entire city.',
-    behavior: 'Individually trivial but aggro in flocks of twenty to fifty. Ubiquitous urban presence — more environmental pressure than discrete encounter.',
+    behavior: 'Individually trivial but aggro in flocks of twenty to fifty. Ubiquitous urban presence. More environmental pressure than discrete encounter.',
     threat: 'Swarm behavior creates a localized [Vortex of Blades] AoE. Highly lethal to Unawakened civilians or low-level Players caught in the open without overhead cover. Functions as a constant ambient hazard forcing shelter discipline.',
     notes: null
   }
@@ -377,7 +377,7 @@ var DISTRICTS = [
     subtitle: 'The Formal Core',
     chapter: 1,
     controlledBy: 'Ferro Patto (partial)',
-    character: 'Baroque architecture, luxury retail, government buildings, museums, banks. The most formally imposing part of the city. The Centro empties of civilians faster than most districts — too exposed, too formal, too little cover.',
+    character: 'Baroque architecture, luxury retail, government buildings, museums, banks. The most formally imposing part of the city. The Centro empties of civilians faster than most districts.',
     collapseNotes: 'Government and financial actors attempt to hold it; they fail within days or are absorbed by whoever arrives with actual force. Financial district notarial offices contain documentation valuable to Matteo\'s operations.',
     keyLocations: 'Piazza Castello, Palazzo Reale, Via Roma arcades, Piazza San Carlo'
   },
@@ -389,7 +389,7 @@ var DISTRICTS = [
     chapter: 1,
     controlledBy: 'Leonelli',
     character: 'The oldest surviving street grid in the city, laid over the Roman military camp. Narrow streets, medieval-scale blocks, dense residential. The neighborhood has gentrified but retains a compressed, layered quality — buildings sitting on Roman foundations, medieval walls visible in basements.',
-    collapseNotes: 'Residents are more likely to organize locally and hold ground. The district does not empty — it tightens. Natural Leonelli home territory. The narrow streets favor people who know them.',
+    collapseNotes: 'Residents are more likely to organize locally and hold ground. Natural Leonelli home territory. The narrow streets favor people who know them.',
     keyLocations: 'Porta Palatina, Palazzo Valperga, Palazzo Scorza, underground cellars throughout'
   },
 
@@ -400,7 +400,7 @@ var DISTRICTS = [
     chapter: 1,
     controlledBy: 'Contested (Leonelli / Leone Selvaggio)',
     character: 'Porta Palazzo hosts the largest open-air market in Europe. Aurora is dense, multicultural, economically marginal, historically working class. The most ethnically and economically diverse district in the city.',
-    collapseNotes: 'Does not collapse — reorganizes. Community structures and informal networks activate quickly. Functional food and goods distribution within days while other neighborhoods are still panicking. Black markets emerge here first.',
+    collapseNotes: 'Community structures and informal networks activate quickly. Functional food and goods distribution within days while other neighborhoods are still panicking. Black markets emerge here first.',
     keyLocations: 'Piazza della Repubblica / Porta Palazzo market, Balon flea market, Città della Salute e della Scienza hospital'
   },
 
@@ -495,7 +495,7 @@ var FRONTS = [
     chapter: 1,
     faction: 'leonelli',
     type: 'Business Front',
-    function: 'Matteo\'s personal professional front — consulting, contract drafting, and discreet notarial-adjacent services.',
+    function: 'Matteo\'s personal professional front: consulting, contract drafting, and discreet notarial-adjacent services.',
     preCollapse: 'Contract drafting and dispute mediation for clients who prefer discretion. Notarial-adjacent services. Document certification and archiving.',
     postCollapse: 'The most directly useful front post-collapse. Document archive, professional relationships with actual notaries and lawyers, and Matteo\'s reputation as a man who handles difficult matters quietly give the Leonellis a legal infrastructure no other criminal organization possesses.'
   }

@@ -13,7 +13,7 @@
 
 var SYSTEM_OVERVIEW = {
   chapter: 1,
-  intro: 'The System arrived without warning and without explanation. It did not ask permission. It appeared in every person\'s visual field simultaneously — text rendered in the air, monochrome, slightly luminous, impossible to ignore or obscure — and it addressed each person directly, as though it had been waiting.',
+  intro: 'The System arrived without warning and without explanation. It did not ask permission. It appeared in every person\'s visual field simultaneously \(text rendered in the air, monochrome, slightly luminous, impossible to ignore or obscure\) and it addressed each person directly, as though it had been waiting.',
   initMessage: 'WELCOME TO THE NEW WORLD.\nYOUR REGISTRATION IS CONFIRMED.\nPLEASE REVIEW YOUR CLASSIFICATION OPTIONS.\nYOU HAVE 72 HOURS.',
   interface: [
     { label: 'Display Method', text: 'Direct-to-perception overlays. No device required. No opt-out.' },
@@ -27,10 +27,10 @@ var SYSTEM_OVERVIEW = {
   npcStatus: {
     chapter: 7,
     title: 'NPC Status',
-    description: 'The designation given to any human entity who does not engage with the class selection window before it closes. Approximately half of Turin\'s population becomes NPC — including most police and military, who were ordered by institutional command to ignore the System and await government guidance that never came.',
+    description: 'The designation given to any human entity who does not engage with the class selection window before it closes. Approximately 80% of Turin\'s population become "NPCs". These include most police and military, who were ordered by institutional command to ignore the System and await government guidance that never came.',
     consequences: [
       'NPC weapons and physical force deal significantly reduced damage against Players and creatures',
-      'NPCs are not excluded from Scenario events — creatures do not distinguish them from Players as targets',
+      'NPCs are not excluded from Scenario events. Creatures do not distinguish them from Players as targets',
       'They receive none of the protection that class registration confers, and all of the exposure',
       'The consequences are permanent and mechanical'
     ],
@@ -95,7 +95,7 @@ var STATS_DATA = {
     {
       name: 'INFAMY',
       chapter: 13,
-      description: 'Accumulates through acts the System categorizes as fear-generating — killing under observation, enforcing agreements by violence, breaking resistance publicly. Does not reset.',
+      description: 'Accumulates through acts the System categorizes as fear-generating: killing under observation, enforcing agreements by violence, breaking resistance publicly. Does not reset.',
       effects: 'High Infamy improves intimidation, underworld compliance, and command weight. Also escalates enemy aggression, Hero faction targeting, and bounty values.',
       note: 'The System tracks it because it is useful information about what an entity is becoming.'
     },
@@ -198,8 +198,8 @@ var CLASSES_DATA = [
     holder: 'Luca Terranova',
     descriptor: 'For those who build what others use.',
     tier: 'Origin (I)',
-    primary: 'ACUITY',
-    secondary: 'PRESENCE (emerging)',
+    primary: 'EDGE',
+    secondary: 'ACUITY',
     classLine: ['Architect', 'System Architect', 'Framework Master', 'World Engine'],
     ceiling: null,
     buildDirection: 'Non-combat support and systemic intelligence. The most unusual class line in the group, with no natural combat evolution. It has a structural evolution instead. At higher tiers, Luca\'s outputs begin to interact with the System at an architectural level.',
