@@ -49,8 +49,7 @@ var MAP_LOCATIONS = [
     faction: 'leonelli',
     category: 'safehouse',
     icon: 'node',
-    description: 'A four-story post-war concrete building in San Donato, near Parco Dora. Ground floor converted into a small accounting practice (Studio Commerciale Ferretti). Luca had been monitoring the street from the third floor since the System arrived, using the stairwell landing for sightlines rather than his apartment window.',
-    notes: 'Matteo entered twenty minutes before Cecilia and waited on the fourth floor with the tighter draft of the contract. Bianca had placed a watcher on at an adjacent building. Cecilia read the curtain gap from the street and knew Luca\'s position before she entered.'
+    description: 'A four-story concrete building in Parella, near Parco Calibria. Ground floor converted into a small accounting practice (Studio Commerciale Ferretti).',
   },
 
   {
@@ -64,7 +63,7 @@ var MAP_LOCATIONS = [
     category: 'safehouse',
     icon: 'node',
     description: 'A residential building on Corso Casale, east bank of the Po. Ermilo Ferrero (RaptorSix) and his wife Lorena were barricaded on the top floor during the Night of First Measure. Four armed men from a rival group had attempted to take them hours earlier; two neighbors were killed on the second floor. Cecilia\'s team cleared the building, interrogated a survivor, and extracted the siblings.',
-    notes: 'The survivor named Marinelli as the group\'s backer. The dead analyst Davide Lanza\'s notebook contained Ferrero\'s address with the note "top floor / use rear entrance" — both groups were working from the same list.'
+    notes: 'The survivor named Marinelli as the group\'s backer. The dead analyst Davide Lanza\'s notebook contained Ferrero\'s address with the note "top floor / use rear entrance." Both groups were working from the same list.'
   },
 
   {
@@ -77,7 +76,7 @@ var MAP_LOCATIONS = [
     faction: 'contested',
     category: 'scenario',
     icon: 'scenario',
-    description: 'A ground-floor studio behind a computer repair shop on Corso Casale. Cecilia\'s team found Davide Lanza — a market analyst who had built MMO auction tools still cited years later — shot dead behind his counter during the Night of First Measure. His equipment had been stripped. On the wall: "SAFE ZONE" with an arrow and a phone number.',
+    description: 'A ground-floor studio behind a computer repair shop on Corso Casale. Cecilia\'s team found Davide Lanza shot dead behind his counter during the Night of First Measure. His equipment had been stripped. On the wall: "SAFE ZONE" with an arrow and a phone number.',
     notes: 'The first confirmation that a rival group was collecting System-literate talent and killing those who resisted. Lanza\'s notebook contained addresses for other targets, including Ermilo Ferrero.'
   },
 
@@ -96,7 +95,7 @@ var MAP_LOCATIONS = [
     category: 'scenario',
     icon: 'scenario',
     description: 'During the Night of First Measure, Cecilia\'s team encountered a police checkpoint on Via Po: two patrol cars, one fire truck, four officers behind portable barriers, five trapped civilian vehicles. Three creatures attacked from beneath the cars. Ruggiero engaged hand-to-hand. One officer was killed. Cecilia ordered the barriers moved and proceeded.',
-    notes: 'First direct evidence that conventional law enforcement was mechanically outmatched by System entities. When the team returned via the same route an hour later, the checkpoint was gone — one car burned to its frame, the fire truck abandoned with doors open.'
+    notes: 'First direct evidence that conventional law enforcement was mechanically outmatched by System entities. When the team returned via the same route an hour later, the checkpoint was gone. One car burned to its frame, the fire truck abandoned with doors open.'
   },
 
   {
@@ -105,7 +104,7 @@ var MAP_LOCATIONS = [
     subtitle: 'Abandoned / Salvaged Day 4',
     lat: 45.075971,
     lng: 7.652763,
-    chapter: 12,
+    chapter: 16,
     faction: 'contested',
     category: 'scenario',
     icon: 'scenario',
@@ -142,7 +141,7 @@ var MAP_LOCATIONS = [
     category: 'strategic',
     icon: 'market',
     description: 'The largest open-air market in Europe, Piazza della Repubblica. By Day 4, stall count had dropped by half. System drops from the Night of First Measure were already circulating as trade goods. Some vendors had stopped accepting euros. Three unidentified Players were mapping the market\'s vulnerabilities. The Civil Security Coalition posted recruitment bulletins here.',
-    notes: 'Dario reconnected with Fatima Hassan, a longtime Aurora contact. She asked whether the Leonellis were "still in business." He confirmed. The market\'s social physics — who shows up, who protects it, who sets prices — will determine civilian allegiance across the northern districts.'
+    notes: 'Dario reconnected with Fatima Hassan, a longtime Aurora contact. She asked whether the Leonellis were "still in business." He confirmed. The market\'s social physics will determine civilian allegiance across the northern districts.'
   },
 
   {
@@ -155,7 +154,7 @@ var MAP_LOCATIONS = [
     faction: 'contested',
     category: 'infrastructure',
     icon: 'infrastructure',
-    description: 'A major east-west boulevard along the northern edge of the city center. On Day 1 at approximately 5 PM, a convoy of military vehicles — open-topped APCs with decades-old Soviet-style gear and anomalous plate numbers — pressed southwest into the metropolitan zone.',
+    description: 'A major east-west boulevard along the northern edge of the city center. On Day 1 at approximately 5 PM, a convoy of military vehicles pressed southwest into the metropolitan zone.',
     notes: 'The military\'s arrival didn\'t bring anyone back inside. Quite the opposite.'
   },
 
@@ -169,7 +168,7 @@ var MAP_LOCATIONS = [
     faction: 'contested',
     category: 'landmark',
     icon: 'landmark',
-    description: 'Turin\'s largest piazza, opening toward the Po. On the first night, Dario observed a man standing on a park bench near the piazza, preaching about levels, classes, and quests to a growing crowd. Two listeners began glowing — hands, mostly. "Like light, but not from a bulb."',
+    description: 'Turin\'s largest piazza, opening toward the Po. On the first night, Dario observed a man standing on a park bench near the piazza, preaching about levels, classes, and quests to a growing crowd.',
     notes: 'The man said anyone who didn\'t choose a class would get a bad one. That it was a test. Dario left before anything else happened. He wasn\'t wrong about that part.'
   },
 
@@ -224,7 +223,7 @@ var HOOD_CONFIG = {
   },
   'AURORA': {
     color: '#d4763a',
-    notes: 'Historic working-class district north of the city center, part of Circoscrizione 7. Includes the Porta Palazzo quarter — home to Europe\'s largest open-air market in Piazza della Repubblica — as well as Borgo Dora and Valdocco. High immigrant population, dense informal economy, and strong community networks.'
+    notes: 'Historic working-class district north of the city center, part of Circoscrizione 7. Includes the Porta Palazzo quarter, home to Europe\'s largest open-air market in Piazza della Repubblica, as well as Borgo Dora and Valdocco. High immigrant population, dense informal economy, and strong community networks.'
   },
   'BARRIERA DI MILANO': {
     color: '#b33a3a',
@@ -240,7 +239,7 @@ var HOOD_CONFIG = {
   },
   'VANCHIGLIA': {
     color: '#4a7a9a',
-    notes: 'East of center, part of Circoscrizione 7 with Aurora and Madonna del Pilone. University neighborhood with a younger population and active cafe scene. Piazza Vittorio Veneto — Turin\'s largest piazza — opens toward the Po at its southern edge.'
+    notes: 'East of center, part of Circoscrizione 7 with Aurora and Madonna del Pilone. University neighborhood with a younger population and active cafe scene. Piazza Vittorio Veneto, Turin\'s largest piazza, opens toward the Po at its southern edge.'
   },
   'SAN SALVARIO': {
     color: '#8a7a6a',
@@ -264,7 +263,7 @@ var HOOD_CONFIG = {
   },
   'FALCHERA': {
     color: '#6a7a6a',
-    notes: 'Far northeastern public housing district, part of Circoscrizione 6. Designed in the 1950s by architect Giovanni Astengo as one of Italy\'s earliest planned suburban communities with integrated green spaces. The Laghetti di Falchera — two artificial lakes reclaimed from former gravel quarries — sit at its northern edge.'
+    notes: 'Far northeastern public housing district, part of Circoscrizione 6. Designed in the 1950s by architect Giovanni Astengo as one of Italy\'s earliest planned suburban communities with integrated green spaces. The Laghetti di Falchera, two artificial lakes reclaimed from former gravel quarries, sit at its northern edge.'
   },
   'LE VALLETTE': {
     color: '#5a6a5a',
