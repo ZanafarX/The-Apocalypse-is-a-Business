@@ -215,7 +215,7 @@ var CLASSES_DATA = [
     tier: 'Origin (I)',
     primary: 'EDGE',
     secondary: 'FORCE',
-    classLine: ['Sparkcaller', null, null, null],
+    classLine: ['Sparkcaller', 'Arc Diviner', 'Latent Warden', 'Quickening'],
     ceiling: null,
     buildDirection: 'Hybrid combat and analytical class. Pairs Electrokinesis with the drawing out of latent System energy — the potential in people, objects, and locations that has not been activated or recognized. Senses suppressed or developing System-recognized potential as a qualitative presence rather than as stats or class detail. Can sometimes perceive what an entity is becoming before it emerges.',
     combatNotes: 'Iris fights at range and in close, channeling Electrokinesis as direct output. The analytical half of the class is the more dangerous half: in the Palazzo, being able to sense latent emergence is not comfortable knowledge to hold.'
@@ -230,7 +230,7 @@ var CLASSES_DATA = [
     tier: 'Origin (I)',
     primary: 'ACUITY',
     secondary: 'VELOCITY',
-    classLine: ['Cartographer', null, null, null],
+    classLine: ['Cartographer', 'Wayreader', 'Surveyor General', 'Horizon'],
     ceiling: null,
     buildDirection: 'Non-combat spatial-temporal intelligence. Maps the System\'s spatial and temporal patterns — spawn density, creature movement, energy accumulation, the probability corridors along which events unfold. Velocity secondary is unusual for a non-combat class and reflects the real-time nature of the output. At higher ranks the map extends to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
     combatNotes: 'Ivan does not fight. The class does not turn off; he receives signal continuously. His value is the projection, not the engagement. The noise-canceling headphones are load-bearing infrastructure.'
@@ -245,7 +245,7 @@ var CLASSES_DATA = [
     tier: 'Origin (I)',
     primary: 'ACUITY',
     secondary: 'PRECISION',
-    classLine: ['Auditor', null, null, null],
+    classLine: ['Auditor', 'Discrepant', 'Hidden Hand', 'The Witness'],
     ceiling: null,
     buildDirection: 'Non-combat hidden-variable intelligence. Has access to the System\'s internal records — the variables it tracks but does not surface to the standard interface: hidden flags, accumulated trigger conditions, behavioral records, and environmental values logged for the System\'s own purposes. Sees the System\'s working, not just its output. Can identify divergences between visible output and hidden records.',
     combatNotes: 'Ermilio does not fight. His value is informational: the gap between what a faction shows and what the System has logged. The skill Matteo finds most useful and most unsettling.'
@@ -260,7 +260,7 @@ var CLASSES_DATA = [
     tier: 'Origin (I)',
     primary: 'PRECISION',
     secondary: 'ACUITY',
-    classLine: ['Scribe', null, null, null],
+    classLine: ['Scribe', 'Notary', 'Codifier', ' The Canon'],
     ceiling: null,
     buildDirection: 'Non-combat record infrastructure. Formalizes System data through physical recording. A recorded fact, in the format the System has made legible to the class, is validated and timestamped — existing in both the physical document and the System\'s own registry. Scribe-produced records carry System-backed authenticity, cannot be retroactively altered without producing a visible discrepancy, and can be submitted as evidence in System-adjudicated disputes.',
     combatNotes: 'Lorena does not fight. Her records are not supporting documentation for Matteo\'s contract architecture — they are System-recognized primary sources.'
@@ -275,7 +275,7 @@ var CLASSES_DATA = [
     tier: 'Origin (I)',
     primary: 'PRECISION',
     secondary: 'ACUITY',
-    classLine: ['Artificer', null, null, null],
+    classLine: ['Artificer', 'Material Adept', 'Loomwright', 'Genesis Forge'],
     ceiling: null,
     buildDirection: 'Non-combat technical arm. Manipulates and upgrades physical items by infusing them with System properties, working directly with the material layer the System recognizes. Enhances existing items, composites incompatible System properties into functional combinations, and produces devices that interact with System mechanics in ways standard equipment cannot. At higher ranks moves from modification toward creation — objects the System has no prior record of.',
     combatNotes: 'Giulia does not fight on the line. Her anxiety in high-threat environments is real; she functions by keeping attention on the object in her hands. Output includes the node disruptor, modified field equipment, and a carefully restricted licensing line to the broader protection network.'
@@ -290,7 +290,7 @@ var CLASSES_DATA = [
     tier: 'Origin (I)',
     primary: 'EDGE',
     secondary: 'ACUITY',
-    classLine: ['Breaker', null, null, null],
+    classLine: ['Breaker', 'Edge Case', 'Undefined', 'Null Author'],
     ceiling: 'No defined progression path. Advances by finding states the System did not fully define — edge cases, undefined interactions, the gap between what a rule says and what happens when pushed past its tested range. The System cannot state the next unlock condition in advance because, by definition, it is something the System did not anticipate.',
     buildDirection: 'Exploit specialist. Exists partially outside the System\'s standard classification framework. Functions normally in defined interactions; at the edges of mechanic definitions she produces outputs the System was not modeling. Can deliberately trigger and extend edge-case interactions, holding a mechanic in an undefined state long enough to extract value from it.',
     combatNotes: 'Serena\'s value is the exploit, not the duel. Tactically reckless by any reasonable standard — she has tested things on herself she should have tested on systems, and will continue to. Her output is occasionally not useful and occasionally spectacular.'
