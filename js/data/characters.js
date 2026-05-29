@@ -376,7 +376,7 @@ var CHARACTERS = [
         name: 'LATENT SENSE',
         type: 'Passive (developing)',
         chapter: 7,
-        desc: 'Iris perceives suppressed or developing System-recognized potential in entities around her. Not stats, not class details: something more qualitative, the presence of something that has not yet emerged. She does not have the vocabulary to describe this precisely, which frustrates her. It presents as intuition because she has no better framework for it yet.',
+        desc: 'Iris perceives suppressed or developing System-recognized potential in entities around her as qualitative inferences. She does not have the vocabulary to describe this precisely, which frustrates her. It presents as intuition because she has no better framework for it yet.',
         ranks: 'At higher ranks, the perception becomes more articulate and more specific. The practical implication is that she can sometimes see what people are becoming before they can. This is not comfortable knowledge to have in the Palazzo Valperga.'
       },
       {

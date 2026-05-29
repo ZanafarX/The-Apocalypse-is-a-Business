@@ -511,13 +511,13 @@ var SKILLS_DATA = [
     holder: 'Iris Terranova',
     class: 'SPARKCALLER',
     type: 'Passive — Developing',
-    description: 'Iris senses suppressed or developing System-recognized potential in entities, objects, and locations around her — not stats, not class details, but something more qualitative: the presence of something that has not emerged yet. She can sometimes perceive what people are becoming before they can. She does not yet have the language to describe this precisely, which frustrates her; it presents as intuition because she has no better framework for it. At higher ranks, the perception will sharpen from impression toward something she can articulate and act on.',
+    description: 'Iris senses suppressed or developing System-recognized potential in entities, objects, and locations around her as qualitative inferences. She can sometimes perceive what people are becoming before they can. She does not yet have the language to describe this precisely, which frustrates her; it presents as intuition because she has no better framework for it. At higher ranks, the perception will sharpen from impression toward something she can articulate and act on.',
     ranks: []
   },
 
   {
     id: 'spark-electro',
-    name: 'ELECTROKINESIS',
+    name: 'SPARK',
     chapter: 99,
     holder: 'Iris Terranova',
     class: 'SPARKCALLER',
@@ -533,7 +533,7 @@ var SKILLS_DATA = [
     holder: 'Ivan Carceri',
     class: 'CARTOGRAPHER',
     type: 'Passive',
-    description: 'Ivan continuously receives low-level positional and density data about System-active entities and energy accumulations within a significant radius. At rest, this presents as ambient awareness — he knows which direction creatures are moving before anyone reports it. Under stress, it becomes overwhelming. The skill does not turn off, which is why the noise-canceling headphones are load-bearing infrastructure.',
+    description: 'Ivan continuously receives low-level positional and density data about System-active entities and energy accumulations within a significant radius. At rest, this presents as ambient awareness. He knows which direction creatures are moving before anyone reports it. Under stress, it becomes overwhelming. The skill does not turn off, which is why the noise-canceling headphones are load-bearing infrastructure.',
     ranks: []
   },
 
