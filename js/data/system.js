@@ -173,7 +173,7 @@ var CLASSES_DATA = [
     classLine: ['Runner', 'Silk Knife', 'Vice Broker', 'Smiling Revenant'],
     ceiling: null,
     buildDirection: 'Mobile skirmisher, social infiltrator, and market operator. Dario wins by being in precisely the wrong position for opponents and precisely the right one for himself.',
-    combatNotes: 'His fights should feel almost unfair. He is never where expected. He does not face opponents — he appears at their margins and is already gone. Weapons: knives, garrote, poison. All close-range and opportunistic.'
+    combatNotes: 'His fights should feel almost unfair. He is never where expected. Weapons: knives, garrote, poison. All close-range and opportunistic.'
   },
 
   {
@@ -217,7 +217,7 @@ var CLASSES_DATA = [
     secondary: 'FORCE',
     classLine: ['Sparkcaller', 'Arc Diviner', 'Latent Warden', 'Quickening'],
     ceiling: null,
-    buildDirection: 'Hybrid combat and analytical class. Pairs Electrokinesis with the drawing out of latent System energy — the potential in people, objects, and locations that has not been activated or recognized. Senses suppressed or developing System-recognized potential as a qualitative presence rather than as stats or class detail. Can sometimes perceive what an entity is becoming before it emerges.',
+    buildDirection: 'Hybrid combat and analytical class. Pairs Electrokinesis with the drawing out of latent System energy: the potential in people, objects, and locations that has not been activated or recognized. Senses suppressed or developing System-recognized potential as a qualitative presence rather than as stats or class detail. Can sometimes perceive what an entity is becoming before it emerges.',
     combatNotes: 'Iris fights at range and in close, channeling Electrokinesis as direct output. The analytical half of the class is the more dangerous half: in the Palazzo, being able to sense latent emergence is not comfortable knowledge to hold.'
   },
 
@@ -232,7 +232,7 @@ var CLASSES_DATA = [
     secondary: 'VELOCITY',
     classLine: ['Cartographer', 'Wayreader', 'Surveyor General', 'Horizon'],
     ceiling: null,
-    buildDirection: 'Non-combat spatial-temporal intelligence. Maps the System\'s spatial and temporal patterns — spawn density, creature movement, energy accumulation, the probability corridors along which events unfold. Velocity secondary is unusual for a non-combat class and reflects the real-time nature of the output. At higher ranks the map extends to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
+    buildDirection: 'Non-combat spatial-temporal intelligence. Maps the System\'s spatial and temporal patterns: spawn density, creature movement, energy accumulation, the probability corridors along which events unfold. Velocity secondary is unusual for a non-combat class and reflects the real-time nature of the output. At higher ranks the map extends to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
     combatNotes: 'Ivan does not fight. The class does not turn off; he receives signal continuously. His value is the projection, not the engagement. The noise-canceling headphones are load-bearing infrastructure.'
   },
 
@@ -262,8 +262,8 @@ var CLASSES_DATA = [
     secondary: 'ACUITY',
     classLine: ['Scribe', 'Notary', 'Codifier', ' The Canon'],
     ceiling: null,
-    buildDirection: 'Non-combat record infrastructure. Formalizes System data through physical recording. A recorded fact, in the format the System has made legible to the class, is validated and timestamped — existing in both the physical document and the System\'s own registry. Scribe-produced records carry System-backed authenticity, cannot be retroactively altered without producing a visible discrepancy, and can be submitted as evidence in System-adjudicated disputes.',
-    combatNotes: 'Lorena does not fight. Her records are not supporting documentation for Matteo\'s contract architecture — they are System-recognized primary sources.'
+    buildDirection: 'Non-combat record infrastructure. Formalizes System data through physical recording. A recorded fact, in the format the System has made legible to the class, is validated and timestamped, existing in both the physical document and the System\'s own registry. Scribe-produced records carry System-backed authenticity, cannot be retroactively altered without producing a visible discrepancy, and can be submitted as evidence in System-adjudicated disputes.',
+    combatNotes: 'Lorena does not fight. Her records are not supporting documentation for Matteo\'s contract architecture. They are System-recognized primary sources.'
   },
 
   {
@@ -277,8 +277,8 @@ var CLASSES_DATA = [
     secondary: 'ACUITY',
     classLine: ['Artificer', 'Material Adept', 'Loomwright', 'Genesis Forge'],
     ceiling: null,
-    buildDirection: 'Non-combat technical arm. Manipulates and upgrades physical items by infusing them with System properties, working directly with the material layer the System recognizes. Enhances existing items, composites incompatible System properties into functional combinations, and produces devices that interact with System mechanics in ways standard equipment cannot. At higher ranks moves from modification toward creation — objects the System has no prior record of.',
-    combatNotes: 'Giulia does not fight on the line. Her anxiety in high-threat environments is real; she functions by keeping attention on the object in her hands. Output includes the node disruptor, modified field equipment, and a carefully restricted licensing line to the broader protection network.'
+    buildDirection: 'Non-combat technical arm. Manipulates and upgrades physical items by infusing them with System properties, working directly with the material layer the System recognizes. Enhances existing items, composites incompatible System properties into functional combinations, and produces devices that interact with System mechanics in ways standard equipment cannot. At higher ranks moves from modification toward creating objects the System has no prior record of.',
+    combatNotes: 'Giulia does not fight on the line. Her anxiety in high-threat environments is real. She functions by keeping attention on the object in her hands. Output includes the node disruptor, modified field equipment, and a carefully restricted licensing line to the broader protection network.'
   },
 
   {
@@ -291,9 +291,9 @@ var CLASSES_DATA = [
     primary: 'EDGE',
     secondary: 'ACUITY',
     classLine: ['Breaker', 'Edge Case', 'Undefined', 'Null Author'],
-    ceiling: 'No defined progression path. Advances by finding states the System did not fully define — edge cases, undefined interactions, the gap between what a rule says and what happens when pushed past its tested range. The System cannot state the next unlock condition in advance because, by definition, it is something the System did not anticipate.',
+    ceiling: 'No defined progression path. Advances by finding states the System did not fully define: edge cases, undefined interactions, the gap between what a rule says and what happens when pushed past its tested range. The System cannot state the next unlock condition in advance because, by definition, it is something the System did not anticipate.',
     buildDirection: 'Exploit specialist. Exists partially outside the System\'s standard classification framework. Functions normally in defined interactions; at the edges of mechanic definitions she produces outputs the System was not modeling. Can deliberately trigger and extend edge-case interactions, holding a mechanic in an undefined state long enough to extract value from it.',
-    combatNotes: 'Serena\'s value is the exploit, not the duel. Tactically reckless by any reasonable standard — she has tested things on herself she should have tested on systems, and will continue to. Her output is occasionally not useful and occasionally spectacular.'
+    combatNotes: 'Serena\'s value is the exploit, not the duel. Tactically reckless by any reasonable standard. She has tested things on herself she should have tested on systems, and will continue to. Her output is occasionally not useful and occasionally spectacular.'
   }
 
 ];
@@ -555,7 +555,7 @@ var SKILLS_DATA = [
     holder: 'Ermilio Ferrero',
     class: 'AUDITOR',
     type: 'Passive',
-    description: 'Ermilio can see System flags and hidden variables attached to entities, objects, and locations — data points the System tracks without showing, such as "this entity has triggered condition X across N instances," "this location has accumulated Y units of spawn energy," "this contract has a logged compliance flag." The information arrives as a secondary layer over his normal visual field: most of the time barely noticeable; occasionally, in locations with significant System activity, overwhelming.',
+    description: 'Ermilio can see System flags and hidden variables attached to entities, objects, and locations. These include data points the System tracks without showing, such as "this entity has triggered condition X across N instances," "this location has accumulated Y units of spawn energy," "this contract has a logged compliance flag." The information arrives as a secondary layer over his normal visual field: most of the time barely noticeable; occasionally, in locations with significant System activity, overwhelming.',
     ranks: []
   },
 
@@ -577,7 +577,7 @@ var SKILLS_DATA = [
     holder: 'Lorena Ferrero',
     class: 'SCRIBE',
     type: 'Active',
-    description: 'Lorena can produce a System-validated record of any fact she has directly witnessed or received through a credible chain of documentation. The record is timestamped by the System and flagged as authenticated, existing in both the physical document and the System\'s registry. The precision required is significant — imprecise or partially false records produce distorted outputs she can detect but not fully correct.',
+    description: 'Lorena can produce a System-validated record of any fact she has directly witnessed or received through a credible chain of documentation. The record is timestamped by the System and flagged as authenticated, existing in both the physical document and the System\'s registry. The precision required is significant. Imprecise or partially false records produce distorted outputs she can detect but not fully correct.',
     ranks: []
   },
 
@@ -610,7 +610,7 @@ var SKILLS_DATA = [
     holder: 'Giulia Conti',
     class: 'ARTIFICER',
     type: 'Active',
-    description: 'Giulia can introduce System properties into a physical object through direct sustained contact and concentrated attention. The precision required is significant — imprecise infusion produces unstable results, which she has learned from twice. At current ranks, this requires her workshop, specific raw materials, and time. At higher ranks, the time requirement will compress and the material dependency will broaden.',
+    description: 'Giulia can introduce System properties into a physical object through direct sustained contact and concentrated attention. The precision required is significant. Imprecise infusion produces unstable results, which she has learned from twice. At current ranks, this requires her workshop, specific raw materials, and time. At higher ranks, the time requirement will compress and the material dependency will broaden.',
     ranks: []
   },
 
