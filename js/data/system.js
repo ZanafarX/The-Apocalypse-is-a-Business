@@ -56,13 +56,13 @@ var STATS_DATA = {
       name: 'ACUITY',
       chapter: 1,
       description: 'Pattern recognition, strategic planning, information processing speed.',
-      users: 'Primary: Matteo (Advocate). Secondary: Cecilia (Fixer), Luca (Architect)'
+      users: 'Primary: Matteo (Advocate), Ivan (Cartographer), Ermilio (Auditor). Secondary: Cecilia (Fixer), Luca (Architect), Lorena (Scribe), Giulia (Artificer), Serena (Breaker)'
     },
     {
       name: 'FORCE',
       chapter: 1,
       description: 'Raw physical output — strength, impact, damage delivery.',
-      users: 'Primary: Ruggiero (Collector).'
+      users: 'Primary: Ruggiero (Collector). Secondary: Iris (Sparkcaller).'
     },
     {
       name: 'RESILIENCE',
@@ -74,19 +74,19 @@ var STATS_DATA = {
       name: 'VELOCITY',
       chapter: 1,
       description: 'Movement speed, reaction time, positional advantage.',
-      users: 'Primary: Bianca (Watcher).'
+      users: 'Primary: Bianca (Watcher). Secondary: Ivan (Cartographer).'
     },
     {
       name: 'PRECISION',
       chapter: 1,
       description: 'Accuracy, fine motor control, targeting quality.',
-      users: 'Secondary: Bianca (Watcher)'
+      users: 'Primary: Lorena (Scribe), Giulia (Artificer). Secondary: Bianca (Watcher), Ermilio (Auditor)'
     },
     {
       name: 'EDGE',
       chapter: 1,
       description: 'Opportunistic action, misdirection, exploit windows, and the margin between what should work and what does. Governs classes whose power derives from positioning and timing rather than raw output.',
-      users: 'Primary: Dario (Runner), Luca (Architect)',
+      users: 'Primary: Dario (Runner), Luca (Architect), Iris (Sparkcaller), Serena (Breaker)',
       note: 'The seventh stat. Not listed in the initialization message. Not announced. Discovered through class behavior. Its existence is inferred, not stated.'
     }
   ],
@@ -204,6 +204,96 @@ var CLASSES_DATA = [
     ceiling: null,
     buildDirection: 'Non-combat support and systemic intelligence. The most unusual class line in the group, with no natural combat evolution. It has a structural evolution instead. At higher tiers, Luca\'s outputs begin to interact with the System at an architectural level.',
     combatNotes: 'Luca does not fight. His value is in what he can build, model, and predict. His class line has no equivalent in any other faction in Turin.'
+  },
+
+  {
+    id: 'sparkcaller',
+    name: 'SPARKCALLER',
+    chapter: 99,
+    holder: 'Iris Terranova',
+    descriptor: 'For those who call out what is not yet awake.',
+    tier: 'Origin (I)',
+    primary: 'EDGE',
+    secondary: 'FORCE',
+    classLine: ['Sparkcaller', null, null, null],
+    ceiling: null,
+    buildDirection: 'Hybrid combat and analytical class. Pairs Electrokinesis with the drawing out of latent System energy — the potential in people, objects, and locations that has not been activated or recognized. Senses suppressed or developing System-recognized potential as a qualitative presence rather than as stats or class detail. Can sometimes perceive what an entity is becoming before it emerges.',
+    combatNotes: 'Iris fights at range and in close, channeling Electrokinesis as direct output. The analytical half of the class is the more dangerous half: in the Palazzo, being able to sense latent emergence is not comfortable knowledge to hold.'
+  },
+
+  {
+    id: 'cartographer',
+    name: 'CARTOGRAPHER',
+    chapter: 99,
+    holder: 'Ivan Carceri',
+    descriptor: 'For those who chart what is coming.',
+    tier: 'Origin (I)',
+    primary: 'ACUITY',
+    secondary: 'VELOCITY',
+    classLine: ['Cartographer', null, null, null],
+    ceiling: null,
+    buildDirection: 'Non-combat spatial-temporal intelligence. Maps the System\'s spatial and temporal patterns — spawn density, creature movement, energy accumulation, the probability corridors along which events unfold. Velocity secondary is unusual for a non-combat class and reflects the real-time nature of the output. At higher ranks the map extends to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
+    combatNotes: 'Ivan does not fight. The class does not turn off; he receives signal continuously. His value is the projection, not the engagement. The noise-canceling headphones are load-bearing infrastructure.'
+  },
+
+  {
+    id: 'auditor',
+    name: 'AUDITOR',
+    chapter: 99,
+    holder: 'Ermilio Ferrero',
+    descriptor: 'For those who read what is not shown.',
+    tier: 'Origin (I)',
+    primary: 'ACUITY',
+    secondary: 'PRECISION',
+    classLine: ['Auditor', null, null, null],
+    ceiling: null,
+    buildDirection: 'Non-combat hidden-variable intelligence. Has access to the System\'s internal records — the variables it tracks but does not surface to the standard interface: hidden flags, accumulated trigger conditions, behavioral records, and environmental values logged for the System\'s own purposes. Sees the System\'s working, not just its output. Can identify divergences between visible output and hidden records.',
+    combatNotes: 'Ermilio does not fight. His value is informational: the gap between what a faction shows and what the System has logged. The skill Matteo finds most useful and most unsettling.'
+  },
+
+  {
+    id: 'scribe',
+    name: 'SCRIBE',
+    chapter: 99,
+    holder: 'Lorena Ferrero',
+    descriptor: 'For those who make a record hold.',
+    tier: 'Origin (I)',
+    primary: 'PRECISION',
+    secondary: 'ACUITY',
+    classLine: ['Scribe', null, null, null],
+    ceiling: null,
+    buildDirection: 'Non-combat record infrastructure. Formalizes System data through physical recording. A recorded fact, in the format the System has made legible to the class, is validated and timestamped — existing in both the physical document and the System\'s own registry. Scribe-produced records carry System-backed authenticity, cannot be retroactively altered without producing a visible discrepancy, and can be submitted as evidence in System-adjudicated disputes.',
+    combatNotes: 'Lorena does not fight. Her records are not supporting documentation for Matteo\'s contract architecture — they are System-recognized primary sources.'
+  },
+
+  {
+    id: 'artificer',
+    name: 'ARTIFICER',
+    chapter: 99,
+    holder: 'Giulia Conti',
+    descriptor: 'For those who coax what is built.',
+    tier: 'Origin (I)',
+    primary: 'PRECISION',
+    secondary: 'ACUITY',
+    classLine: ['Artificer', null, null, null],
+    ceiling: null,
+    buildDirection: 'Non-combat technical arm. Manipulates and upgrades physical items by infusing them with System properties, working directly with the material layer the System recognizes. Enhances existing items, composites incompatible System properties into functional combinations, and produces devices that interact with System mechanics in ways standard equipment cannot. At higher ranks moves from modification toward creation — objects the System has no prior record of.',
+    combatNotes: 'Giulia does not fight on the line. Her anxiety in high-threat environments is real; she functions by keeping attention on the object in her hands. Output includes the node disruptor, modified field equipment, and a carefully restricted licensing line to the broader protection network.'
+  },
+
+  {
+    id: 'breaker',
+    name: 'BREAKER',
+    chapter: 99,
+    holder: 'Serena Marini',
+    descriptor: 'For those who find where the rules end.',
+    tier: 'Origin (I)',
+    primary: 'EDGE',
+    secondary: 'ACUITY',
+    classLine: ['Breaker', null, null, null],
+    ceiling: 'No defined progression path. Advances by finding states the System did not fully define — edge cases, undefined interactions, the gap between what a rule says and what happens when pushed past its tested range. The System cannot state the next unlock condition in advance because, by definition, it is something the System did not anticipate.',
+    buildDirection: 'Exploit specialist. Exists partially outside the System\'s standard classification framework. Functions normally in defined interactions; at the edges of mechanic definitions she produces outputs the System was not modeling. Can deliberately trigger and extend edge-case interactions, holding a mechanic in an undefined state long enough to extract value from it.',
+    combatNotes: 'Serena\'s value is the exploit, not the duel. Tactically reckless by any reasonable standard — she has tested things on herself she should have tested on systems, and will continue to. Her output is occasionally not useful and occasionally spectacular.'
   }
 
 ];
@@ -411,6 +501,138 @@ var SKILLS_DATA = [
     class: 'ARCHITECT',
     type: 'Active — Developing',
     description: 'Luca constructs a predictive model of a developing situation and shares it as a System-legible output to a designated group. At higher ranks, becomes a shared tactical overlay updating in real time. The skill that makes him irreplaceable, and the most dangerous one in the group if ever directed against Cecilia\'s interests.',
+    ranks: []
+  },
+
+  {
+    id: 'spark-latent',
+    name: 'LATENT SENSE',
+    chapter: 99,
+    holder: 'Iris Terranova',
+    class: 'SPARKCALLER',
+    type: 'Passive — Developing',
+    description: 'Iris senses suppressed or developing System-recognized potential in entities, objects, and locations around her — not stats, not class details, but something more qualitative: the presence of something that has not emerged yet. She can sometimes perceive what people are becoming before they can. She does not yet have the language to describe this precisely, which frustrates her; it presents as intuition because she has no better framework for it. At higher ranks, the perception will sharpen from impression toward something she can articulate and act on.',
+    ranks: []
+  },
+
+  {
+    id: 'spark-electro',
+    name: 'ELECTROKINESIS',
+    chapter: 99,
+    holder: 'Iris Terranova',
+    class: 'SPARKCALLER',
+    type: 'Active — Developing',
+    description: 'Iris generates and directs electrical output as direct combat application, at range and in close. The combat half of the hybrid class. At higher ranks, scales in raw output \(Force secondary\) and gains finer control over discharge, with developing interactions between her Electrokinesis and the latent energy her passive perceives.',
+    ranks: []
+  },
+
+  {
+    id: 'survey',
+    name: 'SURVEY',
+    chapter: 99,
+    holder: 'Ivan Carceri',
+    class: 'CARTOGRAPHER',
+    type: 'Passive',
+    description: 'Ivan continuously receives low-level positional and density data about System-active entities and energy accumulations within a significant radius. At rest, this presents as ambient awareness — he knows which direction creatures are moving before anyone reports it. Under stress, it becomes overwhelming. The skill does not turn off, which is why the noise-canceling headphones are load-bearing infrastructure.',
+    ranks: []
+  },
+
+  {
+    id: 'projection',
+    name: 'PROJECTION',
+    chapter: 99,
+    holder: 'Ivan Carceri',
+    class: 'CARTOGRAPHER',
+    type: 'Active',
+    description: 'Ivan produces a formal predictive map of a defined area over a defined time window, rendered as a System-legible overlay shareable with designated parties. The accuracy degrades with distance and time horizon but is meaningfully better than anything available through direct observation. At higher ranks the map extends to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
+    ranks: []
+  },
+
+  {
+    id: 'variable',
+    name: 'VARIABLE',
+    chapter: 99,
+    holder: 'Ermilio Ferrero',
+    class: 'AUDITOR',
+    type: 'Passive',
+    description: 'Ermilio can see System flags and hidden variables attached to entities, objects, and locations — data points the System tracks without showing, such as "this entity has triggered condition X across N instances," "this location has accumulated Y units of spawn energy," "this contract has a logged compliance flag." The information arrives as a secondary layer over his normal visual field: most of the time barely noticeable; occasionally, in locations with significant System activity, overwhelming.',
+    ranks: []
+  },
+
+  {
+    id: 'discrepancy',
+    name: 'DISCREPANCY',
+    chapter: 99,
+    holder: 'Ermilio Ferrero',
+    class: 'AUDITOR',
+    type: 'Active',
+    description: 'Ermilio can identify divergences between the System\'s visible output and its hidden records. When a faction\'s public Reputation does not match its logged behavioral record, he can see the gap. When a contract has been technically complied with in a way that violates its logged intent, he can see the gap. This is the skill Matteo finds most useful and most unsettling.',
+    ranks: []
+  },
+
+  {
+    id: 'inscription',
+    name: 'INSCRIPTION',
+    chapter: 99,
+    holder: 'Lorena Ferrero',
+    class: 'SCRIBE',
+    type: 'Active',
+    description: 'Lorena can produce a System-validated record of any fact she has directly witnessed or received through a credible chain of documentation. The record is timestamped by the System and flagged as authenticated, existing in both the physical document and the System\'s registry. The precision required is significant — imprecise or partially false records produce distorted outputs she can detect but not fully correct.',
+    ranks: []
+  },
+
+  {
+    id: 'archive',
+    name: 'ARCHIVE',
+    chapter: 99,
+    holder: 'Lorena Ferrero',
+    class: 'SCRIBE',
+    type: 'Passive — Developing',
+    description: 'Lorena retains exact recall of any document she has Inscribed. At current ranks, this applies to her own Inscriptions. At higher ranks, it will extend to documents she has analyzed through proper channels, then to documents she has been shown by reliable parties.',
+    ranks: []
+  },
+
+  {
+    id: 'material-sense',
+    name: 'MATERIAL SENSE',
+    chapter: 99,
+    holder: 'Giulia Conti',
+    class: 'ARTIFICER',
+    type: 'Passive',
+    description: 'Giulia perceives the System properties latent in physical objects — the modifications possible, the incompatibilities present, and the stress points that will fail first under System-level force. This operates continuously and involuntarily, which means she has not been able to look at the Palazzo\'s infrastructure without running a structural assessment since the first week. She has not shared all of her findings.',
+    ranks: []
+  },
+
+  {
+    id: 'infuse',
+    name: 'INFUSE',
+    chapter: 99,
+    holder: 'Giulia Conti',
+    class: 'ARTIFICER',
+    type: 'Active',
+    description: 'Giulia can introduce System properties into a physical object through direct sustained contact and concentrated attention. The precision required is significant — imprecise infusion produces unstable results, which she has learned from twice. At current ranks, this requires her workshop, specific raw materials, and time. At higher ranks, the time requirement will compress and the material dependency will broaden.',
+    ranks: []
+  },
+
+  {
+    id: 'null-state',
+    name: 'NULL STATE',
+    chapter: 99,
+    holder: 'Serena Marini',
+    class: 'BREAKER',
+    type: 'Passive',
+    description: 'Serena exists partially outside the System\'s standard classification framework. In defined, expected interactions, she functions normally. At the edges of mechanic definitions — the threshold cases, the interactions between systems that were not designed to interact — she produces outputs the System was not modeling. This is not always useful. It is occasionally spectacular.',
+    ranks: []
+  },
+
+  {
+    id: 'exploit-window',
+    name: 'EXPLOIT WINDOW',
+    chapter: 99,
+    holder: 'Serena Marini',
+    class: 'BREAKER',
+    type: 'Active — Developing',
+    description: 'Serena can deliberately trigger and extend the edge-case interactions her passive identifies, holding a mechanic in an undefined state long enough to extract value from it. At current ranks, the windows are short and the triggers are imprecise. At higher ranks, she will be able to engineer the conditions that create the windows rather than finding them in the environment.',
     ranks: []
   }
 
