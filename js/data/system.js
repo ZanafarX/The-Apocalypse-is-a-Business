@@ -260,10 +260,10 @@ var CLASSES_DATA = [
     tier: 'Origin (I)',
     primary: 'PRECISION',
     secondary: 'ACUITY',
-    classLine: ['Scribe', 'Notary', 'Codifier', ' The Canon'],
+    classLine: ['Scribe', 'Notary', 'Codifier', 'The Canon'],
     ceiling: null,
-    buildDirection: 'Non-combat record infrastructure. Formalizes System data through physical recording. A recorded fact, in the format the System has made legible to the class, is validated and timestamped, existing in both the physical document and the System\'s own registry. Scribe-produced records carry System-backed authenticity, cannot be retroactively altered without producing a visible discrepancy, and can be submitted as evidence in System-adjudicated disputes.',
-    combatNotes: 'Lorena does not fight. Her records are not supporting documentation for Matteo\'s contract architecture. They are System-recognized primary sources.'
+    buildDirection: 'Non-combat records infrastructure. A Scribe turns System data into physical records the System then treats as real: written down, validated, timestamped, living in both the document and the System\'s own registry. Those records carry System-backed authenticity, can\'t be altered afterward without leaving a visible discrepancy, and hold up as primary evidence in adjudicated disputes. The deeper half of the class is comprehension. A Scribe reads System language the way a notary reads a contract, taking in what it states and, underneath that, the shape of what it leaves out.',
+    combatNotes: 'Lorena doesn\'t fight. The System treats her records as primary sources: the official version of what happened, solid enough that Matteo\'s contracts get built on top of them.'
   },
 
   {
@@ -577,18 +577,18 @@ var SKILLS_DATA = [
     holder: 'Lorena Ferrero',
     class: 'SCRIBE',
     type: 'Active',
-    description: 'Lorena can produce a System-validated record of any fact she has directly witnessed or received through a credible chain of documentation. The record is timestamped by the System and flagged as authenticated, existing in both the physical document and the System\'s registry. The precision required is significant. Imprecise or partially false records produce distorted outputs she can detect but not fully correct.',
+    description: 'Lorena writes down a fact she\'s witnessed herself or received through a solid chain of documentation, and the System logs it as authenticated and timestamped, held in both the physical document and the registry. Precision carries the whole skill. A record that\'s sloppy or even partly false comes out distorted, and while she can feel the distortion forming, she can\'t always correct it. Once a record is set, nothing alters it without leaving a visible discrepancy, which is what lets it stand as primary evidence in System-adjudicated disputes.',
     ranks: []
   },
 
   {
-    id: 'archive',
-    name: 'ARCHIVE',
+    id: 'collation',
+    name: 'COLLATION',
     chapter: 99,
     holder: 'Lorena Ferrero',
     class: 'SCRIBE',
     type: 'Passive — Developing',
-    description: 'Lorena retains exact recall of any document she has Inscribed. At current ranks, this applies to her own Inscriptions. At higher ranks, it will extend to documents she has analyzed through proper channels, then to documents she has been shown by reliable parties.',
+    description: 'Lorena keeps perfect recall of everything she\'s Inscribed, and holds it as a single cross-referenced set instead of a pile of separate records. Each new Inscription checks itself against every earlier one, so contradictions, duplicates, and impossibilities surface on their own. It\'s what lets her catch a flaw in her own record before it sets, and where a gap she only sensed at the time gets confirmed later, once events prove the omission was real. For now it covers her own Inscriptions. At higher ranks it reaches documents she\'s analyzed properly, then ones reliable people have shown her, until she can set a stranger\'s record beside her own and feel exactly where it lies.',
     ranks: []
   },
 
