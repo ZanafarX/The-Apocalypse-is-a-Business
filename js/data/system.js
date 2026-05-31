@@ -13,28 +13,28 @@
 
 var SYSTEM_OVERVIEW = {
   chapter: 1,
-  intro: 'The System arrived without warning and without explanation. It did not ask permission. It appeared in every person\'s visual field simultaneously \(text rendered in the air, monochrome, slightly luminous, impossible to ignore or obscure\) and it addressed each person directly, as though it had been waiting.',
+  intro: 'The System showed up with no warning and no explanation. It didn\'t ask permission. It appeared in everyone\'s field of vision at once \(text hanging in the air, monochrome, faintly luminous, impossible to look away from or cover up\), and it spoke to each person directly, like it had been waiting on them.',
   initMessage: 'WELCOME TO THE NEW WORLD.\nYOUR REGISTRATION IS CONFIRMED.\nPLEASE REVIEW YOUR CLASSIFICATION OPTIONS.\nYOU HAVE 72 HOURS.',
   interface: [
-    { label: 'Display Method', text: 'Direct-to-perception overlays. No device required. No opt-out.' },
-    { label: 'Tone', text: 'Speaks like a game master who is also a judge. Exact and indifferent, but not impersonal. Every notification is addressed to you, specific and direct.' },
-    { label: 'Personal Messages', text: 'Invisible to bystanders.' },
-    { label: 'Public Broadcasts', text: 'Appear simultaneously in every registered entity\'s visual field. Same position, same text, same moment.' },
-    { label: 'Hidden Prompts', text: 'Exist and are never announced. Surface only when specific, undisclosed conditions are met. The System does not confirm they exist. It does not deny it.' },
-    { label: 'Notifications', text: 'Appear once and do not repeat.' },
-    { label: 'Appraise', text: 'Basic interaction available to all registered entities. Reveals class name and tier only. Level, stats, and skill loadout remain hidden. Strength is readable only by demonstration.' }
+    { label: 'Display Method', text: 'Painted straight onto your perception. No device needed. No opt-out.' },
+    { label: 'Tone', text: 'It talks like a game master who\'s also the judge. Exact and indifferent, and never impersonal. Every notification is addressed to you, specific and direct.' },
+    { label: 'Personal Messages', text: 'Invisible to anyone standing next to you.' },
+    { label: 'Public Broadcasts', text: 'Hit every registered entity\'s vision at once. Same spot, same words, same instant.' },
+    { label: 'Hidden Prompts', text: 'They exist and they\'re never announced. They surface only when some condition you were never told about gets met. The System won\'t confirm they exist. It won\'t deny it either.' },
+    { label: 'Notifications', text: 'They appear once and don\'t repeat.' },
+    { label: 'Appraise', text: 'A basic interaction anyone registered can use. It gives up class name and tier, nothing else. Level, stats, and skill loadout stay hidden. The only way to read someone\'s strength is to watch them use it.' }
   ],
   npcStatus: {
     chapter: 7,
     title: 'NPC Status',
-    description: 'The designation given to any human entity who does not engage with the class selection window before it closes. Approximately 80% of Turin\'s population become "NPCs". These include most police and military, who were ordered by institutional command to ignore the System and await government guidance that never came.',
+    description: 'What you get labeled if you never touch the class selection window before it shuts. Roughly 80% of Turin\'s population ends up an "NPC." That includes most police and military, who were told by institutional command to ignore the System and wait on government guidance that never came.',
     consequences: [
-      'NPC weapons and physical force deal significantly reduced damage against Players and creatures',
-      'NPCs are not excluded from Scenario events. Creatures do not distinguish them from Players as targets',
-      'They receive none of the protection that class registration confers, and all of the exposure',
-      'The consequences are permanent and mechanical'
+      'NPC weapons and muscle do badly reduced damage against Players and creatures',
+      'NPCs don\'t get a pass on Scenario events. Creatures hunt them the same as Players',
+      'They get none of the protection class registration buys, and the full helping of exposure',
+      'It\'s permanent, and it\'s mechanical'
     ],
-    note: 'Not all institutional personnel are NPCs. A fraction defied official guidance and selected their classes. This creates internal institutional fracturing. Player officers are measurably more effective, generating resentment in multiple directions.'
+    note: 'Not every uniform is an NPC. A fraction ignored the official line and picked their classes anyway, and that splits the institutions down the middle. Player officers are measurably better at the job, which breeds resentment in every direction at once.'
   }
 };
 
@@ -49,45 +49,45 @@ var STATS_DATA = {
     {
       name: 'PRESENCE',
       chapter: 1,
-      description: 'Command, coercion, social leverage, fear economy, negotiation pressure.',
+      description: 'Command, coercion, social leverage, the fear economy, pressure at the negotiating table.',
       users: 'Primary: Cecilia (Fixer). Secondary: Matteo (Advocate), Dario (Runner).'
     },
     {
       name: 'ACUITY',
       chapter: 1,
-      description: 'Pattern recognition, strategic planning, information processing speed.',
+      description: 'Pattern recognition, strategic planning, how fast you process information.',
       users: 'Primary: Matteo (Advocate), Ivan (Cartographer), Ermilio (Auditor). Secondary: Cecilia (Fixer), Luca (Architect), Lorena (Scribe), Giulia (Artificer), Serena (Breaker)'
     },
     {
       name: 'FORCE',
       chapter: 1,
-      description: 'Raw physical output — strength, impact, damage delivery.',
+      description: 'Raw physical output: strength, impact, how hard you hit.',
       users: 'Primary: Ruggiero (Collector). Secondary: Iris (Sparkcaller).'
     },
     {
       name: 'RESILIENCE',
       chapter: 1,
-      description: 'Damage absorption, sustained engagement capacity, endurance.',
+      description: 'How much you can soak, how long you can stay in it, endurance.',
       users: 'Secondary: Ruggiero (Collector).'
     },
     {
       name: 'VELOCITY',
       chapter: 1,
-      description: 'Movement speed, reaction time, positional advantage.',
+      description: 'Movement speed, reaction time, getting to the right spot first.',
       users: 'Primary: Bianca (Watcher). Secondary: Ivan (Cartographer).'
     },
     {
       name: 'PRECISION',
       chapter: 1,
-      description: 'Accuracy, fine motor control, targeting quality.',
+      description: 'Accuracy, fine motor control, how clean your targeting is.',
       users: 'Primary: Lorena (Scribe), Giulia (Artificer). Secondary: Bianca (Watcher), Ermilio (Auditor)'
     },
     {
       name: 'EDGE',
       chapter: 1,
-      description: 'Opportunistic action, misdirection, exploit windows, and the margin between what should work and what does. Governs classes whose power derives from positioning and timing rather than raw output.',
+      description: 'Opportunistic action, misdirection, exploit windows, and the margin between what should work and what does. It governs classes whose power comes from positioning and timing instead of raw output.',
       users: 'Primary: Dario (Runner), Luca (Architect), Iris (Sparkcaller), Serena (Breaker)',
-      note: 'The seventh stat. Not listed in the initialization message. Not announced. Discovered through class behavior. Its existence is inferred, not stated.'
+      note: 'The seventh stat. It\'s not in the initialization message. It\'s never announced. You find it through how the classes behave. Its existence has to be inferred; nobody states it.'
     }
   ],
 
@@ -95,15 +95,15 @@ var STATS_DATA = {
     {
       name: 'INFAMY',
       chapter: 13,
-      description: 'Accumulates through acts the System categorizes as fear-generating: killing under observation, enforcing agreements by violence, breaking resistance publicly. Does not reset.',
-      effects: 'High Infamy improves intimidation, underworld compliance, and command weight. Also escalates enemy aggression, Hero faction targeting, and bounty values.',
-      note: 'The System tracks it because it is useful information about what an entity is becoming.'
+      description: 'Builds up through anything the System files as fear-generating: killing where people can see, enforcing deals with violence, breaking someone\'s resistance in public. It doesn\'t reset.',
+      effects: 'High Infamy sharpens intimidation, underworld compliance, and command weight. It also cranks up enemy aggression, marks you for the Hero factions, and drives your bounty values higher.',
+      note: 'The System tracks it because it tells the System something useful about what you\'re turning into.'
     },
     {
       name: 'AUTHORITY',
       chapter: 13,
-      description: 'Unlocked only at faction recognition. Measures organizational command power. Scales with hierarchy quality, membership, territory, and active agreement density.',
-      effects: 'An individual without a recognized faction has zero Authority regardless of every other stat. Authority is what converts individual Player capability into institutional power.',
+      description: 'Locked until your faction gets recognized. It measures organizational command power, and it scales with the quality of your hierarchy, your membership, your territory, and how many active agreements you\'re running.',
+      effects: 'Without a recognized faction your Authority is zero, no matter how good every other stat is. Authority is the thing that turns one Player\'s capability into institutional power.',
       note: null
     }
   ]
@@ -126,9 +126,9 @@ var CLASSES_DATA = [
     primary: 'PRESENCE',
     secondary: 'ACUITY',
     classLine: ['Fixer', 'Leverage Broker', 'Sovereign Fixer', 'Final Arbiter'],
-    ceiling: 'No stated evolution ceiling. Classification window closed for this entity. Not a cap. A different designation.',
+    ceiling: 'No stated evolution ceiling. The classification window closed for this entity. That\'s a different designation, not a cap.',
     buildDirection: 'Command authority, leverage application, territory-linked effects, execution bonuses against marked targets, compulsion and contract interactions.',
-    combatNotes: 'Cecilia is not a frontline fighter. Her combat scenes are brief, decisive, and preceded by a read that made the outcome structurally inevitable. She hits most precisely, at the moment that costs her opponent most.'
+    combatNotes: 'Cecilia isn\'t a frontline fighter. Her combat scenes are short, decisive, and set up by a read that made the outcome inevitable before a blow landed. She hits with precision, at the exact moment it costs her opponent the most.'
   },
 
   {
@@ -142,8 +142,8 @@ var CLASSES_DATA = [
     secondary: 'RESILIENCE',
     classLine: ['Collector', 'Iron Collector', 'Execution Captain', 'Grave Warden'],
     ceiling: null,
-    buildDirection: 'Enforcer-tank-controller. Terrain domination, group suppression, formation rupture, sustained engagement. Ruggiero absorbs punishment and converts it into forward momentum.',
-    combatNotes: 'His combat scenes should feel physical and cumulative. He absorbs. He pushes forward. He does not stop. His presence in a physical space changes the tactical calculation for every entity in it.'
+    buildDirection: 'Enforcer-tank-controller. Terrain domination, group suppression, breaking up formations, staying in the fight. Ruggiero soaks punishment and turns it into forward momentum.',
+    combatNotes: 'His fights should feel physical and cumulative. He absorbs. He pushes forward. He doesn\'t stop. The second he\'s in a room, the tactical math changes for everyone else in it.'
   },
 
   {
@@ -157,8 +157,8 @@ var CLASSES_DATA = [
     secondary: 'PRESENCE',
     classLine: ['Advocate', 'Pact Advocate', 'Veiled Magistrate', 'Covenant Chancellor'],
     ceiling: null,
-    buildDirection: 'Control-support through contract architecture, informational suppression, and ward systems. Matteo performs almost no direct combat. He makes the conditions of every engagement favorable before it begins.',
-    combatNotes: 'Matteo does not fight. He writes the conditions under which other people fight and lose. His most powerful scene is the moment a Breach Penalty executes visibly and the room understands what it means.'
+    buildDirection: 'Control-support built on contract architecture, informational suppression, and ward systems. Matteo does almost no direct combat. He makes the terms of every engagement favorable before it starts.',
+    combatNotes: 'Matteo doesn\'t fight. He writes the conditions under which other people fight and lose. His strongest scene is the moment a Breach Penalty executes where everyone can see it, and the room works out what it means.'
   },
 
   {
@@ -172,8 +172,8 @@ var CLASSES_DATA = [
     secondary: 'PRESENCE',
     classLine: ['Runner', 'Silk Knife', 'Vice Broker', 'Smiling Revenant'],
     ceiling: null,
-    buildDirection: 'Mobile skirmisher, social infiltrator, and market operator. Dario wins by being in precisely the wrong position for opponents and precisely the right one for himself.',
-    combatNotes: 'His fights should feel almost unfair. He is never where expected. Weapons: knives, garrote, poison. All close-range and opportunistic.'
+    buildDirection: 'Mobile skirmisher, social infiltrator, market operator. Dario wins by being in exactly the wrong spot for his opponents and exactly the right one for himself.',
+    combatNotes: 'His fights should feel almost unfair. He\'s never where you expect him. Weapons: knives, garrote, poison. Close-range and opportunistic, all of it.'
   },
 
   {
@@ -187,8 +187,8 @@ var CLASSES_DATA = [
     secondary: 'PRECISION',
     classLine: ['Watcher', 'Night Auditor', 'Widow Fang', 'Silence Collector'],
     ceiling: null,
-    buildDirection: 'Precision eliminator and intelligence operative. Excels in conditions of silence: physical, informational, and territorial. The most dangerous member of the crew in the specific situations she is designed for, which she has taken care to make very common.',
-    combatNotes: 'Bianca\'s violence is personal. Her scenes should feel quiet even when they are not. The unsettling thing is not what she does. It is how completely untroubled she is by doing it.'
+    buildDirection: 'Precision eliminator and intelligence operative. She\'s at her best in silence: physical, informational, territorial. She\'s the most dangerous member of the crew in the exact situations she\'s built for, and she\'s taken pains to make those situations come up a lot.',
+    combatNotes: 'Bianca\'s violence is personal. Her scenes should feel quiet even when they\'re not. What unsettles people isn\'t what she does. It\'s how completely it doesn\'t trouble her to do it.'
   },
 
   {
@@ -202,8 +202,8 @@ var CLASSES_DATA = [
     secondary: 'ACUITY',
     classLine: ['Architect', 'System Architect', 'Framework Master', 'World Engine'],
     ceiling: null,
-    buildDirection: 'Non-combat support and systemic intelligence. The most unusual class line in the group, with no natural combat evolution. It has a structural evolution instead. At higher tiers, Luca\'s outputs begin to interact with the System at an architectural level.',
-    combatNotes: 'Luca does not fight. His value is in what he can build, model, and predict. His class line has no equivalent in any other faction in Turin.'
+    buildDirection: 'Non-combat support and systemic intelligence. The strangest class line in the group, with no natural combat evolution. What it has instead is a structural one. At higher tiers, Luca\'s outputs start interacting with the System at an architectural level.',
+    combatNotes: 'Luca doesn\'t fight. His value is in what he can build, model, and predict. No other faction in Turin has anything like his class line.'
   },
 
   {
@@ -217,8 +217,8 @@ var CLASSES_DATA = [
     secondary: 'FORCE',
     classLine: ['Sparkcaller', 'Arc Diviner', 'Latent Warden', 'Quickening'],
     ceiling: null,
-    buildDirection: 'Hybrid combat and analytical class. Pairs Electrokinesis with the drawing out of latent System energy: the potential in people, objects, and locations that has not been activated or recognized. Senses suppressed or developing System-recognized potential as a qualitative presence rather than as stats or class detail. Can sometimes perceive what an entity is becoming before it emerges.',
-    combatNotes: 'Iris fights at range and in close, channeling Electrokinesis as direct output. The analytical half of the class is the more dangerous half: in the Palazzo, being able to sense latent emergence is not comfortable knowledge to hold.'
+    buildDirection: 'A hybrid combat-and-analysis class. It pairs Electrokinesis with the drawing-out of latent System energy: the potential sitting in people, objects, and locations that hasn\'t been activated or recognized yet. She senses suppressed or developing System-recognized potential as a felt presence, not as stats or class detail. Sometimes she can perceive what an entity is becoming before it surfaces.',
+    combatNotes: 'Iris fights at range and up close, channeling Electrokinesis straight into output. The analytical half is the more dangerous half. Inside the Palazzo, the ability to sense latent emergence is not comfortable knowledge to be holding.'
   },
 
   {
@@ -232,8 +232,8 @@ var CLASSES_DATA = [
     secondary: 'VELOCITY',
     classLine: ['Cartographer', 'Wayreader', 'Surveyor General', 'Horizon'],
     ceiling: null,
-    buildDirection: 'Non-combat spatial-temporal intelligence. Maps the System\'s spatial and temporal patterns: spawn density, creature movement, energy accumulation, the probability corridors along which events unfold. Velocity secondary is unusual for a non-combat class and reflects the real-time nature of the output. At higher ranks the map extends to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
-    combatNotes: 'Ivan does not fight. The class does not turn off; he receives signal continuously. His value is the projection, not the engagement. The noise-canceling headphones are load-bearing infrastructure.'
+    buildDirection: 'Non-combat spatial-temporal intelligence. It maps the System\'s patterns across space and time: spawn density, creature movement, energy accumulation, the probability corridors events run down. A Velocity secondary is unusual for a non-combat class, and it\'s there because the output is real-time. At higher ranks the map stretches to faction movements, resource flows, and systemic trend lines that have nothing to do with creatures.',
+    combatNotes: 'Ivan doesn\'t fight. The class never switches off; the signal keeps coming. His value is the projection, not the engagement. The noise-canceling headphones are load-bearing infrastructure.'
   },
 
   {
@@ -247,8 +247,8 @@ var CLASSES_DATA = [
     secondary: 'PRECISION',
     classLine: ['Auditor', 'Discrepant', 'Hidden Hand', 'The Witness'],
     ceiling: null,
-    buildDirection: 'Non-combat hidden-variable intelligence. Has access to the System\'s internal records — the variables it tracks but does not surface to the standard interface: hidden flags, accumulated trigger conditions, behavioral records, and environmental values logged for the System\'s own purposes. Sees the System\'s working, not just its output. Can identify divergences between visible output and hidden records.',
-    combatNotes: 'Ermilio does not fight. His value is informational: the gap between what a faction shows and what the System has logged. The skill Matteo finds most useful and most unsettling.'
+    buildDirection: 'Non-combat hidden-variable intelligence. He can reach the System\'s internal records, the variables it tracks but never pushes to the standard interface: hidden flags, accumulated trigger conditions, behavioral records, the environmental values it logs for itself. He sees the System working, not just the result it shows. He can spot where the visible output and the hidden record don\'t match.',
+    combatNotes: 'Ermilio doesn\'t fight. His value is informational: the gap between what a faction shows and what the System has on file. The skill Matteo finds most useful and most unsettling.'
   },
 
   {
@@ -277,8 +277,8 @@ var CLASSES_DATA = [
     secondary: 'ACUITY',
     classLine: ['Artificer', 'Material Adept', 'Loomwright', 'Genesis Forge'],
     ceiling: null,
-    buildDirection: 'Non-combat technical arm. Manipulates and upgrades physical items by infusing them with System properties, working directly with the material layer the System recognizes. Enhances existing items, composites incompatible System properties into functional combinations, and produces devices that interact with System mechanics in ways standard equipment cannot. At higher ranks moves from modification toward creating objects the System has no prior record of.',
-    combatNotes: 'Giulia does not fight on the line. Her anxiety in high-threat environments is real. She functions by keeping attention on the object in her hands. Output includes the node disruptor, modified field equipment, and a carefully restricted licensing line to the broader protection network.'
+    buildDirection: 'Non-combat technical arm. She manipulates and upgrades physical items by working System properties into them, dealing directly with the material layer the System recognizes. She enhances existing gear, composites incompatible System properties into combinations that actually function, and builds devices that touch System mechanics in ways standard equipment can\'t. At higher ranks she moves from modifying things toward making objects the System has no prior record of.',
+    combatNotes: 'Giulia doesn\'t fight on the line. Her anxiety in high-threat places is real. She gets through it by keeping her attention on the object in her hands. Her output includes the node disruptor, modified field gear, and a tightly restricted licensing line out to the wider protection network.'
   },
 
   {
@@ -291,9 +291,9 @@ var CLASSES_DATA = [
     primary: 'EDGE',
     secondary: 'ACUITY',
     classLine: ['Breaker', 'Edge Case', 'Undefined', 'Null Author'],
-    ceiling: 'No defined progression path. Advances by finding states the System did not fully define: edge cases, undefined interactions, the gap between what a rule says and what happens when pushed past its tested range. The System cannot state the next unlock condition in advance because, by definition, it is something the System did not anticipate.',
-    buildDirection: 'Exploit specialist. Exists partially outside the System\'s standard classification framework. Functions normally in defined interactions; at the edges of mechanic definitions she produces outputs the System was not modeling. Can deliberately trigger and extend edge-case interactions, holding a mechanic in an undefined state long enough to extract value from it.',
-    combatNotes: 'Serena\'s value is the exploit, not the duel. Tactically reckless by any reasonable standard. She has tested things on herself she should have tested on systems, and will continue to. Her output is occasionally not useful and occasionally spectacular.'
+    ceiling: 'No defined progression path. It advances by finding states the System never fully defined: edge cases, undefined interactions, the gap between what a rule says and what happens when you shove it past its tested range. The System can\'t tell her the next unlock condition in advance, because by definition it\'s something the System didn\'t see coming.',
+    buildDirection: 'Exploit specialist. She sits partly outside the System\'s standard classification framework. In defined interactions she works like anyone else; out at the edges of a mechanic\'s definition she throws off outputs the System wasn\'t modeling. She can deliberately trigger and stretch edge-case interactions, holding a mechanic in an undefined state long enough to pull value out of it.',
+    combatNotes: 'Serena\'s value is the exploit, not the duel. Tactically reckless by any sane standard. She\'s tested things on herself she should have tested on systems, and she\'ll keep doing it. Her output runs from useless to spectacular with not much in between.'
   }
 
 ];
@@ -326,11 +326,11 @@ var CLASSES_DATA = [
 
 var SKILLS_OVERVIEW = {
   chapter: 1,
-  acquisition: 'Skills emerge from behavior — the System formalizes what an entity consistently does rather than offering a selection menu.',
+  acquisition: 'Skills come out of behavior. The System formalizes what you keep doing instead of handing you a menu to pick from.',
   visibleRanks: 'Ranks 1 through 3 are visible and announced.',
-  hiddenRanks: 'Ranks 4 and above exist but are never announced. Unlock conditions are specific behavioral convergences the System does not explain. Their existence must be inferred from anomalous effects. Every hidden rank unlock is a story beat.',
-  hiddenRank4Rule: 'Hidden Rank 4 is qualitative, not numerical. It is not a stronger version of what the skill was. It is a different thing that contains the previous thing. The System is recognizing that something has become true about the entity that the skill now needs to reflect.',
-  classWindowNote: 'Reading class descriptors reveals evolution ceiling. "Cannot" marks a hard cap. "Will not" marks willingness, not limitation. Classes without stated ceilings have room to grow.'
+  hiddenRanks: 'Ranks 4 and up exist and never get announced. The unlock conditions are specific behavioral convergences the System won\'t explain. You have to infer they happened from effects that don\'t add up. Every hidden rank unlock is a story beat.',
+  hiddenRank4Rule: 'Hidden Rank 4 is qualitative, not numerical. It\'s not a beefier version of the old skill. It\'s a different thing that holds the old thing inside it. The System is recognizing that something has become true about you, and the skill has to reflect it now.',
+  classWindowNote: 'Reading a class descriptor tells you the evolution ceiling. "Cannot" is a hard cap. "Will not" is about willingness, not limitation. Classes with no stated ceiling have room to grow.'
 };
 
 var SKILLS_DATA = [
@@ -342,12 +342,12 @@ var SKILLS_DATA = [
     holder: 'Cecilia Leonelli',
     class: 'FIXER',
     type: 'Passive',
-    description: 'Through sustained interaction, Cecilia identifies a target\'s primary vulnerability, the thing they most fear losing. The System formalizes this as a catalogued flag that enhances all her actions against that target. In social contexts: negotiation reads. In combat contexts: identification of vulnerability at the moment of maximum cost.',
+    description: 'Spend enough time with someone and Cecilia finds their primary vulnerability, the thing they\'re most afraid to lose. The System turns it into a catalogued flag that sharpens everything she does against that target. In social settings it reads as negotiation leverage. In combat it reads as knowing the vulnerability, and hitting it at the moment that costs the most.',
     ranks: [
       { rank: 1, text: 'Active during direct one-on-one engagement.', chapter: 1 },
-      { rank: 2, text: 'Functions in group settings; multiple targets can be marked simultaneously.', chapter: 99 },
-      { rank: 3, text: 'Survives the end of direct engagement; the read persists as a standing file.', chapter: 99 },
-      { rank: 'H4', text: 'Unlocks when Cecilia eliminates a Marked target simultaneously under an active Breach Penalty. Becomes FINAL ACCOUNT. The skill fuses with contract enforcement.', chapter: 99 }
+      { rank: 2, text: 'Works in group settings; she can mark several targets at once.', chapter: 99 },
+      { rank: 3, text: 'Outlasts the engagement; the read stays as a standing file.', chapter: 99 },
+      { rank: 'H4', text: 'Unlocks when Cecilia takes out a Marked target who\'s also carrying an active Breach Penalty. Becomes FINAL ACCOUNT. The skill fuses with contract enforcement.', chapter: 99 }
     ]
   },
 
@@ -358,7 +358,7 @@ var SKILLS_DATA = [
     holder: 'Cecilia Leonelli',
     class: 'FIXER',
     type: 'Active — Hidden Rank 4 Evolution',
-    description: 'When a Marked Ledger target has an active Breach Penalty and Cecilia acts against them directly, the execution carries compulsion weight. The target\'s resistance is mechanically suppressed. The System registers the outcome as a formal resolution of an outstanding liability, with downstream effects on faction reputation and contract authority.',
+    description: 'When a Marked Ledger target is under an active Breach Penalty and Cecilia moves on them herself, the kill carries compulsion weight. The target\'s resistance gets mechanically suppressed. The System logs the outcome as a formal resolution of an outstanding liability, with knock-on effects to faction reputation and contract authority.',
     ranks: []
   },
 
@@ -369,7 +369,7 @@ var SKILLS_DATA = [
     holder: 'Cecilia Leonelli',
     class: 'FIXER',
     type: 'Active — Presence-based',
-    description: 'Cecilia can impose a conditional behavioral constraint on a target during direct engagement. At low ranks: a brief hesitation window. At higher ranks: a battlefield compulsion — an opponent under WEIGHT OF OFFICE cannot voluntarily move toward a protected target, use a specific named skill, or take a specific named action for the duration.',
+    description: 'Cecilia can drop a conditional behavioral constraint on a target during direct engagement. At low ranks it\'s a short hesitation window. At higher ranks it\'s a battlefield compulsion: an opponent under WEIGHT OF OFFICE can\'t willingly move toward a protected target, use a specific named skill, or take a specific named action for the duration.',
     ranks: []
   },
 
@@ -380,12 +380,12 @@ var SKILLS_DATA = [
     holder: 'Ruggiero Montini',
     class: 'COLLECTOR',
     type: 'Passive',
-    description: 'Damage absorption scales upward during sustained engagement. The longer Ruggiero holds a position, the more he can absorb before output is affected.',
+    description: 'Damage absorption climbs the longer a fight runs. The longer Ruggiero holds a spot, the more he can soak before it starts costing him output.',
     ranks: [
-      { rank: 1, text: 'Reactive — requires taking damage first to trigger elevated state.', chapter: 7 },
-      { rank: 2, text: 'Threshold triggers earlier; elevated state sustains longer.', chapter: 99 },
+      { rank: 1, text: 'Reactive: he has to take damage first to trigger the elevated state.', chapter: 7 },
+      { rank: 2, text: 'The threshold trips earlier and the elevated state holds longer.', chapter: 99 },
       { rank: 3, text: 'Further scaling improvements.', chapter: 99 },
-      { rank: 'H4', text: 'Sustain combat against four or more simultaneous opponents without retreating. Activates automatically on entry to any outnumbered engagement. Damage condition no longer required.', chapter: 99 }
+      { rank: 'H4', text: 'Hold combat against four or more opponents at once without giving ground. Activates on its own the moment he enters any outnumbered fight. No damage condition needed anymore.', chapter: 99 }
     ]
   },
 
@@ -396,7 +396,7 @@ var SKILLS_DATA = [
     holder: 'Ruggiero Montini',
     class: 'COLLECTOR',
     type: 'Active',
-    description: 'Ruggiero designates a physical space as held ground. Enemies attempting to move through face escalating resistance effects that compound with each attempt. Allies moving through receive a minor speed bonus. Pairs with IRON THRESHOLD in chokepoint situations.',
+    description: 'Ruggiero names a stretch of space as held ground. Enemies trying to push through hit resistance effects that compound with every attempt. Allies passing through get a small speed bonus. Pairs with IRON THRESHOLD in chokepoints.',
     ranks: []
   },
 
@@ -407,12 +407,12 @@ var SKILLS_DATA = [
     holder: 'Matteo Vascari',
     class: 'ADVOCATE',
     type: 'Active',
-    description: 'Formalized agreements authored by Matteo in the presence of all parties carry System-enforceable weight. Violation triggers a Breach Penalty, a System-registered consequence applied to the violating party.',
+    description: 'Agreements Matteo formalizes in front of all parties carry weight the System will enforce. Break one and you trip a Breach Penalty, a consequence the System registers and lands on whoever broke faith.',
     ranks: [
-      { rank: 1, text: 'Minor notification-based consequence on breach.', chapter: 7 },
+      { rank: 1, text: 'A minor notification-based consequence on breach.', chapter: 7 },
       { rank: 2, text: 'Compulsion effects on breach.', chapter: 99 },
       { rank: 3, text: 'Territory-linked enforcement and automatic escalation.', chapter: 99 },
-      { rank: 'H4', text: 'Author a contract that is breached, then witness the full Breach Penalty execution without intervening. Breach Penalties automatically flag into Cecilia\'s MARKED LEDGER, enabling the FINAL ACCOUNT convergence.', chapter: 99 }
+      { rank: 'H4', text: 'Author a contract that gets breached, then watch the full Breach Penalty run its course without stepping in. Breach Penalties start flagging automatically into Cecilia\'s MARKED LEDGER, which is what enables the FINAL ACCOUNT convergence.', chapter: 99 }
     ]
   },
 
@@ -423,7 +423,7 @@ var SKILLS_DATA = [
     holder: 'Matteo Vascari',
     class: 'ADVOCATE',
     type: 'Passive',
-    description: 'Matteo retains exact recall of any formalized agreement he has authored, witnessed, or analyzed. At higher ranks, extends to oral agreements made within earshot, then to agreements reliably reported through documented channels. He is a living archive of every binding commitment.',
+    description: 'Matteo holds exact recall of any formalized agreement he\'s authored, witnessed, or analyzed. At higher ranks it reaches spoken agreements made within earshot, then agreements reliably reported through documented channels. He\'s a living archive of every binding commitment.',
     ranks: []
   },
 
@@ -434,7 +434,7 @@ var SKILLS_DATA = [
     holder: 'Dario Fioretti',
     class: 'RUNNER',
     type: 'Passive',
-    description: 'On entry to any space, Dario instinctively maps the emotional and motivational state of everyone present. A passive alignment display: a rough read of the gap between stated behavior and actual intent. In combat: tells him who is about to break before they know it themselves.',
+    description: 'The second Dario walks into a space, he maps where everyone\'s head is at, emotionally and motivationally. A passive alignment display: a rough read on the gap between what people are saying and what they actually want. In combat it tells him who\'s about to break before they\'ve figured it out themselves.',
     ranks: []
   },
 
@@ -445,7 +445,7 @@ var SKILLS_DATA = [
     holder: 'Dario Fioretti',
     class: 'RUNNER',
     type: 'Active',
-    description: 'Dario maintains a mental map of viable trade routes, contacts, and resource nodes within a given territory. At higher ranks, generates a System notification when a key route becomes compromised before visible evidence appears. Makes him operationally irreplaceable.',
+    description: 'Dario carries a running mental map of the workable trade routes, contacts, and resource nodes across a given territory. At higher ranks it pings him with a System notification when a key route gets compromised, before there\'s anything visible to go on. It\'s what makes him operationally irreplaceable.',
     ranks: []
   },
 
@@ -456,7 +456,7 @@ var SKILLS_DATA = [
     holder: 'Bianca Severa',
     class: 'WATCHER',
     type: 'Passive',
-    description: 'Bianca\'s movement generates no System-legible sound signature within enclosed spaces. Not true invisibility. She still occupies space and can be physically encountered. Her movement falls below the detection threshold of non-System-enhanced awareness. At higher ranks, extends to outdoor environments and crowds.',
+    description: 'Inside enclosed spaces, Bianca\'s movement throws off no sound signature the System can read. She\'s not invisible. She still takes up space and can be run into. Her movement just falls under the detection threshold of anyone the System hasn\'t enhanced. At higher ranks it reaches outdoor environments and crowds.',
     ranks: []
   },
 
@@ -467,7 +467,7 @@ var SKILLS_DATA = [
     holder: 'Bianca Severa',
     class: 'WATCHER',
     type: 'Active',
-    description: 'Suppresses sound in a designated radius. Prevents auditory alerting and interrupts verbal skill components. At advanced tiers, suppresses the System interface for entities inside: targets cannot read their own status, receive notifications, or see skill cooldowns. A room Bianca has silenced is a room the System has gone quiet in.',
+    description: 'Kills sound across a set radius. No auditory alarms, and verbal skill components get cut off mid-word. At the advanced tiers it smothers the System interface for anyone inside: targets can\'t read their own status, can\'t get notifications, can\'t see a cooldown. A room Bianca has silenced is a room the System has gone quiet in.',
     ranks: []
   },
 
@@ -478,7 +478,7 @@ var SKILLS_DATA = [
     holder: 'Bianca Severa',
     class: 'WATCHER',
     type: 'Active',
-    description: 'Bianca designates a single target as her covered entity. Incoming attacks during active Coverage are intercepted, with the effect redirected to Bianca at reduced damage. She does not extend Coverage automatically. It is a deliberate tactical decision.',
+    description: 'Bianca names one target as her covered entity. While Coverage is up, incoming attacks get intercepted and redirected to her at reduced damage. She never extends Coverage on its own. It\'s a deliberate tactical call, every time.',
     ranks: []
   },
 
@@ -489,7 +489,7 @@ var SKILLS_DATA = [
     holder: 'Luca Terranova',
     class: 'ARCHITECT',
     type: 'Passive — Developing',
-    description: 'Luca instinctively identifies the structural dependencies of any system he observes: the elements that, if removed or changed, cause the rest to collapse or transform. In a Scenario, identifies which element of enemy deployment or objective chain is load-bearing before anyone else has finished reading the announcement.',
+    description: 'Luca instinctively finds the structural dependencies of anything he\'s looking at: the pieces that, if you pull or change them, bring the rest down or transform it. In a Scenario, he\'s clocked which part of the enemy deployment or objective chain is load-bearing before anyone else has finished reading the announcement.',
     ranks: []
   },
 
@@ -500,7 +500,7 @@ var SKILLS_DATA = [
     holder: 'Luca Terranova',
     class: 'ARCHITECT',
     type: 'Active — Developing',
-    description: 'Luca constructs a predictive model of a developing situation and shares it as a System-legible output to a designated group. At higher ranks, becomes a shared tactical overlay updating in real time. The skill that makes him irreplaceable, and the most dangerous one in the group if ever directed against Cecilia\'s interests.',
+    description: 'Luca builds a predictive model of a developing situation and pushes it out as a System-legible output to a group he\'s designated. At higher ranks it becomes a shared tactical overlay that updates live. The skill that makes him irreplaceable, and the most dangerous one in the group the day it ever gets pointed at Cecilia\'s interests.',
     ranks: []
   },
 
@@ -511,7 +511,7 @@ var SKILLS_DATA = [
     holder: 'Iris Terranova',
     class: 'SPARKCALLER',
     type: 'Passive — Developing',
-    description: 'Iris senses suppressed or developing System-recognized potential in entities, objects, and locations around her as qualitative inferences. She can sometimes perceive what people are becoming before they can. She does not yet have the language to describe this precisely, which frustrates her; it presents as intuition because she has no better framework for it. At higher ranks, the perception will sharpen from impression toward something she can articulate and act on.',
+    description: 'Iris senses suppressed or developing System-recognized potential in the entities, objects, and locations around her, as rough qualitative impressions. Sometimes she can perceive what people are becoming before they can. She doesn\'t have the language to pin it down yet, which frustrates her, and it reads as intuition because she has no better frame for it. At higher ranks the perception sharpens from impression into something she can put into words and act on.',
     ranks: []
   },
 
@@ -522,7 +522,7 @@ var SKILLS_DATA = [
     holder: 'Iris Terranova',
     class: 'SPARKCALLER',
     type: 'Active — Developing',
-    description: 'Iris generates and directs electrical output as direct combat application, at range and in close. The combat half of the hybrid class. At higher ranks, scales in raw output \(Force secondary\) and gains finer control over discharge, with developing interactions between her Electrokinesis and the latent energy her passive perceives.',
+    description: 'Iris generates and directs electrical output as direct combat application, at range and up close. The combat half of the hybrid class. At higher ranks it scales in raw output \(Force secondary\) and gains finer control over the discharge, with developing interactions between her Electrokinesis and the latent energy her passive picks up.',
     ranks: []
   },
 
@@ -533,7 +533,7 @@ var SKILLS_DATA = [
     holder: 'Ivan Carceri',
     class: 'CARTOGRAPHER',
     type: 'Passive',
-    description: 'Ivan continuously receives low-level positional and density data about System-active entities and energy accumulations within a significant radius. At rest, this presents as ambient awareness. He knows which direction creatures are moving before anyone reports it. Under stress, it becomes overwhelming. The skill does not turn off, which is why the noise-canceling headphones are load-bearing infrastructure.',
+    description: 'Ivan takes in a low-level feed of positional and density data on System-active entities and energy buildups across a sizable radius. At rest it reads as ambient awareness. He knows which way the creatures are moving before anyone calls it in. Under stress it floods him. The skill never switches off, which is why the noise-canceling headphones are load-bearing infrastructure.',
     ranks: []
   },
 
@@ -544,7 +544,7 @@ var SKILLS_DATA = [
     holder: 'Ivan Carceri',
     class: 'CARTOGRAPHER',
     type: 'Active',
-    description: 'Ivan produces a formal predictive map of a defined area over a defined time window, rendered as a System-legible overlay shareable with designated parties. The accuracy degrades with distance and time horizon but is meaningfully better than anything available through direct observation. At higher ranks the map extends to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
+    description: 'Ivan produces a formal predictive map of a defined area over a defined time window, rendered as a System-legible overlay he can share with designated parties. Accuracy falls off with distance and time horizon, and it still beats anything you\'d get from direct observation by a wide margin. At higher ranks the map stretches to faction movements, resource flows, and systemic trend lines unrelated to creatures.',
     ranks: []
   },
 
@@ -555,7 +555,7 @@ var SKILLS_DATA = [
     holder: 'Ermilio Ferrero',
     class: 'AUDITOR',
     type: 'Passive',
-    description: 'Ermilio can see System flags and hidden variables attached to entities, objects, and locations. These include data points the System tracks without showing, such as "this entity has triggered condition X across N instances," "this location has accumulated Y units of spawn energy," "this contract has a logged compliance flag." The information arrives as a secondary layer over his normal visual field: most of the time barely noticeable; occasionally, in locations with significant System activity, overwhelming.',
+    description: 'Ermilio can see the System flags and hidden variables hung on entities, objects, and locations. These are data points the System tracks without showing, things like "this entity has triggered condition X across N instances," "this location has accumulated Y units of spawn energy," "this contract has a logged compliance flag." It arrives as a second layer over his normal vision: mostly barely noticeable, and occasionally, in places with heavy System activity, overwhelming.',
     ranks: []
   },
 
@@ -566,7 +566,7 @@ var SKILLS_DATA = [
     holder: 'Ermilio Ferrero',
     class: 'AUDITOR',
     type: 'Active',
-    description: 'Ermilio can identify divergences between the System\'s visible output and its hidden records. When a faction\'s public Reputation does not match its logged behavioral record, he can see the gap. When a contract has been technically complied with in a way that violates its logged intent, he can see the gap. This is the skill Matteo finds most useful and most unsettling.',
+    description: 'Ermilio can find the gaps between what the System shows and what it records. When a faction\'s public Reputation doesn\'t square with its logged behavior, he sees the gap. When a contract\'s been technically honored in a way that guts its logged intent, he sees that too. This is the skill Matteo finds most useful and most unsettling.',
     ranks: []
   },
 
@@ -599,7 +599,7 @@ var SKILLS_DATA = [
     holder: 'Giulia Conti',
     class: 'ARTIFICER',
     type: 'Passive',
-    description: 'Giulia perceives the System properties latent in physical objects: the modifications possible, the incompatibilities present, and the stress points that will fail first under System-level force. This operates continuously and involuntarily, which means she has not been able to look at the Palazzo\'s infrastructure without running a structural assessment since the first week. She has not shared all of her findings.',
+    description: 'Giulia reads the System properties latent in physical objects: what she can modify, what won\'t play nice together, which stress point fails first under System-level force. It runs continuously and without her say-so, which means she hasn\'t been able to look at the Palazzo\'s infrastructure without running a structural assessment since her first week. She hasn\'t shared all of what she\'s found.',
     ranks: []
   },
 
@@ -610,7 +610,7 @@ var SKILLS_DATA = [
     holder: 'Giulia Conti',
     class: 'ARTIFICER',
     type: 'Active',
-    description: 'Giulia can introduce System properties into a physical object through direct sustained contact and concentrated attention. The precision required is significant. Imprecise infusion produces unstable results, which she has learned from twice. At current ranks, this requires her workshop, specific raw materials, and time. At higher ranks, the time requirement will compress and the material dependency will broaden.',
+    description: 'Giulia can work System properties into a physical object through sustained contact and focused attention. The precision it takes is no joke. Sloppy infusion gives you unstable results, a lesson she\'s learned twice. At current ranks it needs her workshop, the right raw materials, and time. At higher ranks the time requirement compresses and the material dependency broadens.',
     ranks: []
   },
 
@@ -621,7 +621,7 @@ var SKILLS_DATA = [
     holder: 'Serena Marini',
     class: 'BREAKER',
     type: 'Passive',
-    description: 'Serena exists partially outside the System\'s standard classification framework. In defined, expected interactions, she functions normally. At the edges of mechanic definitions — the threshold cases, the interactions between systems that were not designed to interact — she produces outputs the System was not modeling. This is not always useful. It is occasionally spectacular.',
+    description: 'Serena sits partly outside the System\'s standard classification framework. In defined, expected interactions she works like anyone else. Out at the edges of a mechanic\'s definition, the threshold cases, the places where two systems collide that were never built to touch, she throws off outputs the System wasn\'t modeling. Not always useful. Occasionally spectacular.',
     ranks: []
   },
 
@@ -632,7 +632,7 @@ var SKILLS_DATA = [
     holder: 'Serena Marini',
     class: 'BREAKER',
     type: 'Active — Developing',
-    description: 'Serena can deliberately trigger and extend the edge-case interactions her passive identifies, holding a mechanic in an undefined state long enough to extract value from it. At current ranks, the windows are short and the triggers are imprecise. At higher ranks, she will be able to engineer the conditions that create the windows rather than finding them in the environment.',
+    description: 'Serena can deliberately trigger and stretch the edge-case interactions her passive turns up, holding a mechanic in an undefined state long enough to pull value out of it. At current ranks the windows are short and the triggers imprecise. At higher ranks she\'ll engineer the conditions that create the windows instead of stumbling onto them in the environment.',
     ranks: []
   }
 
@@ -664,26 +664,26 @@ var SCENARIOS_DATA = {
 
   overview: {
     chapter: 8,
-    text: 'The System generates Scenarios regularly and at multiple scales. They are the primary progression engine for all Players. The Leonellis approach every Scenario as an intelligence event first and a survival event second.'
+    text: 'The System throws Scenarios regularly and at every scale. They\'re the main progression engine for every Player. The Leonellis treat each one as an intelligence event first and a survival event second.'
   },
 
   scaleTypes: [
-    { name: 'City-Wide Scenarios', chapter: 8, desc: 'Affect all of Turin simultaneously. Short-notice announcement. Secondary objectives never disclosed. All registered entities receive the alert. Creatures manifest at scale. Fixed duration. Rewards distributed on performance and undisclosed factors. Most dramatically reshape the faction landscape.' },
-    { name: 'District Scenarios', chapter: 8, desc: 'Affect a specific area. May or may not be announced outside the affected district. Shorter, more focused, with localized creature types or conditions tied to the district\'s character. A well-positioned faction can extract disproportionate value.' },
-    { name: 'Faction Scenarios', chapter: 8, desc: 'Issued directly to recognized factions. Invisible to non-members. Specific objectives, sometimes against rival factions. The System\'s method of stress-testing faction structure and rewarding organizational depth.' },
-    { name: 'Individual Scenarios', chapter: 38, desc: 'Issued to specific Players. Private. Emerge from behavioral patterns the System has been observing. Calibrated to push the Player toward a specific threshold or test a specific capacity.' },
-    { name: 'Recurring Minor Scenarios', chapter: 8, desc: 'Occur somewhere in the city every day. Not every district sees one, but at the city level, Scenarios are a permanent background condition.' }
+    { name: 'City-Wide Scenarios', chapter: 8, desc: 'They hit all of Turin at once. Short-notice announcement. The secondary objectives never get disclosed. Every registered entity gets the alert. Creatures manifest at scale. Fixed duration. Rewards go out on performance and on factors nobody\'s told. These reshape the faction landscape more than anything else.' },
+    { name: 'District Scenarios', chapter: 8, desc: 'They hit a specific area. They may or may not get announced outside the affected district. Shorter and more focused, with creature types or conditions tied to whatever the district is. A faction sitting in the right spot can pull disproportionate value out of one.' },
+    { name: 'Faction Scenarios', chapter: 8, desc: 'Handed straight to recognized factions. Invisible to anyone outside. Specific objectives, sometimes aimed at a rival faction. It\'s how the System stress-tests a faction\'s structure and pays out organizational depth.' },
+    { name: 'Individual Scenarios', chapter: 38, desc: 'Issued to a specific Player. Private. They grow out of behavioral patterns the System\'s been watching, tuned to push that Player toward a threshold or test one particular capacity.' },
+    { name: 'Recurring Minor Scenarios', chapter: 8, desc: 'One goes off somewhere in the city every day. Not every district sees one, but citywide, Scenarios are a permanent background condition.' }
   ],
 
   namedTypes: [
-    { name: 'CLAIM', chapter: 8, desc: 'Contest a designated node between factions. The fight around the node often yields more than the node itself.' },
-    { name: 'SUPPLY', chapter: 8, desc: 'Spawn resource caches weighted to district economic value, not random distribution.' },
-    { name: 'RANKING', chapter: 8, desc: 'Publish individual and faction standings city-wide. The event is the information.' },
-    { name: 'HIDDEN OBJECTIVE', chapter: 8, desc: 'Announce a stated primary objective that is not the real one.' },
-    { name: 'NARRATIVE', chapter: 99, desc: 'The rarest type. Structural choices with permanent, irreversible consequences that reshape city conditions. The most significant Leonelli advantages and most serious threats arrive through Narrative Events.' }
+    { name: 'CLAIM', chapter: 8, desc: 'Contest a designated node between factions. The fight around the node usually pays better than the node itself.' },
+    { name: 'SUPPLY', chapter: 8, desc: 'Spawn resource caches weighted to a district\'s economic value, not scattered at random.' },
+    { name: 'RANKING', chapter: 8, desc: 'Publish individual and faction standings citywide. The information is the event.' },
+    { name: 'HIDDEN OBJECTIVE', chapter: 8, desc: 'Announce a primary objective that isn\'t the real one.' },
+    { name: 'NARRATIVE', chapter: 99, desc: 'The rarest type. Structural choices with permanent, irreversible consequences that reshape the city\'s conditions. The biggest Leonelli advantages and the worst threats both come in through Narrative Events.' }
   ],
 
-  keyNote: 'The Leonelli information advantage is most front-loaded in the first weeks and closes as the population learns through attrition. Converting early knowledge into durable structural advantage before the gap closes is the entire game.'
+  keyNote: 'The Leonelli information edge is heaviest in the first weeks and closes as the population learns the hard way, by attrition. Turning that early knowledge into durable structural advantage before the gap shuts is the whole game.'
 };
 
 
@@ -696,16 +696,16 @@ var MECHANICS_DATA = {
   contracts: {
     chapter: 23,
     title: 'Contracts',
-    description: 'Formalized agreements carry System-enforceable weight. Most factions do not know contracts exist as a mechanic. The Leonellis discover, develop, and exploit them first because Matteo\'s professional life already runs on binding agreements.',
+    description: 'Formalized agreements carry weight the System will enforce. Most factions have no idea contracts exist as a mechanic. The Leonellis find them, develop them, and exploit them first, because Matteo\'s whole professional life already runs on binding agreements.',
     effects: [
       'Formalize agreements under System observation',
-      'Generate Breach Penalty notifications when violated',
-      'At higher development: compulsion effects, territory-linked bonuses, interaction with Cecilia\'s MARKED LEDGER'
+      'Throw Breach Penalty notifications when they\'re violated',
+      'Further along: compulsion effects, territory-linked bonuses, interaction with Cecilia\'s MARKED LEDGER'
     ],
     amplification: {
       chapter: 99,
       title: 'Turin Contract Amplification',
-      text: 'Hidden mechanic. Contract and oath effects receive a significant bonus when executed at specific Turin locations with documented esoteric or lodge history: certain piazzas, underground chambers, specific buildings. Not announced by the System. Discoverable. Matteo finds it at Palazzo Scorza during an early negotiation. Reshapes how the Leonellis choose every future negotiation venue.',
+      text: 'A hidden mechanic. Contract and oath effects get a big bonus when they\'re executed at specific Turin locations with documented esoteric or lodge history: certain piazzas, underground chambers, particular buildings. The System never announces it. You can find it. Matteo does, at Palazzo Scorza during an early negotiation, and it rewrites how the Leonellis pick every venue afterward.',
       peakNode: 'The Superga summit is the highest-amplification node in the city. The Fiamma Eterna holds it without knowing what it is mechanically.'
     }
   },
@@ -714,28 +714,28 @@ var MECHANICS_DATA = {
     chapter: 99,
     title: 'Territory Tiers',
     tiers: [
-      { name: 'PRESENCE', desc: 'Entity is there with force. System acknowledges occupation. Minimal bonuses. Unstable.' },
-      { name: 'CONTROL', desc: 'Sustained occupation with civilian compliance threshold met. Minor bonuses: reduced hostile spawns, passive resource generation.' },
-      { name: 'ADMINISTRATION', desc: 'Full System registration achieved. All bonuses active. Much harder to displace without major investment from a contesting faction.' }
+      { name: 'PRESENCE', desc: 'You\'re there with force. The System acknowledges you\'re occupying it. Minimal bonuses. Unstable.' },
+      { name: 'CONTROL', desc: 'Sustained occupation, with the civilian compliance threshold met. Minor bonuses: fewer hostile spawns, passive resource generation.' },
+      { name: 'ADMINISTRATION', desc: 'Full System registration. Every bonus active. A lot harder to dislodge without a contesting faction pouring in major investment.' }
     ]
   },
 
   factionMechanics: {
     chapter: 99,
     title: 'Faction Recognition',
-    description: 'When a group meets a threshold of registered members, territory, and internal role differentiation, the System recognizes it as a Faction. Faction status unlocks organizational bonuses: command buffs for members acting within their designated role, territorial spawn suppression, Organizational Quests, and Renown accumulation.',
-    orgQuests: 'Private System directives visible only to faction leadership. Generated based on organizational status and territorial position. Completing quests generates institutional rewards: the organization itself levels up, not the individual.',
-    note: 'Unregistered additions degrade the multiplier until properly integrated.'
+    description: 'When a group clears a threshold of registered members, territory, and differentiated internal roles, the System recognizes it as a Faction. Faction status unlocks organizational bonuses: command buffs for members working inside their designated role, territorial spawn suppression, Organizational Quests, and Renown accumulation.',
+    orgQuests: 'Private System directives only faction leadership can see. They\'re generated off organizational status and territorial position. Completing them pays institutional rewards: the organization itself levels up, not the individual.',
+    note: 'Unregistered additions drag the multiplier down until they\'re properly integrated.'
   },
 
   classSelection: {
     chapter: 1,
     title: 'Class Selection Window',
-    description: 'Opens at initialization; closes after 72 hours. Entities choose from three options tailored to them by the System. Entities who do not engage with the window become NPCs when it closes. They receive no class, no progression, and no System protection. There is no middle option.',
+    description: 'Opens at initialization and shuts after 72 hours. You choose from three options the System tailors to you. Anyone who doesn\'t engage with the window becomes an NPC when it closes. No class, no progression, no System protection. There\'s no middle option.',
     tierThresholds: [
       { tier: 'Tier II', condition: 'Level 20' },
       { tier: 'Tier III', condition: 'Level 50' },
-      { tier: 'Tier IV (Sovereign)', condition: 'No level gate. Requires meeting a behavioral or organizational condition the System does not publish. It evaluates whether you have become what the class represents.' }
+      { tier: 'Tier IV (Sovereign)', condition: 'No level gate. It needs a behavioral or organizational condition the System doesn\'t publish. It\'s checking whether you\'ve actually become what the class represents.' }
     ]
   }
 
