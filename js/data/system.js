@@ -599,7 +599,7 @@ var SKILLS_DATA = [
     holder: 'Giulia Conti',
     class: 'ARTIFICER',
     type: 'Passive',
-    description: 'Giulia perceives the System properties latent in physical objects — the modifications possible, the incompatibilities present, and the stress points that will fail first under System-level force. This operates continuously and involuntarily, which means she has not been able to look at the Palazzo\'s infrastructure without running a structural assessment since the first week. She has not shared all of her findings.',
+    description: 'Giulia perceives the System properties latent in physical objects: the modifications possible, the incompatibilities present, and the stress points that will fail first under System-level force. This operates continuously and involuntarily, which means she has not been able to look at the Palazzo\'s infrastructure without running a structural assessment since the first week. She has not shared all of her findings.',
     ranks: []
   },
 
