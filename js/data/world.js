@@ -28,7 +28,7 @@ var FACTIONS = [
     philosophy: 'Make the organization so structurally necessary to Turin\'s continued functioning that its criminal nature becomes irrelevant. Not territorial conquest. Infrastructure. The load-bearing walls of a new city.',
     subgroups: [
       { name: 'The Core Five', desc: 'Cecilia, Bianca, Ruggiero, Matteo, and Dario. Pre-existing trust network. Each occupies a non-overlapping function. Their love is possessive, violent, and exclusionary.', chapter: 1 },
-      { name: 'System Analysis Division', desc: 'Internal unit of coerced, indebted, and recruited elite gamers. Cells: Optimization, Scenario Desk, Exploit Lab, Enemy Modeling, Resource Routing. Permanently tense — analysts are indispensable, humiliated, and dangerous.', chapter: 30 }
+      { name: 'System Analysis Division', desc: 'Internal unit of coerced, indebted, and recruited elite gamers. Cells: Optimization, Scenario Desk, Exploit Lab, Enemy Modeling, Resource Routing. Permanently tense — analysts are indispensable, coerced, and dangerous.', chapter: 30 }
     ]
   },
 
