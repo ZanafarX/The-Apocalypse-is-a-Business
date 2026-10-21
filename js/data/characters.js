@@ -75,7 +75,7 @@ var CHARACTERS = withCharacterHistory([
           {
             "chapter": 45,
             "desc": "QUIET APPROACH Rank 4 lets Bianca read the moment of commitment in an observed entity before it acts. Anticipation resolves through VELOCITY and PRECISION; it is not unrestricted future sight.",
-            "ranks": "Rank 4 is explicitly announced in Chapter 45."
+            "ranks": "Rank 4 is explicitly announced in ."
           }
         ]
       },
@@ -89,7 +89,7 @@ var CHARACTERS = withCharacterHistory([
           {
             "chapter": 49,
             "desc": "At Rank 3, all sound within the designated radius is suppressed, and enclosed entities cannot transmit, receive or execute System interface actions for the duration. Existing physical momentum and ordinary strength remain dangerous.",
-            "ranks": "Rank 3 is displayed in Chapter 49."
+            "ranks": "Rank 3 is displayed in ."
           }
         ]
       },
@@ -144,7 +144,7 @@ var CHARACTERS = withCharacterHistory([
       },
       {
         "chapter": 106,
-        "summary": "Leonelli intelligence chief, assassin, and internal security. Reserved, exact, unsentimental. Bianca is the stillest person in any room she's in. The stillness is concentration pulled so narrow that people who haven't learned to look for it mistake it for absence. She listens more than anyone, says less than anyone, and treats every disclosed fact as leverage thrown away. She stands where she can see the doors and the reflections. When she's locked in she barely blinks. She rarely laughs.<br><br>She's unsentimental in a flinty Piedmontese register: careful about what's owed to whom, and unwilling to fake a warmth she doesn't feel. The warmth she does feel comes out as proximity, as readiness, as how fast she moves when something threatens what she's guarding. She'd rather show you than tell you. Showing you can't be misread.<br><br>Her thing with Cecilia is the central fact of her inner life, and she's decided to keep it there. Her rule on the subject is simple: the only thing worse than caring too much was looking like you did. She lives inside that rule with the discipline of someone who's decided the discipline is the relationship. What she gives, she gives as attention.<br><br>She's wary of nearly everyone outside the Core Five. Past that perimeter her default is surveillance, and her threshold for going lethal runs lower than Cecilia would like. Cecilia's told her so. Bianca took the correction on board and goes right on operating, when she judges it necessary, a step past what she's been cleared for. She knows the trade. Losing a little of Cecilia's approval is a price worth paying to make sure there's still a Cecilia around to disapprove.<br><br>Bianca was born in Genoa, daughter of a longshoreman and a woman whose work never made it onto any document her daughter's been able to dig up. Her father died when she was fourteen, in an accident the family agreed to call an accident and that Bianca, by sixteen, had decided wasn't one. The investigation she ran between sixteen and eighteen turned up answers she's never shared and left consequences she's never described. She left Genoa at nineteen and never went back.<br><br>The years between nineteen and twenty-three go down in her file as freelance security work, which is what people call them when they don't need to know more. Whatever she did then gave her the skills she uses now and the reputation that put her on the Leonellis' radar. She was twenty-three when she came in for an interview Cecilia had requested by name, off a recommendation Cecilia had checked herself.<br><br>The interview ran forty minutes. She sat across from Cecilia who'd read her whole file, asked four questions, and offered terms better than Bianca had any right to expect. She said yes before it was over. It was the first time in her life she'd sat across from a stranger and not felt the urge to get up and leave. Since joining, she has not gone looking for a different arrangement.<br><br>During Luca's Keystone quest, she reads the Guardian's committed attacks, interrupts interface-mediated action with SILENCE FIELD and uses CLOSE COVERAGE to protect him. They escape with injuries and without confirming a kill.<br><br>Her killing of Davide Serra during the courier-route operation creates legal and political consequences. Protecting Cecilia and the organization does not exempt her actions from scrutiny."
+        "summary": "Leonelli intelligence chief, assassin, and internal security. Reserved, exact, unsentimental. Bianca is the stillest person in any room she's in. The stillness is concentration pulled so narrow that people who haven't learned to look for it mistake it for absence. She listens more than anyone, says less than anyone, and treats every disclosed fact as leverage thrown away. She stands where she can see the doors and the reflections. When she's locked in she barely blinks. She rarely laughs.<br><br>She's unsentimental in a flinty Piedmontese register: careful about what's owed to whom, and unwilling to fake a warmth she doesn't feel. The warmth she does feel comes out as proximity, as readiness, as how fast she moves when something threatens what she's guarding. She'd rather show you than tell you. Showing you can't be misread.<br><br>Her thing with Cecilia is the central fact of her inner life, and she's decided to keep it there. Her rule on the subject is simple: the only thing worse than caring too much was looking like you did. She lives inside that rule with the discipline of someone who's decided the discipline is the relationship. What she gives, she gives as attention.<br><br>She's wary of nearly everyone outside the Core Five. Past that perimeter her default is surveillance, and her threshold for going lethal runs lower than Cecilia would like. Cecilia's told her so. Bianca took the correction on board and goes right on operating, when she judges it necessary, a step past what she's been cleared for. She knows the trade. Losing a little of Cecilia's approval is a price worth paying to make sure there's still a Cecilia around to disapprove.<br><br>Bianca was born in Genoa, daughter of a longshoreman and a woman whose work never made it onto any document her daughter's been able to dig up. Her father died when she was fourteen, in an accident the family agreed to call an accident and that Bianca, by sixteen, had decided wasn't one. The investigation she ran between sixteen and eighteen turned up answers she's never shared and left consequences she's never described. She left Genoa at nineteen and never went back.<br><br>The years between nineteen and twenty-three go down in her file as freelance security work, which is what people call them when they don't need to know more. Whatever she did then gave her the skills she uses now and the reputation that put her on the Leonellis' radar. She was twenty-three when she came in for an interview Cecilia had requested by name, off a recommendation Cecilia had checked herself.<br><br>The interview ran forty minutes. She sat across from Cecilia who'd read her whole file, asked four questions, and offered terms better than Bianca had any right to expect. She said yes before it was over. It was the first time in her life she'd sat across from a stranger and not felt the urge to get up and leave. Since joining, she has not gone looking for a different arrangement.<br><br>During Luca's Keystone quest, she reads the Guardian's committed attacks, interrupts interface-mediated action with SILENCE FIELD and uses CLOSE COVERAGE to protect him. They escape with injuries and without confirming a kill.<br><br>Her killing of Enea Serra during the courier-route operation creates legal and political consequences. Protecting Cecilia and the organization does not exempt her actions from scrutiny."
       }
     ]
   },
@@ -187,7 +187,7 @@ var CHARACTERS = withCharacterHistory([
         "type": "Active",
         "chapter": 49,
         "desc": "Her next attack or command against a Marked Ledger target resolves as a finishing move, multiplying active effects and dealing decisive damage.",
-        "ranks": "Rank 1 is explicitly displayed in Chapter 49. MARKED LEDGER remains in her later skill inventory."
+        "ranks": "Rank 1 is explicitly displayed in . MARKED LEDGER remains in her later skill inventory."
       },
       {
         "name": "STRUCTURAL AUTHORITY",
@@ -262,7 +262,7 @@ var CHARACTERS = withCharacterHistory([
       },
       {
         "chapter": 124,
-        "summary": "Head of the Leonelli crime family. Calm, exact, patient. She governs by attention. Her quiet is the quiet of someone who's already worked out the thing the room is about to need, and is waiting to see if anyone else gets there too. She speaks softly because softness makes a room lean in, and she rarely repeats herself, because every repetition is paid for in authority. Her resting expression is a controlled near-smile, and she deploys it in inverse proportion to how comfortable the room feels. The more dangerous the moment, the more correct her manner becomes.<br><br>She reads leverage the way other people read faces. Debts, habits, fear, ambition: four entries in a ledger she keeps on everyone she meets, updated quietly in the back of every conversation. Her politeness is tuned so that disrespecting her feels less like a risk and more like a mistake of basic competence. The courtesy is so precise it does the threatening for her.<br><br>She protects her people because they're hers. That distinction matters to her. She isn't merciful and she doesn't pretend the work is anything other than what it is. What she won't do is confuse the people who depend on her with currency. Loyalty inside the organization gets treated as load-bearing structure, maintained as carefully as the building's actual walls. Loyalty outside it she earns or buys, whichever runs cheaper.<br><br>Her dislikes are specific. She's got no patience for ornamental authority, for people who mistake the trappings of power for the work that makes power. She's got even less for cowards who've arranged their whole world so they never have to make the calls their position demands. She holds grudges for years, and she holds them so calmly that people mistake it for forgiveness. That's their error. A betrayal is just an open account, and the account stays open until she closes it.<br><br>Cecilia is the only child of Aurelio Leonelli, who ran the organization until his arrest and his death in custody, five years before the System showed up. She grew up inside the Family the way the children of senior figures do: visible to everyone, named by no one, present at functions where her presence was the whole point and her opinion went unasked. She watched her father work from balconies, from doorways, from the corners of rooms she wasn't supposed to be listening in. She listened anyway.<br><br>What she learned, she learned by watching. That authority is a performance held up by infrastructure. That infrastructure is built out of relationships. That the relationships worth having are the ones where both sides have run the math on betrayal and landed on the same number. She learned her father was very good at his work, that the work involved decisions she'd one day make herself, and, eventually, that he'd never planned for her to make them.<br><br>She was twenty-one when he was arrested. Twenty-one and a half when the hearing he'd been preparing for went badly enough that the Family understood he wasn't coming home. The gold chain she wears under her shirt was a gift from the day before that hearing. She's worn it every day since.<br><br>The succession wasn't built for her. Her father had a handful of senior men whose history made them the obvious heirs, and the obvious heirs spent a short, ugly stretch assuming the obvious. What they'd missed was that Aurelio, in the years before the arrest, had quietly wired her into the organization's records, its bookkeeping, and its dealings with its steadiest commercial partners.<br><br>By the time the obvious heirs looked at the books, the books answered to her. By the time they thought about fixing that, Ruggiero Montini and Matteo Vascari had said out loud where they stood, and correcting the situation became something you'd have to settle in blood. The men who'd have had to spill it went looking for a quieter answer.<br><br>The two years that followed she's called, in private, the apprenticeship her father never meant to give her. She made mistakes. Fewer than her doubters had bet on, and the ones she made she paid for herself, in person, which built her a name separate from his. Aurelio commanded a room because he'd been born certain he belonged in it, and the certainty showed in everything he decided. Hers she has to build new every morning, out of evidence, against a bar he set and never had to clear. The bar is useful to her. The comparison wears her down. She's decided to keep both.<br><br>She still measures herself against him in private. She knows the comparison is unfair to both of them. She keeps it anyway. By twenty-five the Family was leaner, quieter, more profitable, and more disciplined than at any point in its history, and the doubters had either left or gone silent.<br><br>The System arrived eight months after her twenty-sixth birthday. She read its first announcement, clocked it as the largest rewrite of operational reality in her lifetime, and was giving orders before the first hour was out. Everything she's built since runs on one conviction she's held since the day her father didn't come home: the world won't arrange itself around her, so arranging it is her job.<br><br>She advances to Leverage Broker at Level 20 after resolving the Aurora anomaly through a binding protection and vassalage agreement. The arrangement preserves the party and Sofia's authorship while bringing their activity under recognized Leonelli Authority.<br><br>At Mirafiori she uses MAKE IT WORK to conserve a limited field reserve. Cooperation with the Corporate Restoration Bloc creates a useful asset and an expensive relationship, rather than eliminating a rival.<br><br>By the end of Book Two, she is negotiating recurring freight and municipal services while the CRB remains a viable competitor. Bianca's conduct remains under inquiry, and the research network's larger purpose remains unresolved."
+        "summary": "Head of the Leonelli crime family. Calm, exact, patient. She governs by attention. Her quiet is the quiet of someone who's already worked out the thing the room is about to need, and is waiting to see if anyone else gets there too. She speaks softly because softness makes a room lean in, and she rarely repeats herself, because every repetition is paid for in authority. Her resting expression is a controlled near-smile, and she deploys it in inverse proportion to how comfortable the room feels. The more dangerous the moment, the more correct her manner becomes.<br><br>She reads leverage the way other people read faces. Debts, habits, fear, ambition: four entries in a ledger she keeps on everyone she meets, updated quietly in the back of every conversation. Her politeness is tuned so that disrespecting her feels less like a risk and more like a mistake of basic competence. The courtesy is so precise it does the threatening for her.<br><br>She protects her people because they're hers. That distinction matters to her. She isn't merciful and she doesn't pretend the work is anything other than what it is. What she won't do is confuse the people who depend on her with currency. Loyalty inside the organization gets treated as load-bearing structure, maintained as carefully as the building's actual walls. Loyalty outside it she earns or buys, whichever runs cheaper.<br><br>Her dislikes are specific. She's got no patience for ornamental authority, for people who mistake the trappings of power for the work that makes power. She's got even less for cowards who've arranged their whole world so they never have to make the calls their position demands. She holds grudges for years, and she holds them so calmly that people mistake it for forgiveness. That's their error. A betrayal is just an open account, and the account stays open until she closes it.<br><br>Cecilia is the only child of Aurelio Leonelli, who ran the organization until his arrest and his death in custody, five years before the System showed up. She grew up inside the Family the way the children of senior figures do: visible to everyone, named by no one, present at functions where her presence was the whole point and her opinion went unasked. She watched her father work from balconies, from doorways, from the corners of rooms she wasn't supposed to be listening in. She listened anyway.<br><br>What she learned, she learned by watching. That authority is a performance held up by infrastructure. That infrastructure is built out of relationships. That the relationships worth having are the ones where both sides have run the math on betrayal and landed on the same number. She learned her father was very good at his work, that the work involved decisions she'd one day make herself, and, eventually, that he'd never planned for her to make them.<br><br>She was twenty-one when he was arrested. Twenty-one and a half when the hearing he'd been preparing for went badly enough that the Family understood he wasn't coming home. The gold chain she wears under her shirt was a gift from the day before that hearing. She's worn it every day since.<br><br>The succession wasn't built for her. Her father had a handful of senior men whose history made them the obvious heirs, and the obvious heirs spent a short, ugly stretch assuming the obvious. What they'd missed was that Aurelio, in the years before the arrest, had quietly wired her into the organization's records, its bookkeeping, and its dealings with its steadiest commercial partners.<br><br>By the time the obvious heirs looked at the books, the books answered to her. By the time they thought about fixing that, Ruggiero Montini and Matteo Vascari had said out loud where they stood, and correcting the situation became something you'd have to settle in blood. The men who'd have had to spill it went looking for a quieter answer.<br><br>The two years that followed she's called, in private, the apprenticeship her father never meant to give her. She made mistakes. Fewer than her doubters had bet on, and the ones she made she paid for herself, in person, which built her a name separate from his. Aurelio commanded a room because he'd been born certain he belonged in it, and the certainty showed in everything he decided. Hers she has to build new every morning, out of evidence, against a bar he set and never had to clear. The bar is useful to her. The comparison wears her down. She's decided to keep both.<br><br>She still measures herself against him in private. She knows the comparison is unfair to both of them. She keeps it anyway. By twenty-five the Family was leaner, quieter, more profitable, and more disciplined than at any point in its history, and the doubters had either left or gone silent.<br><br>The System arrived eight months after her twenty-sixth birthday. She read its first announcement, clocked it as the largest rewrite of operational reality in her lifetime, and was giving orders before the first hour was out. Everything she's built since runs on one conviction she's held since the day her father didn't come home: the world won't arrange itself around her, so arranging it is her job.<br><br>She advances to Leverage Broker at Level 20 after resolving the Aurora anomaly through a binding protection and vassalage agreement. The arrangement preserves the party and Sofia's authorship while bringing their activity under recognized Leonelli Authority.<br><br>At Mirafiori she uses MAKE IT WORK to conserve a limited field reserve. Cooperation with the Corporate Restoration Bloc creates a useful asset and an expensive relationship, rather than eliminating a rival.<br><br>She negotiates recurring freight and municipal services while the CRB remains a viable competitor. Bianca's conduct remains under inquiry, and the research network's larger purpose remains unresolved."
       }
     ]
   },
@@ -483,7 +483,7 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": "The older of the two Esposito sisters; maintains a composed, formal manner under pressure.",
     "summary": "Introduced during the Esposito debt meeting with her younger sister Micole.",
     "coreFlaw": null,
     "skills": [],
@@ -491,11 +491,11 @@ var CHARACTERS = withCharacterHistory([
     "history": [
       {
         "chapter": 90,
-        "summary": "Introduced during the Esposito debt meeting with her younger sister Micole.<br><br>She has settled into life at the Palazzo. Cecilia explicitly keeps the daughters' protection separate from the debt terms she negotiates with their returning father."
+        "summary": "The older Esposito daughter, accustomed to representing the family in difficult conversations. Her father's overdue debt brings her and Micole into Cecilia's protection at the Palazzo. When Giorgio returns, Cecilia keeps the daughters' safety separate from the debt-service agreement he negotiates."
       },
       {
         "chapter": 118,
-        "summary": "Introduced during the Esposito debt meeting with her younger sister Micole.<br><br>She has settled into life at the Palazzo. Cecilia explicitly keeps the daughters' protection separate from the debt terms she negotiates with their returning father.<br><br>Contributes to Iris's understanding of the household arrangements disrupted by transport preparations."
+        "summary": "The older Esposito daughter, accustomed to representing the family in difficult conversations. Her father's overdue debt brings her and Micole into Cecilia's protection at the Palazzo. When Giorgio returns, Cecilia keeps the daughters' safety separate from the debt-service agreement he negotiates. She takes responsibility for her residential floor's household counts, distinguishes confirmed help from uncertain offers, and gives Iris meal figures for the dispatch crews. She sets limits on repeat work rather than leaving her availability open-ended."
       }
     ]
   },
@@ -549,6 +549,11 @@ var CHARACTERS = withCharacterHistory([
         "name": "Matteo Vascari",
         "chapter": 90,
         "detail": "Coordinates and examines his work for the Leonelli organization."
+      },
+      {
+        "name": "Cecilia Leonelli",
+        "chapter": 90,
+        "detail": "Provides adversarial forecasts for her decisions while serving the family against his debt."
       }
     ],
     "authorReference": {
@@ -572,8 +577,8 @@ var CHARACTERS = withCharacterHistory([
         "faction": "leonelli",
         "role": "analyst",
         "title": "Analyst, Enemy Modeling Desk",
-        "appearance": "Age 43. A former competitive poker player and online casino operator; greying at the temples.",
-        "summary": "Giorgio returns to Turin and negotiates service against the converted debt. He presents himself voluntarily at this later meeting; his daughters' protection is explicitly separate from his terms. He models probabilities under incomplete information and objects when a plan is structurally unsound."
+        "appearance": "Age 43, greying at the temples and carefully shaved. He makes his best jacket serve as businesswear even as its worn cuffs show the cost of his return to Turin.",
+        "summary": "A former competitive poker player who became an online casino operator, Giorgio is accustomed to opponents concealing both their resources and their priorities. His family's substantial Leonelli debt outlasts the business assumptions behind it. He returns to Turin and voluntarily negotiates service against that converted debt, while keeping his daughters' protection separate from his employment terms.<br><br>On the Enemy Modeling Desk he specializes in probability under incomplete information and decisions made by adversaries. Cynical and transactional, he challenges a proposal when its structure fails rather than because its purpose troubles him. Matteo relies on his willingness to identify an unsound plan. That confidence has limits: a model is only useful while he remains willing to replace its assumptions."
       },
       {
         "chapter": 106,
@@ -582,7 +587,7 @@ var CHARACTERS = withCharacterHistory([
       },
       {
         "chapter": 112,
-        "summary": "Giorgio returns to Turin and negotiates service against the converted debt. He presents himself voluntarily at this later meeting; his daughters' protection is explicitly separate from his terms. He models probabilities under incomplete information and objects when a plan is structurally unsound.<br><br>Teresa Bosco's refusal exposes his mistake: the carrier is protecting a trained crew, not simply maximizing spare cash. He revises the proposal and one active COUNTERPLAY model rather than claiming the skill made his initial forecast certain."
+        "summary": "A former competitive poker player who became an online casino operator, Giorgio is accustomed to opponents concealing both their resources and their priorities. His family's substantial Leonelli debt outlasts the business assumptions behind it. He returns to Turin and voluntarily negotiates service against that converted debt, while keeping his daughters' protection separate from his employment terms.<br><br>On the Enemy Modeling Desk he specializes in probability under incomplete information and decisions made by adversaries. Cynical and transactional, he challenges a proposal when its structure fails rather than because its purpose troubles him. Matteo relies on his willingness to identify an unsound plan. That confidence has limits: a model is only useful while he remains willing to replace its assumptions.<br><br>READ THE TABLE keeps evidence and alternative explanations available for scrutiny, while COUNTERPLAY maintains a conditional model of one actor. Teresa Bosco's insistence on preserving her trained crew exposes a cash-centered assumption in his forecast. He revises the offer and the model. His class supplies disciplined analysis, not access to private thoughts or guaranteed predictions."
       }
     ]
   },
@@ -602,7 +607,7 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": "The younger Esposito sister; initially withdrawn and watchful beside Francesca.",
     "summary": "Introduced during the Esposito debt meeting with her older sister Francesca.",
     "coreFlaw": null,
     "skills": [],
@@ -610,11 +615,11 @@ var CHARACTERS = withCharacterHistory([
     "history": [
       {
         "chapter": 90,
-        "summary": "Introduced during the Esposito debt meeting with her older sister Francesca.<br><br>She has settled into life at the Palazzo. Cecilia explicitly keeps the daughters' protection separate from the debt terms she negotiates with their returning father."
+        "summary": "The younger Esposito daughter. Initially quiet beside Francesca, she nevertheless notices uncomfortable facts about the family's finances and says what her sister would prefer to qualify. She lives at the Palazzo under protection that Cecilia keeps separate from Giorgio's debt-service terms."
       },
       {
         "chapter": 118,
-        "summary": "Introduced during the Esposito debt meeting with her older sister Francesca.<br><br>She has settled into life at the Palazzo. Cecilia explicitly keeps the daughters' protection separate from the debt terms she negotiates with their returning father.<br><br>Contributes to Iris's understanding of the household arrangements disrupted by transport preparations."
+        "summary": "The younger Esposito daughter. Initially quiet beside Francesca, she nevertheless notices uncomfortable facts about the family's finances and says what her sister would prefer to qualify. She lives at the Palazzo under protection that Cecilia keeps separate from Giorgio's debt-service terms. She volunteers to pack meal bags for a defined afternoon shift and declines an extension. Iris records the agreed hours, allowing her contribution to remain a bounded piece of ordinary household work."
       }
     ]
   },
@@ -849,7 +854,7 @@ var CHARACTERS = withCharacterHistory([
         "name": "EXPLOIT WINDOW",
         "type": "Active",
         "chapter": 81,
-        "desc": "Lets Serena briefly hold some available interactions unresolved. Timing matters, attempts can fail, and progression conditions remain incompletely understood.",
+        "desc": "Lets Serena briefly hold some available interactions unresolved. Timing matters, attempts can fail, and progression conditions remain incompletely understood. She acquires the skill at Level 8; that is an acquisition milestone, not a confirmed current level.",
         "ranks": null
       }
     ],
@@ -895,7 +900,7 @@ var CHARACTERS = withCharacterHistory([
         "title": "Analyst employed by the Corporate Restoration Bloc",
         "faction": "corporate-bloc",
         "appearance": "Dark hair with a teal-green gradient; restless, competitive and strongly interested in difficult mechanics.",
-        "summary": "A former competitive speedrunner working for the Bloc. She finds its managerial priorities restrictive and pursues unresolved System interactions with NULL STATE and EXPLOIT WINDOW.",
+        "summary": "Known online as Nullroute, Serena is a former competitive speedrunner whose instinct is to test the parts of a system that other people accept as boundaries. Iris knows her work on game economies and recommends her approach before the Leonellis meet her. At the Corporate Restoration Bloc, managerial demand for useful presentations conflicts with her interest in difficult, unfinished interactions.<br><br>As a Breaker, she recognizes and briefly holds certain available interactions before they resolve. Her displayed primary stat is ACUITY. Her curiosity makes failed attempts informative, but can also tempt her to keep working beyond a sensible stopping point.",
         "class": "BREAKER",
         "tier": "Origin (I)",
         "classLine": "Breaker",
@@ -906,15 +911,15 @@ var CHARACTERS = withCharacterHistory([
         "title": "Lead, Exploit Lab",
         "faction": "leonelli",
         "role": "analyst",
-        "summary": "Serena leaves the Bloc through an orderly handover and negotiates Leonelli membership after demonstrating a held interaction. She gains a laboratory, operating resources and defined research autonomy. Her agreement preserves prior confidentiality obligations and requires Cecilia's consent for departure."
+        "summary": "Known online as Nullroute, Serena is a former competitive speedrunner whose instinct is to test the parts of a system that other people accept as boundaries. Iris knows her work on game economies and recommends her approach before the Leonellis meet her. At the Corporate Restoration Bloc, managerial demand for useful presentations conflicts with her interest in difficult, unfinished interactions.<br><br>She makes an orderly departure from the Bloc and demonstrates a held interaction before negotiating Leonelli membership. The agreement provides a laboratory, resources, and defined research autonomy, preserves prior confidentiality obligations, and requires Cecilia's consent for departure. Her value lies in reproducible opportunities the other analysts cannot simply reproduce with their own classes."
       },
       {
         "chapter": 89,
-        "summary": "Serena leaves the Bloc through an orderly handover and negotiates Leonelli membership after demonstrating a held interaction. She gains a laboratory, operating resources and defined research autonomy. Her agreement preserves prior confidentiality obligations and requires Cecilia's consent for departure.<br><br>The contact-test apparatus remains a separate research tool from the conventional drones she repairs with Giulia and learns to use with Dario's team."
+        "summary": "Known online as Nullroute, Serena is a former competitive speedrunner whose instinct is to test the parts of a system that other people accept as boundaries. Iris knows her work on game economies and recommends her approach before the Leonellis meet her. At the Corporate Restoration Bloc, managerial demand for useful presentations conflicts with her interest in difficult, unfinished interactions.<br><br>She makes an orderly departure from the Bloc and demonstrates a held interaction before negotiating Leonelli membership. The agreement provides a laboratory, resources, and defined research autonomy, preserves prior confidentiality obligations, and requires Cecilia's consent for departure. Her value lies in reproducible opportunities the other analysts cannot simply reproduce with their own classes.<br><br>With Giulia she repairs conventional drones and works with Dario's people to make them useful for field observation. The drone project and the contact-test apparatus are separate pieces of work, with different practical requirements. Her displayed primary remains ACUITY; EDGE is the team's working name for a hypothesis about System interactions, rather than a confirmed new stat label on her interface."
       },
       {
         "chapter": 115,
-        "summary": "Serena leaves the Bloc through an orderly handover and negotiates Leonelli membership after demonstrating a held interaction. She gains a laboratory, operating resources and defined research autonomy. Her agreement preserves prior confidentiality obligations and requires Cecilia's consent for departure.<br><br>The contact-test apparatus remains a separate research tool from the conventional drones she repairs with Giulia and learns to use with Dario's team.<br><br>Repeated early holds on shell activation coincide with responses on two independent outside instruments. Later holds and ordinary attempts do not. She can reproduce a specific result without yet knowing its mechanism or complete range."
+        "summary": "Known online as Nullroute, Serena is a former competitive speedrunner whose instinct is to test the parts of a system that other people accept as boundaries. Iris knows her work on game economies and recommends her approach before the Leonellis meet her. At the Corporate Restoration Bloc, managerial demand for useful presentations conflicts with her interest in difficult, unfinished interactions.<br><br>She makes an orderly departure from the Bloc and demonstrates a held interaction before negotiating Leonelli membership. The agreement provides a laboratory, resources, and defined research autonomy, preserves prior confidentiality obligations, and requires Cecilia's consent for departure. Her value lies in reproducible opportunities the other analysts cannot simply reproduce with their own classes.<br><br>With Giulia she repairs conventional drones and works with Dario's people to make them useful for field observation. The drone project and the contact-test apparatus are separate pieces of work, with different practical requirements.<br><br>Repeated early holds during shell activation coincide with responses on two independent outside instruments. Later holds and ordinary attempts do not. She can reproduce that result without yet explaining its mechanism or full range. ACUITY remains her displayed primary; the EDGE hypothesis does not justify treating every unusual reading as proof of a new attribute."
       }
     ]
   },
@@ -1238,8 +1243,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "One of Dario's regular operators. She is distinct from the fuel customer Nadia Sarti.",
+    "appearance": null,
+    "summary": "One of Dario's regular operators. She is distinct from the fuel customer Donata Sarti.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1260,7 +1265,7 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": null,
     "summary": "One of Dario's regular operators; contributes to practical equipment and field work.",
     "coreFlaw": null,
     "skills": [],
@@ -1282,7 +1287,7 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": null,
     "summary": "Recurring field partner to Ruggiero; takes part in industrial access, transfer protection and recovery work.",
     "coreFlaw": null,
     "skills": [],
@@ -1304,7 +1309,7 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": null,
     "summary": "A veteran operator whose pre-Integration freight relationships remain useful. Vehicles, technicians, bookings and returns still require separate commitments. No given name is established.",
     "coreFlaw": null,
     "skills": [],
@@ -1326,7 +1331,7 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": null,
     "summary": "Coordinates recruits and the training bookings Sofia can actually provide.",
     "coreFlaw": null,
     "skills": [],
@@ -1348,7 +1353,7 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": null,
     "summary": "A municipal negotiator who deals with private protection providers without simply surrendering the institutions he represents.",
     "coreFlaw": null,
     "skills": [],
@@ -1370,8 +1375,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Lost most of an ear in an earlier Razor-wing attack.",
+    "appearance": "Missing most of one ear after a Razor-wing attack.",
+    "summary": "A Leonelli enforcer whose injury is a visible reminder that ordinary patrol and protection work carry lasting costs.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1392,8 +1397,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Declines a renewal under competing terms; little further biographical information is established.",
+    "appearance": null,
+    "summary": "A former Leonelli renewal prospect who declines to continue under competing terms. Her decision makes the loss of clients a practical revenue problem rather than an abstract challenge to Cecilia's reputation.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1414,8 +1419,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Negotiates supply terms and later helps identify the goods and operating needs attached to freight.",
+    "appearance": null,
+    "summary": "Represents growers in supply negotiations. His contribution is access to goods and knowledge of what producers need in exchange, including the requirements attached to moving freight.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1436,10 +1441,25 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": "A shorter young man with pale forearms and pushed-up sleeves; visibly nervous at the first meeting.",
     "summary": "One of five young people occupying the unusually quiet area of Aurora.",
     "coreFlaw": null,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Root restraint",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 68,
+        "desc": "Roots rise through existing floor joints to catch limbs and hold enemies for the party. This describes the observed effect, rather than a disclosed formal skill title.",
+        "ranks": null
+      },
+      {
+        "name": "TERRAIN MANIPULATION",
+        "type": "Class ability; activation type not stated",
+        "chapter": 71,
+        "desc": "Terrain control supports the party's positioning. A recorded narrated encounter halves its cost and grants +11% Acuity; the reduction and bonus are temporary encounter conditions.",
+        "ranks": null
+      }
+    ],
     "relationships": [
       {
         "name": "Luca Terranova",
@@ -1450,25 +1470,33 @@ var CHARACTERS = withCharacterHistory([
         "name": "Cecilia Leonelli",
         "chapter": 71,
         "detail": "The binding protection agreement brings their activity under Leonelli Authority."
+      },
+      {
+        "name": "Sofia Dei Guidi",
+        "chapter": 71,
+        "detail": "A member of the same longstanding tabletop group and protected adventuring party."
       }
     ],
     "history": [
       {
         "chapter": 65,
         "name": "Elia",
-        "title": "Druid and terrain support",
-        "summary": "A chemistry student at UniTo with an interest in sustainable agriculture. Growth, roots and terrain support become practical party tools. He is distinct from the early recruit renamed Santina."
+        "title": "Chemistry student",
+        "summary": "Originally from Foggia, Elia is a chemistry student at UniTo, in the fourth year of a three-year course when the Integration interrupts university life. He is talkative, defensive about his academic delays, and interested in sustainable agriculture. He found the others through an online tabletop recruitment post; the campaign became a friendship that survived the collapse of their ordinary lives. Returning home offered little prospect of restoring the life he wanted in Turin."
       },
       {
         "chapter": 66,
         "class": "DRUID",
-        "classLine": "DRUID"
+        "classLine": "DRUID",
+        "appearance": "Shorter than Tommaso, with pale forearms usually exposed by pushed-up sleeves. His quick explanations and nervous glances contrast with the steadier concentration he brings to the ground beneath a fight.",
+        "summary": "Originally from Foggia, Elia is a chemistry student at UniTo, in the fourth year of a three-year course when the Integration interrupts university life. He is talkative, defensive about his academic delays, and interested in sustainable agriculture. He found the others through an online tabletop recruitment post; the campaign became a friendship that survived the collapse of their ordinary lives. Returning home offered little prospect of restoring the life he wanted in Turin.<br><br>He chooses Druid for growth and cultivation, then turns those interests toward the party's immediate needs. In combat he uses roots to restrain enemies and shape approaches while the others attack. His understanding of plants and terrain gives him a practical support role alongside the group's spellcasters and frontline fighters.",
+        "title": "Druid and terrain support"
       },
       {
         "chapter": 71,
         "name": "Elia Amicone",
         "faction": "leonelli",
-        "summary": "A chemistry student at UniTo with an interest in sustainable agriculture. Growth, roots and terrain support become practical party tools. He is distinct from the early recruit renamed Santina.<br><br>The Chapter 71 protection and vassalage agreement preserves the party as a unit. Sofia retains authorship and licenses output; departure and retained work have negotiated terms."
+        "summary": "Originally from Foggia, Elia is a chemistry student at UniTo, in the fourth year of a three-year course when the Integration interrupts university life. He is talkative, defensive about his academic delays, and interested in sustainable agriculture. He found the others through an online tabletop recruitment post; the campaign became a friendship that survived the collapse of their ordinary lives. Returning home offered little prospect of restoring the life he wanted in Turin.<br><br>He chooses Druid for growth and cultivation, then turns those interests toward the party's immediate needs. In combat he uses roots to restrain enemies and shape approaches while the others attack. His understanding of plants and terrain gives him a practical support role alongside the group's spellcasters and frontline fighters.<br><br>The group enters Leonelli protection and vassalage together. Its agreement preserves the party as a unit; Sofia retains authorship and licenses her work, with negotiated terms governing departure and retained material. The arrangement gives their skills resources and protection while placing them inside an organization whose priorities extend beyond their own survival.<br><br><strong>System details:</strong> During the fight against Arrears, Sofia's narration grants him +11% Acuity and halves the cost of Terrain Manipulation. These are encounter effects; his permanent attribute scores and primary/secondary designations remain undisclosed."
       }
     ]
   },
@@ -1488,10 +1516,18 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": "A young woman in a black beanie pulled down toward her eyebrows, watchful even before she joins the conversation.",
     "summary": "One of five young people occupying the unusually quiet area of Aurora.",
     "coreFlaw": null,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Lightning casting",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 68,
+        "desc": "Uses a rod to direct lightning at moving targets and exposed seams. A recorded narrated encounter grants +10% Precision and reduces evocation cooldowns by five seconds; neither is a permanent base statistic.",
+        "ranks": null
+      }
+    ],
     "relationships": [
       {
         "name": "Luca Terranova",
@@ -1502,25 +1538,33 @@ var CHARACTERS = withCharacterHistory([
         "name": "Cecilia Leonelli",
         "chapter": 71,
         "detail": "The binding protection agreement brings their activity under Leonelli Authority."
+      },
+      {
+        "name": "Sofia Dei Guidi",
+        "chapter": 71,
+        "detail": "A member of the same longstanding tabletop group and protected adventuring party."
       }
     ],
     "history": [
       {
         "chapter": 65,
         "name": "Marta",
-        "title": "Mage and effects analyst",
-        "summary": "A beanie-wearing student from Borgo San Paolo who chooses Mage for spell theory and deconstruction. She examines the party's effects and later helps the Division observe experiments."
+        "title": "Student from Borgo San Paolo",
+        "summary": "A student from Borgo San Paolo, Marta joined the tabletop campaign through an online call for players. She is blunt with strangers and reluctant to offer personal details merely to make a conversation easier. Her ties to family in Turin persist after the Integration, but proximity does not make those relationships simple. She tests Luca's explanations rather than accepting his status as an analyst as proof that he is right."
       },
       {
         "chapter": 66,
         "class": "MAGE",
-        "classLine": "MAGE"
+        "classLine": "MAGE",
+        "appearance": "A young woman with green eyes, usually wearing a black beanie pulled low toward her eyebrows. In a fight she carries a casting rod; away from combat she watches people and effects with the same direct, skeptical attention.",
+        "summary": "A student from Borgo San Paolo, Marta joined the tabletop campaign through an online call for players. She is blunt with strangers and reluctant to offer personal details merely to make a conversation easier. Her ties to family in Turin persist after the Integration, but proximity does not make those relationships simple. She tests Luca's explanations rather than accepting his status as an analyst as proof that he is right.<br><br>She chooses Mage for spell theory, the deconstruction of magical effects, and the prospect of adapting to unfamiliar problems. Her lightning provides ranged damage while the others pin enemies or hold a corridor. Her interest in how an effect works also makes her useful when the group needs to examine Sofia's authored encounters from inside them.",
+        "title": "Mage and effects analyst"
       },
       {
         "chapter": 71,
         "name": "Marta Galimberti",
         "faction": "leonelli",
-        "summary": "A beanie-wearing student from Borgo San Paolo who chooses Mage for spell theory and deconstruction. She examines the party's effects and later helps the Division observe experiments.<br><br>The Chapter 71 protection and vassalage agreement preserves the party as a unit. Sofia retains authorship and licenses output; departure and retained work have negotiated terms."
+        "summary": "A student from Borgo San Paolo, Marta joined the tabletop campaign through an online call for players. She is blunt with strangers and reluctant to offer personal details merely to make a conversation easier. Her ties to family in Turin persist after the Integration, but proximity does not make those relationships simple. She tests Luca's explanations rather than accepting his status as an analyst as proof that he is right.<br><br>She chooses Mage for spell theory, the deconstruction of magical effects, and the prospect of adapting to unfamiliar problems. Her lightning provides ranged damage while the others pin enemies or hold a corridor. Her interest in how an effect works also makes her useful when the group needs to examine Sofia's authored encounters from inside them.<br><br>The group enters Leonelli protection and vassalage together. Its agreement preserves the party as a unit; Sofia retains authorship and licenses her work, with negotiated terms governing departure and retained material. The arrangement gives their skills resources and protection while placing them inside an organization whose priorities extend beyond their own survival.<br><br><strong>System details:</strong> During the fight against Arrears, Sofia's narration grants her +10% Precision and reduces evocation spell cooldowns by five seconds. These are encounter effects, not permanent attribute scores or a confirmed primary stat."
       }
     ]
   },
@@ -1540,10 +1584,25 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": "A skinny young man who appears to be in his mid-twenties, wearing a jacket with numerous zippers. He presents himself with practiced charm, although pressure can make the performance transparent.",
     "summary": "One of five young people occupying the unusually quiet area of Aurora.",
     "coreFlaw": null,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Vocal support",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 69,
+        "desc": "Uses his voice in the party's support and control work. A recorded narrated encounter grants +12% Presence and applies Sonic Vulnerability to its target.",
+        "ranks": null
+      },
+      {
+        "name": "Countering a howl",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 96,
+        "desc": "Answers a Hound's howl with a sustained note, preventing its pressure from settling over the party. The maneuver requires his participation; it is not a permanent immunity.",
+        "ranks": null
+      }
+    ],
     "relationships": [
       {
         "name": "Luca Terranova",
@@ -1554,6 +1613,11 @@ var CHARACTERS = withCharacterHistory([
         "name": "Cecilia Leonelli",
         "chapter": 71,
         "detail": "The binding protection agreement brings their activity under Leonelli Authority."
+      },
+      {
+        "name": "Sofia Dei Guidi",
+        "chapter": 71,
+        "detail": "A member of the same longstanding tabletop group and protected adventuring party."
       }
     ],
     "history": [
@@ -1561,18 +1625,20 @@ var CHARACTERS = withCharacterHistory([
         "chapter": 65,
         "name": "Nicolò",
         "title": "Party spokesperson and support combatant",
-        "summary": "From Novara; produces music and plays guitar. He chooses Bard for support, control and knowledge gathering. His priorities sometimes differ from the rest of the party."
+        "summary": "From Novara, Nicolò produces music and plays guitar. He and Sofia were already playing together before they brought in their neighbor Tommaso and recruited the rest of the campaign online. He commonly speaks for the group, deflecting uncomfortable questions and trying to set the terms of an encounter before anyone else can. Contact with his brother exposes their disagreement over whether the government will restore the old order."
       },
       {
         "chapter": 66,
         "class": "BARD",
-        "classLine": "BARD"
+        "classLine": "BARD",
+        "appearance": "A skinny young man who appears to be in his mid-twenties, wearing a jacket with numerous zippers. He presents himself with practiced charm, although pressure can make the performance transparent.",
+        "summary": "From Novara, Nicolò produces music and plays guitar. He and Sofia were already playing together before they brought in their neighbor Tommaso and recruited the rest of the campaign online. He commonly speaks for the group, deflecting uncomfortable questions and trying to set the terms of an encounter before anyone else can. Contact with his brother exposes their disagreement over whether the government will restore the old order.<br><br>He chooses Bard for a mixture of support, control, and knowledge gathering. His voice is a working combat tool: chants support the party, and a countering note can interrupt a Hound's howl. His confidence in negotiation is useful, but his interest in what the group's abilities might be worth can place his priorities at odds with his friends'."
       },
       {
         "chapter": 71,
         "name": "Nicolò Conti",
         "faction": "leonelli",
-        "summary": "From Novara; produces music and plays guitar. He chooses Bard for support, control and knowledge gathering. His priorities sometimes differ from the rest of the party.<br><br>The Chapter 71 protection and vassalage agreement preserves the party as a unit. Sofia retains authorship and licenses output; departure and retained work have negotiated terms."
+        "summary": "From Novara, Nicolò produces music and plays guitar. He and Sofia were already playing together before they brought in their neighbor Tommaso and recruited the rest of the campaign online. He commonly speaks for the group, deflecting uncomfortable questions and trying to set the terms of an encounter before anyone else can. Contact with his brother exposes their disagreement over whether the government will restore the old order.<br><br>He chooses Bard for a mixture of support, control, and knowledge gathering. His voice is a working combat tool: chants support the party, and a countering note can interrupt a Hound's howl. His confidence in negotiation is useful, but his interest in what the group's abilities might be worth can place his priorities at odds with his friends'.<br><br>The group enters Leonelli protection and vassalage together. Its agreement preserves the party as a unit; Sofia retains authorship and licenses her work, with negotiated terms governing departure and retained material. The arrangement gives their skills resources and protection while placing them inside an organization whose priorities extend beyond their own survival.<br><br><strong>System details:</strong> During the fight against Arrears, Sofia's narration grants him +12% Presence and applies Sonic Vulnerability to the enemy. The Presence increase is an encounter effect; it does not establish his permanent score or primary designation."
       },
       {
         "chapter": 96,
@@ -1596,10 +1662,39 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": "A young woman in a grey sweatshirt, carrying a flat object under her arm and initially keeping her distance from the meeting.",
     "summary": "One of five young people occupying the unusually quiet area of Aurora.",
     "coreFlaw": null,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Encounter authorship",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 68,
+        "desc": "Works with suitable existing dungeon-like spaces and local spawns. Chooses arrival timing and direction, influences initial behavior, and can reduce monster capability by about fifteen percent. She cannot invent arbitrary creatures or freely build new rooms.",
+        "ranks": null
+      },
+      {
+        "name": "Temporary spatial adjustments",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 68,
+        "desc": "Makes limited, nonstructural adjustments to walls, doors, and floor levels within a recognized space. The changes revert when she leaves its boundary. Ordinary streets and offices do not automatically qualify.",
+        "ranks": null
+      },
+      {
+        "name": "Narrated encounter conditions",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 71,
+        "desc": "Her narration supplies tactical conditions and temporary party bonuses. Against Arrears the recorded effects include Presence +12%, Precision +10%, Force +14%, and Acuity +11% for different party members, alongside target or ability modifiers. These are encounter-specific effects, not freely assignable permanent stats.",
+        "ranks": null
+      },
+      {
+        "name": "Repeatable training campaigns",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 96,
+        "desc": "Provides repeatable authored training under a recovery interval of roughly six days. The System determines rewards; moving the activity to another address does not create an immediate extra run. Scenario-tier threats are outside her control.",
+        "ranks": null
+      }
+    ],
     "relationships": [
       {
         "name": "Luca Terranova",
@@ -1610,6 +1705,11 @@ var CHARACTERS = withCharacterHistory([
         "name": "Cecilia Leonelli",
         "chapter": 71,
         "detail": "The binding protection agreement brings their activity under Leonelli Authority."
+      },
+      {
+        "name": "Nicolò Conti",
+        "chapter": 71,
+        "detail": "A longtime player in her campaign and the group's usual spokesperson; his commercial instincts can complicate decisions about her work."
       }
     ],
     "history": [
@@ -1617,26 +1717,28 @@ var CHARACTERS = withCharacterHistory([
         "chapter": 65,
         "name": "Sofia",
         "title": "Physics student and Dungeon Master",
-        "summary": "A second-year physics student from Trapani who runs the group's tabletop campaign and works on game engines as a hobby. Her authored encounters become a practical way for the party to train."
+        "summary": "A second-year physics student from Trapani, Sofia runs the group's tabletop campaign and experiments with Unreal and Unity as a hobby. The campaign predates the Integration; keeping it alive gives the five friends continuity when university, family plans, and ordinary security become uncertain. She is reserved with outsiders and protective of the distinction between her own authorship and what somebody else wishes to purchase from it."
       },
       {
         "chapter": 66,
         "class": "DUNGEON MASTER",
-        "classLine": "DUNGEON MASTER"
+        "classLine": "DUNGEON MASTER",
+        "appearance": "A young woman in a grey sweatshirt and glasses, often holding a soft notebook secured with an elastic band. She tends to stay apart from the initial conversation, then speaks with quiet, deliberate precision when the subject reaches her work.",
+        "summary": "A second-year physics student from Trapani, Sofia runs the group's tabletop campaign and experiments with Unreal and Unity as a hobby. The campaign predates the Integration; keeping it alive gives the five friends continuity when university, family plans, and ordinary security become uncertain. She is reserved with outsiders and protective of the distinction between her own authorship and what somebody else wishes to purchase from it.<br><br>Her Dungeon Master class turns encounter design into a survival resource. The party's refuge in Aurora brings that work to the attention of Luca and Cecilia. Understanding her value requires understanding her limits: she authors conditions for an encounter rather than fighting as a sixth frontline combatant or freely creating a world."
       },
       {
         "chapter": 71,
         "name": "Sofia Dei Guidi",
         "faction": "leonelli",
-        "summary": "A second-year physics student from Trapani who runs the group's tabletop campaign and works on game engines as a hobby. Her authored encounters become a practical way for the party to train.<br><br>The Chapter 71 protection and vassalage agreement preserves the party as a unit. Sofia retains authorship and licenses output; departure and retained work have negotiated terms."
+        "summary": "A second-year physics student from Trapani, Sofia runs the group's tabletop campaign and experiments with Unreal and Unity as a hobby. The campaign predates the Integration; keeping it alive gives the five friends continuity when university, family plans, and ordinary security become uncertain. She is reserved with outsiders and protective of the distinction between her own authorship and what somebody else wishes to purchase from it.<br><br>Her Dungeon Master class turns encounter design into a survival resource. The party's refuge in Aurora brings that work to the attention of Luca and Cecilia. Understanding her value requires understanding her limits: she authors conditions for an encounter rather than fighting as a sixth frontline combatant or freely creating a world.<br><br>The group enters Leonelli protection and vassalage together. Its agreement preserves the party as a unit; Sofia retains authorship and licenses her work, with negotiated terms governing departure and retained material. The arrangement gives their skills resources and protection while placing them inside an organization whose priorities extend beyond their own survival.<br><br><strong>System details:</strong> Her permanent attribute scores, primary/secondary designations, and level remain undisclosed. Recorded class limits include an approximately fifteen-percent downward adjustment to available monsters and a recovery interval of roughly six days; those limits are not general stat bonuses."
       },
       {
         "chapter": 96,
-        "summary": "A second-year physics student from Trapani who runs the group's tabletop campaign and works on game engines as a hobby. Her authored encounters become a practical way for the party to train.<br><br>The Chapter 71 protection and vassalage agreement preserves the party as a unit. Sofia retains authorship and licenses output; departure and retained work have negotiated terms.<br><br>She uses suitable existing space and ordinary available spawns, with a limited downward adjustment and a roughly six-day recovery interval. The System determines rewards. Territorial suppression is a separate benefit, and Scenario-tier threats remain outside her control."
+        "summary": "A second-year physics student from Trapani, Sofia runs the group's tabletop campaign and experiments with Unreal and Unity as a hobby. The campaign predates the Integration; keeping it alive gives the five friends continuity when university, family plans, and ordinary security become uncertain. She is reserved with outsiders and protective of the distinction between her own authorship and what somebody else wishes to purchase from it.<br><br>Her Dungeon Master class turns encounter design into a survival resource. The party's refuge in Aurora brings that work to the attention of Luca and Cecilia. Understanding her value requires understanding her limits: she authors conditions for an encounter rather than fighting as a sixth frontline combatant or freely creating a world.<br><br>The group enters Leonelli protection and vassalage together. Its agreement preserves the party as a unit; Sofia retains authorship and licenses her work, with negotiated terms governing departure and retained material. The arrangement gives their skills resources and protection while placing them inside an organization whose priorities extend beyond their own survival.<br><br><strong>System details:</strong> Her permanent attribute scores, primary/secondary designations, and level remain undisclosed. Recorded class limits include an approximately fifteen-percent downward adjustment to available monsters and a recovery interval of roughly six days; those limits are not general stat bonuses.<br><br>She works inside suitable existing spaces the System recognizes as dungeon-like. Limited changes to walls, doors, and floor levels revert when she leaves the boundary; she cannot excavate new rooms. She uses ordinary available spawns, selects arrival timing and direction, and has limited influence on their initial behavior. The roughly fifteen-percent reduction operates separately from Leonelli territorial suppression. The System sets rewards, and ordinary monster drops remain separate from authored quest rewards. Scenario-tier threats lie outside her control."
       },
       {
         "chapter": 114,
-        "summary": "A second-year physics student from Trapani who runs the group's tabletop campaign and works on game engines as a hobby. Her authored encounters become a practical way for the party to train.<br><br>The Chapter 71 protection and vassalage agreement preserves the party as a unit. Sofia retains authorship and licenses output; departure and retained work have negotiated terms.<br><br>She uses suitable existing space and ordinary available spawns, with a limited downward adjustment and a roughly six-day recovery interval. The System determines rewards. Territorial suppression is a separate benefit, and Scenario-tier threats remain outside her control.<br><br>She negotiates what a session can provide and protects time outside the training schedule. A different address does not create another adventure before the ability recovers."
+        "summary": "A second-year physics student from Trapani, Sofia runs the group's tabletop campaign and experiments with Unreal and Unity as a hobby. The campaign predates the Integration; keeping it alive gives the five friends continuity when university, family plans, and ordinary security become uncertain. She is reserved with outsiders and protective of the distinction between her own authorship and what somebody else wishes to purchase from it.<br><br>Her Dungeon Master class turns encounter design into a survival resource. The party's refuge in Aurora brings that work to the attention of Luca and Cecilia. Understanding her value requires understanding her limits: she authors conditions for an encounter rather than fighting as a sixth frontline combatant or freely creating a world.<br><br>The group enters Leonelli protection and vassalage together. Its agreement preserves the party as a unit; Sofia retains authorship and licenses her work, with negotiated terms governing departure and retained material. The arrangement gives their skills resources and protection while placing them inside an organization whose priorities extend beyond their own survival.<br><br><strong>System details:</strong> Her permanent attribute scores, primary/secondary designations, and level remain undisclosed. Recorded class limits include an approximately fifteen-percent downward adjustment to available monsters and a recovery interval of roughly six days; those limits are not general stat bonuses.<br><br>She works inside suitable existing spaces the System recognizes as dungeon-like. Limited changes to walls, doors, and floor levels revert when she leaves the boundary; she cannot excavate new rooms. She uses ordinary available spawns, selects arrival timing and direction, and has limited influence on their initial behavior. The roughly fifteen-percent reduction operates separately from Leonelli territorial suppression. The System sets rewards, and ordinary monster drops remain separate from authored quest rewards. Scenario-tier threats lie outside her control. Moving to another address does not bypass the recovery interval. She negotiates session objectives and protects time outside the training schedule, resisting pressure to treat every available room as another immediate run."
       }
     ]
   },
@@ -1656,10 +1758,25 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
+    "appearance": "A tall young man carrying a length of scaffold pipe in both hands.",
     "summary": "One of five young people occupying the unusually quiet area of Aurora.",
     "coreFlaw": null,
-    "skills": [],
+    "skills": [
+      {
+        "name": "Frontline protection",
+        "type": "Class capability; formal skill name not stated",
+        "chapter": 68,
+        "desc": "Holds narrow approaches with a shield or improvised weapon while the others control and attack the enemy. His class choice favors protecting other people; no formal skill name is supplied.",
+        "ranks": null
+      },
+      {
+        "name": "Narrated attack bonus",
+        "type": "Temporary encounter effect",
+        "chapter": 71,
+        "desc": "A recorded encounter grants +14% Force and increased damage against weakened enemies. The conditions come from Sofia's narration and do not establish a permanent Force score.",
+        "ranks": null
+      }
+    ],
     "relationships": [
       {
         "name": "Luca Terranova",
@@ -1670,25 +1787,33 @@ var CHARACTERS = withCharacterHistory([
         "name": "Cecilia Leonelli",
         "chapter": 71,
         "detail": "The binding protection agreement brings their activity under Leonelli Authority."
+      },
+      {
+        "name": "Sofia Dei Guidi",
+        "chapter": 71,
+        "detail": "A member of the same longstanding tabletop group and protected adventuring party."
       }
     ],
     "history": [
       {
         "chapter": 65,
         "name": "Tommaso",
-        "title": "Frontline protector",
-        "summary": "A third-year civil engineering student at the Politecnico with scaffolding experience. He chooses Paladin to stand in front of others and keeps track of passages, approaches and the people who need protection."
+        "title": "Civil engineering student",
+        "summary": "Tommaso comes from a village outside Nuoro and studies civil engineering at the Politecnico, reaching his third year before the Integration. Since sixteen he has spent summers in his uncle's scaffolding yard. That experience explains both his first improvised weapon and his habit of assessing access, clearances, and the physical work a plan actually requires. He joined Sofia and Nicolò's tabletop group after they discovered he lived next door."
       },
       {
         "chapter": 66,
         "class": "PALADIN",
-        "classLine": "PALADIN"
+        "classLine": "PALADIN",
+        "appearance": "Tall, initially carrying a length of scaffold pipe in both hands. He speaks softly and slowly. His later equipment includes a shield and an iron club, suited to holding a narrow approach while the others work behind him.",
+        "summary": "Tommaso comes from a village outside Nuoro and studies civil engineering at the Politecnico, reaching his third year before the Integration. Since sixteen he has spent summers in his uncle's scaffolding yard. That experience explains both his first improvised weapon and his habit of assessing access, clearances, and the physical work a plan actually requires. He joined Sofia and Nicolò's tabletop group after they discovered he lived next door.<br><br>He chooses Paladin because he wants to stand in front of people and protect them. In the party he holds the line, catches attacks on his shield, and strikes enemies controlled by Elia or exposed by Marta. He is economical with words and attentive to who can reach safety, making his protective role a matter of positioning and judgment as well as class choice.",
+        "title": "Frontline protector"
       },
       {
         "chapter": 71,
         "name": "Tommaso Peirone",
         "faction": "leonelli",
-        "summary": "A third-year civil engineering student at the Politecnico with scaffolding experience. He chooses Paladin to stand in front of others and keeps track of passages, approaches and the people who need protection.<br><br>The Chapter 71 protection and vassalage agreement preserves the party as a unit. Sofia retains authorship and licenses output; departure and retained work have negotiated terms."
+        "summary": "Tommaso comes from a village outside Nuoro and studies civil engineering at the Politecnico, reaching his third year before the Integration. Since sixteen he has spent summers in his uncle's scaffolding yard. That experience explains both his first improvised weapon and his habit of assessing access, clearances, and the physical work a plan actually requires. He joined Sofia and Nicolò's tabletop group after they discovered he lived next door.<br><br>He chooses Paladin because he wants to stand in front of people and protect them. In the party he holds the line, catches attacks on his shield, and strikes enemies controlled by Elia or exposed by Marta. He is economical with words and attentive to who can reach safety, making his protective role a matter of positioning and judgment as well as class choice.<br><br>The group enters Leonelli protection and vassalage together. Its agreement preserves the party as a unit; Sofia retains authorship and licenses her work, with negotiated terms governing departure and retained material. The arrangement gives their skills resources and protection while placing them inside an organization whose priorities extend beyond their own survival.<br><br><strong>System details:</strong> During the fight against Arrears, Sofia's narration grants him +14% Force and a damage bonus against weakened enemies. These are encounter effects; permanent scores, level, and primary/secondary designations remain undisclosed."
       },
       {
         "chapter": 96,
@@ -1712,8 +1837,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "An older shopkeeper encountered during the effort to understand an approach conventional leverage does not solve.",
+    "appearance": "An elderly shopkeeper.",
+    "summary": "Maintains a nearly empty shop and treats the few remaining items on its shelves with deliberate dignity. Cecilia's encounter with him challenges her assumption that every refusal can be solved by finding the correct leverage.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1734,8 +1859,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "A seventy-one-year-old retired postal worker. Knows his residents and distinguishes their needs from the label NPC.",
+    "appearance": "Seventy-one years old; keeps a clipboard and a rifle close to hand.",
+    "summary": "A retired postal worker who knows the residents and informal arrangements of his building. He offers Cecilia information without surrendering his own judgment, distinguishing the people under her protection from the labels the System gives them.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1756,8 +1881,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Mentioned by Anselmi as a registered resident. He is not identified as Dottor Ferretti.",
+    "appearance": null,
+    "summary": "A younger registered resident who works with the Compagnia network. Anselmi describes him as reliable about his building contribution, while noting the uneasy politeness that can surround someone whose new capabilities other residents need.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1778,8 +1903,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Does not pass on a contact she cannot evaluate. The consequences matter when Cecilia asks how information travels through a building.",
+    "appearance": null,
+    "summary": "A resident entrusted with a possible contact because she has time to handle correspondence. She declines to pass on an approach she cannot evaluate, showing how uncertainty and ordinary caution affect the family's access to information.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1800,8 +1925,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Represents local workers and occupants in practical access and compensation discussions. Cooperation with Dario and Ruggiero does not mean he joins the Leonelli organization.",
+    "appearance": null,
+    "summary": "A worker and union organizer who represents occupants in negotiations over access, lost hours, equipment, and compensation. He cooperates with Leonelli and Bloc representatives when the terms protect the people doing the work, while retaining his own constituency.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1822,8 +1947,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Attends the municipal negotiations. Her institutional role is established; no exact Player class is given.",
+    "appearance": "A woman representing the Economic Recovery Task Force.",
+    "summary": "Participates in municipal negotiations over Turin's recovery. Cecilia identifies her as the official most concerned with the economic numbers behind the proposed arrangements.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1844,8 +1969,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Takes part in the municipal discussion of security and institutional continuity.",
+    "appearance": "A woman representing the Ministry of Internal Affairs.",
+    "summary": "Participates in municipal negotiations with a focus on social order and institutional continuity as private organizations acquire powers the state can no longer exercise consistently.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1911,8 +2036,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "Age 51. Pre-integration corporate attorney and logistics consultant.",
-    "summary": "Corporate lawyer and Turin representative of the Corporate Restoration Bloc. He offers branded security and services through contracts and competes with the Leonellis for clients, revenue and institutional acceptance.",
+    "appearance": "Age 51. A practiced corporate representative whose calm delivery and open gestures make his arguments sound measured even when he is attacking a rival's legitimacy.",
+    "summary": "A corporate attorney and former logistics consultant, Fasce represents the Corporate Restoration Bloc in Turin. He sells security, services, and a claim to legitimate institutional recovery. His public contrast between professional contracts and mafia coercion targets the Leonellis' reputation as well as their revenue. Commercial cooperation remains possible where it serves the Bloc's position.",
     "coreFlaw": "His promise of reliable institutional services must survive the costs and exclusions in the agreements he sells.",
     "skills": [],
     "relationships": [
@@ -1941,7 +2066,7 @@ var CHARACTERS = withCharacterHistory([
     "history": [
       {
         "chapter": 124,
-        "summary": "Corporate lawyer and Turin representative of the Corporate Restoration Bloc. He offers branded security and services through contracts and competes with the Leonellis for clients, revenue and institutional acceptance.<br><br>The Bloc survives the book as a functioning rival. Joint freight work, financing, a technical comparison and a settled customer dispute demonstrate cooperation without agreement on who should govern Turin."
+        "summary": "A corporate attorney and former logistics consultant, Fasce represents the Corporate Restoration Bloc in Turin. He sells security, services, and a claim to legitimate institutional recovery. His public contrast between professional contracts and mafia coercion targets the Leonellis' reputation as well as their revenue. Commercial cooperation remains possible where it serves the Bloc's position. Joint freight work, financing, a technical comparison, and a settled customer dispute leave the Bloc functioning as a rival. Practical agreements do not settle who should govern Turin."
       }
     ]
   },
@@ -1961,8 +2086,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Moves away from Leonelli protection toward the Bloc's offer.",
+    "appearance": "In his early fifties, with a trim grey beard and a manner poised between apology and stubbornness.",
+    "summary": "Owns a transport company and moves away from Leonelli protection toward the Bloc's cheaper offer. His trucks, delivery requirements, and contract costs give Cecilia a concrete example of what her competitors are selling.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -1983,8 +2108,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Shares the Bloc's proposed offer voluntarily while remaining a Leonelli client. His consignment and delivery needs make operational promises testable.",
+    "appearance": null,
+    "summary": "A Leonelli client who voluntarily shares a printed Bloc proposal while choosing to stay with the family. His consignment and delivery needs let the Leonellis examine actual coverage and service promises instead of relying on the rival's advertising.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2005,12 +2130,16 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "A former bank security manager. He coordinates part of the Bloc's security provision and records limits to his authority instead of treating every site agreement as a right to move its occupants.",
+    "appearance": "A businesslike former bank security manager, quick to leave briefings for his operational work.",
+    "summary": "A former bank security manager who coordinates Bloc security work. He distinguishes his own authorization from the rights of occupants and other operators. His responsibilities include staging, access coordination, and protecting the people using a site, rather than assuming every agreement grants unrestricted control.",
     "coreFlaw": null,
     "skills": [],
     "relationships": [],
     "history": [
+      {
+        "chapter": 95,
+        "appearance": "Wears a dark jacket over a polo shirt at the site meeting; keeps a radio and notebook to hand."
+      },
       {
         "chapter": 100,
         "title": "Bloc security coordinator; recognized installation claimant"
@@ -2033,8 +2162,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "His operational priorities and presentations frustrate Serena's research. He is distinct from the younger Ferretti resident associated with the Compagnia network.",
+    "appearance": null,
+    "summary": "A Bloc manager whose presentations and emphasis on immediately useful results frustrate Serena's research. He represents the organizational priorities she has to navigate when asking for time and resources to investigate uncertain mechanics.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2055,8 +2184,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Introduced during the drone preparations; participates in the following field work. No surname is established.",
+    "appearance": "A lean, dark-haired young man, initially awkward with his equipment strap and visibly nervous before a Scenario.",
+    "summary": "A junior Leonelli field operative working under Silvio. He helps prepare the drone equipment and gains experience on patrol and Scenario work. His uncertain hands contrast with the practiced routines of the older team members.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2077,8 +2206,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Runs a high-end club outside the Quadrilatero and supplies Dario with information about meetings and influence. The scene calls her both manager and owner; exact ownership remains unspecified.",
+    "appearance": "Age 34, with long brown hair, dark eyes, and an athletic build. Comfortable in both designer clothing and professional swimwear.",
+    "summary": "Runs a high-end club outside the Quadrilatero serving Players and wealthy unawakened clients. Her access to private gatherings gives Dario information about Bloc fundraising, recruitment, and the social interests behind official offers. She is a cultivated contact with her own business to protect.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2099,8 +2228,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Works with Stefano on mechanisms and assemblies. He questions requirements and the behavior of unfamiliar material rather than assuming a successful component guarantees a reliable device.",
+    "appearance": null,
+    "summary": "The younger Baldisarri brother and a designer at the family workshop on Via Rivalta. He develops mechanisms and assemblies with Stefano, examining how unfamiliar materials behave inside a complete device. Their prototypes turn unusual component properties into defensive tools that still require testing, tolerances, and workable fabrication.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2121,8 +2250,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Commissions the brothers' prototypes and coordinates fabrication arrangements. Her precise employment or membership status is not established clearly enough to assign a class or a family rank.",
+    "appearance": null,
+    "summary": "Coordinates commissions and fabrication arrangements for the Baldisarri brothers. She delivers requirements, tests prototypes, and arranges payment, providing the practical link between workshop development and the people commissioning the equipment.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2143,11 +2272,17 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Practical negotiator and metalworker at the Via Rivalta workshop. He is four years older than Giovanni. The brothers develop defensive tools and later expand into Borgo Dora.",
+    "appearance": "Four years older than Giovanni; works directly with the materials and prototypes at the bench.",
+    "summary": "A metalworker and practical negotiator at the Baldisarri workshop. Their father preserved the business's independence by keeping it small. Leonelli commissions force Stefano to reconsider whether remaining unnoticed still offers security. He and Giovanni develop defensive prototypes.",
     "coreFlaw": null,
     "skills": [],
-    "relationships": []
+    "relationships": [],
+    "history": [
+      {
+        "chapter": 103,
+        "summary": "A metalworker and practical negotiator at the Baldisarri workshop. Their father preserved the business's independence by keeping it small. Leonelli commissions force Stefano to reconsider whether remaining unnoticed still offers security. He and Giovanni develop defensive prototypes before expanding their workshop activity into Borgo Dora."
+      }
+    ]
   },
   {
     "id": "enrico-barale",
@@ -2165,8 +2300,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Knows the Mirafiori annex's pumps, altered circuits and physical access. He insists that his crew can decline unsafe work and that people doing an operation understand what they are allowed to touch.",
+    "appearance": "A narrow man with thick wrists, close-cut grey hair, a washed-out shirt collar, and a right thumb that healed crooked. Carries the site keys.",
+    "summary": "Maintenance supervisor at the Mirafiori annex, familiar with its pumps, altered circuits, and access routes. He requires damaged tools to be replaced and insists that his crew retain the right to refuse unsafe work. His site knowledge remains essential even when armed Players arrive with a larger plan.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2187,11 +2322,17 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Joins Sofia's training with a short club and later takes part in field support. His exact class is not stated.",
+    "appearance": "Wears a padded jacket and carries a short club when he begins training with the party.",
+    "summary": "A Leonelli Player recruit introduced to Sofia's authored training. Initially too quick to pursue an opening, he learns to work within the party's control and support. His class and numerical attributes remain undisclosed.",
     "coreFlaw": null,
     "skills": [],
-    "relationships": []
+    "relationships": [],
+    "history": [
+      {
+        "chapter": 121,
+        "summary": "A Leonelli Player recruit introduced to Sofia's authored training. Initially too quick to pursue an opening, he learns to work within the party's control and support. He later helps recover an electrician during the fog emergency. His class and numerical attributes remain undisclosed."
+      }
+    ]
   },
   {
     "id": "paola",
@@ -2209,11 +2350,18 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Trains with a buckler and knife, learning to communicate with the group before committing to a dangerous position.",
+    "appearance": "Carries a buckler and a small knife.",
+    "summary": "A Leonelli Player recruit who trains alongside the student party. She catches a Hound on her buckler, helps operate a gate under pressure, and learns to communicate her position before acting. Her class and numerical attributes remain undisclosed.",
     "coreFlaw": null,
     "skills": [],
-    "relationships": []
+    "relationships": [],
+    "history": [
+      {
+        "chapter": 121,
+        "appearance": "Carries a buckler and a small knife; later works stationary cover while recovering from an ankle injury.",
+        "summary": "A Leonelli Player recruit who trains alongside the student party. She catches a Hound on her buckler, helps operate a gate under pressure, and learns to communicate her position before acting. Her later deployment respects her medical clearance. Her class and numerical attributes remain undisclosed."
+      }
+    ]
   },
   {
     "id": "giulio-vannini",
@@ -2231,8 +2379,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Leads the team hired for the installation operation and settles obligations, safety provisions and unexpected System decisions before entry.",
+    "appearance": "Carries a rifle, checking its clearance against the installation entrance before slinging it behind him.",
+    "summary": "Leads the contracted expedition team at Mirafiori. He settles entry responsibilities, staging arrangements, and the consequences of unexpected System decisions before committing his people. The job gives him defined obligations rather than a general place in Leonelli command.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2253,8 +2401,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Establishes reference arrangements and operates the Mirafiori installation. She insists that comparisons retain the operating changes that could explain a result. No given name or exact class is stated.",
+    "appearance": "A woman working beside the installation's platforms and instrument sockets.",
+    "summary": "A Bloc engineer who establishes reference conditions and operates the Mirafiori installation. She distinguishes the insert that stabilizes its field from the pumps it supports and insists that comparisons retain operating changes that might explain a result. Her given name and exact class remain undisclosed.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2275,15 +2423,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Wounded while supporting Marco during the installation operation.",
+    "appearance": "Suffers a forearm wound during the installation operation.",
+    "summary": "A Leonelli operative and driver wounded while supporting Marco. Recovery and the availability of replacement personnel affect what the organization can undertake afterward.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "elena-venturi",
-    "name": "Elena Venturi",
+    "name": "Agnese Venturi",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 102,
@@ -2297,15 +2445,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Paolo Venturi's daughter. Retains observations and instrument records and authorizes defined exchanges. Her role does not establish knowledge of the entire collection network's purpose.",
+    "appearance": "A narrow-faced woman with greying hair tied behind her head, resembling her father in an old surveying photograph.",
+    "summary": "Agnese is Corrado Venturi's daughter and the custodian of his retained research material. She keeps instrument records and observations, answers an archive inquiry as his estate representative, and authorizes narrowly defined exchanges. Her permission governs particular records and comparisons; it does not give the Leonellis unrestricted access to everyone connected with the work.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "paolo-venturi",
-    "name": "Paolo Venturi",
+    "name": "Corrado Venturi",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 102,
@@ -2319,8 +2467,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Deceased engineer whose 2011 field records and apparatus history become relevant to current observations. The retained records do not establish that he understood the future Integration.",
+    "appearance": "Remembered in a framed photograph as a younger, narrow-faced man beside a surveying instrument.",
+    "summary": "A deceased engineer whose retained field observations and apparatus history become relevant to current measurements. His 2011 gorge survey records an incomplete sequence, halted with the return route's safety in mind. The record matters because it predates the Integration; it does not establish that he anticipated the System or understood the later network's purpose.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2341,8 +2489,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "His repaired pump coupling is ready for collection while the workshop handles Leonelli prototype problems.",
+    "appearance": null,
+    "summary": "A workshop customer waiting to collect a repaired pump coupling. His ordinary repair shares bench time with Leonelli prototype work, grounding the workshop's new commissions in the business it still has to run.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2363,15 +2511,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "His disappearance and abandoned van motivate the investigation and rescue.",
+    "appearance": null,
+    "summary": "A courier abducted from a delivery run, leaving his van abandoned and a Leonelli material delivery incomplete. His rescue exposes the coercion operating through a working garage and leaves injuries requiring treatment and time away from work.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "davide-serra",
-    "name": "Davide Serra",
+    "name": "Enea Serra",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 104,
@@ -2385,15 +2533,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Involved in the coercion around the courier route. Bianca kills him during the operation, and the consequences remain under investigation.",
+    "appearance": null,
+    "summary": "A leader of a local Leone Selvaggio group who organizes probes along the Quadrilatero perimeter. He uses a functioning garage and its ordinary traffic to hold people without stopping the street outside. Bianca kills him after disarming him during Aldo Bassi's recovery, creating consequences that outlast the rescue.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "carlo-bellandi",
-    "name": "Carlo Bellandi",
+    "name": "Osvaldo Bellandi",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 108,
@@ -2407,15 +2555,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Checks samples, isolation, connections and restart conditions. He distinguishes a usable inspected lot from a promise of future supply.",
+    "appearance": "In his fifties, thick through the middle, with a sunburnt neck above a faded work shirt and steady hands.",
+    "summary": "An unawakened fuel-transfer technician responsible for sampling, hoses, connections, isolation, and restart conditions. He identifies contamination and keeps untested stock separate from usable diesel. His right to stop the work makes the inspection meaningful even when the customer arrives armed.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "paolo-assistant",
-    "name": "Paolo",
+    "name": "Tobia",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 108,
@@ -2429,8 +2577,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Helps set up and isolate the fuel transfer. His identity is not established as the same Paolo mentioned in an earlier Leonelli scene.",
+    "appearance": null,
+    "summary": "Osvaldo Bellandi's assistant at the fuel-transfer compound. Tobia sorts fittings, helps prepare the equipment cabinet, and participates in isolating and setting up the transfer under the technician's direction.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2451,15 +2599,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Works with Bosco's carrier equipment and has a following booking that the trial cannot simply disregard.",
+    "appearance": "A compact man with white stubble; initially stiff when walking, then moving more easily.",
+    "summary": "A tanker driver working with Bosco's carrier equipment. His availability includes a following booking, so the Leonelli trial has to account for his return and cannot treat his vehicle or attendance as indefinitely reserved.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "adele-conti",
-    "name": "Adele Conti",
+    "name": "Adele Lamberti",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 109,
@@ -2473,8 +2621,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Referred the earlier survey-access work to Matteo through an ordinary professional connection. Retained correspondence establishes the limited purpose of her part in the arrangement.",
+    "appearance": null,
+    "summary": "A professional contact who referred the earlier survey-access work to Matteo. Retained correspondence establishes an ordinary, limited role in arranging that access, rather than evidence that she directed the later research network.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2495,15 +2643,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Challenges the difference between a sales assurance and the dispatch exclusions used to refuse her claim.",
+    "appearance": null,
+    "summary": "Operates a laundry in San Donato and disputes the refusal of assistance sold under broader assurances. She pursues the difference between the offer she relied on and the dispatch exclusions invoked afterward.",
     "coreFlaw": null,
     "skills": [],
     "relationships": [],
     "history": [
       {
         "chapter": 123,
-        "summary": "Challenges the difference between a sales assurance and the dispatch exclusions used to refuse her claim.<br><br>She operates a laundry in San Donato. Settlement of her disputed recovery cost depends on the provider's actual authority and the defined invoice, not a generic promise that every Bloc company owes the same thing."
+        "summary": "Operates a laundry in San Donato and disputes the refusal of assistance sold under broader assurances. She pursues the difference between the offer she relied on and the dispatch exclusions invoked afterward. Her disputed recovery cost is eventually settled against a defined invoice and the provider's actual authority. The settlement addresses the claim without turning her into a Leonelli client or establishing that every Bloc company owes the same obligation."
       }
     ]
   },
@@ -2523,15 +2671,21 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Arranges carriers, collection conditions and prices. She enforces commitments made with her company and later helps personal correspondence reach the Terranova family.",
+    "appearance": "At the freight meeting, has dried mud on her trousers and a shallow cut on one hand; leaves her jacket over a chair while working through the papers.",
+    "summary": "A Genoa freight and dispatch contact who arranges carriers, loading attendance, collection windows, and prices. She demands that promised barter goods actually exist and distinguishes the local escort from the onward journey. Her dealings with Dario combine workable commercial terms with an unwillingness to absorb somebody else's missed commitment.",
     "coreFlaw": null,
     "skills": [],
-    "relationships": []
+    "relationships": [],
+    "history": [
+      {
+        "chapter": 122,
+        "summary": "A Genoa freight and dispatch contact who arranges carriers, loading attendance, collection windows, and prices. She demands that promised barter goods actually exist and distinguishes the local escort from the onward journey. Her dealings with Dario combine workable commercial terms with an unwillingness to absorb somebody else's missed commitment. She also helps personal correspondence reach the Terranova family, using an established freight connection for a smaller human obligation."
+      }
+    ]
   },
   {
     "id": "enrico-valenti",
-    "name": "Enrico Valenti",
+    "name": "Cesare Valenti",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 110,
@@ -2545,8 +2699,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Appears in Dario's recollection of the connections through which Tessari introduces people.",
+    "appearance": "Broad-shouldered, with soft hands.",
+    "summary": "A business intermediary in the network through which Tessari introduces Dario to coastal contacts. His remembered access and courtesies help start a conversation, but they do not guarantee present control of the crews or charges involved.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2567,15 +2721,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Controls a useful local collection segment and tries to improve its price and future commitments. His later agreements name a crew and attendance rather than promising unlimited access.",
+    "appearance": "A young man whose deliberately patient telephone manner advertises his new bargaining power.",
+    "summary": "A Player who provides coastal gate cover and escort to Parodi's assembly yard. He tries to increase the value of a useful junction and a limited attendance window. Dario presses him to name the crew, recovery arrangements, and exact segment covered rather than accept a general assurance that problems will be handled. His class and attribute scores remain undisclosed.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "sergio-bertone",
-    "name": "Sergio Bertone",
+    "name": "Fabrizio Bertone",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 112,
@@ -2589,8 +2743,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Supplies valves and fittings and considers financing the transport pilot. His dealings with Fasce do not establish Bloc employment.",
+    "appearance": null,
+    "summary": "A valve and industrial-fittings supplier considering financing for the freight pilot. He can contribute specified goods and cash subject to inspection and recorded handovers. His dealings with Fasce support a return to auditable conventional business; they do not make him a Bloc employee.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2611,8 +2765,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Retains her vehicles, crews and following bookings. Her insistence on preserving skilled staff exposes the gap in Giorgio's initial cash-focused forecast.",
+    "appearance": "A square-faced woman in a work shirt, with one cuff rolled higher than the other.",
+    "summary": "Owns a carrier with four vehicles and six drivers. She protects trained crews, retained vehicles, and following bookings when considering a new contract. Giorgio initially overweights immediate cash in predicting her choice; her refusal makes him revise both the offer and his model of what she is preserving.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2633,15 +2787,21 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "His instrument business handles servicing and transmitted access material. He is accepted as a technical reader for a defined comparison in Chapter 116; this does not establish control of the whole research network.",
+    "appearance": "Wears a pale shirt and a green jacket when observed through the instrument business.",
+    "summary": "Proprietor of Balestra Strumenti, involved in instrument servicing and the transmission of technical access material. His business provides a traceable connection in the observation network, while his competence gives him a potential role as a technical reader. Those functions establish specific responsibilities without revealing the whole network's command or purpose.",
     "coreFlaw": null,
     "skills": [],
-    "relationships": []
+    "relationships": [],
+    "history": [
+      {
+        "chapter": 116,
+        "summary": "Proprietor of Balestra Strumenti, involved in instrument servicing and the transmission of technical access material. His business provides a traceable connection in the observation network, while his competence gives him a potential role as a technical reader. Those functions establish specific responsibilities without revealing the whole network's command or purpose. He supplies qualifications, accepts personal-use restrictions, and is admitted as a technical reader for a defined comparison shared with both Leonelli and Bloc teams, including failed matches and limitations."
+      }
+    ]
   },
   {
     "id": "carlo-vianello",
-    "name": "Carlo Vianello",
+    "name": "Ottavio Vianello",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 116,
@@ -2655,15 +2815,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Handles assigned collections, prioritizes reports against equipment histories and explains a request involved in restricting consultation. The extent of his authority and the larger agenda remain unresolved.",
+    "appearance": "Thinning at the crown; wears a brown coat and a pullover over his shirt, with a cuff repaired in slightly mismatched dark thread.",
+    "summary": "An observation collector and coordinator connected to Agnese Venturi's records. He prioritizes reports against instrument histories and explains his part in requesting restricted consultation. Identifying him establishes a responsible contact for particular decisions, while leaving the extent of his authority and the network's larger agenda open.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "nadia-sarti",
-    "name": "Nadia Sarti",
+    "name": "Donata Sarti",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 117,
@@ -2677,11 +2837,17 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Her collection is displaced by the Leonelli departure arrangement. She later seeks reimbursement and books another service with the Bloc; payment does not purchase her loyalty.",
+    "appearance": null,
+    "summary": "Purchases fuel for a small food distributor. Her paid collection is displaced by the Leonelli departure arrangement, giving the larger freight plan a cost borne by a smaller customer with commitments of her own.",
     "coreFlaw": null,
     "skills": [],
-    "relationships": []
+    "relationships": [],
+    "history": [
+      {
+        "chapter": 123,
+        "summary": "Purchases fuel for a small food distributor. Her paid collection is displaced by the Leonelli departure arrangement, giving the larger freight plan a cost borne by a smaller customer with commitments of her own. She seeks reimbursement, resists a broad waiver, and books replacement service with the Bloc. Compensation settles a loss without purchasing her loyalty."
+      }
+    ]
   },
   {
     "id": "mirella-rota",
@@ -2699,15 +2865,15 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Her agreed attendance includes return travel and household care obligations. Iris insists those conditions remain visible in the operation's staffing plan.",
+    "appearance": null,
+    "summary": "An unawakened receiving-pump technician whose attendance includes travel time and household care obligations. She needs a reliable return arrangement and relief cover. Iris keeps those conditions in the staffing plan instead of treating a signed attendance sheet as unlimited availability.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
   },
   {
     "id": "bruno-farina",
-    "name": "Bruno Farina",
+    "name": "Gabriele Farina",
     "alias": null,
     "portrait": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20260%22%3E%3Crect%20width%3D%22200%22%20height%3D%22260%22%20fill%3D%22%231c2024%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%2288%22%20r%3D%2234%22%20fill%3D%22%2359616a%22/%3E%3Cpath%20d%3D%22M35%20240v-50a65%2065%200%200%201%20130%200v50%22%20fill%3D%22%2359616a%22/%3E%3C/svg%3E",
     "chapter": 121,
@@ -2721,8 +2887,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Examines the failed cooling unit and helps the team distinguish consignments that can still be moved from the load requiring a claim.",
+    "appearance": null,
+    "summary": "A refrigeration technician who diagnoses a failed controller rather than assuming the fan is the problem. He helps distinguish food consignments that can still be moved from temperature-sensitive material requiring a separate claim.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2743,8 +2909,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Initially misdirected at the receiving yard. Locating him, recovering his equipment and providing a safe approach are separate problems.",
+    "appearance": null,
+    "summary": "A relief electrician initially misdirected at the receiving yard during the fog emergency. The student party locates and recovers him along the warehouse wall. Recovering his equipment and giving him a safe working approach remain separate tasks before electrical work can proceed.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
@@ -2765,8 +2931,8 @@ var CHARACTERS = withCharacterHistory([
     "primaryStat": null,
     "secondaryStat": null,
     "stats": null,
-    "appearance": "No further physical description is established.",
-    "summary": "Helps with manifests and handover at the receiving yard. Shared first names elsewhere do not establish the same identity.",
+    "appearance": null,
+    "summary": "A dispatch helper at the receiving yard. He works with manifests and handovers and records incoming reports while Iris checks workers' actual whereabouts during the emergency.",
     "coreFlaw": null,
     "skills": [],
     "relationships": []
